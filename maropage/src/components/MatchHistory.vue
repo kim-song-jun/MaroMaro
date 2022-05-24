@@ -1,52 +1,29 @@
 <template>
   <div class="card">
     <div class="card-body">
-      <table>
-        <tr>
-          <td><h4>#2</h4></td>
-          <td><h4>#2</h4></td>
-          <td><h4>#2</h4></td>
-          <td><h4>#2</h4></td>
-          <td><h4>#2</h4></td>
-          <td><h4>#2</h4></td>
-          <td><h4>#2</h4></td>
-          <td><h4>#2</h4></td>
-          <td><h4>#2</h4></td>
-        </tr>
-        <tr>
-          <td>랭크</td>
-          <td>랭크</td>
-          <td>랭크</td>
-          <td>랭크</td>
-          <td>랭크</td>
-          <td>랭크</td>
-          <td>랭크</td>
-          <td>랭크</td>
-          <td>랭크</td>
-        </tr>
-        <tr>
-          <td>19:21</td>
-          <td>19:21</td>
-          <td>19:21</td>
-          <td>19:21</td>
-          <td>19:21</td>
-          <td>19:21</td>
-          <td>19:21</td>
-          <td>19:21</td>
-          <td>19:21</td>
-        </tr>
-        <tr>
-          <td>1주일 전</td>
-          <td>1주일 전</td>
-          <td>1주일 전</td>
-          <td>1주일 전</td>
-          <td>1주일 전</td>
-          <td>1주일 전</td>
-          <td>1주일 전</td>
-          <td>1주일 전</td>
-          <td>1주일 전</td>
-        </tr>
-      </table>
+      <ul style="float: left; text-align: left">
+        <li>
+          <h5>#2</h5>
+        </li>
+        <li>랭크</li>
+        <li>19:23</li>
+        <li>일주일전</li>
+      </ul>
+      <ul style="float: left; text-align: left">
+        <li>df</li>
+      </ul>
+      <ul style="float: left; text-align: left">
+        temps
+      </ul>
+      <ul style="float: left; text-align: left">
+        temps
+      </ul>
+      <ul style="float: left; text-align: left">
+        temps
+      </ul>
+      <ul style="float: left; text-align: left">
+        temps
+      </ul>
     </div>
   </div>
 </template>
