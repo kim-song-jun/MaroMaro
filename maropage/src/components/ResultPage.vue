@@ -52,7 +52,7 @@
           <input
             class="form-control me-2"
             type="search"
-            :placeholder="`${name}`"
+            placeholder="소환사 이름"
             :aria-label="`${name}`"
             v-model="this.inputValue"
           />
@@ -86,7 +86,6 @@ export default {
     onSearch() {
       if (this.inputValue.length > 0) {
         this.$emit('name', this.inputValue.trim());
-        this.$emit('nextStep', this.nextStep);
       }
     },
   },
