@@ -64,6 +64,11 @@
     </div>
   </nav>
   <MatchHistory></MatchHistory>
+  <MatchHistory></MatchHistory>
+  <MatchHistory></MatchHistory>
+  <MatchHistory></MatchHistory>
+  <MatchHistory></MatchHistory>
+  <MatchHistory></MatchHistory>
 </template>
 
 <script>
