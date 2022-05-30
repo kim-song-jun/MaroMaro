@@ -63,20 +63,25 @@
       </div>
     </div>
   </nav>
-  <MatchHistory></MatchHistory>
-  <MatchHistory></MatchHistory>
-  <MatchHistory></MatchHistory>
-  <MatchHistory></MatchHistory>
-  <MatchHistory></MatchHistory>
-  <MatchHistory></MatchHistory>
+  <MatchHistory
+    v-for="item in this.MatchData"
+    :key="item.key"
+    :match="item"
+    :ItemName = "ItemName"
+    :ChampionName = "ChampionName"
+  ></MatchHistory>
 </template>
 
 <script>
-import MatchHistory from './MatchHistory.vue';
+import MatchHistory from "./MatchHistory.vue";
 export default {
-  name: 'resultpage',
+  name: "resultpage",
   props: {
     name: String,
+    UserData: Array,
+    MatchData: Array,
+    ItemName: Object,
+    ChampionName: Object,
   },
   components: {
     MatchHistory,
@@ -90,7 +95,7 @@ export default {
   methods: {
     onSearch() {
       if (this.inputValue.length > 0) {
-        this.$emit('name', this.inputValue.trim());
+        this.$emit("name", this.inputValue.trim());
       }
     },
   },

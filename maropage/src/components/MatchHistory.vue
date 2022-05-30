@@ -2,272 +2,162 @@
   <div
     class="row-vh d-flex flex-row align-items-center justify-content-between my-info"
   >
-    <div class="item" style="margin-left: 15px; white-space: nowrap">
+    <div
+      class="item"
+      style="margin-left: 15px; white-space: nowrap; width: 7.33%"
+    >
       <div class="row-vh d-flex flex-row"><h4>#2</h4></div>
       <div class="row-vh d-flex flex-row">초고속 모드</div>
       <div class="row-vh d-flex flex-row">20:14</div>
       <div class="row-vh d-flex flex-row">1개월전</div>
     </div>
-    <div class="item my-profile"></div>
-    <div class="item" style="margin-left: 20px">
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-synergy"></div>
-        <div class="item my-synergy"></div>
-        <div class="item my-synergy"></div>
-        <div class="item my-synergy"></div>
-        <div class="item my-synergy"></div>
-      </div>
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-synergy"></div>
-        <div class="item my-synergy"></div>
-        <div class="item my-synergy"></div>
-        <div class="item my-synergy"></div>
-        <div class="item my-synergy"></div>
+    <div class="item my-profile" style="width: 5.66%"></div>
+    <div style="width: 16%">
+      <div class="item" style="margin-left: 20px">
+        <div class="row-vh d-flex flex-row">
+          <div
+            class="item my-synergy"
+            v-for="item in this.match.metaTraitDTO"
+            :key="item.key"
+          ></div>
+        </div>
+        <div
+          class="row-vh d-flex flex-row"
+          v-if="this.match.metaTraitDTO.length > 5"
+        >
+          <div
+            class="item my-synergy"
+            v-for="item in this.match.metaTraitDTO"
+            :key="item.key + 5"
+          ></div>
+        </div>
       </div>
     </div>
-    <div class="item" style="margin-left: 20px">
-      <div class="row-vh d-flex flex-row">
+
+    <div class="item" style="margin-left: 20px; width: 3%">
+      <div
+        class="row-vh d-flex flex-row"
+        v-for="item in this.match.augments"
+        :key="item.key"
+      >
         <div class="item my-advenced"></div>
       </div>
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-advenced"></div>
-      </div>
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-advenced"></div>
+    </div>
+
+    <div class="item row-vh d-flex flex-row" style="width: 40%">
+      <div
+        class="item"
+        style="margin-left: 20px; width: 10%"
+        v-for="item in this.match.unitDTO"
+        :key="item.key"
+      >
+        <div class="row-vh d-flex flex-row justify-content-center">
+          <div
+            class="item my-champion-star"
+            v-for="star in item.items"
+            :key="star.key"
+          ></div>
+        </div>
+        <div class="row-vh d-flex flex-row">
+          <div
+            class="item my-champion"
+            :style="{
+              backgroundImage: `url(${this.ChampionName.TFT6_Ashe.image}})`,
+            }"
+          ></div>
+        </div>
+        <div class="row-vh d-flex flex-row justify-content-center">
+          <div class="item my-champion-item"></div>
+          <!-- <div class="item my-champion-item"></div> -->
+          <!-- <div class="item my-champion-item"></div> -->
+        </div>
       </div>
     </div>
-    <div class="item" style="margin-left: 20px">
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-champion-star"></div>
-        <div class="item my-champion-star"></div>
-        <div class="item my-champion-star"></div>
+    <div
+      class="item row-vh d-flex flex-row justify-content-end"
+      style="width: 20%"
+    >
+      <div class="item" style="margin-right: 3%; width: 50%">
+        <div class="row-vh d-flex flex-row">
+          <div class="item my-match"></div>
+          <a>dfdfd</a>
+        </div>
       </div>
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-champion"></div>
-      </div>
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-champion-item"></div>
-        <div class="item my-champion-item"></div>
-        <div class="item my-champion-item"></div>
-      </div>
-    </div>
-    <div class="item">
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-champion-star"></div>
-        <div class="item my-champion-star"></div>
-        <div class="item my-champion-star"></div>
-      </div>
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-champion"></div>
-      </div>
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-champion-item"></div>
-        <div class="item my-champion-item"></div>
-        <div class="item my-champion-item"></div>
-      </div>
-    </div>
-    <div class="item">
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-champion-star"></div>
-        <div class="item my-champion-star"></div>
-        <div class="item my-champion-star"></div>
-      </div>
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-champion"></div>
-      </div>
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-champion-item"></div>
-        <div class="item my-champion-item"></div>
-        <div class="item my-champion-item"></div>
-      </div>
-    </div>
-    <div class="item">
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-champion-star"></div>
-        <div class="item my-champion-star"></div>
-        <div class="item my-champion-star"></div>
-      </div>
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-champion"></div>
-      </div>
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-champion-item"></div>
-        <div class="item my-champion-item"></div>
-        <div class="item my-champion-item"></div>
-      </div>
-    </div>
-    <div class="item">
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-champion-star"></div>
-        <div class="item my-champion-star"></div>
-        <div class="item my-champion-star"></div>
-      </div>
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-champion"></div>
-      </div>
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-champion-item"></div>
-        <div class="item my-champion-item"></div>
-        <div class="item my-champion-item"></div>
-      </div>
-    </div>
-    <div class="item">
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-champion-star"></div>
-        <div class="item my-champion-star"></div>
-        <div class="item my-champion-star"></div>
-      </div>
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-champion"></div>
-      </div>
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-champion-item"></div>
-        <div class="item my-champion-item"></div>
-        <div class="item my-champion-item"></div>
-      </div>
-    </div>
-    <div class="item">
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-champion-star"></div>
-        <div class="item my-champion-star"></div>
-        <div class="item my-champion-star"></div>
-      </div>
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-champion"></div>
-      </div>
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-champion-item"></div>
-        <div class="item my-champion-item"></div>
-        <div class="item my-champion-item"></div>
-      </div>
-    </div>
-    <div class="item">
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-champion-star"></div>
-        <div class="item my-champion-star"></div>
-        <div class="item my-champion-star"></div>
-      </div>
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-champion"></div>
-      </div>
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-champion-item"></div>
-        <div class="item my-champion-item"></div>
-        <div class="item my-champion-item"></div>
-      </div>
-    </div>
-    <div class="item">
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-champion-star"></div>
-        <div class="item my-champion-star"></div>
-        <div class="item my-champion-star"></div>
-      </div>
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-champion"></div>
-      </div>
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-champion-item"></div>
-        <div class="item my-champion-item"></div>
-        <div class="item my-champion-item"></div>
-      </div>
-    </div>
-    <div class="item">
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-champion-star"></div>
-        <div class="item my-champion-star"></div>
-        <div class="item my-champion-star"></div>
-      </div>
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-champion"></div>
-      </div>
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-champion-item"></div>
-        <div class="item my-champion-item"></div>
-        <div class="item my-champion-item"></div>
-      </div>
-    </div>
-    <div class="item" style="margin-left:30px white-space : nowrap;"></div>
-    <div class="item">
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-match"></div>
-        <a>dfdfd</a>
-      </div>
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-match"></div>
-        <a>dfdfd</a>
-      </div>
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-match"></div>
-        <a>dfdfd</a>
-      </div>
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-match"></div>
-        <a>dfdfd</a>
-      </div>
-    </div>
-    <div class="item" style="margin-left:20px white-space : nowrap;">
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-match"></div>
-        <a>dfdfd</a>
-      </div>
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-match"></div>
-        <a>dfdfd</a>
-      </div>
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-match"></div>
-        <a>dfdfd</a>
-      </div>
-      <div class="row-vh d-flex flex-row">
-        <div class="item my-match"></div>
-        <a>dfdfd</a>
+      <div class="item" style="margin-right: 3%; width: 50%">
+        <div class="row-vh d-flex flex-row">
+          <div class="item my-match"></div>
+          <a>dfdfd</a>
+        </div>
+        <div class="row-vh d-flex flex-row">
+          <div class="item my-match"></div>
+          <a>dfdfd</a>
+        </div>
+        <div class="row-vh d-flex flex-row">
+          <div class="item my-match"></div>
+          <a>dfdfd</a>
+        </div>
+        <div class="row-vh d-flex flex-row">
+          <div class="item my-match"></div>
+          <a>dfdfd</a>
+        </div>
       </div>
     </div>
     <div class="item my-border-color" style="margin-left: 30px">
-      <div class="item align-self-end my-button" v-if="more == 0" @click="more = 1"></div>
+      <div
+        class="item align-self-end my-button"
+        v-if="more == 0"
+        @click="more = 1"
+      ></div>
       <div
         class="item align-self-end my-button"
         style="transform: scaleY(-1)"
         v-if="more == 1"
-        @click="more= 0"
+        @click="more = 0"
       ></div>
     </div>
   </div>
 
-  <div v-if="more == 1"
-    class="row-vh d-flex flex-row align-items-center justify-content-between my-detail-info"
+  <div
+    v-if="more == 1"
+    class="row-vh d-flex flex-row align-items-center justify-content-center my-detail-info"
+    style="font-size: x-small"
   >
-    <div class="item">등수</div>
-    <div class="item">소환사</div>
-    <div class="item">라운드</div>
-    <div class="item">생존시간</div>
-    <div class="item">시너지</div>
-    <div class="item">챔피언</div>
+    <div class="item" style="width: 7%; margin-left: 2%">등수</div>
+    <div class="item" style="width: 5%">소환사</div>
+    <div class="item" style="width: 5%; margin-left: 3%">라운드</div>
+    <div class="item" style="width: 8%">생존시간</div>
+    <div class="item" style="width: 13%">시너지</div>
+    <div class="item" style="width: 35%; margin-left: 25%">챔피언</div>
   </div>
-
-  <MatchHistoryDetail v-if="more == 1"></MatchHistoryDetail>
-  <MatchHistoryDetail v-if="more == 1"></MatchHistoryDetail>
-  <MatchHistoryDetail v-if="more == 1"></MatchHistoryDetail>
-  <MatchHistoryDetail v-if="more == 1"></MatchHistoryDetail>
-  <MatchHistoryDetail v-if="more == 1"></MatchHistoryDetail>
-  <MatchHistoryDetail v-if="more == 1"></MatchHistoryDetail>
-  <MatchHistoryDetail v-if="more == 1"></MatchHistoryDetail>
-  <MatchHistoryDetail v-if="more == 1"></MatchHistoryDetail>
-  <MatchHistoryDetail v-if="more == 1"></MatchHistoryDetail>
-
+  <div v-if="more == 1">
+    <MatchHistoryDetail></MatchHistoryDetail>
+  </div>
 </template>
 
 <script>
-import MatchHistoryDetailVue from './MatchHistoryDetail.vue';
+import MatchHistoryDetailVue from "./MatchHistoryDetail.vue";
 export default {
   data() {
     return {
-      more: 0,
+      more: 1,
+      url: "",
     };
   },
-  components:{
+  props: {
+    ItemName: Object,
+    ChampionName: Object,
+    match: Object,
+  },
+  components: {
     MatchHistoryDetail: MatchHistoryDetailVue,
-  }
+  },
+  methods: {
+    // GetCharcterUrl(item){
+    //   for (let i = 0; i < 9; i++) {
+    //   }
+    //   return item
+    // }
+  },
 };
 </script>
 
@@ -411,7 +301,7 @@ export default {
   background-size: 100%;
   margin-top: 5px;
   margin-left: 15px;
-  margin-right: 10px
+  margin-right: 10px;
   /* border-radius: 50%; */
 }
 .my-detail-match-champion {
