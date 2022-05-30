@@ -54,7 +54,7 @@
         <div class="row-vh d-flex flex-row justify-content-center">
           <div
             class="item my-champion-star"
-            v-for="star in item.items"
+            v-for="star in item.tier"
             :key="star.key"
           ></div>
         </div>
@@ -62,7 +62,7 @@
           <div
             class="item my-champion"
             :style="{
-              backgroundImage: `url(${this.ChampionName.TFT6_Ashe.image}})`,
+              backgroundImage: `url(${this.GetCharcterUrl(item)}})`,
             }"
           ></div>
         </div>
@@ -135,12 +135,12 @@
 </template>
 
 <script>
-import MatchHistoryDetailVue from "./MatchHistoryDetail.vue";
+import MatchHistoryDetailVue from './MatchHistoryDetail.vue';
 export default {
   data() {
     return {
       more: 1,
-      url: "",
+      url: '',
     };
   },
   props: {
@@ -152,11 +152,14 @@ export default {
     MatchHistoryDetail: MatchHistoryDetailVue,
   },
   methods: {
-    // GetCharcterUrl(item){
-    //   for (let i = 0; i < 9; i++) {
-    //   }
-    //   return item
-    // }
+    GetCharcterUrl(item) {
+      for (let j = 0; j < Object.keys(this.ChampionName).length; j++) {
+        if (item.character_id == Object.keys(this.ChampionName)[j]) {
+          this.url = this.ChampionName[Object.keys(this.ChampionName)[j]].image;
+        }
+      }
+      return this.url;
+    },
   },
 };
 </script>
@@ -177,7 +180,7 @@ export default {
   height: 108.8px;
 }
 .my-profile {
-  background-image: url("https://placeimg.com/100/100/arch");
+  background-image: url('https://placeimg.com/100/100/arch');
   width: 60px;
   height: 60px;
   background-size: 100%;
@@ -185,7 +188,7 @@ export default {
   margin-left: 15px;
 }
 .my-synergy {
-  background-image: url("https://placeimg.com/100/100/arch");
+  background-image: url('https://placeimg.com/100/100/arch');
   width: 30px;
   height: 30px;
   background-size: 100%;
@@ -194,7 +197,7 @@ export default {
   margin-bottom: 5px;
 }
 .my-advenced {
-  background-image: url("https://placeimg.com/100/100/arch");
+  background-image: url('https://placeimg.com/100/100/arch');
   width: 25px;
   height: 25px;
   background-size: 100%;
@@ -203,7 +206,7 @@ export default {
   margin-top: 5px;
 }
 .my-champion {
-  background-image: url("https://placeimg.com/100/100/arch");
+  background-image: url('https://placeimg.com/100/100/arch');
   width: 40px;
   height: 40px;
   background-size: 100%;
@@ -213,7 +216,7 @@ export default {
   margin-top: 5px;
 }
 .my-champion-star {
-  background-image: url("https://placeimg.com/100/100/arch");
+  background-image: url('https://placeimg.com/100/100/arch');
   width: 10px;
   height: 10px;
   background-size: 100%;
@@ -221,7 +224,7 @@ export default {
   margin-right: 3px;
 }
 .my-champion-item {
-  background-image: url("https://placeimg.com/100/100/arch");
+  background-image: url('https://placeimg.com/100/100/arch');
   width: 10px;
   height: 10px;
   background-size: 100%;
@@ -229,7 +232,7 @@ export default {
   margin-right: 3px;
 }
 .my-match {
-  background-image: url("https://placeimg.com/100/100/arch");
+  background-image: url('https://placeimg.com/100/100/arch');
   width: 15px;
   height: 15px;
   background-size: 100%;
@@ -238,7 +241,7 @@ export default {
   margin-top: 5px;
 }
 .my-button {
-  background-image: url("../assets/chevron-down-solid.png");
+  background-image: url('../assets/chevron-down-solid.png');
   width: 15px;
   height: 20px;
   background-size: 100%;
@@ -263,21 +266,21 @@ export default {
   border-right: 1px rgb(214, 214, 214) solid;
 }
 .my-detail-match-profile {
-  background-image: url("https://placeimg.com/100/100/arch");
+  background-image: url('https://placeimg.com/100/100/arch');
   width: 40px;
   height: 40px;
   background-size: 100%;
   border-radius: 50%;
 }
 .my-detail-match-level {
-  background-image: url("https://placeimg.com/100/100/arch");
+  background-image: url('https://placeimg.com/100/100/arch');
   width: 15px;
   height: 15px;
   background-size: 100%;
   border-radius: 50%;
 }
 .my-detail-match-tier {
-  background-image: url("https://placeimg.com/100/100/arch");
+  background-image: url('https://placeimg.com/100/100/arch');
   width: 20px;
   height: 20px;
   background-size: 100%;
@@ -285,7 +288,7 @@ export default {
   /* border-radius: 50%; */
 }
 .my-detail-match-synergy {
-  background-image: url("https://placeimg.com/100/100/arch");
+  background-image: url('https://placeimg.com/100/100/arch');
   width: 20px;
   height: 20px;
   background-size: 100%;
@@ -295,7 +298,7 @@ export default {
   /* border-radius: 50%; */
 }
 .my-detail-match-advenced {
-  background-image: url("https://placeimg.com/100/100/arch");
+  background-image: url('https://placeimg.com/100/100/arch');
   width: 15px;
   height: 15px;
   background-size: 100%;
@@ -305,7 +308,7 @@ export default {
   /* border-radius: 50%; */
 }
 .my-detail-match-champion {
-  background-image: url("https://placeimg.com/100/100/arch");
+  background-image: url('https://placeimg.com/100/100/arch');
   width: 36px;
   height: 36px;
   background-size: 100%;
@@ -313,7 +316,7 @@ export default {
   /* border-radius: 100%; */
 }
 .my-detail-match-champion-star {
-  background-image: url("https://placeimg.com/100/100/arch");
+  background-image: url('https://placeimg.com/100/100/arch');
   width: 10px;
   height: 10px;
   background-size: 100%;
@@ -322,7 +325,7 @@ export default {
   margin-bottom: 3px;
 }
 .my-detail-match-champion-item {
-  background-image: url("https://placeimg.com/100/100/arch");
+  background-image: url('https://placeimg.com/100/100/arch');
   width: 10px;
   height: 10px;
   background-size: 100%;
