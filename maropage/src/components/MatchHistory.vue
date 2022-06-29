@@ -15,8 +15,18 @@
         </div>
       </div>
     </div>
-    <div class="item main-match-extend">3</div>
-    <div class="item main-match-plus">4</div>
+    <div class="container main-match-extend">
+      <div class="item main-match-extend-attribute">1</div>
+      <div class="item main-match-extend-attribute">1</div>
+      <div class="item main-match-extend-attribute">1</div>
+      <div class="item main-match-extend-attribute">1</div>
+      <div class="item main-match-extend-attribute">1</div>
+    </div>
+    <div class="item main-match-plus">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
     <div class="item main-match-champion">5</div>
     <div class="item main-match-summoner">6</div>
     <div class="item main-match-tab">7</div>
@@ -110,9 +120,16 @@ export default {
 }
 .main-match-extend {
   width: 14.5%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.main-match-extend-attribute {
+  width: 20%;
 }
 .main-match-plus {
   width: 3%;
+  align-content: center;
 }
 .main-match-champion {
   width: 40%;
