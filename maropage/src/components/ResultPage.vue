@@ -67,8 +67,9 @@
     v-for="item in this.MatchData"
     :key="item.key"
     :match="item"
-    :ItemName = "ItemName"
-    :ChampionName = "ChampionName"
+    :champions = "champions"
+    :items = "items"
+    :traits = "traits"
   ></MatchHistory>
 </template>
 
@@ -80,8 +81,9 @@ export default {
     name: String,
     UserData: Array,
     MatchData: Array,
-    ItemName: Object,
-    ChampionName: Object,
+    champions: Object,
+    items: Object,
+    traits: Object,
   },
   components: {
     MatchHistory,
