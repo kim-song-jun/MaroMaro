@@ -3,13 +3,14 @@
     <div class="header-content"><Header></Header></div>
     <div class="sidebar-a">sidebar-a</div>
     <div class="sidebar-b">sidebar-b</div>
-    <div class="search-content" style="height: 10em;"><SearchBar></SearchBar></div>
+    <div class="search-content" style="height: 10em">
+      <SearchBar></SearchBar>
+    </div>
     <div class="card-content">
       <Carousel></Carousel>
     </div>
-    <div class="tier-content">tier</div>
+    <div class="tier-content"><Tabs></Tabs></div>
     <div class="footer-content"><Footer></Footer></div>
-
   </div>
   <!-- <SearchPage
     v-if="step == 0"
@@ -28,41 +29,42 @@
     :name="this.name"
     @name="search"
     @nextStep="nextStep"
-    :MatchData = "this.MatchData"
-    :UserData = "this.UserData" 
-    :champions = "this.champions"
-    :items = "this.items"
-    :traits = "this.traits"
+    :MatchData="this.MatchData"
+    :UserData="this.UserData"
+    :champions="this.champions"
+    :items="this.items"
+    :traits="this.traits"
   ></ResultPage>
   <!-- <router-view :name="this.name" @name="search"></router-view> -->
 </template>
 
 <script>
-import ResultPage from "./components/ResultPage.vue";
+import ResultPage from './components/ResultPage.vue';
 // import SearchPage from "./components/SearchPage.vue";
-import MatchData from "./assets/MatchData.js";
-import UserData from "./assets/UserData.js";
+import MatchData from './assets/MatchData.js';
+import UserData from './assets/UserData.js';
 // import ApexVue from "./components/Apex.vue";
-import Data from "../src/assets/data.json";
-import Header from "./components/Header.vue";
-import SearchBar from "./components/SearchBar.vue";
-import Footer from "./components/Footer.vue";
-import Carousel from "./components/Carousel.vue";
+import Data from '../src/assets/data.json';
+import Header from './components/Header.vue';
+import SearchBar from './components/SearchBar.vue';
+import Footer from './components/Footer.vue';
+import Carousel from './components/Carousel.vue';
+import Tabs from './components/Tabs.vue';
 export default {
-  name: "App",
+  name: 'App',
   data() {
     return {
       step: 0,
-      name: "",
+      name: '',
       MatchData: MatchData,
       UserData: UserData,
       champions: require('../src/assets/set5patch1115/champions.json'),
       items: require('../src/assets/set5patch1115/items.json'),
       traits: require('../src/assets/set5patch1115/traits.json'),
       data: require('../src/assets/data.json'),
-      t : Data,
-      newData: {"setData":[]},
-      itemData:{"items":[]},
+      t: Data,
+      newData: { setData: [] },
+      itemData: { items: [] },
       setData: {},
     };
   },
@@ -73,8 +75,9 @@ export default {
     Header,
     SearchBar,
     Footer,
-    Carousel
-},
+    Carousel,
+    Tabs,
+  },
   methods: {
     search(name) {
       this.name = name;
@@ -120,39 +123,39 @@ export default {
 </script>
 
 <style>
-.app_container{
+.app_container {
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
   justify-items: stretch;
-  grid-template-areas: "header header header"
-                        "a search b"
-                        "a card b"
-                        "a tier b"
-                        "footer footer footer";
+  grid-template-areas:
+    'header header header'
+    'a search b'
+    'a card b'
+    'a tier b'
+    'footer footer footer';
   height: 100vh;
   align-items: stretch;
 }
-.header-content{
+.header-content {
   grid-area: header;
 }
-.footer-content{
+.footer-content {
   grid-area: footer;
   height: 30px;
 }
-.sidebar-a{
+.sidebar-a {
   grid-area: a;
 }
-.sidebar-b{
+.sidebar-b {
   grid-area: b;
 }
-.search-content{
+.search-content {
   grid-area: search;
 }
-.card-content{
+.card-content {
   grid-area: card;
 }
-.tier-content{
+.tier-content {
   grid-area: tier;
 }
-
 </style>
