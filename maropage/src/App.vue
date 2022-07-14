@@ -10,7 +10,11 @@
       <Carousel></Carousel>
     </div>
     <div class="tier-content"><Tabs></Tabs></div>
-    <div class="footer-content"><Footer></Footer></div>
+    <div class="footer-content">
+      <Footer></Footer>
+      {{ more() }}
+      {{ instaData }}
+    </div>
   </div>
   <!-- <SearchPage
     v-if="step == 0"
@@ -50,6 +54,7 @@ import SearchBar from './components/SearchBar.vue';
 import Footer from './components/Footer.vue';
 import Carousel from './components/Carousel.vue';
 import Tabs from './components/Tabs.vue';
+import axios from 'axios';
 export default {
   name: 'App',
   data() {
@@ -66,6 +71,8 @@ export default {
       newData: { setData: [] },
       itemData: { items: [] },
       setData: {},
+      instaData: [],
+      index: 0,
     };
   },
   components: {
@@ -85,16 +92,21 @@ export default {
     nextStep(next) {
       this.step = next;
     },
-    // more() {
-    //   axios
-    //     .get(`https://codingapple1.github.io/vue/more${this.index}.json`)
-    //     .then((result) => {
-    //       //요청 성공시 가져오는 코드
-    //       // console.log(result.data)
-    //       this.instaData.push(result.data);
-    //       this.index++;
-    //     });
-    // },
+    more() {
+      axios
+        .get(
+          'https://cors-anywhere.herokuapp.com/http://yukmaro.cafe24.com/GetMatchHistory/%EC%95%A1%EC%A0%95%EA%B9%A8%EA%B8%B0%EC%9E%A5%EC%9D%B8'
+        )
+        .then((result) => {
+          //요청 성공시 가져오는 코드
+          // console.log(result.data)
+          this.instaData.push(result.data);
+          this.index++;
+        })
+        .catch(() => {
+          console.log('error');
+        });
+    },
     // makeData(){
     //   for (var value in this.t.setData){
     //     console.log(value)

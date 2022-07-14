@@ -1,5 +1,5 @@
 <template>
-  <div class="row-container main-match-info" style="background-color: #1D1D1D; color:aliceblue">
+  <div class="row-container main-match-info">
     <div class="row-item main-match-text">
       <div class="col-container">
         <div class="col-item"><h4>#2</h4></div>
@@ -16,46 +16,52 @@
       </div>
     </div>
     <div class="row-container main-match-extend">
-      <div class="row-item main-match-extend-attribute">1</div>
-      <div class="row-item main-match-extend-attribute">1</div>
-      <div class="row-item main-match-extend-attribute">1</div>
-      <div class="row-item main-match-extend-attribute">1</div>
-      <div class="row-item main-match-extend-attribute">1</div>
+      <img
+        class="row-item main-match-extend-attribute"
+        v-for="i in 7"
+        :key="i"
+        src="https://raw.communitydragon.org/latest/game/assets/maps/particles/tft/item_icons/augments/hexcore/academyemblem3.tft_set6.png"
+      />
     </div>
     <div class="row-item main-match-plus">
-      <div class="row-item main-match-plus-attribute"></div>
-      <div class="row-item main-match-plus-attribute"></div>
-      <div class="row-item main-match-plus-attribute"></div>
+      <img
+        class="row-item main-match-plus-attribute"
+        src="https://raw.communitydragon.org/latest/game/assets/maps/particles/tft/item_icons/augments/choiceui/celestialblessing3.tft_set6.png"
+        v-for="i in 3"
+        :key="i"
+      />
     </div>
     <div class="row-container main-match-champion">
-      <div class="col-container main-match-champion-attribute" v-for="item in 7" :key="item" > 
+      <div
+        class="col-container main-match-champion-attribute"
+        v-for="item in 10"
+        :key="item"
+      >
         <div class="row-container">
-          <div class="row-item main-match-champion-attribute-star"></div>
-          <div class="row-item main-match-champion-attribute-star"></div>
-          <div class="row-item main-match-champion-attribute-star"></div>
+          <img
+            class="row-item main-match-champion-attribute-star"
+            src="https://raw.communitydragon.org/latest/game/assets/ux/tft/notificationicons/goldstar.png"
+            v-for="i in 3"
+            :key="i"
+          />
         </div>
-        <div class="row-item main-match-champion-attribute-img"></div>
+        <img
+          class="row-item main-match-champion-attribute-img"
+          src="../assets/set5patch1115/champions/TFT5_Aatrox.png"
+        />
         <div class="row-container">
-          <div class="row-item main-match-champion-attribute-item"></div>
-          <div class="row-item main-match-champion-attribute-item"></div>
-          <div class="row-item main-match-champion-attribute-item"></div>
+          <img
+            class="row-item main-match-champion-attribute-item"
+            src="https://raw.communitydragon.org/latest/game/assets/maps/particles/tft/item_icons/standard/bf_sword.png"
+            v-for="i in 3"
+            :key="i"
+          />
         </div>
       </div>
     </div>
     <div class="row-item main-match-summoner">
       <div class="col-container">
-        <div class="col-item">1</div>
-        <div class="col-item">1</div>
-        <div class="col-item">1</div>
-        <div class="col-item">1</div>
-      </div>
-    </div>
-    <div class="row-item main-match-summoner">
-      <div class="col-container">
-        <div class="col-item">2</div>
-        <div class="col-item">2</div>
-        <div class="col-item">2</div>
-        <div class="col-item">2</div>
+        <strong>3 Ragewing, 3 Guild,</strong> 2 Tempest
       </div>
     </div>
     <div class="row-item main-match-tab"></div>
@@ -96,9 +102,9 @@ export default {
 <style>
 .row-container {
   display: flex;
-  display: inline-flex; 
+  display: inline-flex;
   flex-direction: row;
-  flex-wrap: nowrap; 
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
 }
@@ -129,7 +135,7 @@ export default {
   width: 5.5%;
   margin: 1%;
 }
-.main-match-icon-main {  
+.main-match-icon-main {
   background-image: url('https://placeimg.com/100/100/arch');
   background-size: 100%;
   z-index: 0;
@@ -157,60 +163,33 @@ export default {
 }
 .main-match-extend-attribute {
   width: 20%;
-  background-image: url('https://raw.communitydragon.org/latest/game/assets/maps/particles/tft/item_icons/augments/hexcore/academyemblem3.tft_set6.png');
-  background-size: 100%;
-  background-repeat: no-repeat;
-  width: 20%;
   display: block;
-  border-radius: 0%;
 }
 .main-match-plus {
   width: 4%;
   align-content: center;
 }
 .main-match-plus-attribute {
-  background-image: url('https://raw.communitydragon.org/latest/game/assets/maps/particles/tft/item_icons/augments/choiceui/celestialblessing3.tft_set6.png');
-  background-size: 100%;
-  background-repeat: no-repeat;
   width: 70%;
-  display: block;
-  padding-bottom: 60%;
-  border-radius: 0%;
 }
 .main-match-champion {
-  width: 40%;
+  width: 60%;
   justify-content: flex-start;
   margin: 1%;
 }
-.main-match-champion-attribute{
+.main-match-champion-attribute {
   width: 10%;
   margin-left: 10px;
 }
-.main-match-champion-attribute-img{
-  background-image: url('../assets/set5patch1115/champions/TFT5_Aatrox.png');
-  background-size: 100%;
+.main-match-champion-attribute-img {
   width: 100%;
-  display: block;
-  padding-bottom: 100%;
-  border-radius: 30%;
+  border-radius: 20%;
 }
-.main-match-champion-attribute-star{
-  background-image: url('https://raw.communitydragon.org/latest/game/assets/ux/tft/notificationicons/goldstar.png');
-  background-size: 100%;
-  background-repeat: no-repeat;
+.main-match-champion-attribute-star {
   width: 40%;
-  display: block;
-  padding-bottom: 50%;
-  border-radius: 0%;
 }
-.main-match-champion-attribute-item{
-  background-image: url('https://raw.communitydragon.org/latest/game/assets/maps/particles/tft/item_icons/standard/bf_sword.png');
-  background-size: 100%;
-  background-repeat: no-repeat;
-  width: 40%;
-  display: block;
-  padding-bottom: 50%;
-  border-radius: 0%;
+.main-match-champion-attribute-item {
+  width: 33%;
   margin-top: 2px;
   margin-left: 1px;
   margin-right: 1px;
@@ -219,7 +198,7 @@ export default {
   width: 13%;
   margin: 1%;
 }
-.main-match-summoner-attribute{
+.main-match-summoner-attribute {
   width: 50%;
 }
 .main-match-tab {
@@ -229,5 +208,6 @@ export default {
   background-image: url('../assets/chevron-down-solid.png');
   background-size: 70%;
   background-repeat: no-repeat;
-  background-position: bottom}
+  background-position: bottom;
+}
 </style>
