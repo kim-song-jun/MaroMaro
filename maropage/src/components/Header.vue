@@ -16,18 +16,18 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <div to="/" class="nav-link active" aria-current="page">Home</div>
+            <div class="nav-link active" aria-current="page" @click="this.pageChange"> Home</div>
           </li>
           <li class="nav-item">
-            <div to="/list" class="nav-link">List</div>
+            <div class="nav-link">List</div>
           </li>
           <li class="nav-item">
-            <div to="/detail/0" class="nav-link">Detail</div>
+            <div class="nav-link">Detail</div>
           </li>
           <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
-              href="#"
+              
               id="navbarDropdownMenuLink"
               role="button"
               data-bs-toggle="dropdown"
@@ -36,9 +36,9 @@
               Dropdown link
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" >Action</a></li>
+              <li><a class="dropdown-item" >Another action</a></li>
+              <li><a class="dropdown-item" >Something else here</a></li>
             </ul>
           </li>
         </ul>
@@ -49,6 +49,19 @@
 
 <script>
 export default {
+  data(){
+    return {inputValue:''}
+  },
+  methods:{
+      pageChange(){
+      this.emitter.emit('page',0)
+    },
+    onSearch() {
+      if (this.inputValue.length > 0) {
+        this.emitter.emit('name', this.inputValue.trim());
+      }
+    },
+  }
 }
 </script>
 

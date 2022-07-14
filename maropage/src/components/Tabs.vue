@@ -59,7 +59,7 @@
       role="tabpanel"
       aria-labelledby="pills-profile-tab"
     >
-      <MatchHistory></MatchHistory>
+      <!-- /<MatchHistory></MatchHistory> -->
     </div>
     <div
       class="tab-pane fade"
@@ -74,9 +74,8 @@
 
 <script>
 import TierDeck from './TierDeck.vue';
-import MatchHistory from './MatchHistory.vue';
 import Scatter from './Scatter.vue';
-export default { components: { TierDeck, MatchHistory, Scatter } };
+export default { components: { TierDeck, Scatter } };
 </script>
 
 <style></style>

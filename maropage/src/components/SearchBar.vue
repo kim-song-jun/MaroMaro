@@ -39,16 +39,19 @@ props: {
   },
   data() {
     return {
-      inputValue: this.name,
-      nextStep: 1,
+      inputValue: "",
+      nextPage: 1 ,
     };
   },
   methods: {
     onSearch() {
       if (this.inputValue.length > 0) {
-        this.$emit('name', this.inputValue.trim());
-        this.$emit('nextStep', this.nextStep);
+        this.emitter.emit('name', this.inputValue.trim());
+        this.pageChange(); 
       }
+    },
+    pageChange(){
+      this.emitter.emit('page',this.nextPage)
     },
   },
 }

@@ -1,26 +1,26 @@
 <template>
-  <div class="row-container main-match-info">
+<div class="col-container" v-for="item,index in this.userMatchData" :key="index">
+  <div class="row-container main-match-info" style="background-color: #1d1d1d; filter: brightness(80%); color:aliceblue" >
     <div class="row-item main-match-text">
       <div class="col-container">
-        <div class="col-item"><h4>#2</h4></div>
+        <div class="col-item"><h4>#{{item.placement}}</h4></div>
         <div class="col-item">랭크</div>
-        <div class="col-item">20:14</div>
+        <div class="col-item">{{ChangeUnixTime(item.time_eliminated)}}</div>
         <div class="col-item">1개월전</div>
       </div>
     </div>
     <div class="row-item main-match-icon">
       <div class="col-container">
-        <div class="row-item main-match-icon-main">
-          <div class="row-item main-match-icon-sub"></div>
-        </div>
+        <img src="https://placeimg.com/100/100/arch" class="row-item main-match-icon-main">
       </div>
     </div>
-    <div class="row-container main-match-extend">
+    <div class="row-container main-match-extend" v>
       <img
+      v-for="trait,j in this.GetTraitSorted(this.TraitsFillter(item.traits))"
+        :key="j"
         class="row-item main-match-extend-attribute"
-        v-for="i in 7"
-        :key="i"
-        src="https://raw.communitydragon.org/latest/game/assets/maps/particles/tft/item_icons/augments/hexcore/academyemblem3.tft_set6.png"
+        :src="this.GetTrait(trait)"
+        :style="{'background-image': `url(${this.GetTraitBackGround(trait)})`}"
       />
     </div>
     <div class="row-item main-match-plus">
@@ -34,68 +34,226 @@
     <div class="row-container main-match-champion">
       <div
         class="col-container main-match-champion-attribute"
-        v-for="item in 10"
-        :key="item"
+        v-for="cham,i in this.NullFillter(item.unitDTO)"
+        :key="i"
       >
-        <div class="row-container">
+      <!-- {{this.GetChampionUrl(cham.character_id)}} -->
+      <!-- {{this.NullFillter(item.unitDTO)}} -->
+        <div class="row-container" >
           <img
+            v-for="v,k in cham.tier"
+            :key="k"
             class="row-item main-match-champion-attribute-star"
-            src="https://raw.communitydragon.org/latest/game/assets/ux/tft/notificationicons/goldstar.png"
-            v-for="i in 3"
-            :key="i"
+            :src="this.GetStar(cham.tier)"
           />
         </div>
         <img
           class="row-item main-match-champion-attribute-img"
-          src="../assets/set5patch1115/champions/TFT5_Aatrox.png"
+          :src="this.GetChampionUrlByName(cham.character_id)"
         />
         <div class="row-container">
           <img
             class="row-item main-match-champion-attribute-item"
-            src="https://raw.communitydragon.org/latest/game/assets/maps/particles/tft/item_icons/standard/bf_sword.png"
-            v-for="i in 3"
-            :key="i"
+            v-for="(q, w) in cham.items" :key="w"
+            :src="this.GetItem(q)"
           />
         </div>
       </div>
     </div>
     <div class="row-item main-match-summoner">
       <div class="col-container">
-        <strong>3 Ragewing, 3 Guild,</strong> 2 Tempest
+        <strong style="color:aliceblue" v-for="a,b in this.GetDeck(this.TraitsFillter(item.traits)).slice(0, 2)" :key="b">{{a.num_units}} {{a.name.split('_')[1]}}</strong> {{this.GetDeck(this.TraitsFillter(item.traits))[2].num_units}} {{this.GetDeck(this.TraitsFillter(item.traits))[2].name.split('_')[1]}}
       </div>
     </div>
-    <div class="row-item main-match-tab"></div>
+    <div class="row-item main-match-tab" v-if="more[index] == 0" @click="more[index] = 1"></div>
+    <div class="row-item main-match-tab" v-if="more[index] == 1" @click="more[index] = 0" style="transform: scaleY(-1); background-position: top;"></div>
+    </div>
+    <MatchHistoryDetail v-if="more[index] == 1"></MatchHistoryDetail>
   </div>
+  <!-- {{this.alldata.sets['6'].traits[0].apiName}}
+  {{this.alldata.sets['7'].traits[0].apiName}}
+  {{this.alldata.sets['1'].traits}}
+  {{this.alldata.setData[5].traits}}
+
+  {{this.alldata.setData[4].traits[0].apiName}} -->
+  <!-- {{`https://raw.communitydragon.org/latest/game/${this.alldata.setData[0].champions[0].icon.toLowerCase().slice(0,-4)}_mobile.png`}}
+  {{this.matchData[0][0].unitDTO[0].character_id}}
+  {{this.matchData[0][6].unitDTO[0].character_id}}
+  {{this.userMatchData[6].unitDTO[0]}} -->
+  <!-- {{this.GetChampionUrl()}} -->
 </template>
 
 <script>
 // import MatchHistoryDetailVue from './MatchHistoryDetail.vue';
+import alldata from '../assets/data.json'
+import matchData from '../assets/MatchData.json'
+import userMatchData from '../assets/UserMatchData.json'
+import axios from 'axios';
+import MatchHistoryDetail from './MatchHistoryDetail.vue';
+
 export default {
   data() {
     return {
-      more: 1,
+      more: [0,0,0,0,0,0,0,0,0,0],
       url: '',
+      alldata,
+      matchData,
+      userMatchData,
+      apiUrl: [],
+      apiName:[],
+      userName:'',
     };
   },
-  props: {
-    champions: Object,
-    items: Object,
-    traits: Object,
-    match: Object,
-  },
   components: {
-    // MatchHistoryDetail: MatchHistoryDetailVue,
-  },
+    MatchHistoryDetail
+},
   methods: {
-    GetCharcterUrl(item) {
-      for (let j = 0; j < Object.keys(this.ChampionName).length; j++) {
-        if (item.character_id == Object.keys(this.ChampionName)[j]) {
-          this.url = this.ChampionName[Object.keys(this.ChampionName)[j]].image;
+    GetChampionUrl(championName){
+      for (let i in this.alldata.setData){
+        for (let j in this.alldata.setData[i].champions){
+          if (this.alldata.setData[i].champions[j].apiName == championName){
+            let temp = this.alldata.setData[i].champions[j].icon.toLowerCase().split('/')
+            // console.log(temp[-2])
+            let newUrl = temp.slice(0,-1)
+            return `https://raw.communitydragon.org/latest/game/${newUrl.join('/') + "/"+championName.toLowerCase()}_mobile.tft_set7.png`
+          }
+        } 
+      }
+    },
+    GetChampionUrlByName(championName){
+      let changeName = ""
+      let temp = championName.toLowerCase()
+      if (temp == "tft7_dragonblue"){
+        changeName = "tft7_miragesdragon"
+      }
+      else if (temp == "tft7_dragongold"){
+        changeName = "tft7_shimmerscaledragon"
+      }
+      else if (temp == "tft7_dragongreen"){
+        changeName = "tft7_jadedragon"
+      }
+      else if (temp == "tft7_dragonpurple"){
+        changeName = "tft7_whispersdragon"
+      }
+      else{
+        changeName = temp
+      }
+      // console.log(temp)
+      // console.log(changeName)
+      return `https://raw.communitydragon.org/latest/game/assets/characters/${temp}/hud/${changeName}_square.tft_set7.png`
+    },
+    TraitsFillter(trait){
+      let array = []
+      for (let i in trait){
+        if (trait[i].style > 0){
+          array.push(trait[i])
         }
       }
-      return this.url;
+      return array
     },
+    GetChampionID(match){
+      for (let i in match.unitDTO){
+        this.apiName.push(i.character_id)
+      }
+    },
+    NullFillter(DTO){
+      let array = []
+      for (let i in DTO){
+        if (DTO[i] != null){
+          array.push(DTO[i])
+        }
+      }
+      return array
+    },
+    GetTrait(trait){
+      // console.log(trait.name)
+      for (let i in this.alldata.setData){
+        if (this.alldata.setData[i].traits.length != 0){
+          for (let j in this.alldata.setData[i].traits){
+            if (this.alldata.setData[i].traits[j].apiName.toLowerCase() == trait.name.toLowerCase()){
+              return `https://raw.communitydragon.org/latest/game/${this.alldata.setData[i].traits[j].icon.toLowerCase().slice(0,-4)}.png`
+            }
+          }
+        }
+      }
+    },
+    GetTraitBackGround(trait){
+      // console.log(trait)
+      if (trait.style == 0){
+        // console.log(trait.style)
+      } else if (trait.style == 1){
+        // console.log(trait.style)
+        return require('../assets/background/bronze.svg')
+      }else if (trait.style == 2){
+        // console.log(trait.style)
+        return require('../assets/background/silver.svg')
+      }else if (trait.style == 3){
+        // console.log(trait.style)
+        return require('../assets/background/gold.svg')
+      }else if (trait.style == 4){
+        // console.log(trait.style)
+        return require('../assets/background/chromatic.svg')
+      }else{
+        console.log('error')
+      }
+    },
+    GetStar(i){
+      if (i == 2){
+        return `https://raw.communitydragon.org/latest/game/assets/ux/tft/notificationicons/silverstar.png`
+      }
+      else if (i == 3){
+        return `https://raw.communitydragon.org/latest/game/assets/ux/tft/notificationicons/goldstar.png`
+      }
+      else{
+        return ``
+      }
+    },
+    GetDeck(trait){
+      return trait.sort(function(a,b){
+        return b.num_units - a.num_units
+      })
+    },
+    GetTraitSorted(trait){
+      return trait.sort(function(a,b){
+        return b.style - a.style
+      })
+    },
+    GetItem(item){
+      // console.log(item)
+        for (let j in this.alldata.items){
+          if (item == this.alldata.items[j].id){
+            return `https://raw.communitydragon.org/latest/game/${this.alldata.items[j].icon.toLowerCase().slice(0,-4)}.png`
+        }
+      }
+    },
+    ChangeUnixTime(unix){
+      // let temp = unix
+      // unix = temp.join()
+      let date = new Date(unix)
+      let hours = date.getHours()
+      let minutes = "0" + date.getMinutes()
+      let seconds = "0" + date.getSeconds()
+
+      return `${hours}:${minutes.substr(-2)}:${seconds.substr(-2)}`
+    }
   },
+  mounted() {
+    this.emitter.on('name',(e)=>{
+      console.log(e)
+      this.userName = e;
+      axios
+        .get(
+          `https://cors-anywhere.herokuapp.com/http://yukmaro.cafe24.com/GetMatchHistory/${this.userName}`
+        )
+        .then((result) => {
+          //요청 성공시 가져오는 코드
+          console.log(result.data)
+          this.userMatchData = result.data
+        })
+        .catch(() => {
+          console.log('error');
+        });
+  })},
 };
 </script>
 
@@ -136,23 +294,10 @@ export default {
   margin: 1%;
 }
 .main-match-icon-main {
-  background-image: url('https://placeimg.com/100/100/arch');
-  background-size: 100%;
-  z-index: 0;
-  position: relative;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
+  border-radius: 30%;
 }
 .main-match-icon-sub {
-  background-image: url('https://placeimg.com/100/100/arch');
-  background-size: 100%;
   z-index: 1;
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  top: 30px;
-  left: 30px;
   border-radius: 50%;
 }
 .main-match-extend {
@@ -164,6 +309,10 @@ export default {
 .main-match-extend-attribute {
   width: 20%;
   display: block;
+  margin-bottom: 3px;
+  background-size: 100%;
+  padding: 4%;
+  background-repeat: no-repeat;
 }
 .main-match-plus {
   width: 4%;
@@ -176,9 +325,10 @@ export default {
   width: 60%;
   justify-content: flex-start;
   margin: 1%;
+  align-items: baseline;
 }
 .main-match-champion-attribute {
-  width: 10%;
+  width: 8%;
   margin-left: 10px;
 }
 .main-match-champion-attribute-img {
@@ -187,15 +337,17 @@ export default {
 }
 .main-match-champion-attribute-star {
   width: 40%;
+  margin-bottom: 3px;
 }
 .main-match-champion-attribute-item {
   width: 33%;
   margin-top: 2px;
   margin-left: 1px;
   margin-right: 1px;
+  border-radius: 40%;
 }
 .main-match-summoner {
-  width: 13%;
+  width: 15%;
   margin: 1%;
 }
 .main-match-summoner-attribute {
@@ -204,7 +356,7 @@ export default {
 .main-match-tab {
   width: 3%;
   background-color: red;
-  padding-bottom: 14%;
+  align-self: stretch;
   background-image: url('../assets/chevron-down-solid.png');
   background-size: 70%;
   background-repeat: no-repeat;
