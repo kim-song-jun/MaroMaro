@@ -1,9 +1,9 @@
 <template>
-  <div class="row-container main-match-info">
+  <div class="row-container main-match-info" style="background-color: #1D1D1D; color:aliceblue">
     <div class="row-item main-match-text">
       <div class="col-container">
         <div class="col-item"><h4>#2</h4></div>
-        <div class="col-item">초고속 모드</div>
+        <div class="col-item">랭크</div>
         <div class="col-item">20:14</div>
         <div class="col-item">1개월전</div>
       </div>
@@ -23,28 +23,42 @@
       <div class="row-item main-match-extend-attribute">1</div>
     </div>
     <div class="row-item main-match-plus">
-      <div class="row-item">1</div>
-      <div class="row-item">2</div>
-      <div class="row-item">3</div>
+      <div class="row-item main-match-plus-attribute"></div>
+      <div class="row-item main-match-plus-attribute"></div>
+      <div class="row-item main-match-plus-attribute"></div>
     </div>
     <div class="row-container main-match-champion">
-      <div class="col-container main-match-champion-attribute">
+      <div class="col-container main-match-champion-attribute" v-for="item in 7" :key="item" > 
         <div class="row-container">
-          <div class="row-item">r1</div>
-          <div class="row-item">r2</div>
-          <div class="row-item">r3</div>
+          <div class="row-item main-match-champion-attribute-star"></div>
+          <div class="row-item main-match-champion-attribute-star"></div>
+          <div class="row-item main-match-champion-attribute-star"></div>
         </div>
-        <div class="row-item">2</div>
+        <div class="row-item main-match-champion-attribute-img"></div>
         <div class="row-container">
-          <div class="row-item">r1</div>
-          <div class="row-item">r2</div>
-          <div class="row-item">r3</div>
+          <div class="row-item main-match-champion-attribute-item"></div>
+          <div class="row-item main-match-champion-attribute-item"></div>
+          <div class="row-item main-match-champion-attribute-item"></div>
         </div>
       </div>
     </div>
-    <div class="row-item main-match-summoner">6</div>
-    <div class="row-item main-match-summoner">6</div>
-    <div class="row-item main-match-tab">7</div>
+    <div class="row-item main-match-summoner">
+      <div class="col-container">
+        <div class="col-item">1</div>
+        <div class="col-item">1</div>
+        <div class="col-item">1</div>
+        <div class="col-item">1</div>
+      </div>
+    </div>
+    <div class="row-item main-match-summoner">
+      <div class="col-container">
+        <div class="col-item">2</div>
+        <div class="col-item">2</div>
+        <div class="col-item">2</div>
+        <div class="col-item">2</div>
+      </div>
+    </div>
+    <div class="row-item main-match-tab"></div>
   </div>
 </template>
 
@@ -105,7 +119,6 @@ export default {
 .main-match-info {
   width: 100%;
   border-left: 7px solid red;
-  border-right: 7px solid red;
   margin-top: 1%;
 }
 .main-match-text {
@@ -144,11 +157,25 @@ export default {
 }
 .main-match-extend-attribute {
   width: 20%;
+  background-image: url('https://raw.communitydragon.org/latest/game/assets/maps/particles/tft/item_icons/augments/hexcore/academyemblem3.tft_set6.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 20%;
+  display: block;
+  border-radius: 0%;
 }
 .main-match-plus {
-  width: 3%;
+  width: 4%;
   align-content: center;
-  margin: 1%;
+}
+.main-match-plus-attribute {
+  background-image: url('https://raw.communitydragon.org/latest/game/assets/maps/particles/tft/item_icons/augments/choiceui/celestialblessing3.tft_set6.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 70%;
+  display: block;
+  padding-bottom: 60%;
+  border-radius: 0%;
 }
 .main-match-champion {
   width: 40%;
@@ -157,6 +184,36 @@ export default {
 }
 .main-match-champion-attribute{
   width: 10%;
+  margin-left: 10px;
+}
+.main-match-champion-attribute-img{
+  background-image: url('../assets/set5patch1115/champions/TFT5_Aatrox.png');
+  background-size: 100%;
+  width: 100%;
+  display: block;
+  padding-bottom: 100%;
+  border-radius: 30%;
+}
+.main-match-champion-attribute-star{
+  background-image: url('https://raw.communitydragon.org/latest/game/assets/ux/tft/notificationicons/goldstar.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 40%;
+  display: block;
+  padding-bottom: 50%;
+  border-radius: 0%;
+}
+.main-match-champion-attribute-item{
+  background-image: url('https://raw.communitydragon.org/latest/game/assets/maps/particles/tft/item_icons/standard/bf_sword.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 40%;
+  display: block;
+  padding-bottom: 50%;
+  border-radius: 0%;
+  margin-top: 2px;
+  margin-left: 1px;
+  margin-right: 1px;
 }
 .main-match-summoner {
   width: 13%;
@@ -166,7 +223,11 @@ export default {
   width: 50%;
 }
 .main-match-tab {
-  width: 2%;
-  height: 100%;
-}
+  width: 3%;
+  background-color: red;
+  padding-bottom: 14%;
+  background-image: url('../assets/chevron-down-solid.png');
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: bottom}
 </style>

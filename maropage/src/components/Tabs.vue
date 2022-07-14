@@ -50,7 +50,8 @@
       role="tabpanel"
       aria-labelledby="pills-home-tab"
     >
-      <TierDeck></TierDeck>
+      <TierDeck style=" margin: 0 0.5em; box-shadow: 2px 6px 8px px rgba(22, 22, 26, 0.18);"></TierDeck>
+
     </div>
     <div
       class="tab-pane fade"
@@ -58,7 +59,7 @@
       role="tabpanel"
       aria-labelledby="pills-profile-tab"
     >
-      second item
+      <MatchHistory></MatchHistory>
     </div>
     <div
       class="tab-pane fade"
@@ -66,14 +67,16 @@
       role="tabpanel"
       aria-labelledby="pills-contact-tab"
     >
-      third item
+      <Scatter></Scatter>
     </div>
   </div>
 </template>
 
 <script>
 import TierDeck from './TierDeck.vue';
-export default { components: { TierDeck } };
+import MatchHistory from './MatchHistory.vue';
+import Scatter from './Scatter.vue';
+export default { components: { TierDeck, MatchHistory, Scatter } };
 </script>
 
 <style></style>
