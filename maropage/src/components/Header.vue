@@ -50,18 +50,14 @@
 <script>
 export default {
   data(){
-    return {inputValue:''}
+    return {}
   },
   methods:{
       pageChange(){
       this.emitter.emit('page',0)
     },
-    onSearch() {
-      if (this.inputValue.length > 0) {
-        this.emitter.emit('name', this.inputValue.trim());
-      }
-    },
-  }
+  },
+
 }
 </script>
 

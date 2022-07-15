@@ -17,7 +17,7 @@
     <!-- {{more()}} -->
   <!-- {{this.saveAsFile(JSON.stringify(this.instaData,null,2),'set.json')}}</div> -->
   <ResultPage
-  v-if="pageChange ==1"
+  v-if="pageChange == 1"
   ></ResultPage>
 </template>
 

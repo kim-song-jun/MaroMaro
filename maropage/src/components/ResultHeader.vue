@@ -56,7 +56,7 @@
             :aria-label="`${name}`"
             v-model="this.inputValue"
           />
-          <button class="btn btn-warning" type="submit" @click="this.onSearch">
+          <button @click="this.onSearch" class="btn btn-warning" type="submit" >
             Search
           </button>
         </form>

@@ -66,9 +66,10 @@
       </div>
     </div>
     <div class="row-item main-match-tab" v-if="more[index] == 0" @click="more[index] = 1"></div>
-    <div class="row-item main-match-tab" v-if="more[index] == 1" @click="more[index] = 0" style="transform: scaleY(-1); background-position: top;"></div>
+    <div class="row-item main-match-tab" v-if="more[index] == 1" @click="more[index] = 0;" style="transform: scaleY(-1); background-position: top;">{{this.SendDetail(item.match_id)}}</div>
     </div>
-    <MatchHistoryDetail v-if="more[index] == 1"></MatchHistoryDetail>
+    {{item.match_id}}
+    <MatchHistoryDetail v-if="more[index] == 1" :detail="item.match_id"></MatchHistoryDetail>
   </div>
   <!-- {{this.alldata.sets['6'].traits[0].apiName}}
   {{this.alldata.sets['7'].traits[0].apiName}}
@@ -84,10 +85,9 @@
 </template>
 
 <script>
-// import MatchHistoryDetailVue from './MatchHistoryDetail.vue';
 import alldata from '../assets/data.json'
-import matchData from '../assets/MatchData.json'
-import userMatchData from '../assets/UserMatchData.json'
+// import matchData from '../assets/MatchData.json'
+// import userMatchData from '../assets/UserMatchData.json'
 import axios from 'axios';
 import MatchHistoryDetail from './MatchHistoryDetail.vue';
 
@@ -97,8 +97,8 @@ export default {
       more: [0,0,0,0,0,0,0,0,0,0],
       url: '',
       alldata,
-      matchData,
-      userMatchData,
+      matchData: [],
+      userMatchData: [],
       apiUrl: [],
       apiName:[],
       userName:'',
@@ -124,7 +124,7 @@ export default {
       let changeName = ""
       let temp = championName.toLowerCase()
       if (temp == "tft7_dragonblue"){
-        changeName = "tft7_miragesdragon"
+        changeName = "tft7_miragedragon"
       }
       else if (temp == "tft7_dragongold"){
         changeName = "tft7_shimmerscaledragon"
@@ -227,34 +227,35 @@ export default {
       }
     },
     ChangeUnixTime(unix){
-      // let temp = unix
-      // unix = temp.join()
-      let date = new Date(unix)
-      let hours = date.getHours()
-      let minutes = "0" + date.getMinutes()
-      let seconds = "0" + date.getSeconds()
-
-      return `${hours}:${minutes.substr(-2)}:${seconds.substr(-2)}`
-    }
-  },
-  mounted() {
-    this.emitter.on('name',(e)=>{
-      console.log(e)
-      this.userName = e;
+      return new Date(unix * 1000).toISOString().substr(14,5);
+    },
+    SendDetail(detailInfo){
+      this.emitter.emit('detailInfo',detailInfo)
+    },
+    More(name){
       axios
         .get(
-          `https://cors-anywhere.herokuapp.com/http://yukmaro.cafe24.com/GetMatchHistory/${this.userName}`
+          // name: 병그니, 액정깨기장인, ..
+          `/GetMatchHistory/${name}`
         )
         .then((result) => {
           //요청 성공시 가져오는 코드
-          console.log(result.data)
+          console.log(result)
           this.userMatchData = result.data
         })
         .catch(() => {
           console.log('error');
         });
-  })},
-};
+    },
+  },
+  mounted() {
+    this.emitter.on('name',(e)=>{
+      console.log(e)
+      this.userName = e;
+      this.More(this.userName)
+    })
+  },
+}
 </script>
 
 <style>
