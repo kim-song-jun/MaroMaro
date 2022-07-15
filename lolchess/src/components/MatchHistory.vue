@@ -142,19 +142,19 @@ export default {
       apiName: [],
       userName: '',
       greenStyleLeft: {
-        borderLeft: 'solid 7px rgb(255, 221, 0)',
+        borderLeft: 'solid 10px rgb(255, 221, 0)',
       },
       greenStyleRight: {
         backgroundColor: 'rgb(255, 221, 0)',
       },
       blueStyleLeft: {
-        borderLeft: 'solid 7px rgb(0, 76, 255)',
+        borderLeft: 'solid 10px rgb(0, 76, 255)',
       },
       blueStyleRight: {
         backgroundColor: 'rgb(0, 76, 255)',
       },
       grayStyleLeft: {
-        borderLeft: 'solid 7px gray',
+        borderLeft: 'solid 10px gray',
       },
       grayStyleRight: {
         backgroundColor: 'gray',
