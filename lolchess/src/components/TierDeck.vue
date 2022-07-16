@@ -56,8 +56,8 @@
         </div>
       </div>
       <div class="col-container my-tier-expands">
-        <div class="col-item">button</div>
-        <div class="col-item">button</div>
+        <div class="col-item">b</div>
+        <div class="col-item">b</div>
       </div>
     </div>
   </div>

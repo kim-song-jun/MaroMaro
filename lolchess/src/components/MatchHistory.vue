@@ -8,9 +8,9 @@
       class="row-container main-match-info"
       :style="this.ChangeBorder(item.placement)[0]"
       style="
-        background-color: #1d1d1d;
-        filter: brightness(80%);
-        color: aliceblue;
+        background-color: whitesmoke;
+        /* filter: brightness(80%); */
+        /* color: aliceblue; */
       "
     >
       <div class="row-item main-match-text">
@@ -26,7 +26,7 @@
       <div class="row-item main-match-icon">
         <div class="col-container">
           <img
-            src="https://placeimg.com/100/100/arch"
+            src="../assets/icon2.png"
             class="row-item main-match-icon-main"
           />
         </div>
@@ -71,6 +71,11 @@
           <img
             class="row-item main-match-champion-attribute-img"
             :src="this.GetChampionUrlByName(cham.character_id)"
+            :style="
+              this.championBorderStyle[cham.rarity][
+                Object.keys(this.championBorderStyle[cham.rarity])[0]
+              ]
+            "
           />
           <div class="row-container">
             <img
@@ -84,8 +89,8 @@
       </div>
       <div class="row-item main-match-summoner">
         <div class="col-container">
+          <!-- style="color: aliceblue" -->
           <strong
-            style="color: aliceblue"
             v-for="(a, b) in this.GetDeck(
               this.TraitsFillter(item.traits)
             ).slice(0, 2)"
@@ -114,7 +119,8 @@
     </div>
     <MatchHistoryDetail
       v-if="more[index] == 1"
-      :detail="allMatchData"
+      :detail="this.allMatchData"
+      :championBorderStyle="this.championBorderStyle"
     ></MatchHistoryDetail>
   </div>
 </template>
@@ -142,23 +148,60 @@ export default {
       apiName: [],
       userName: '',
       greenStyleLeft: {
-        borderLeft: 'solid 10px rgb(255, 221, 0)',
+        borderLeft: 'solid 10px wheat',
       },
       greenStyleRight: {
-        backgroundColor: 'rgb(255, 221, 0)',
+        backgroundColor: 'wheat',
       },
       blueStyleLeft: {
-        borderLeft: 'solid 10px rgb(0, 76, 255)',
+        borderLeft: 'solid 10px lightskyblue',
       },
       blueStyleRight: {
-        backgroundColor: 'rgb(0, 76, 255)',
+        backgroundColor: 'lightskyblue',
       },
       grayStyleLeft: {
-        borderLeft: 'solid 10px gray',
+        borderLeft: 'solid 10px lightgray',
       },
       grayStyleRight: {
-        backgroundColor: 'gray',
+        backgroundColor: 'lightgray',
       },
+      championBorderStyle: [
+        {
+          gray: {
+            border: 'solid 2px gray',
+          },
+        },
+        {
+          green: {
+            border: 'solid 2px green',
+          },
+        },
+        {
+          blue: {
+            border: 'solid 2px blue',
+          },
+        },
+        {
+          purple: {
+            border: 'solid 2px purple',
+          },
+        },
+        {
+          orange: {
+            border: 'solid 2px orange',
+          },
+        },
+        {
+          yellow: {
+            border: 'solid 2px yellow',
+          },
+        },
+        {
+          red: {
+            border: 'solid 2px red',
+          },
+        },
+      ],
     };
   },
   components: {
@@ -359,7 +402,7 @@ export default {
 }
 .main-match-info {
   width: 100%;
-  border-left: 7px solid rgb(0, 76, 255);
+  border-left: 7px solid wheat;
   margin-top: 1%;
 }
 .main-match-text {
@@ -367,7 +410,7 @@ export default {
   margin: 1%;
 }
 .main-match-icon {
-  width: 5.5%;
+  width: 6%;
   margin: 1%;
 }
 .main-match-icon-main {

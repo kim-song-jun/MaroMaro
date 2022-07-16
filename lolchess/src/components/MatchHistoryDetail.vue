@@ -27,7 +27,11 @@
         class="row-container detail-match-summoner"
         style="justify-content: flex-start"
       >
-        <img src="../assets/logo.png" class="row-item" style="width: 40%" />
+        <img
+          src="../assets/icon2.png"
+          class="row-item"
+          style="width: 25%; margin-right: 5px"
+        />
         <div
           class="row-item"
           style="
@@ -94,6 +98,11 @@
           <img
             class="row-item detail-match-units-attribute-img"
             :src="this.GetChampionUrlByName(cham.character_id)"
+            :style="
+              this.championBorderStyle[cham.rarity][
+                Object.keys(this.championBorderStyle[cham.rarity])[0]
+              ]
+            "
           />
           <div class="row-container">
             <img
@@ -117,6 +126,7 @@ import AllMatchData from '../assets/AllMatchData.json';
 export default {
   props: {
     detail: Object,
+    championBorderStyle: Array,
   },
   data() {
     return {
@@ -253,16 +263,16 @@ export default {
 .detail-match-info {
   margin-top: 1%;
   width: 100%;
-  border-left: 1px solid rgb(185, 192, 199);
-  border-right: 1px solid rgb(185, 192, 199);
-  background-color: rgb(185, 192, 199);
-  font-size: x-small;
+  border-left: 1px solid whitesmoke;
+  border-right: 1px solid whitesmoke;
+  background-color: whitesmoke;
+  font-size: small;
   text-align: center;
 }
 .detail-match-info-detail {
   width: 100%;
-  border-left: 1px solid rgb(185, 192, 199);
-  border-right: 1px solid rgb(185, 192, 199);
+  border-left: 1px solid whitesmoke;
+  border-right: 1px solid whitesmoke;
   font-size: small;
   text-align: center;
   padding: 5px;
