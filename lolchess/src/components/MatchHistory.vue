@@ -336,7 +336,7 @@ export default {
       }
     },
     GetMatchDetailInfo(info) {
-      console.log(`MatchHistory-GetMatchDetailInfo: ${info}`);
+      // console.log(`MatchHistory-GetMatchDetailInfo: ${info}`);
       return this.More(info);
     },
     ChangeUnixTime(unix) {
@@ -346,15 +346,15 @@ export default {
       let myStyle = [];
       if (placement == 1) {
         myStyle.push(this.greenStyleLeft, this.greenStyleRight);
-        console.log(myStyle);
+        // console.log(myStyle);
         return myStyle;
       } else if (placement < 5) {
         myStyle.push(this.blueStyleLeft, this.blueStyleRight);
-        console.log(myStyle);
+        // console.log(myStyle);
         return myStyle;
       } else {
         myStyle.push(this.grayStyleLeft, this.grayStyleRight);
-        console.log(myStyle);
+        // console.log(myStyle);
         return myStyle;
       }
     },

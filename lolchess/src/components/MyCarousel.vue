@@ -1,12 +1,46 @@
 <template>
   <Carousel :itemsToShow="3.95" :wrapAround="true">
     <Slide v-for="slide in 10" :key="slide">
-      <img
-        class="carousel__item my-card"
-        src="https://raw.communitydragon.org/latest/game/assets/maps/particles/tft/item_icons/augments/choiceui/celestialblessing3.tft_set6.png"
-      />
+      <div class="carousel__item my-card" style="position: relative">
+        <img
+          style="opacity: 0.9; border-radius: 25%"
+          src="https://raw.communitydragon.org/latest/game/assets/ux/tft/championsplashes/tft7_bard_mobile.tft_set7.png"
+        />
+        <div
+          style="
+            position: absolute;
+            top: 6%;
+            left: 7%;
+            color: aliceblue;
+            font-size: 2vw;
+          "
+        >
+          Bard
+        </div>
+        <div
+          style="
+            position: absolute;
+            top: 68%;
+            left: 7%;
+            color: aliceblue;
+            font-size: 1.5vw;
+          "
+        >
+          Guild
+        </div>
+        <div
+          style="
+            position: absolute;
+            top: 85%;
+            left: 31%;
+            color: aliceblue;
+            font-size: 0.8vw;
+          "
+        >
+          51.2% to 53.3%
+        </div>
+      </div>
     </Slide>
-
     <template #addons>
       <navigation />
       <pagination />
@@ -16,12 +50,12 @@
 
 <script>
 // If you are using PurgeCSS, make sure to whitelist the carousel CSS classes
-import 'vue3-carousel/dist/carousel.css';
-import { defineComponent } from 'vue';
-import { Carousel, Navigation, Slide, Pagination } from 'vue3-carousel';
+import "vue3-carousel/dist/carousel.css";
+import { defineComponent } from "vue";
+import { Carousel, Navigation, Slide, Pagination } from "vue3-carousel";
 
 export default defineComponent({
-  name: 'Autoplay',
+  name: "Autoplay",
   components: {
     Carousel,
     Slide,
@@ -51,6 +85,11 @@ export default defineComponent({
   transform: scale(1);
 }
 .my-card {
-  border: 1px solid gray;
+  border: 5px solid gold;
+  border-radius: 27%;
+  margin: 10%;
+}
+.my-card-info {
+  background-image: url("https://raw.communitydragon.org/latest/game/assets/ux/tft/championsplashes/tft7_bard_mobile.tft_set7.png");
 }
 </style>

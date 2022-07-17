@@ -14,7 +14,6 @@
                   v-model="this.inputValue"
                 />
                 <!-- aria-label="소환사 이름" -->
-                {{ this.inputValue.length }}
                 <button
                   type="button"
                   class="btn btn-warning"
@@ -33,11 +32,11 @@
 </template>
 
 <script>
-import axios from 'axios';
+import axios from "axios";
 export default {
   data() {
     return {
-      inputValue: '',
+      inputValue: "",
       nextPage: 1,
     };
   },
@@ -45,12 +44,12 @@ export default {
   methods: {
     onSearch() {
       if (this.inputValue.length > 0) {
-        this.$emit('inputValue', this.inputValue);
+        this.$emit("inputValue", this.inputValue);
         this.pageChange();
       }
     },
     pageChange() {
-      this.emitter.emit('page', this.nextPage);
+      this.emitter.emit("page", this.nextPage);
     },
     More(name) {
       axios
@@ -64,7 +63,7 @@ export default {
           return result.data;
         })
         .catch(() => {
-          console.log('error');
+          console.log("error");
         });
     },
   },

@@ -18,12 +18,12 @@
 </template>
 
 <script>
-import Header from './Header.vue';
-import SearchBar from './SearchBar.vue';
-import Footer from './Footer.vue';
+import Header from "./Header.vue";
+import SearchBar from "./SearchBar.vue";
+import Footer from "./Footer.vue";
 // import Carousel from './Carousel.vue';
-import Tabs from './Tabs.vue';
-import MyCarousel from './MyCarousel.vue';
+import Tabs from "./Tabs.vue";
+import MyCarousel from "./MyCarousel.vue";
 
 export default {
   components: {
@@ -39,7 +39,7 @@ export default {
   },
   methods: {
     DataPass(input) {
-      this.$emit('inputValue', input);
+      this.$emit("inputValue", input);
     },
   },
 };
@@ -51,11 +51,11 @@ export default {
   grid-template-columns: 1fr 5fr 1fr;
   justify-items: stretch;
   grid-template-areas:
-    'header header header'
-    'a search b'
-    'a card b'
-    'a tier b'
-    'footer footer footer';
+    "header header header"
+    "a search b"
+    "a card b"
+    "a tier b"
+    "footer footer footer";
   height: 100vh;
   align-items: stretch;
 }

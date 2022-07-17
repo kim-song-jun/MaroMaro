@@ -2,10 +2,7 @@
   <!-- {{this.More(this.detail)}} -->
   <!-- {{this.AllMatchData}} -->
   <!-- {{this.detail.toString()}} -->
-  <div
-    class="col-container"
-    style="border-bottom: 1px solid rgb(185, 192, 199)"
-  >
+  <div class="col-container" style="border-bottom: 1px solid rgb(185, 192, 199)">
     <div class="row-container detail-match-info">
       <div class="row-item detail-match-rank">Rank</div>
       <div class="row-item detail-match-summoner">Summoner</div>
@@ -23,42 +20,23 @@
       <div class="row-item detail-match-rank">
         <strong>{{ item.placement }}</strong>
       </div>
-      <div
-        class="row-container detail-match-summoner"
-        style="justify-content: flex-start"
-      >
-        <img
-          src="../assets/icon2.png"
-          class="row-item"
-          style="width: 25%; margin-right: 5px"
-        />
+      <div class="row-container detail-match-summoner" style="justify-content: flex-start">
+        <img src="../assets/icon2.png" class="row-item" style="width: 25%; margin-right: 5px" />
         <div
           class="row-item"
-          style="
-            width: 15%;
-            background-color: aquamarine;
-            border-radius: 30%;
-            border: 0.1px solid gray;
-          "
+          style="width: 15%; background-color: aquamarine; border-radius: 30%; border: 0.1px solid gray"
         >
           P4
         </div>
-        <div class="row-item" style="width: 60%; font-size: x-small">
-          삼시열다섯끼
-        </div>
+        <div class="row-item" style="width: 60%; font-size: x-small">삼시열다섯끼</div>
       </div>
       <div class="row-item detail-match-round">{{ item.last_round }}</div>
       <div class="row-item detail-match-alive" style="font-size: x-small">
         {{ this.ChangeUnixTime(item.time_eliminated) }}
       </div>
-      <div
-        class="row-container detail-match-traits"
-        style="justify-content: flex-start; flex-flow: row wrap"
-      >
+      <div class="row-container detail-match-traits" style="justify-content: flex-start; flex-flow: row wrap">
         <img
-          v-for="(trait, j) in this.GetTraitSorted(
-            this.TraitsFillter(item.traits)
-          )"
+          v-for="(trait, j) in this.GetTraitSorted(this.TraitsFillter(item.traits))"
           :key="j"
           class="row-item"
           style="width: 16%; padding: 4%; margin-top: 2px"
@@ -69,10 +47,7 @@
         />
       </div>
 
-      <div
-        class="row-container detail-match-units"
-        style="justify-content: flex-start"
-      >
+      <div class="row-container detail-match-units" style="justify-content: flex-start">
         <div class="detail-match-arg">
           <img
             v-for="k in 3"
@@ -98,11 +73,7 @@
           <img
             class="row-item detail-match-units-attribute-img"
             :src="this.GetChampionUrlByName(cham.character_id)"
-            :style="
-              this.championBorderStyle[cham.rarity][
-                Object.keys(this.championBorderStyle[cham.rarity])[0]
-              ]
-            "
+            :style="this.championBorderStyle[cham.rarity][Object.keys(this.championBorderStyle[cham.rarity])[0]]"
           />
           <div class="row-container">
             <img
@@ -114,15 +85,29 @@
           </div>
         </div>
       </div>
-      <div class="row-item detail-match-gold">{{ item.gold_left }}</div>
+      <div class="row-item detail-match-gold">
+        <div
+          style="
+            text-align: center;
+            border: solid 2px gold;
+            background-color: gold;
+            color: white;
+            border-radius: 50%;
+            width: 40%;
+            display: inline-block;
+          "
+        >
+          {{ item.gold_left }}
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 // import axios from 'axios';
-import alldata from '../assets/data.json';
-import AllMatchData from '../assets/AllMatchData.json';
+import alldata from "../assets/data.json";
+import AllMatchData from "../assets/AllMatchData.json";
 export default {
   props: {
     detail: Object,
@@ -142,16 +127,16 @@ export default {
       });
     },
     GetChampionUrlByName(championName) {
-      let changeName = '';
+      let changeName = "";
       let temp = championName.toLowerCase();
-      if (temp == 'tft7_dragonblue') {
-        changeName = 'tft7_miragedragon';
-      } else if (temp == 'tft7_dragongold') {
-        changeName = 'tft7_shimmerscaledragon';
-      } else if (temp == 'tft7_dragongreen') {
-        changeName = 'tft7_jadedragon';
-      } else if (temp == 'tft7_dragonpurple') {
-        changeName = 'tft7_whispersdragon';
+      if (temp == "tft7_dragonblue") {
+        changeName = "tft7_miragedragon";
+      } else if (temp == "tft7_dragongold") {
+        changeName = "tft7_shimmerscaledragon";
+      } else if (temp == "tft7_dragongreen") {
+        changeName = "tft7_jadedragon";
+      } else if (temp == "tft7_dragonpurple") {
+        changeName = "tft7_whispersdragon";
       } else {
         changeName = temp;
       }
@@ -187,13 +172,8 @@ export default {
       for (let i in this.alldata.setData) {
         if (this.alldata.setData[i].traits.length != 0) {
           for (let j in this.alldata.setData[i].traits) {
-            if (
-              this.alldata.setData[i].traits[j].apiName.toLowerCase() ==
-              trait.name.toLowerCase()
-            ) {
-              return `https://raw.communitydragon.org/latest/game/${this.alldata.setData[
-                i
-              ].traits[j].icon
+            if (this.alldata.setData[i].traits[j].apiName.toLowerCase() == trait.name.toLowerCase()) {
+              return `https://raw.communitydragon.org/latest/game/${this.alldata.setData[i].traits[j].icon
                 .toLowerCase()
                 .slice(0, -4)}.png`;
             }
@@ -207,18 +187,18 @@ export default {
         // console.log(trait.style)
       } else if (trait.style == 1) {
         // console.log(trait.style)
-        return require('../assets/background/bronze.svg');
+        return require("../assets/background/bronze.svg");
       } else if (trait.style == 2) {
         // console.log(trait.style)
-        return require('../assets/background/silver.svg');
+        return require("../assets/background/silver.svg");
       } else if (trait.style == 3) {
         // console.log(trait.style)
-        return require('../assets/background/gold.svg');
+        return require("../assets/background/gold.svg");
       } else if (trait.style == 4) {
         // console.log(trait.style)
-        return require('../assets/background/chromatic.svg');
+        return require("../assets/background/chromatic.svg");
       } else {
-        console.log('error');
+        console.log("error");
       }
     },
     GetStar(i) {
@@ -244,9 +224,7 @@ export default {
       // console.log(item)
       for (let j in this.alldata.items) {
         if (item == this.alldata.items[j].id) {
-          return `https://raw.communitydragon.org/latest/game/${this.alldata.items[
-            j
-          ].icon
+          return `https://raw.communitydragon.org/latest/game/${this.alldata.items[j].icon
             .toLowerCase()
             .slice(0, -4)}.png`;
         }
@@ -269,6 +247,7 @@ export default {
   font-size: small;
   text-align: center;
 }
+
 .detail-match-info-detail {
   width: 100%;
   border-left: 1px solid whitesmoke;
@@ -277,45 +256,56 @@ export default {
   text-align: center;
   padding: 5px;
 }
+
 .detail-match-rank {
   width: 6%;
 }
+
 .detail-match-summoner {
   width: 16%;
 }
+
 .detail-match-round {
   width: 6%;
 }
+
 .detail-match-alive {
   width: 6%;
 }
+
 .detail-match-traits {
   width: 20%;
 }
+
 .detail-match-arg {
   width: 10%;
   flex-direction: column;
   display: flex;
 }
+
 .detail-match-units {
   width: 38%;
   justify-content: flex-start;
   margin: 1%;
   align-items: baseline;
 }
+
 .detail-match-units-attribute {
   width: 8%;
   margin-left: 10px;
   align-self: baseline;
 }
+
 .detail-match-units-attribute-img {
   width: 100%;
   border-radius: 20%;
 }
+
 .detail-match-units-attribute-star {
   width: 40%;
   margin-bottom: 3px;
 }
+
 .detail-match-units-attribute-item {
   width: 33%;
   margin-top: 2px;
@@ -323,6 +313,7 @@ export default {
   margin-right: 1px;
   border-radius: 40%;
 }
+
 .detail-match-gold {
   width: 6%;
 }

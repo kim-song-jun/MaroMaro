@@ -51,10 +51,7 @@
       aria-labelledby="pills-home-tab"
     >
       <TierDeck
-        style="
-          margin: 0 0.5em;
-          box-shadow: 2px 6px 8px px rgba(22, 22, 26, 0.18);
-        "
+        style="background-color: white; border-radius: 5% 5% 5% 5% / 25% 25% 25% 25%; padding: 3%;"
       ></TierDeck>
     </div>
     <div

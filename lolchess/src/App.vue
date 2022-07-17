@@ -12,16 +12,16 @@
 </template>
 
 <script>
-import SearchPage from './components/SearchPage.vue';
-import ResultPage from './components/ResultPage.vue';
-import axios from 'axios';
+import SearchPage from "./components/SearchPage.vue";
+import ResultPage from "./components/ResultPage.vue";
+import axios from "axios";
 
 export default {
-  name: 'App',
+  name: "App",
   data() {
     return {
       pageChange: 0,
-      userName: '',
+      userName: "",
       matchData: [],
     };
   },
@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     GetMatchData(name) {
-      console.log('App-GetMatchData');
+      console.log("App-GetMatchData");
       this.More(name);
     },
     RefreshMatchData(bool) {
@@ -57,12 +57,12 @@ export default {
           this.matchData = result.data;
         })
         .catch(() => {
-          console.log('error');
+          console.log("error");
         });
     },
   },
   mounted() {
-    this.emitter.on('page', (e) => {
+    this.emitter.on("page", (e) => {
       this.pageChange = e;
       console.log(e);
     });
