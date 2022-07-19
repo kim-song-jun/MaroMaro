@@ -5,7 +5,10 @@
     <div class="user-content" style="text-align: center">
       <img class="userInfo-icon" src="../assets/gold_base2.webp" />
       <div>
-        <strong style="font-size: x-large">{{ this.userName }}</strong>
+        <strong style="font-size: x-large">
+          <!-- {{ this.userName }} -->
+          {{ $store.state.name }}
+        </strong>
       </div>
 
       <div>Gold III 30 LP</div>
@@ -142,7 +145,10 @@ export default {
           if (this.userMatchData[i].placement < 5 && i == 0) {
             result.steak++;
           }
-          if (this.userMatchData[i].placement < 5 && this.userMatchData[Number(i) + 1].placement < 5) {
+          if (
+            this.userMatchData[i].placement < 5 &&
+            this.userMatchData[Number(i) + 1].placement < 5
+          ) {
             result.steak++;
           } else {
             check = false;

@@ -4,7 +4,7 @@
     <div class="sidebar-a"></div>
     <div class="sidebar-b"></div>
     <div class="search-content" style="height: 13em">
-      <SearchBar @inputValue="DataPass($event)"></SearchBar>
+      <SearchBar></SearchBar>
     </div>
     <div class="card-content">
       <!-- <Carousel></Carousel> -->
@@ -37,11 +37,7 @@ export default {
   data() {
     return {};
   },
-  methods: {
-    DataPass(input) {
-      this.$emit("inputValue", input);
-    },
-  },
+  methods: {},
 };
 </script>
 

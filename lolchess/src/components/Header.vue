@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <div class="navbar-brand">MaroMaro</div>
+      <a class="navbar-brand" href="/">MaroMaro</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -16,31 +16,33 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <div class="nav-link active" aria-current="page">
+            <a href="/" class="nav-link active" aria-current="page">
               <!-- @click="this.pageChange" -->
               Home
-            </div>
+            </a>
           </li>
           <li class="nav-item">
-            <div class="nav-link">List</div>
-          </li>
-          <li class="nav-item">
-            <div class="nav-link">Detail</div>
+            <div class="nav-link">Comps</div>
           </li>
           <li class="nav-item dropdown">
             <a
-              class="nav-link dropdown-toggle"
+              class="nav-link active dropdown-toggle"
               id="navbarDropdownMenuLink"
               role="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Dropdown link
+              Stats
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item">Action</a></li>
-              <li><a class="dropdown-item">Another action</a></li>
-              <li><a class="dropdown-item">Something else here</a></li>
+            <ul
+              class="dropdown-menu disabled"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <li><a class="dropdown-item">Items</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item">Units</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item">Traits</a></li>
             </ul>
           </li>
         </ul>
@@ -56,7 +58,7 @@ export default {
   },
   methods: {
     pageChange() {
-      this.emitter.emit('page', 0);
+      this.emitter.emit("page", 0);
     },
   },
 };

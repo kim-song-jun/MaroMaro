@@ -1,8 +1,8 @@
 <template>
-  <!-- {{this.More(this.detail)}} -->
-  <!-- {{this.AllMatchData}} -->
-  <!-- {{this.detail.toString()}} -->
-  <div class="col-container" style="border-bottom: 1px solid rgb(185, 192, 199)">
+  <div
+    class="col-container"
+    style="border-bottom: 1px solid rgb(185, 192, 199)"
+  >
     <div class="row-container detail-match-info">
       <div class="row-item detail-match-rank">Rank</div>
       <div class="row-item detail-match-summoner">Summoner</div>
@@ -14,29 +14,50 @@
     </div>
     <div
       class="row-container detail-match-info-detail"
-      v-for="(item, index) in this.SortByPlaceMent(detail.participants)"
+      v-for="(item, index) in this.SortByPlaceMent(
+        this.resultData.participants
+      )"
       :key="index"
     >
       <div class="row-item detail-match-rank">
         <strong>{{ item.placement }}</strong>
       </div>
-      <div class="row-container detail-match-summoner" style="justify-content: flex-start">
-        <img src="../assets/icon2.png" class="row-item" style="width: 25%; margin-right: 5px" />
+      <div
+        class="row-container detail-match-summoner"
+        style="justify-content: flex-start"
+      >
+        <img
+          src="../assets/icon2.png"
+          class="row-item"
+          style="width: 25%; margin-right: 5px"
+        />
         <div
           class="row-item"
-          style="width: 15%; background-color: aquamarine; border-radius: 30%; border: 0.1px solid gray"
+          style="
+            width: 15%;
+            background-color: aquamarine;
+            border-radius: 30%;
+            border: 0.1px solid gray;
+          "
         >
           P4
         </div>
-        <div class="row-item" style="width: 60%; font-size: x-small">삼시열다섯끼</div>
+        <div class="row-item" style="width: 60%; font-size: x-small">
+          삼시열다섯끼
+        </div>
       </div>
       <div class="row-item detail-match-round">{{ item.last_round }}</div>
       <div class="row-item detail-match-alive" style="font-size: x-small">
         {{ this.ChangeUnixTime(item.time_eliminated) }}
       </div>
-      <div class="row-container detail-match-traits" style="justify-content: flex-start; flex-flow: row wrap">
+      <div
+        class="row-container detail-match-traits"
+        style="justify-content: flex-start; flex-flow: row wrap"
+      >
         <img
-          v-for="(trait, j) in this.GetTraitSorted(this.TraitsFillter(item.traits))"
+          v-for="(trait, j) in this.GetTraitSorted(
+            this.TraitsFillter(item.traits)
+          )"
           :key="j"
           class="row-item"
           style="width: 16%; padding: 4%; margin-top: 2px"
@@ -47,7 +68,10 @@
         />
       </div>
 
-      <div class="row-container detail-match-units" style="justify-content: flex-start">
+      <div
+        class="row-container detail-match-units"
+        style="justify-content: flex-start"
+      >
         <div class="detail-match-arg">
           <img
             v-for="k in 3"
@@ -73,7 +97,7 @@
           <img
             class="row-item detail-match-units-attribute-img"
             :src="this.GetChampionUrlByName(cham.character_id)"
-            :style="this.championBorderStyle[cham.rarity][Object.keys(this.championBorderStyle[cham.rarity])[0]]"
+            :style="this.championBorderStyle[cham.rarity][cham.rarity]"
           />
           <div class="row-container">
             <img
@@ -105,24 +129,62 @@
 </template>
 
 <script>
-// import axios from 'axios';
+import axios from "axios";
 import alldata from "../assets/data.json";
 import AllMatchData from "../assets/AllMatchData.json";
 export default {
   props: {
-    detail: Object,
-    championBorderStyle: Array,
+    getRecord: String,
+    // championBorderStyle: Array,
   },
   data() {
     return {
       AllMatchData,
       alldata,
+      resultData: {},
+      championBorderStyle: [
+        {
+          0: {
+            border: "solid 2px gray",
+          },
+        },
+        {
+          1: {
+            border: "solid 2px green",
+          },
+        },
+        {
+          2: {
+            border: "solid 2px blue",
+          },
+        },
+        {
+          3: {
+            border: "solid 2px purple",
+          },
+        },
+        {
+          4: {
+            border: "solid 2px orange",
+          },
+        },
+        {
+          5: {
+            border: "solid 2px yellow",
+          },
+        },
+        {
+          6: {
+            border: "solid 2px red",
+          },
+        },
+      ],
     };
   },
   components: {},
   methods: {
-    SortByPlaceMent(participands) {
-      return participands.sort(function (a, b) {
+    SortByPlaceMent(array) {
+      return array?.sort(function (a, b) {
         return a.placement - b.placement;
       });
     },
@@ -162,7 +224,7 @@ export default {
       let array = [];
       for (let i in DTO) {
         if (DTO[i] != null) {
-          array.push(DTO[i]);
+          if (DTO[i].rarity < 7) array.push(DTO[i]);
         }
       }
       return array;
@@ -172,8 +234,13 @@ export default {
       for (let i in this.alldata.setData) {
         if (this.alldata.setData[i].traits.length != 0) {
           for (let j in this.alldata.setData[i].traits) {
-            if (this.alldata.setData[i].traits[j].apiName.toLowerCase() == trait.name.toLowerCase()) {
-              return `https://raw.communitydragon.org/latest/game/${this.alldata.setData[i].traits[j].icon
+            if (
+              this.alldata.setData[i].traits[j].apiName.toLowerCase() ==
+              trait.name.toLowerCase()
+            ) {
+              return `https://raw.communitydragon.org/latest/game/${this.alldata.setData[
+                i
+              ].traits[j].icon
                 .toLowerCase()
                 .slice(0, -4)}.png`;
             }
@@ -224,7 +291,9 @@ export default {
       // console.log(item)
       for (let j in this.alldata.items) {
         if (item == this.alldata.items[j].id) {
-          return `https://raw.communitydragon.org/latest/game/${this.alldata.items[j].icon
+          return `https://raw.communitydragon.org/latest/game/${this.alldata.items[
+            j
+          ].icon
             .toLowerCase()
             .slice(0, -4)}.png`;
         }
@@ -233,6 +302,24 @@ export default {
     ChangeUnixTime(unix) {
       return new Date(unix * 1000).toISOString().substr(14, 5);
     },
+    GetRecord(name) {
+      axios
+        .get(
+          // KR_11232322
+          `/GetRecord/${name}`
+        )
+        .then((result) => {
+          //요청 성공시 가져오는 코드
+          console.log(result.data);
+          this.resultData = result.data;
+        })
+        .catch(() => {
+          console.log("error");
+        });
+    },
+  },
+  created() {
+    this.GetRecord(this.getRecord);
   },
 };
 </script>

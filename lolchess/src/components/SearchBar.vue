@@ -32,39 +32,20 @@
 </template>
 
 <script>
-import axios from "axios";
 export default {
   data() {
     return {
       inputValue: "",
-      nextPage: 1,
     };
   },
   props: {},
   methods: {
     onSearch() {
       if (this.inputValue.length > 0) {
-        this.$emit("inputValue", this.inputValue);
-        this.pageChange();
+        this.$store.commit("SetName", this.inputValue);
+        this.$store.dispatch("GetMatchHistory", this.inputValue);
+        this.$store.commit("SetPage", 1);
       }
-    },
-    pageChange() {
-      this.emitter.emit("page", this.nextPage);
-    },
-    More(name) {
-      axios
-        .get(
-          // name: 병그니, 액정깨기장인, ..
-          `/GetMatchHistory/${name}`
-        )
-        .then((result) => {
-          //요청 성공시 가져오는 코드
-          console.log(result);
-          return result.data;
-        })
-        .catch(() => {
-          console.log("error");
-        });
     },
   },
 };

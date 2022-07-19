@@ -1,70 +1,101 @@
 <template>
-  <div class="my-tier">
-    <div class="my-tier-main">
-      <img src="../assets/logo.png" class="row-item my-tier-img" />
-      <div class="row-item my-tier-deck-name">
-        <strong class="my-tier-deck-main">3 Ragewing, 3Guild,</strong>
-        2 Tempest
+  <div
+    style="
+      background-color: white;
+      border-radius: 5% 5% 5% 5% / 25% 25% 25% 25%;
+      padding: 3%;
+    "
+  >
+    <div class="my-tier">
+      <div class="my-tier-main">
+        <img src="../assets/logo.png" class="row-item my-tier-img" />
+        <div class="row-item my-tier-deck-name">
+          <strong class="my-tier-deck-main">3 Ragewing, 3Guild,</strong>
+          2 Tempest
+        </div>
+        <div class="row-item" style="width: 30%; margin-left: auto">
+          carries
+        </div>
       </div>
-      <div class="row-item" style="width: 30%; margin-left: auto">carries</div>
-    </div>
-    <div class="my-tier-main-info">
-      <div class="my-tier-champions" style="margin-top: 10px">
-        <div class="my-tier-champion" v-for="i in 8" :key="i">
-          <div class="my-tier-champion-stars">
+      <div class="my-tier-main-info">
+        <div class="my-tier-champions" style="margin-top: 10px">
+          <div class="my-tier-champion" v-for="i in 8" :key="i">
+            <div class="my-tier-champion-stars">
+              <img
+                src="../assets/logo.png"
+                class="my-tier-champion-star"
+                v-for="(item, index) in 3"
+                :key="index"
+              />
+            </div>
+            <img src="../assets/logo.png" class="my-tier-champion-img" />
+            <div class="my-tier-champion-name">2</div>
+          </div>
+        </div>
+        <div class="col-container my-tier-APtext" style="text-align: center">
+          <div class="col-item" style="text-align: center; width: 100%">
+            Avg Place:
+            <strong class="my-tier-Avg">4.14</strong>
+          </div>
+          <div class="col-item" style="width: 100%; text-align: center">
+            Pick Rate:
+            <strong class="my-tier-Pick">0.75</strong>
+          </div>
+        </div>
+        <div
+          class="my-tier-carries"
+          style="justify-items: flex-start; width: 30%"
+        >
+          <div
+            class="my-tier-champion"
+            style="width: 15%"
+            v-for="i in 4"
+            :key="i"
+          >
             <img
               src="../assets/logo.png"
-              class="my-tier-champion-star"
-              v-for="(item, index) in 3"
-              :key="index"
+              class="my-tier-champion-img"
+              style="width: 100%"
+            />
+            <div class="my-tier-champion-stars" style="width: 100%">
+              <img src="../assets/logo.png" class="my-tier-champion-star" />
+              <img src="../assets/logo.png" class="my-tier-champion-star" />
+              <img src="../assets/logo.png" class="my-tier-champion-star" />
+            </div>
+          </div>
+        </div>
+        <div class="row-container my-tier-expands">
+          <div class="row-item">
+            <img
+              v-if="!this.tabs"
+              src="../assets/chevron-down-solid.png"
+              style="justify-self: flex-end"
+              @click="this.tabs = !this.tabs"
+            />
+            <img
+              v-if="this.tabs"
+              src="../assets/chevron-down-solid.png"
+              style="justify-self: flex-end; transform: scaleY(-1)"
+              @click="this.tabs = !this.tabs"
             />
           </div>
-          <img src="../assets/logo.png" class="my-tier-champion-img" />
-          <div class="my-tier-champion-name">2</div>
         </div>
-      </div>
-      <div class="col-container my-tier-APtext" style="text-align: center">
-        <div class="col-item" style="text-align: center; width: 100%">
-          Avg Place:
-          <strong class="my-tier-Avg">4.14</strong>
-        </div>
-        <div class="col-item" style="width: 100%; text-align: center">
-          Pick Rate:
-          <strong class="my-tier-Pick">0.75</strong>
-        </div>
-      </div>
-      <div
-        class="my-tier-carries"
-        style="justify-items: flex-start; width: 30%"
-      >
-        <div
-          class="my-tier-champion"
-          style="width: 15%"
-          v-for="i in 4"
-          :key="i"
-        >
-          <img
-            src="../assets/logo.png"
-            class="my-tier-champion-img"
-            style="width: 100%"
-          />
-          <div class="my-tier-champion-stars" style="width: 100%">
-            <img src="../assets/logo.png" class="my-tier-champion-star" />
-            <img src="../assets/logo.png" class="my-tier-champion-star" />
-            <img src="../assets/logo.png" class="my-tier-champion-star" />
-          </div>
-        </div>
-      </div>
-      <div class="col-container my-tier-expands">
-        <div class="col-item">b</div>
-        <div class="col-item">b</div>
       </div>
     </div>
+    <UserTabs v-if="this.tabs" style="padding-top: 3%"></UserTabs>
   </div>
 </template>
 
 <script>
-export default {};
+import UserTabs from "./UserTabs.vue";
+export default {
+  data() {
+    return {
+      tabs: false,
+    };
+  },
+  components: { UserTabs },
+};
 </script>
 
 <style>
@@ -155,7 +186,7 @@ img {
   width: 4%;
 }
 .my-tier-expands {
-  width: 5%;
+  width: 3%;
 }
 .my-tier-expands-button {
 }

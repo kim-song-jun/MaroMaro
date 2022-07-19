@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand">MaroMaro</a>
+      <a class="navbar-brand" href="/">MaroMaro</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -19,15 +19,10 @@
           style="--bs-scroll-height: 100px"
         >
           <l i class="nav-item">
-            <a
-              class="nav-link active"
-              aria-current="page"
-              @click="this.pageChange"
-              >Home</a
-            >
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
           </l>
           <li class="nav-item">
-            <a class="nav-link">Link</a>
+            <a class="nav-link">Comps</a>
           </li>
           <li class="nav-item dropdown">
             <a
@@ -37,17 +32,15 @@
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Link
+              Stats
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-              <li><a class="dropdown-item">Action</a></li>
-              <li><a class="dropdown-item">Another action</a></li>
+              <li><a class="dropdown-item">Items</a></li>
               <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item">Something else here</a></li>
+              <li><a class="dropdown-item">Units</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item">Traits</a></li>
             </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Link</a>
           </li>
         </ul>
         <form class="d-flex" role="search">
@@ -57,7 +50,9 @@
             placeholder="소환사 이름"
             v-model="this.inputValue"
           />
-          <button @click="this.onSearch" class="btn btn-warning">Search</button>
+          <button @click="this.onSearch" class="btn btn-warning" disabled>
+            Search
+          </button>
         </form>
       </div>
     </div>
@@ -68,17 +63,15 @@
 export default {
   data() {
     return {
-      inputValue: '',
+      inputValue: "",
+      nextPage: 1,
     };
   },
   methods: {
-    pageChange() {
-      this.emitter.emit('page', 0);
-    },
     onSearch() {
       if (this.inputValue.length > 0) {
-        this.$emit('inputValue2', this.inputValue);
-        // this.pageChange();
+        this.$store.commit("SetName", this.inputValue);
+        this.$store.dispatch("GetMatchHistory", this.inputValue);
       }
     },
   },

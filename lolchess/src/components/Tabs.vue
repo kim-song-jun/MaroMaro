@@ -50,9 +50,7 @@
       role="tabpanel"
       aria-labelledby="pills-home-tab"
     >
-      <TierDeck
-        style="background-color: white; border-radius: 5% 5% 5% 5% / 25% 25% 25% 25%; padding: 3%;"
-      ></TierDeck>
+      <TierDeck></TierDeck>
     </div>
     <div
       class="tab-pane fade"
@@ -74,8 +72,8 @@
 </template>
 
 <script>
-import TierDeck from './TierDeck.vue';
-import Apex from './Apex.vue';
+import TierDeck from "./TierDeck.vue";
+import Apex from "./Apex.vue";
 export default { components: { TierDeck, Apex } };
 </script>
 

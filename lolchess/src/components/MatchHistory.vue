@@ -1,7 +1,7 @@
 <template>
   <div
     class="col-container"
-    v-for="(item, index) in this.userMatchData"
+    v-for="(item, index) in $store.state.matchData"
     :key="index"
   >
     <div
@@ -77,6 +77,7 @@
               ]
             "
           />
+          <!-- {{ Object.keys(this.championBorderStyle[cham.rarity])[0] }} -->
           <div class="row-container">
             <img
               class="row-item main-match-champion-attribute-item"
@@ -95,11 +96,11 @@
               this.TraitsFillter(item.traits)
             ).slice(0, 2)"
             :key="b"
-            >{{ a.num_units }} {{ a.name.split('_')[1] }}</strong
+            >{{ a.num_units }} {{ a.name.split("_")[1] }}</strong
           >
           {{ this.GetDeck(this.TraitsFillter(item.traits))[2].num_units }}
           {{
-            this.GetDeck(this.TraitsFillter(item.traits))[2].name.split('_')[1]
+            this.GetDeck(this.TraitsFillter(item.traits))[2].name.split("_")[1]
           }}
         </div>
       </div>
@@ -118,20 +119,19 @@
       ></div>
     </div>
     <MatchHistoryDetail
-      v-if="more[index] == 1"
-      :detail="this.allMatchData"
+      v-if="more[index] == 1 && this.returnData[index] !== null"
+      :getRecord="item.match_id"
       :championBorderStyle="this.championBorderStyle"
     ></MatchHistoryDetail>
   </div>
 </template>
 
 <script>
-import alldata from '../assets/data.json';
-import allMatchData from '../assets/AllMatchData.json';
+import alldata from "../assets/data.json";
+import allMatchData from "../assets/AllMatchData.json";
 // import matchData from '../assets/MatchData.json'
-import userMatchData from '../assets/UserMatchData.json';
-import axios from 'axios';
-import MatchHistoryDetail from './MatchHistoryDetail.vue';
+// import userMatchData from "../assets/UserMatchData.json";
+import MatchHistoryDetail from "./MatchHistoryDetail.vue";
 
 export default {
   props: {
@@ -140,65 +140,66 @@ export default {
   data() {
     return {
       more: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-      url: '',
+      returnData: [],
+      url: "",
       alldata,
       allMatchData,
-      userMatchData,
+      // userMatchData,
       apiUrl: [],
       apiName: [],
-      userName: '',
+      userName: "",
       greenStyleLeft: {
-        borderLeft: 'solid 10px wheat',
+        borderLeft: "solid 10px wheat",
       },
       greenStyleRight: {
-        backgroundColor: 'wheat',
+        backgroundColor: "wheat",
       },
       blueStyleLeft: {
-        borderLeft: 'solid 10px lightskyblue',
+        borderLeft: "solid 10px lightskyblue",
       },
       blueStyleRight: {
-        backgroundColor: 'lightskyblue',
+        backgroundColor: "lightskyblue",
       },
       grayStyleLeft: {
-        borderLeft: 'solid 10px lightgray',
+        borderLeft: "solid 10px lightgray",
       },
       grayStyleRight: {
-        backgroundColor: 'lightgray',
+        backgroundColor: "lightgray",
       },
       championBorderStyle: [
         {
           gray: {
-            border: 'solid 2px gray',
+            border: "solid 2px gray",
           },
         },
         {
           green: {
-            border: 'solid 2px green',
+            border: "solid 2px green",
           },
         },
         {
           blue: {
-            border: 'solid 2px blue',
+            border: "solid 2px blue",
           },
         },
         {
           purple: {
-            border: 'solid 2px purple',
+            border: "solid 2px purple",
           },
         },
         {
           orange: {
-            border: 'solid 2px orange',
+            border: "solid 2px orange",
           },
         },
         {
           yellow: {
-            border: 'solid 2px yellow',
+            border: "solid 2px yellow",
           },
         },
         {
           red: {
-            border: 'solid 2px red',
+            border: "solid 2px red",
           },
         },
       ],
@@ -214,27 +215,27 @@ export default {
           if (this.alldata.setData[i].champions[j].apiName == championName) {
             let temp = this.alldata.setData[i].champions[j].icon
               .toLowerCase()
-              .split('/');
+              .split("/");
             // console.log(temp[-2])
             let newUrl = temp.slice(0, -1);
             return `https://raw.communitydragon.org/latest/game/${
-              newUrl.join('/') + '/' + championName.toLowerCase()
+              newUrl.join("/") + "/" + championName.toLowerCase()
             }_mobile.tft_set7.png`;
           }
         }
       }
     },
     GetChampionUrlByName(championName) {
-      let changeName = '';
+      let changeName = "";
       let temp = championName.toLowerCase();
-      if (temp == 'tft7_dragonblue') {
-        changeName = 'tft7_miragedragon';
-      } else if (temp == 'tft7_dragongold') {
-        changeName = 'tft7_shimmerscaledragon';
-      } else if (temp == 'tft7_dragongreen') {
-        changeName = 'tft7_jadedragon';
-      } else if (temp == 'tft7_dragonpurple') {
-        changeName = 'tft7_whispersdragon';
+      if (temp == "tft7_dragonblue") {
+        changeName = "tft7_miragedragon";
+      } else if (temp == "tft7_dragongold") {
+        changeName = "tft7_shimmerscaledragon";
+      } else if (temp == "tft7_dragongreen") {
+        changeName = "tft7_jadedragon";
+      } else if (temp == "tft7_dragonpurple") {
+        changeName = "tft7_whispersdragon";
       } else {
         changeName = temp;
       }
@@ -290,18 +291,18 @@ export default {
         // console.log(trait.style)
       } else if (trait.style == 1) {
         // console.log(trait.style)
-        return require('../assets/background/bronze.svg');
+        return require("../assets/background/bronze.svg");
       } else if (trait.style == 2) {
         // console.log(trait.style)
-        return require('../assets/background/silver.svg');
+        return require("../assets/background/silver.svg");
       } else if (trait.style == 3) {
         // console.log(trait.style)
-        return require('../assets/background/gold.svg');
+        return require("../assets/background/gold.svg");
       } else if (trait.style == 4) {
         // console.log(trait.style)
-        return require('../assets/background/chromatic.svg');
+        return require("../assets/background/chromatic.svg");
       } else {
-        console.log('error');
+        console.log("error");
       }
     },
     GetStar(i) {
@@ -357,21 +358,6 @@ export default {
         // console.log(myStyle);
         return myStyle;
       }
-    },
-    More(name) {
-      axios
-        .get(
-          // KR_11232322
-          `/GetRecord/${name}`
-        )
-        .then((result) => {
-          //요청 성공시 가져오는 코드
-          console.log(result);
-          return result.data;
-        })
-        .catch(() => {
-          console.log('error');
-        });
     },
   },
 };
@@ -477,7 +463,7 @@ export default {
   width: 3%;
   background-color: red;
   align-self: stretch;
-  background-image: url('../assets/chevron-down-solid.png');
+  background-image: url("../assets/chevron-down-solid.png");
   background-size: 70%;
   background-repeat: no-repeat;
   background-position: bottom;

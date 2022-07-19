@@ -1,14 +1,18 @@
 <template>
-  <SearchPage
+  <!-- <SearchPage
     v-if="pageChange == 0"
     @inputValue="this.userName = $event"
+    @page="this.pageChange = $event"
   ></SearchPage>
   <ResultPage
     v-if="pageChange == 1"
-    @inputValue2="SearchByHeader($event)"
+    @inputValue="this.userName = $event"
+    @page="this.pageChange = $event"
     :userName="this.userName"
-    :matchData="GetMatchData(name)"
-  ></ResultPage>
+    :matchData="this.More(this.userName)"
+  ></ResultPage> -->
+  <SearchPage v-if="$store.state.page == 0"></SearchPage>
+  <ResultPage v-if="$store.state.page == 1"></ResultPage>
 </template>
 
 <script>
@@ -31,10 +35,11 @@ export default {
     ResultPage,
   },
   methods: {
-    GetMatchData(name) {
-      console.log("App-GetMatchData");
-      this.More(name);
-    },
+    // GetMatchData(name) {
+    //   console.log("App-GetMatchData");
+    //   this.More(name);
+    //   return this.matchData;
+    // },
     RefreshMatchData(bool) {
       if (bool == true) {
         this.GetMatchData(this.userName);
@@ -42,26 +47,27 @@ export default {
       console.log(bool);
     },
     SearchByHeader(name) {
-      this.pageChange = 1;
       this.userName = name;
     },
     More(name) {
       axios
-        .get(
-          // KR_11232322
-          `/GetMatchHistory/${name}`
-        )
+        .get(`/GetMatchHistory/${name}`)
         .then((result) => {
           //요청 성공시 가져오는 코드
           console.log(result);
           this.matchData = result.data;
+          return this.matchData;
         })
-        .catch(() => {
-          console.log("error");
+        .catch((e) => {
+          console.log(e.message);
         });
     },
   },
   mounted() {
+    this.emitter.on("inputValue", (e) => {
+      this.userName = e;
+      console.log(e);
+    });
     this.emitter.on("page", (e) => {
       this.pageChange = e;
       console.log(e);
