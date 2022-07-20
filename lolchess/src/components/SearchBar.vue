@@ -44,6 +44,10 @@ export default {
       if (this.inputValue.length > 0) {
         this.$store.commit("SetName", this.inputValue);
         this.$store.dispatch("GetMatchHistory", this.inputValue);
+        this.$store.dispatch("GetMatchHistory2", this.inputValue);
+        this.$store.dispatch("GetMatchHistory3", this.inputValue);
+        this.$store.dispatch("GetMatchHistory4", this.inputValue);
+        this.$store.dispatch("GetMatchHistory5", this.inputValue);
         this.$store.commit("SetPage", 1);
       }
     },

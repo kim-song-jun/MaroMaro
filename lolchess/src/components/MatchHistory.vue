@@ -1,7 +1,10 @@
 <template>
+  <div>
+    {{ $store.state.matchData }}
+  </div>
   <div
     class="col-container"
-    v-for="(item, index) in $store.state.matchData"
+    v-for="(item, index) in $store.state.matchData5"
     :key="index"
   >
     <div
@@ -69,6 +72,9 @@
             />
           </div>
           <img
+            data-bs-toggle="tooltip"
+            data-bs-placement="top"
+            :title="cham.character_id.slice(5)"
             class="row-item main-match-champion-attribute-img"
             :src="this.GetChampionUrlByName(cham.character_id)"
             :style="
@@ -132,6 +138,10 @@ import allMatchData from "../assets/AllMatchData.json";
 // import matchData from '../assets/MatchData.json'
 // import userMatchData from "../assets/UserMatchData.json";
 import MatchHistoryDetail from "./MatchHistoryDetail.vue";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.min.js";
+import { Tooltip } from "bootstrap/dist/js/bootstrap.esm.min.js";
 
 export default {
   props: {
@@ -260,7 +270,7 @@ export default {
     NullFillter(DTO) {
       let array = [];
       for (let i in DTO) {
-        if (DTO[i] != null) {
+        if (DTO[i] != null && DTO[i].rarity < 7) {
           array.push(DTO[i]);
         }
       }
@@ -359,6 +369,11 @@ export default {
         return myStyle;
       }
     },
+  },
+  mounted() {
+    Array.from(
+      document.querySelectorAll('img[data-bs-toggle="tooltip"]')
+    ).forEach((tooltipNode) => new Tooltip(tooltipNode));
   },
 };
 </script>

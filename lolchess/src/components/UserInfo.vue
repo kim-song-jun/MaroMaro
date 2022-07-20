@@ -22,7 +22,9 @@
         <div class="recentMatches-content">
           <div
             class="recent-match-item"
-            v-for="(item, index) in this.setRecentPlacement(this.userMatchData)"
+            v-for="(item, index) in this.setRecentPlacement(
+              $store.state.matchData
+            )"
             :key="index"
             :style="setStyleRecentMatches(item)"
           >
@@ -132,22 +134,22 @@ export default {
         LP: 0,
       };
       let check = true;
-      for (let i in this.userMatchData) {
+      for (let i in this.$store.state.matchData) {
         // console.log(i)/
-        if (this.userMatchData[i].placement < 5) {
+        if (this.$store.state.matchData[i].placement < 5) {
           result.top4++;
         }
-        if (this.userMatchData[i].placement == 1) {
+        if (this.$store.state.matchData[i].placement == 1) {
           result.won++;
         }
-        result.LP = result.LP + this.userMatchData[i].placement;
-        if (i < this.userMatchData.length - 2 && check) {
-          if (this.userMatchData[i].placement < 5 && i == 0) {
+        result.LP = result.LP + this.$store.state.matchData[i].placement;
+        if (i < this.$store.state.matchData.length - 2 && check) {
+          if (this.$store.state.matchData[i].placement < 5 && i == 0) {
             result.steak++;
           }
           if (
-            this.userMatchData[i].placement < 5 &&
-            this.userMatchData[Number(i) + 1].placement < 5
+            this.$store.state.matchData[i].placement < 5 &&
+            this.$store.state.matchData[Number(i) + 1].placement < 5
           ) {
             result.steak++;
           } else {

@@ -9,4 +9,6 @@ let app = createApp(App);
 app.config.globalProperties.emitter = emitter;
 app.use(VueApexCharts);
 app.use(store);
+// app.use(BootstrapVue);
+// app.use(BootstrapVueIcons);
 app.mount("#app");

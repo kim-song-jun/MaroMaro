@@ -306,7 +306,15 @@ export default {
       axios
         .get(
           // KR_11232322
-          `/GetRecord/${name}`
+          `/GetRecord/${name}`,
+          {
+            transformRequest: [
+              (data, headers) => {
+                delete headers.common["X-Requested-With"];
+                return data;
+              },
+            ],
+          }
         )
         .then((result) => {
           //요청 성공시 가져오는 코드

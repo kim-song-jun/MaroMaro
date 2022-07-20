@@ -50,9 +50,7 @@
             placeholder="소환사 이름"
             v-model="this.inputValue"
           />
-          <button @click="this.onSearch" class="btn btn-warning" disabled>
-            Search
-          </button>
+          <button class="btn btn-warning">Search</button>
         </form>
       </div>
     </div>
@@ -64,7 +62,6 @@ export default {
   data() {
     return {
       inputValue: "",
-      nextPage: 1,
     };
   },
   methods: {
