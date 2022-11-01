@@ -1,0 +1,40 @@
+[
+  {
+    "deckName": null,
+    "placementRate": 5.0,
+    "character_id": [
+      "TFT7_Shen",
+      "TFT7_Thresh",
+      "TFT7_Sylas",
+      "TFT7_Elise",
+      "TFT7_Ornn",
+      "TFT7_Yasuo",
+      "TFT7_DragonPurple"
+    ]
+  },
+  {
+    "deckName": null,
+    "placementRate": 4.0,
+    "character_id": [
+      "TFT7_Karma",
+      "TFT7_Gnar",
+      "TFT7_Ashe",
+      "TFT7_Swain",
+      "TFT7_Elise",
+      "TFT7_Shyvana"
+    ]
+  },
+  {
+    "deckName": null,
+    "placementRate": 7.0,
+    "character_id": [
+      "TFT7_Shen",
+      "TFT7_Thresh",
+      "TFT7_Sylas",
+      "TFT7_Ornn",
+      "TFT7_Bard",
+      "TFT7_Pyke",
+      "TFT7_DragonPurple"
+    ]
+  }
+]

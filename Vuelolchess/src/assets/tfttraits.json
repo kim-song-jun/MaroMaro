@@ -1,0 +1,644 @@
+[
+  {
+    "display_name": "Assassin",
+    "trait_id": "Assassin",
+    "set": "TFTSet1",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Assassin.png"
+  },
+  {
+    "display_name": "Blademaster",
+    "trait_id": "Blademaster",
+    "set": "TFTSet1",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Blademaster.png"
+  },
+  {
+    "display_name": "Brawler",
+    "trait_id": "Brawler",
+    "set": "TFTSet1",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Brawler.png"
+  },
+  {
+    "display_name": "Demon",
+    "trait_id": "Demon",
+    "set": "TFTSet1",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Demon.png"
+  },
+  {
+    "display_name": "Dragon",
+    "trait_id": "Dragon",
+    "set": "TFTSet1",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Dragon.png"
+  },
+  {
+    "display_name": "Elementalist",
+    "trait_id": "Elementalist",
+    "set": "TFTSet1",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Elementalist.png"
+  },
+  {
+    "display_name": "Exile",
+    "trait_id": "Exile",
+    "set": "TFTSet1",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Exile.png"
+  },
+  {
+    "display_name": "Glacial",
+    "trait_id": "Glacial",
+    "set": "TFTSet1",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Glacial.png"
+  },
+  {
+    "display_name": "Guardian",
+    "trait_id": "Guardian",
+    "set": "TFTSet1",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Guardian.png"
+  },
+  {
+    "display_name": "Gunslinger",
+    "trait_id": "Gunslinger",
+    "set": "TFTSet1",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Gunslinger.png"
+  },
+  {
+    "display_name": "Hextech",
+    "trait_id": "Hextech",
+    "set": "TFTSet1",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Hextech.png"
+  },
+  {
+    "display_name": "Imperial",
+    "trait_id": "Imperial",
+    "set": "TFTSet1",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Imperial.png"
+  },
+  {
+    "display_name": "Knight",
+    "trait_id": "Knight",
+    "set": "TFTSet1",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Knight.png"
+  },
+  {
+    "display_name": "Ninja",
+    "trait_id": "Ninja",
+    "set": "TFTSet1",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Ninja.png"
+  },
+  {
+    "display_name": "Noble",
+    "trait_id": "Noble",
+    "set": "TFTSet1",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Noble.png"
+  },
+  {
+    "display_name": "Phantom",
+    "trait_id": "Phantom",
+    "set": "TFTSet1",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Phantom.png"
+  },
+  {
+    "display_name": "Pirate",
+    "trait_id": "Pirate",
+    "set": "TFTSet1",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Pirate.png"
+  },
+  {
+    "display_name": "Ranger",
+    "trait_id": "Ranger",
+    "set": "TFTSet1",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Ranger.png"
+  },
+  {
+    "display_name": "Robot",
+    "trait_id": "Robot",
+    "set": "TFTSet1",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Robot.png"
+  },
+  {
+    "display_name": "Shapeshifter",
+    "trait_id": "Shapeshifter",
+    "set": "TFTSet1",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Shapeshifter.png"
+  },
+  {
+    "display_name": "Sorcerer",
+    "trait_id": "Sorcerer",
+    "set": "TFTSet1",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Sorcerer.png"
+  },
+  {
+    "display_name": "Void",
+    "trait_id": "Void",
+    "set": "TFTSet1",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Void.png"
+  },
+  {
+    "display_name": "Wild",
+    "trait_id": "Wild",
+    "set": "TFTSet1",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Wild.png"
+  },
+  {
+    "display_name": "Yordle",
+    "trait_id": "Yordle",
+    "set": "TFTSet1",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Yordle.png"
+  },
+  {
+    "display_name": "Academy ",
+    "trait_id": "Set6_Academy",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Academy.png"
+  },
+  {
+    "display_name": "Arcanist",
+    "trait_id": "Set6_Arcanist",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Arcanist.png"
+  },
+  {
+    "display_name": "Assassin",
+    "trait_id": "Set6_Assassin",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Assassin.png"
+  },
+  {
+    "display_name": "Bodyguard",
+    "trait_id": "Set6_Bodyguard",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Hero.png"
+  },
+  {
+    "display_name": "Bruiser",
+    "trait_id": "Set6_Bruiser",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Bruiser.png"
+  },
+  {
+    "display_name": "Challenger",
+    "trait_id": "Set6_Challenger",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Challenger.png"
+  },
+  {
+    "display_name": "Chemtech",
+    "trait_id": "Set6_Chemtech",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Chemtech.png"
+  },
+  {
+    "display_name": "Clockwork",
+    "trait_id": "Set6_Clockwork",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Clockwork.png"
+  },
+  {
+    "display_name": "Colossus",
+    "trait_id": "Set6_Colossus",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Colossus.png"
+  },
+  {
+    "display_name": "Cuddly",
+    "trait_id": "Set6_Cuddly",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Cuddly.TFT_Set6.png"
+  },
+  {
+    "display_name": "Debonair",
+    "trait_id": "Set6_Debonair",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Debonair.png"
+  },
+  {
+    "display_name": "Enchanter",
+    "trait_id": "Set6_Enchanter",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Enchanter.png"
+  },
+  {
+    "display_name": "Enforcer",
+    "trait_id": "Set6_Enforcer",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Enforcer.png"
+  },
+  {
+    "display_name": "Glutton",
+    "trait_id": "Set6_Glutton",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Glutton.png"
+  },
+  {
+    "display_name": "Hextech",
+    "trait_id": "Set6_Hextech",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Hextech.png"
+  },
+  {
+    "display_name": "Imperial",
+    "trait_id": "Set6_Imperial",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Imperial.png"
+  },
+  {
+    "display_name": "Innovator",
+    "trait_id": "Set6_Innovator",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Innovator.png"
+  },
+  {
+    "display_name": "Mastermind",
+    "trait_id": "Set6_Mastermind",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Mastermind.png"
+  },
+  {
+    "display_name": "Mercenary",
+    "trait_id": "Set6_Mercenary",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Mercenary.png"
+  },
+  {
+    "display_name": "Mutant",
+    "trait_id": "Set6_Mutant",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Experimental.png"
+  },
+  {
+    "display_name": "Protector",
+    "trait_id": "Set6_Protector",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_3_Protector.png"
+  },
+  {
+    "display_name": "Rival",
+    "trait_id": "Set6_Rivals",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Rivals.png"
+  },
+  {
+    "display_name": "Scholar",
+    "trait_id": "Set6_Scholar",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Scholar.png"
+  },
+  {
+    "display_name": "Scoped",
+    "trait_id": "Set6_Scoped",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Scoped.png"
+  },
+  {
+    "display_name": "Scrap",
+    "trait_id": "Set6_Scrap",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Scrap.png"
+  },
+  {
+    "display_name": "Sister",
+    "trait_id": "Set6_Sister",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Sisters.png"
+  },
+  {
+    "display_name": "Sniper",
+    "trait_id": "Set6_Sniper",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Sniper.png"
+  },
+  {
+    "display_name": "Socialite",
+    "trait_id": "Set6_Socialite",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Socialite.png"
+  },
+  {
+    "display_name": "Striker",
+    "trait_id": "Set6_Striker",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Striker.png"
+  },
+  {
+    "display_name": "Syndicate",
+    "trait_id": "Set6_Syndicate",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Syndicate.png"
+  },
+  {
+    "display_name": "Transformer",
+    "trait_id": "Set6_Transformer",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Transformer.png"
+  },
+  {
+    "display_name": "Twinshot",
+    "trait_id": "Set6_Twinshot",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Twinshot.png"
+  },
+  {
+    "display_name": "Yordle",
+    "trait_id": "Set6_Yordle",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Yordle.png"
+  },
+  {
+    "display_name": "Yordle-Lord",
+    "trait_id": "Set6_YordleLord",
+    "set": "TFTSet6",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_YordleLord.TFT_Set6.png"
+  },
+  {
+    "display_name": "Assassin",
+    "trait_id": "Set7_Assassin",
+    "set": "TFTSet7",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Assassin.png"
+  },
+  {
+    "display_name": "Astral",
+    "trait_id": "Set7_Astral",
+    "set": "TFTSet7",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_7_Astral.png"
+  },
+  {
+    "display_name": "Bard",
+    "trait_id": "Set7_Bard",
+    "set": "TFTSet7",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_7_Bard.png"
+  },
+  {
+    "display_name": "Bruiser",
+    "trait_id": "Set7_Bruiser",
+    "set": "TFTSet7",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Bruiser.png"
+  },
+  {
+    "display_name": "Cannoneer",
+    "trait_id": "Set7_Cannoneer",
+    "set": "TFTSet7",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_5_Cannoneer.png"
+  },
+  {
+    "display_name": "Cavalier",
+    "trait_id": "Set7_Cavalier",
+    "set": "TFTSet7",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_5_Cavalry.png"
+  },
+  {
+    "display_name": "Darkflight",
+    "trait_id": "Set7_Darkflight",
+    "set": "TFTSet7",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Darkflight.TFT_Set7_Stage2.png"
+  },
+  {
+    "display_name": "Dragon",
+    "trait_id": "Set7_Dragon",
+    "set": "TFTSet7",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_7_Dragon.png"
+  },
+  {
+    "display_name": "Dragonmancer",
+    "trait_id": "Set7_Dragonmancer",
+    "set": "TFTSet7",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_7_Dragonmancer.png"
+  },
+  {
+    "display_name": "Evoker",
+    "trait_id": "Set7_Evoker",
+    "set": "TFTSet7",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_7_Evoker.png"
+  },
+  {
+    "display_name": "Guardian",
+    "trait_id": "Set7_Guardian",
+    "set": "TFTSet7",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_7_Guardian.png"
+  },
+  {
+    "display_name": "Guild",
+    "trait_id": "Set7_Guild",
+    "set": "TFTSet7",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_7_Guild.png"
+  },
+  {
+    "display_name": "Jade",
+    "trait_id": "Set7_Jade",
+    "set": "TFTSet7",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_7_Jade.png"
+  },
+  {
+    "display_name": "Lagoon",
+    "trait_id": "Set7_Lagoon",
+    "set": "TFTSet7",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Lagoon.TFT_Set7_Stage2.png"
+  },
+  {
+    "display_name": "Mage",
+    "trait_id": "Set7_Mage",
+    "set": "TFTSet7",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_2_Mage.png"
+  },
+  {
+    "display_name": "Mirage",
+    "trait_id": "Set7_Mirage",
+    "set": "TFTSet7",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_7_Mirage.png"
+  },
+  {
+    "display_name": "Monolith",
+    "trait_id": "Set7_Monolith",
+    "set": "TFTSet7",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Monolith.TFT_Set7_Stage2.png"
+  },
+  {
+    "display_name": "Mystic",
+    "trait_id": "Set7_Mystic",
+    "set": "TFTSet7",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_2_Mystic.png"
+  },
+  {
+    "display_name": "Prodigy",
+    "trait_id": "Set7_Prodigy",
+    "set": "TFTSet7",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Prodigy.TFT_Set7_Stage2.png"
+  },
+  {
+    "display_name": "Ragewing",
+    "trait_id": "Set7_Ragewing",
+    "set": "TFTSet7",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_7_Ragewing.png"
+  },
+  {
+    "display_name": "Scalescorn",
+    "trait_id": "Set7_Scalescorn",
+    "set": "TFTSet7",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_7_Dragonbane.png"
+  },
+  {
+    "display_name": "Shapeshifter",
+    "trait_id": "Set7_Shapeshifter",
+    "set": "TFTSet7",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Shapeshifter.png"
+  },
+  {
+    "display_name": "Shimmerscale",
+    "trait_id": "Set7_Shimmerscale",
+    "set": "TFTSet7",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_7_Shimmerscale.png"
+  },
+  {
+    "display_name": "SpellThief",
+    "trait_id": "Set7_SpellThief",
+    "set": "TFTSet7",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_7_SpellThief.png"
+  },
+  {
+    "display_name": "Starcaller",
+    "trait_id": "Set7_Starcaller",
+    "set": "TFTSet7",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_7_StarCaller.png"
+  },
+  {
+    "display_name": "Swiftshot",
+    "trait_id": "Set7_Swiftshot",
+    "set": "TFTSet7",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_7_Swiftshot.png"
+  },
+  {
+    "display_name": "Tempest",
+    "trait_id": "Set7_Tempest",
+    "set": "TFTSet7",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_7_Tempest.png"
+  },
+  {
+    "display_name": "Warrior",
+    "trait_id": "Set7_Warrior",
+    "set": "TFTSet7",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_7_Warrior.png"
+  },
+  {
+    "display_name": "Whispers",
+    "trait_id": "Set7_Whispers",
+    "set": "TFTSet7",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_7_Whispers.png"
+  },
+  {
+    "display_name": "Assassin",
+    "trait_id": "TFTTutorial_Assassin",
+    "set": "TFTTutorialSet",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Assassin.png"
+  },
+  {
+    "display_name": "Blademaster",
+    "trait_id": "TFTTutorial_Blademaster",
+    "set": "TFTTutorialSet",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Blademaster.png"
+  },
+  {
+    "display_name": "Brawler",
+    "trait_id": "TFTTutorial_Brawler",
+    "set": "TFTTutorialSet",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Brawler.png"
+  },
+  {
+    "display_name": "Demon",
+    "trait_id": "TFTTutorial_Demon",
+    "set": "TFTTutorialSet",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Demon.png"
+  },
+  {
+    "display_name": "Glacial",
+    "trait_id": "TFTTutorial_Glacial",
+    "set": "TFTTutorialSet",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Glacial.png"
+  },
+  {
+    "display_name": "Gunslinger",
+    "trait_id": "TFTTutorial_Gunslinger",
+    "set": "TFTTutorialSet",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Gunslinger.png"
+  },
+  {
+    "display_name": "Hextech",
+    "trait_id": "TFTTutorial_Hextech",
+    "set": "TFTTutorialSet",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Hextech.png"
+  },
+  {
+    "display_name": "Imperial",
+    "trait_id": "TFTTutorial_Imperial",
+    "set": "TFTTutorialSet",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Imperial.png"
+  },
+  {
+    "display_name": "Knight",
+    "trait_id": "TFTTutorial_Knight",
+    "set": "TFTTutorialSet",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Knight.png"
+  },
+  {
+    "display_name": "Ninja",
+    "trait_id": "TFTTutorial_Ninja",
+    "set": "TFTTutorialSet",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Ninja.png"
+  },
+  {
+    "display_name": "Pirate",
+    "trait_id": "TFTTutorial_Pirate",
+    "set": "TFTTutorialSet",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Pirate.png"
+  },
+  {
+    "display_name": "Ranger",
+    "trait_id": "TFTTutorial_Ranger",
+    "set": "TFTTutorialSet",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Ranger.png"
+  },
+  {
+    "display_name": "Robot",
+    "trait_id": "TFTTutorial_Robot",
+    "set": "TFTTutorialSet",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Robot.png"
+  },
+  {
+    "display_name": "Shapeshifter",
+    "trait_id": "TFTTutorial_Shapeshifter",
+    "set": "TFTTutorialSet",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Shapeshifter.png"
+  },
+  {
+    "display_name": "Sorcerer",
+    "trait_id": "TFTTutorial_Sorcerer",
+    "set": "TFTTutorialSet",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Sorcerer.png"
+  },
+  {
+    "display_name": "Exemplar",
+    "trait_id": "TFTTutorial_TutorialPrimary",
+    "set": "TFTTutorialSet",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_4_Exemplar.png"
+  },
+  {
+    "display_name": "Guardian",
+    "trait_id": "TFTTutorial_TutorialSecondary",
+    "set": "TFTTutorialSet",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Knight.png"
+  },
+  {
+    "display_name": "Void",
+    "trait_id": "TFTTutorial_Void",
+    "set": "TFTTutorialSet",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Void.png"
+  },
+  {
+    "display_name": "Wild",
+    "trait_id": "TFTTutorial_Wild",
+    "set": "TFTTutorialSet",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Wild.png"
+  },
+  {
+    "display_name": "Yordle",
+    "trait_id": "TFTTutorial_Yordle",
+    "set": "TFTTutorialSet",
+    "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Yordle.png"
+  }
+]

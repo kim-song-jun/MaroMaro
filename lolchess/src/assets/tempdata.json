@@ -1,0 +1,34 @@
+{
+  "ability": {
+    "desc": "Vladimir deals @ModifiedDamage@ magic damage to the target and heals for @ModifiedHeal@ Health.",
+    "icon": "ASSETS/Characters/Vladimir/HUD/Icons2D/VladimirQ.dds",
+    "name": "Transfusion",
+    "variables": [
+      {
+        "name": "Damage",
+        "value": [75.0, 275.0, 325.0, 375.0, 575.0, 700.0, 825.0]
+      },
+      {
+        "name": "Heal",
+        "value": [0.0, 275.0, 325.0, 375.0, 0.0, 0.0, 0.0]
+      }
+    ]
+  },
+  "apiName": "TFT7_Vladimir",
+  "cost": 1,
+  "icon": "ASSETS/UX/TFT/ChampionSplashes/TFT7_Vladimir.TFT_Set7.dds",
+  "name": "Vladimir",
+  "stats": {
+    "armor": 45.0,
+    "attackSpeed": 0.6000000238418579,
+    "critChance": 0.25,
+    "critMultiplier": 1.2999999523162842,
+    "damage": 40.0,
+    "hp": 700.0,
+    "initialMana": 0,
+    "magicResist": 45.0,
+    "mana": 70.0,
+    "range": 2.0
+  },
+  "traits": ["Astral", "Mage"]
+}

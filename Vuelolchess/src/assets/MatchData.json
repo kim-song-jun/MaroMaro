@@ -111,16 +111,24 @@
           "tier": 2
         },
         {
-          "items": [45],
+          "items": [
+            45
+          ],
           "character_id": "TFT7_Sylas",
-          "itemNames": ["TFT_Item_FrozenHeart"],
+          "itemNames": [
+            "TFT_Item_FrozenHeart"
+          ],
           "rarity": 2,
           "tier": 2
         },
         {
-          "items": [12],
+          "items": [
+            12
+          ],
           "character_id": "TFT7_Diana",
-          "itemNames": ["TFT_Item_MadredsBloodrazor"],
+          "itemNames": [
+            "TFT_Item_MadredsBloodrazor"
+          ],
           "rarity": 2,
           "tier": 2
         },
@@ -132,7 +140,11 @@
           "tier": 2
         },
         {
-          "items": [57, 77, 79],
+          "items": [
+            57,
+            77,
+            79
+          ],
           "character_id": "TFT7_Neeko",
           "itemNames": [
             "TFT_Item_RedBuff",
@@ -150,7 +162,11 @@
           "tier": 2
         },
         {
-          "items": [69, 16, 25],
+          "items": [
+            69,
+            16,
+            25
+          ],
           "character_id": "TFT7_DragonGreen",
           "itemNames": [
             "TFT_Item_Quicksilver",
@@ -161,7 +177,11 @@
           "tier": 2
         },
         {
-          "items": [94, 46, 26],
+          "items": [
+            94,
+            46,
+            26
+          ],
           "character_id": "TFT7_Pyke",
           "itemNames": [
             "TFT_Item_GuardianAngel",
@@ -172,7 +192,11 @@
           "tier": 2
         },
         {
-          "items": [25, 9, 2318],
+          "items": [
+            25,
+            9,
+            2318
+          ],
           "character_id": "TFT7_Soraka",
           "itemNames": [
             "TFT_Item_TitansResolve",
@@ -278,7 +302,11 @@
       ],
       "unitDTO": [
         {
-          "items": [2, 2323, 13],
+          "items": [
+            2,
+            2323,
+            13
+          ],
           "character_id": "TFT7_DragonPurple",
           "itemNames": [
             "TFT_Item_RecurveBow",
@@ -289,14 +317,22 @@
           "tier": 2
         },
         {
-          "items": [3003],
+          "items": [
+            3003
+          ],
           "character_id": "TFT7_Ornn",
-          "itemNames": ["TFT7_Item_ShimmerscaleGoldmancersStaff"],
+          "itemNames": [
+            "TFT7_Item_ShimmerscaleGoldmancersStaff"
+          ],
           "rarity": 3,
           "tier": 2
         },
         {
-          "items": [23, 39, 19],
+          "items": [
+            23,
+            39,
+            19
+          ],
           "character_id": "TFT7_DragonBlue",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -307,16 +343,26 @@
           "tier": 1
         },
         {
-          "items": [27],
+          "items": [
+            27
+          ],
           "character_id": "TFT7_DragonGold",
-          "itemNames": ["TFT_Item_TitanicHydra"],
+          "itemNames": [
+            "TFT_Item_TitanicHydra"
+          ],
           "rarity": 4,
           "tier": 1
         },
         {
-          "items": [14, 13],
+          "items": [
+            14,
+            13
+          ],
           "character_id": "TFT7_Bard",
-          "itemNames": ["TFT_Item_SpearOfShojin", "TFT_Item_HextechGunblade"],
+          "itemNames": [
+            "TFT_Item_SpearOfShojin",
+            "TFT_Item_HextechGunblade"
+          ],
           "rarity": 5,
           "tier": 1
         },
@@ -434,7 +480,11 @@
           "tier": 1
         },
         {
-          "items": [19, 47, 57],
+          "items": [
+            19,
+            47,
+            57
+          ],
           "character_id": "TFT7_DragonPurple",
           "itemNames": [
             "TFT_Item_InfinityEdge",
@@ -445,7 +495,11 @@
           "tier": 2
         },
         {
-          "items": [77, 9007, 27],
+          "items": [
+            77,
+            9007,
+            27
+          ],
           "character_id": "TFT7_DragonGreen",
           "itemNames": [
             "TFT_Item_WarmogsArmor",
@@ -456,9 +510,13 @@
           "tier": 2
         },
         {
-          "items": [16],
+          "items": [
+            16
+          ],
           "character_id": "TFT7_Yasuo",
-          "itemNames": ["TFT_Item_Bloodthirster"],
+          "itemNames": [
+            "TFT_Item_Bloodthirster"
+          ],
           "rarity": 5,
           "tier": 1
         },
@@ -470,7 +528,11 @@
           "tier": 1
         },
         {
-          "items": [14, 23, 19],
+          "items": [
+            14,
+            23,
+            19
+          ],
           "character_id": "TFT7_AoShin",
           "itemNames": [
             "TFT_Item_SpearOfShojin",
@@ -579,14 +641,22 @@
       ],
       "unitDTO": [
         {
-          "items": [88],
+          "items": [
+            88
+          ],
           "character_id": "TFT7_Ornn",
-          "itemNames": ["TFT_Item_ForceOfNature"],
+          "itemNames": [
+            "TFT_Item_ForceOfNature"
+          ],
           "rarity": 3,
           "tier": 1
         },
         {
-          "items": [25, 45, 79],
+          "items": [
+            25,
+            45,
+            79
+          ],
           "character_id": "TFT7_DragonGreen",
           "itemNames": [
             "TFT_Item_TitansResolve",
@@ -597,7 +667,11 @@
           "tier": 2
         },
         {
-          "items": [23, 3004, 23],
+          "items": [
+            23,
+            3004,
+            23
+          ],
           "character_id": "TFT7_DragonBlue",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -608,9 +682,15 @@
           "tier": 2
         },
         {
-          "items": [9003, 5],
+          "items": [
+            9003,
+            5
+          ],
           "character_id": "TFT7_DragonGold",
-          "itemNames": ["TFT4_Item_OrnnEternalWinter", "TFT_Item_ChainVest"],
+          "itemNames": [
+            "TFT4_Item_OrnnEternalWinter",
+            "TFT_Item_ChainVest"
+          ],
           "rarity": 4,
           "tier": 2
         },
@@ -622,7 +702,11 @@
           "tier": 2
         },
         {
-          "items": [23, 34, 49],
+          "items": [
+            23,
+            34,
+            49
+          ],
           "character_id": "TFT7_AoShin",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -752,16 +836,24 @@
           "tier": 2
         },
         {
-          "items": [29],
+          "items": [
+            29
+          ],
           "character_id": "TFT7_Tristana",
-          "itemNames": ["TFT_Item_LastWhisper"],
+          "itemNames": [
+            "TFT_Item_LastWhisper"
+          ],
           "rarity": 1,
           "tier": 2
         },
         {
-          "items": [55],
+          "items": [
+            55
+          ],
           "character_id": "TFT7_Lulu",
-          "itemNames": ["TFT_Item_BrambleVest"],
+          "itemNames": [
+            "TFT_Item_BrambleVest"
+          ],
           "rarity": 2,
           "tier": 3
         },
@@ -773,7 +865,11 @@
           "tier": 2
         },
         {
-          "items": [23, 19, 39],
+          "items": [
+            23,
+            19,
+            39
+          ],
           "character_id": "TFT7_Corki",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -784,7 +880,11 @@
           "tier": 2
         },
         {
-          "items": [45, 16, 25],
+          "items": [
+            45,
+            16,
+            25
+          ],
           "character_id": "TFT7_Ornn",
           "itemNames": [
             "TFT_Item_FrozenHeart",
@@ -795,7 +895,11 @@
           "tier": 2
         },
         {
-          "items": [57, 3002, 66],
+          "items": [
+            57,
+            3002,
+            66
+          ],
           "character_id": "TFT7_DragonGold",
           "itemNames": [
             "TFT_Item_RedBuff",
@@ -806,9 +910,13 @@
           "tier": 2
         },
         {
-          "items": [41105],
+          "items": [
+            41105
+          ],
           "character_id": "TFT7_TrainerDragon",
-          "itemNames": ["TFT7_Item_TrainerSnax"],
+          "itemNames": [
+            "TFT7_Item_TrainerSnax"
+          ],
           "rarity": 8,
           "tier": 4
         },
@@ -923,14 +1031,24 @@
           "tier": 2
         },
         {
-          "items": [17, 17],
+          "items": [
+            17,
+            17
+          ],
           "character_id": "TFT7_Twitch",
-          "itemNames": ["TFT_Item_ZekesHerald", "TFT_Item_ZekesHerald"],
+          "itemNames": [
+            "TFT_Item_ZekesHerald",
+            "TFT_Item_ZekesHerald"
+          ],
           "rarity": 1,
           "tier": 2
         },
         {
-          "items": [99, 16, 13],
+          "items": [
+            99,
+            16,
+            13
+          ],
           "character_id": "TFT7_Hecarim",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -941,7 +1059,11 @@
           "tier": 1
         },
         {
-          "items": [99, 1, 17],
+          "items": [
+            99,
+            1,
+            17
+          ],
           "character_id": "TFT7_Talon",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -952,16 +1074,24 @@
           "tier": 2
         },
         {
-          "items": [23],
+          "items": [
+            23
+          ],
           "character_id": "TFT7_Xayah",
-          "itemNames": ["TFT_Item_GuinsoosRageblade"],
+          "itemNames": [
+            "TFT_Item_GuinsoosRageblade"
+          ],
           "rarity": 3,
           "tier": 2
         },
         {
-          "items": [57],
+          "items": [
+            57
+          ],
           "character_id": "TFT7_Ornn",
-          "itemNames": ["TFT_Item_RedBuff"],
+          "itemNames": [
+            "TFT_Item_RedBuff"
+          ],
           "rarity": 3,
           "tier": 1
         },
@@ -1076,7 +1206,11 @@
       ],
       "unitDTO": [
         {
-          "items": [99, 26, 12],
+          "items": [
+            99,
+            26,
+            12
+          ],
           "character_id": "TFT7_Vladimir",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -1094,7 +1228,11 @@
           "tier": 3
         },
         {
-          "items": [9009, 16, 9004],
+          "items": [
+            9009,
+            16,
+            9004
+          ],
           "character_id": "TFT7_Nidalee",
           "itemNames": [
             "TFT4_Item_OrnnTheCollector",
@@ -1119,7 +1257,11 @@
           "tier": 2
         },
         {
-          "items": [23, 11, 16],
+          "items": [
+            23,
+            11,
+            16
+          ],
           "character_id": "TFT7_Varus",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -1130,7 +1272,11 @@
           "tier": 3
         },
         {
-          "items": [57, 88, 9008],
+          "items": [
+            57,
+            88,
+            9008
+          ],
           "character_id": "TFT7_Illaoi",
           "itemNames": [
             "TFT_Item_RedBuff",
@@ -1141,9 +1287,15 @@
           "tier": 3
         },
         {
-          "items": [19, 12],
+          "items": [
+            19,
+            12
+          ],
           "character_id": "TFT7_Xayah",
-          "itemNames": ["TFT_Item_InfinityEdge", "TFT_Item_MadredsBloodrazor"],
+          "itemNames": [
+            "TFT_Item_InfinityEdge",
+            "TFT_Item_MadredsBloodrazor"
+          ],
           "rarity": 3,
           "tier": 2
         },
@@ -1155,9 +1307,13 @@
           "tier": 2
         },
         {
-          "items": [17],
+          "items": [
+            17
+          ],
           "character_id": "TFT7_Bard",
-          "itemNames": ["TFT_Item_ZekesHerald"],
+          "itemNames": [
+            "TFT_Item_ZekesHerald"
+          ],
           "rarity": 5,
           "tier": 1
         },
@@ -1270,21 +1426,37 @@
           "tier": 2
         },
         {
-          "items": [17, 2315],
+          "items": [
+            17,
+            2315
+          ],
           "character_id": "TFT7_Twitch",
-          "itemNames": ["TFT_Item_ZekesHerald", "TFT7_Item_RagewingEmblemItem"],
+          "itemNames": [
+            "TFT_Item_ZekesHerald",
+            "TFT7_Item_RagewingEmblemItem"
+          ],
           "rarity": 1,
           "tier": 2
         },
         {
-          "items": [39, 39],
+          "items": [
+            39,
+            39
+          ],
           "character_id": "TFT7_Hecarim",
-          "itemNames": ["TFT_Item_JeweledGauntlet", "TFT_Item_JeweledGauntlet"],
+          "itemNames": [
+            "TFT_Item_JeweledGauntlet",
+            "TFT_Item_JeweledGauntlet"
+          ],
           "rarity": 3,
           "tier": 2
         },
         {
-          "items": [23, 49, 19],
+          "items": [
+            23,
+            49,
+            19
+          ],
           "character_id": "TFT7_Xayah",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -1295,9 +1467,15 @@
           "tier": 2
         },
         {
-          "items": [66, 57],
+          "items": [
+            66,
+            57
+          ],
           "character_id": "TFT7_Ornn",
-          "itemNames": ["TFT_Item_DragonsClaw", "TFT_Item_RedBuff"],
+          "itemNames": [
+            "TFT_Item_DragonsClaw",
+            "TFT_Item_RedBuff"
+          ],
           "rarity": 3,
           "tier": 2
         },
@@ -1309,7 +1487,11 @@
           "tier": 2
         },
         {
-          "items": [24, 34, 13],
+          "items": [
+            24,
+            34,
+            13
+          ],
           "character_id": "TFT7_AoShin",
           "itemNames": [
             "TFT_Item_StatikkShiv",
@@ -1451,7 +1633,11 @@
           "tier": 1
         },
         {
-          "items": [22, 2325, 45],
+          "items": [
+            22,
+            2325,
+            45
+          ],
           "character_id": "TFT7_Olaf",
           "itemNames": [
             "TFT_Item_RapidFireCannon",
@@ -1462,7 +1648,11 @@
           "tier": 2
         },
         {
-          "items": [57, 47, 55],
+          "items": [
+            57,
+            47,
+            55
+          ],
           "character_id": "TFT7_Sylas",
           "itemNames": [
             "TFT_Item_RedBuff",
@@ -1473,7 +1663,11 @@
           "tier": 3
         },
         {
-          "items": [23, 14, 24],
+          "items": [
+            23,
+            14,
+            24
+          ],
           "character_id": "TFT7_Varus",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -1491,7 +1685,11 @@
           "tier": 2
         },
         {
-          "items": [99, 79, 29],
+          "items": [
+            99,
+            79,
+            29
+          ],
           "character_id": "TFT7_Diana",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -1584,7 +1782,11 @@
       ],
       "unitDTO": [
         {
-          "items": [99, 36, 24],
+          "items": [
+            99,
+            36,
+            24
+          ],
           "character_id": "TFT7_Vladimir",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -1609,30 +1811,52 @@
           "tier": 3
         },
         {
-          "items": [39, 24],
+          "items": [
+            39,
+            24
+          ],
           "character_id": "TFT7_Nami",
-          "itemNames": ["TFT_Item_JeweledGauntlet", "TFT_Item_StatikkShiv"],
+          "itemNames": [
+            "TFT_Item_JeweledGauntlet",
+            "TFT_Item_StatikkShiv"
+          ],
           "rarity": 1,
           "tier": 3
         },
         {
-          "items": [67],
+          "items": [
+            67
+          ],
           "character_id": "TFT7_Sylas",
-          "itemNames": ["TFT_Item_Zephyr"],
+          "itemNames": [
+            "TFT_Item_Zephyr"
+          ],
           "rarity": 2,
           "tier": 1
         },
         {
-          "items": [16, 23],
+          "items": [
+            16,
+            23
+          ],
           "character_id": "TFT7_Varus",
-          "itemNames": ["TFT_Item_Bloodthirster", "TFT_Item_GuinsoosRageblade"],
+          "itemNames": [
+            "TFT_Item_Bloodthirster",
+            "TFT_Item_GuinsoosRageblade"
+          ],
           "rarity": 2,
           "tier": 3
         },
         {
-          "items": [35, 5],
+          "items": [
+            35,
+            5
+          ],
           "character_id": "TFT7_Illaoi",
-          "itemNames": ["TFT_Item_LocketOfTheIronSolari", "TFT_Item_ChainVest"],
+          "itemNames": [
+            "TFT_Item_LocketOfTheIronSolari",
+            "TFT_Item_ChainVest"
+          ],
           "rarity": 2,
           "tier": 3
         },
@@ -1757,16 +1981,24 @@
           "tier": 2
         },
         {
-          "items": [45],
+          "items": [
+            45
+          ],
           "character_id": "TFT7_Sylas",
-          "itemNames": ["TFT_Item_FrozenHeart"],
+          "itemNames": [
+            "TFT_Item_FrozenHeart"
+          ],
           "rarity": 2,
           "tier": 2
         },
         {
-          "items": [12],
+          "items": [
+            12
+          ],
           "character_id": "TFT7_Diana",
-          "itemNames": ["TFT_Item_MadredsBloodrazor"],
+          "itemNames": [
+            "TFT_Item_MadredsBloodrazor"
+          ],
           "rarity": 2,
           "tier": 2
         },
@@ -1778,7 +2010,11 @@
           "tier": 2
         },
         {
-          "items": [57, 77, 79],
+          "items": [
+            57,
+            77,
+            79
+          ],
           "character_id": "TFT7_Neeko",
           "itemNames": [
             "TFT_Item_RedBuff",
@@ -1796,7 +2032,11 @@
           "tier": 2
         },
         {
-          "items": [69, 16, 25],
+          "items": [
+            69,
+            16,
+            25
+          ],
           "character_id": "TFT7_DragonGreen",
           "itemNames": [
             "TFT_Item_Quicksilver",
@@ -1807,7 +2047,11 @@
           "tier": 2
         },
         {
-          "items": [94, 46, 26],
+          "items": [
+            94,
+            46,
+            26
+          ],
           "character_id": "TFT7_Pyke",
           "itemNames": [
             "TFT_Item_GuardianAngel",
@@ -1818,7 +2062,11 @@
           "tier": 2
         },
         {
-          "items": [25, 9, 2318],
+          "items": [
+            25,
+            9,
+            2318
+          ],
           "character_id": "TFT7_Soraka",
           "itemNames": [
             "TFT_Item_TitansResolve",
@@ -1924,7 +2172,11 @@
       ],
       "unitDTO": [
         {
-          "items": [2, 2323, 13],
+          "items": [
+            2,
+            2323,
+            13
+          ],
           "character_id": "TFT7_DragonPurple",
           "itemNames": [
             "TFT_Item_RecurveBow",
@@ -1935,14 +2187,22 @@
           "tier": 2
         },
         {
-          "items": [3003],
+          "items": [
+            3003
+          ],
           "character_id": "TFT7_Ornn",
-          "itemNames": ["TFT7_Item_ShimmerscaleGoldmancersStaff"],
+          "itemNames": [
+            "TFT7_Item_ShimmerscaleGoldmancersStaff"
+          ],
           "rarity": 3,
           "tier": 2
         },
         {
-          "items": [23, 39, 19],
+          "items": [
+            23,
+            39,
+            19
+          ],
           "character_id": "TFT7_DragonBlue",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -1953,16 +2213,26 @@
           "tier": 1
         },
         {
-          "items": [27],
+          "items": [
+            27
+          ],
           "character_id": "TFT7_DragonGold",
-          "itemNames": ["TFT_Item_TitanicHydra"],
+          "itemNames": [
+            "TFT_Item_TitanicHydra"
+          ],
           "rarity": 4,
           "tier": 1
         },
         {
-          "items": [14, 13],
+          "items": [
+            14,
+            13
+          ],
           "character_id": "TFT7_Bard",
-          "itemNames": ["TFT_Item_SpearOfShojin", "TFT_Item_HextechGunblade"],
+          "itemNames": [
+            "TFT_Item_SpearOfShojin",
+            "TFT_Item_HextechGunblade"
+          ],
           "rarity": 5,
           "tier": 1
         },
@@ -2080,7 +2350,11 @@
           "tier": 1
         },
         {
-          "items": [19, 47, 57],
+          "items": [
+            19,
+            47,
+            57
+          ],
           "character_id": "TFT7_DragonPurple",
           "itemNames": [
             "TFT_Item_InfinityEdge",
@@ -2091,7 +2365,11 @@
           "tier": 2
         },
         {
-          "items": [77, 9007, 27],
+          "items": [
+            77,
+            9007,
+            27
+          ],
           "character_id": "TFT7_DragonGreen",
           "itemNames": [
             "TFT_Item_WarmogsArmor",
@@ -2102,9 +2380,13 @@
           "tier": 2
         },
         {
-          "items": [16],
+          "items": [
+            16
+          ],
           "character_id": "TFT7_Yasuo",
-          "itemNames": ["TFT_Item_Bloodthirster"],
+          "itemNames": [
+            "TFT_Item_Bloodthirster"
+          ],
           "rarity": 5,
           "tier": 1
         },
@@ -2116,7 +2398,11 @@
           "tier": 1
         },
         {
-          "items": [14, 23, 19],
+          "items": [
+            14,
+            23,
+            19
+          ],
           "character_id": "TFT7_AoShin",
           "itemNames": [
             "TFT_Item_SpearOfShojin",
@@ -2225,14 +2511,22 @@
       ],
       "unitDTO": [
         {
-          "items": [88],
+          "items": [
+            88
+          ],
           "character_id": "TFT7_Ornn",
-          "itemNames": ["TFT_Item_ForceOfNature"],
+          "itemNames": [
+            "TFT_Item_ForceOfNature"
+          ],
           "rarity": 3,
           "tier": 1
         },
         {
-          "items": [25, 45, 79],
+          "items": [
+            25,
+            45,
+            79
+          ],
           "character_id": "TFT7_DragonGreen",
           "itemNames": [
             "TFT_Item_TitansResolve",
@@ -2243,7 +2537,11 @@
           "tier": 2
         },
         {
-          "items": [23, 3004, 23],
+          "items": [
+            23,
+            3004,
+            23
+          ],
           "character_id": "TFT7_DragonBlue",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -2254,9 +2552,15 @@
           "tier": 2
         },
         {
-          "items": [9003, 5],
+          "items": [
+            9003,
+            5
+          ],
           "character_id": "TFT7_DragonGold",
-          "itemNames": ["TFT4_Item_OrnnEternalWinter", "TFT_Item_ChainVest"],
+          "itemNames": [
+            "TFT4_Item_OrnnEternalWinter",
+            "TFT_Item_ChainVest"
+          ],
           "rarity": 4,
           "tier": 2
         },
@@ -2268,7 +2572,11 @@
           "tier": 2
         },
         {
-          "items": [23, 34, 49],
+          "items": [
+            23,
+            34,
+            49
+          ],
           "character_id": "TFT7_AoShin",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -2398,16 +2706,24 @@
           "tier": 2
         },
         {
-          "items": [29],
+          "items": [
+            29
+          ],
           "character_id": "TFT7_Tristana",
-          "itemNames": ["TFT_Item_LastWhisper"],
+          "itemNames": [
+            "TFT_Item_LastWhisper"
+          ],
           "rarity": 1,
           "tier": 2
         },
         {
-          "items": [55],
+          "items": [
+            55
+          ],
           "character_id": "TFT7_Lulu",
-          "itemNames": ["TFT_Item_BrambleVest"],
+          "itemNames": [
+            "TFT_Item_BrambleVest"
+          ],
           "rarity": 2,
           "tier": 3
         },
@@ -2419,7 +2735,11 @@
           "tier": 2
         },
         {
-          "items": [23, 19, 39],
+          "items": [
+            23,
+            19,
+            39
+          ],
           "character_id": "TFT7_Corki",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -2430,7 +2750,11 @@
           "tier": 2
         },
         {
-          "items": [45, 16, 25],
+          "items": [
+            45,
+            16,
+            25
+          ],
           "character_id": "TFT7_Ornn",
           "itemNames": [
             "TFT_Item_FrozenHeart",
@@ -2441,7 +2765,11 @@
           "tier": 2
         },
         {
-          "items": [57, 3002, 66],
+          "items": [
+            57,
+            3002,
+            66
+          ],
           "character_id": "TFT7_DragonGold",
           "itemNames": [
             "TFT_Item_RedBuff",
@@ -2452,9 +2780,13 @@
           "tier": 2
         },
         {
-          "items": [41105],
+          "items": [
+            41105
+          ],
           "character_id": "TFT7_TrainerDragon",
-          "itemNames": ["TFT7_Item_TrainerSnax"],
+          "itemNames": [
+            "TFT7_Item_TrainerSnax"
+          ],
           "rarity": 8,
           "tier": 4
         },
@@ -2569,14 +2901,24 @@
           "tier": 2
         },
         {
-          "items": [17, 17],
+          "items": [
+            17,
+            17
+          ],
           "character_id": "TFT7_Twitch",
-          "itemNames": ["TFT_Item_ZekesHerald", "TFT_Item_ZekesHerald"],
+          "itemNames": [
+            "TFT_Item_ZekesHerald",
+            "TFT_Item_ZekesHerald"
+          ],
           "rarity": 1,
           "tier": 2
         },
         {
-          "items": [99, 16, 13],
+          "items": [
+            99,
+            16,
+            13
+          ],
           "character_id": "TFT7_Hecarim",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -2587,7 +2929,11 @@
           "tier": 1
         },
         {
-          "items": [99, 1, 17],
+          "items": [
+            99,
+            1,
+            17
+          ],
           "character_id": "TFT7_Talon",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -2598,16 +2944,24 @@
           "tier": 2
         },
         {
-          "items": [23],
+          "items": [
+            23
+          ],
           "character_id": "TFT7_Xayah",
-          "itemNames": ["TFT_Item_GuinsoosRageblade"],
+          "itemNames": [
+            "TFT_Item_GuinsoosRageblade"
+          ],
           "rarity": 3,
           "tier": 2
         },
         {
-          "items": [57],
+          "items": [
+            57
+          ],
           "character_id": "TFT7_Ornn",
-          "itemNames": ["TFT_Item_RedBuff"],
+          "itemNames": [
+            "TFT_Item_RedBuff"
+          ],
           "rarity": 3,
           "tier": 1
         },
@@ -2722,7 +3076,11 @@
       ],
       "unitDTO": [
         {
-          "items": [99, 26, 12],
+          "items": [
+            99,
+            26,
+            12
+          ],
           "character_id": "TFT7_Vladimir",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -2740,7 +3098,11 @@
           "tier": 3
         },
         {
-          "items": [9009, 16, 9004],
+          "items": [
+            9009,
+            16,
+            9004
+          ],
           "character_id": "TFT7_Nidalee",
           "itemNames": [
             "TFT4_Item_OrnnTheCollector",
@@ -2765,7 +3127,11 @@
           "tier": 2
         },
         {
-          "items": [23, 11, 16],
+          "items": [
+            23,
+            11,
+            16
+          ],
           "character_id": "TFT7_Varus",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -2776,7 +3142,11 @@
           "tier": 3
         },
         {
-          "items": [57, 88, 9008],
+          "items": [
+            57,
+            88,
+            9008
+          ],
           "character_id": "TFT7_Illaoi",
           "itemNames": [
             "TFT_Item_RedBuff",
@@ -2787,9 +3157,15 @@
           "tier": 3
         },
         {
-          "items": [19, 12],
+          "items": [
+            19,
+            12
+          ],
           "character_id": "TFT7_Xayah",
-          "itemNames": ["TFT_Item_InfinityEdge", "TFT_Item_MadredsBloodrazor"],
+          "itemNames": [
+            "TFT_Item_InfinityEdge",
+            "TFT_Item_MadredsBloodrazor"
+          ],
           "rarity": 3,
           "tier": 2
         },
@@ -2801,9 +3177,13 @@
           "tier": 2
         },
         {
-          "items": [17],
+          "items": [
+            17
+          ],
           "character_id": "TFT7_Bard",
-          "itemNames": ["TFT_Item_ZekesHerald"],
+          "itemNames": [
+            "TFT_Item_ZekesHerald"
+          ],
           "rarity": 5,
           "tier": 1
         },
@@ -2916,21 +3296,37 @@
           "tier": 2
         },
         {
-          "items": [17, 2315],
+          "items": [
+            17,
+            2315
+          ],
           "character_id": "TFT7_Twitch",
-          "itemNames": ["TFT_Item_ZekesHerald", "TFT7_Item_RagewingEmblemItem"],
+          "itemNames": [
+            "TFT_Item_ZekesHerald",
+            "TFT7_Item_RagewingEmblemItem"
+          ],
           "rarity": 1,
           "tier": 2
         },
         {
-          "items": [39, 39],
+          "items": [
+            39,
+            39
+          ],
           "character_id": "TFT7_Hecarim",
-          "itemNames": ["TFT_Item_JeweledGauntlet", "TFT_Item_JeweledGauntlet"],
+          "itemNames": [
+            "TFT_Item_JeweledGauntlet",
+            "TFT_Item_JeweledGauntlet"
+          ],
           "rarity": 3,
           "tier": 2
         },
         {
-          "items": [23, 49, 19],
+          "items": [
+            23,
+            49,
+            19
+          ],
           "character_id": "TFT7_Xayah",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -2941,9 +3337,15 @@
           "tier": 2
         },
         {
-          "items": [66, 57],
+          "items": [
+            66,
+            57
+          ],
           "character_id": "TFT7_Ornn",
-          "itemNames": ["TFT_Item_DragonsClaw", "TFT_Item_RedBuff"],
+          "itemNames": [
+            "TFT_Item_DragonsClaw",
+            "TFT_Item_RedBuff"
+          ],
           "rarity": 3,
           "tier": 2
         },
@@ -2955,7 +3357,11 @@
           "tier": 2
         },
         {
-          "items": [24, 34, 13],
+          "items": [
+            24,
+            34,
+            13
+          ],
           "character_id": "TFT7_AoShin",
           "itemNames": [
             "TFT_Item_StatikkShiv",
@@ -3097,7 +3503,11 @@
           "tier": 1
         },
         {
-          "items": [22, 2325, 45],
+          "items": [
+            22,
+            2325,
+            45
+          ],
           "character_id": "TFT7_Olaf",
           "itemNames": [
             "TFT_Item_RapidFireCannon",
@@ -3108,7 +3518,11 @@
           "tier": 2
         },
         {
-          "items": [57, 47, 55],
+          "items": [
+            57,
+            47,
+            55
+          ],
           "character_id": "TFT7_Sylas",
           "itemNames": [
             "TFT_Item_RedBuff",
@@ -3119,7 +3533,11 @@
           "tier": 3
         },
         {
-          "items": [23, 14, 24],
+          "items": [
+            23,
+            14,
+            24
+          ],
           "character_id": "TFT7_Varus",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -3137,7 +3555,11 @@
           "tier": 2
         },
         {
-          "items": [99, 79, 29],
+          "items": [
+            99,
+            79,
+            29
+          ],
           "character_id": "TFT7_Diana",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -3230,7 +3652,11 @@
       ],
       "unitDTO": [
         {
-          "items": [99, 36, 24],
+          "items": [
+            99,
+            36,
+            24
+          ],
           "character_id": "TFT7_Vladimir",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -3255,30 +3681,52 @@
           "tier": 3
         },
         {
-          "items": [39, 24],
+          "items": [
+            39,
+            24
+          ],
           "character_id": "TFT7_Nami",
-          "itemNames": ["TFT_Item_JeweledGauntlet", "TFT_Item_StatikkShiv"],
+          "itemNames": [
+            "TFT_Item_JeweledGauntlet",
+            "TFT_Item_StatikkShiv"
+          ],
           "rarity": 1,
           "tier": 3
         },
         {
-          "items": [67],
+          "items": [
+            67
+          ],
           "character_id": "TFT7_Sylas",
-          "itemNames": ["TFT_Item_Zephyr"],
+          "itemNames": [
+            "TFT_Item_Zephyr"
+          ],
           "rarity": 2,
           "tier": 1
         },
         {
-          "items": [16, 23],
+          "items": [
+            16,
+            23
+          ],
           "character_id": "TFT7_Varus",
-          "itemNames": ["TFT_Item_Bloodthirster", "TFT_Item_GuinsoosRageblade"],
+          "itemNames": [
+            "TFT_Item_Bloodthirster",
+            "TFT_Item_GuinsoosRageblade"
+          ],
           "rarity": 2,
           "tier": 3
         },
         {
-          "items": [35, 5],
+          "items": [
+            35,
+            5
+          ],
           "character_id": "TFT7_Illaoi",
-          "itemNames": ["TFT_Item_LocketOfTheIronSolari", "TFT_Item_ChainVest"],
+          "itemNames": [
+            "TFT_Item_LocketOfTheIronSolari",
+            "TFT_Item_ChainVest"
+          ],
           "rarity": 2,
           "tier": 3
         },
@@ -3403,16 +3851,24 @@
           "tier": 2
         },
         {
-          "items": [45],
+          "items": [
+            45
+          ],
           "character_id": "TFT7_Sylas",
-          "itemNames": ["TFT_Item_FrozenHeart"],
+          "itemNames": [
+            "TFT_Item_FrozenHeart"
+          ],
           "rarity": 2,
           "tier": 2
         },
         {
-          "items": [12],
+          "items": [
+            12
+          ],
           "character_id": "TFT7_Diana",
-          "itemNames": ["TFT_Item_MadredsBloodrazor"],
+          "itemNames": [
+            "TFT_Item_MadredsBloodrazor"
+          ],
           "rarity": 2,
           "tier": 2
         },
@@ -3424,7 +3880,11 @@
           "tier": 2
         },
         {
-          "items": [57, 77, 79],
+          "items": [
+            57,
+            77,
+            79
+          ],
           "character_id": "TFT7_Neeko",
           "itemNames": [
             "TFT_Item_RedBuff",
@@ -3442,7 +3902,11 @@
           "tier": 2
         },
         {
-          "items": [69, 16, 25],
+          "items": [
+            69,
+            16,
+            25
+          ],
           "character_id": "TFT7_DragonGreen",
           "itemNames": [
             "TFT_Item_Quicksilver",
@@ -3453,7 +3917,11 @@
           "tier": 2
         },
         {
-          "items": [94, 46, 26],
+          "items": [
+            94,
+            46,
+            26
+          ],
           "character_id": "TFT7_Pyke",
           "itemNames": [
             "TFT_Item_GuardianAngel",
@@ -3464,7 +3932,11 @@
           "tier": 2
         },
         {
-          "items": [25, 9, 2318],
+          "items": [
+            25,
+            9,
+            2318
+          ],
           "character_id": "TFT7_Soraka",
           "itemNames": [
             "TFT_Item_TitansResolve",
@@ -3570,7 +4042,11 @@
       ],
       "unitDTO": [
         {
-          "items": [2, 2323, 13],
+          "items": [
+            2,
+            2323,
+            13
+          ],
           "character_id": "TFT7_DragonPurple",
           "itemNames": [
             "TFT_Item_RecurveBow",
@@ -3581,14 +4057,22 @@
           "tier": 2
         },
         {
-          "items": [3003],
+          "items": [
+            3003
+          ],
           "character_id": "TFT7_Ornn",
-          "itemNames": ["TFT7_Item_ShimmerscaleGoldmancersStaff"],
+          "itemNames": [
+            "TFT7_Item_ShimmerscaleGoldmancersStaff"
+          ],
           "rarity": 3,
           "tier": 2
         },
         {
-          "items": [23, 39, 19],
+          "items": [
+            23,
+            39,
+            19
+          ],
           "character_id": "TFT7_DragonBlue",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -3599,16 +4083,26 @@
           "tier": 1
         },
         {
-          "items": [27],
+          "items": [
+            27
+          ],
           "character_id": "TFT7_DragonGold",
-          "itemNames": ["TFT_Item_TitanicHydra"],
+          "itemNames": [
+            "TFT_Item_TitanicHydra"
+          ],
           "rarity": 4,
           "tier": 1
         },
         {
-          "items": [14, 13],
+          "items": [
+            14,
+            13
+          ],
           "character_id": "TFT7_Bard",
-          "itemNames": ["TFT_Item_SpearOfShojin", "TFT_Item_HextechGunblade"],
+          "itemNames": [
+            "TFT_Item_SpearOfShojin",
+            "TFT_Item_HextechGunblade"
+          ],
           "rarity": 5,
           "tier": 1
         },
@@ -3726,7 +4220,11 @@
           "tier": 1
         },
         {
-          "items": [19, 47, 57],
+          "items": [
+            19,
+            47,
+            57
+          ],
           "character_id": "TFT7_DragonPurple",
           "itemNames": [
             "TFT_Item_InfinityEdge",
@@ -3737,7 +4235,11 @@
           "tier": 2
         },
         {
-          "items": [77, 9007, 27],
+          "items": [
+            77,
+            9007,
+            27
+          ],
           "character_id": "TFT7_DragonGreen",
           "itemNames": [
             "TFT_Item_WarmogsArmor",
@@ -3748,9 +4250,13 @@
           "tier": 2
         },
         {
-          "items": [16],
+          "items": [
+            16
+          ],
           "character_id": "TFT7_Yasuo",
-          "itemNames": ["TFT_Item_Bloodthirster"],
+          "itemNames": [
+            "TFT_Item_Bloodthirster"
+          ],
           "rarity": 5,
           "tier": 1
         },
@@ -3762,7 +4268,11 @@
           "tier": 1
         },
         {
-          "items": [14, 23, 19],
+          "items": [
+            14,
+            23,
+            19
+          ],
           "character_id": "TFT7_AoShin",
           "itemNames": [
             "TFT_Item_SpearOfShojin",
@@ -3871,14 +4381,22 @@
       ],
       "unitDTO": [
         {
-          "items": [88],
+          "items": [
+            88
+          ],
           "character_id": "TFT7_Ornn",
-          "itemNames": ["TFT_Item_ForceOfNature"],
+          "itemNames": [
+            "TFT_Item_ForceOfNature"
+          ],
           "rarity": 3,
           "tier": 1
         },
         {
-          "items": [25, 45, 79],
+          "items": [
+            25,
+            45,
+            79
+          ],
           "character_id": "TFT7_DragonGreen",
           "itemNames": [
             "TFT_Item_TitansResolve",
@@ -3889,7 +4407,11 @@
           "tier": 2
         },
         {
-          "items": [23, 3004, 23],
+          "items": [
+            23,
+            3004,
+            23
+          ],
           "character_id": "TFT7_DragonBlue",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -3900,9 +4422,15 @@
           "tier": 2
         },
         {
-          "items": [9003, 5],
+          "items": [
+            9003,
+            5
+          ],
           "character_id": "TFT7_DragonGold",
-          "itemNames": ["TFT4_Item_OrnnEternalWinter", "TFT_Item_ChainVest"],
+          "itemNames": [
+            "TFT4_Item_OrnnEternalWinter",
+            "TFT_Item_ChainVest"
+          ],
           "rarity": 4,
           "tier": 2
         },
@@ -3914,7 +4442,11 @@
           "tier": 2
         },
         {
-          "items": [23, 34, 49],
+          "items": [
+            23,
+            34,
+            49
+          ],
           "character_id": "TFT7_AoShin",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -4044,16 +4576,24 @@
           "tier": 2
         },
         {
-          "items": [29],
+          "items": [
+            29
+          ],
           "character_id": "TFT7_Tristana",
-          "itemNames": ["TFT_Item_LastWhisper"],
+          "itemNames": [
+            "TFT_Item_LastWhisper"
+          ],
           "rarity": 1,
           "tier": 2
         },
         {
-          "items": [55],
+          "items": [
+            55
+          ],
           "character_id": "TFT7_Lulu",
-          "itemNames": ["TFT_Item_BrambleVest"],
+          "itemNames": [
+            "TFT_Item_BrambleVest"
+          ],
           "rarity": 2,
           "tier": 3
         },
@@ -4065,7 +4605,11 @@
           "tier": 2
         },
         {
-          "items": [23, 19, 39],
+          "items": [
+            23,
+            19,
+            39
+          ],
           "character_id": "TFT7_Corki",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -4076,7 +4620,11 @@
           "tier": 2
         },
         {
-          "items": [45, 16, 25],
+          "items": [
+            45,
+            16,
+            25
+          ],
           "character_id": "TFT7_Ornn",
           "itemNames": [
             "TFT_Item_FrozenHeart",
@@ -4087,7 +4635,11 @@
           "tier": 2
         },
         {
-          "items": [57, 3002, 66],
+          "items": [
+            57,
+            3002,
+            66
+          ],
           "character_id": "TFT7_DragonGold",
           "itemNames": [
             "TFT_Item_RedBuff",
@@ -4098,9 +4650,13 @@
           "tier": 2
         },
         {
-          "items": [41105],
+          "items": [
+            41105
+          ],
           "character_id": "TFT7_TrainerDragon",
-          "itemNames": ["TFT7_Item_TrainerSnax"],
+          "itemNames": [
+            "TFT7_Item_TrainerSnax"
+          ],
           "rarity": 8,
           "tier": 4
         },
@@ -4215,14 +4771,24 @@
           "tier": 2
         },
         {
-          "items": [17, 17],
+          "items": [
+            17,
+            17
+          ],
           "character_id": "TFT7_Twitch",
-          "itemNames": ["TFT_Item_ZekesHerald", "TFT_Item_ZekesHerald"],
+          "itemNames": [
+            "TFT_Item_ZekesHerald",
+            "TFT_Item_ZekesHerald"
+          ],
           "rarity": 1,
           "tier": 2
         },
         {
-          "items": [99, 16, 13],
+          "items": [
+            99,
+            16,
+            13
+          ],
           "character_id": "TFT7_Hecarim",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -4233,7 +4799,11 @@
           "tier": 1
         },
         {
-          "items": [99, 1, 17],
+          "items": [
+            99,
+            1,
+            17
+          ],
           "character_id": "TFT7_Talon",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -4244,16 +4814,24 @@
           "tier": 2
         },
         {
-          "items": [23],
+          "items": [
+            23
+          ],
           "character_id": "TFT7_Xayah",
-          "itemNames": ["TFT_Item_GuinsoosRageblade"],
+          "itemNames": [
+            "TFT_Item_GuinsoosRageblade"
+          ],
           "rarity": 3,
           "tier": 2
         },
         {
-          "items": [57],
+          "items": [
+            57
+          ],
           "character_id": "TFT7_Ornn",
-          "itemNames": ["TFT_Item_RedBuff"],
+          "itemNames": [
+            "TFT_Item_RedBuff"
+          ],
           "rarity": 3,
           "tier": 1
         },
@@ -4368,7 +4946,11 @@
       ],
       "unitDTO": [
         {
-          "items": [99, 26, 12],
+          "items": [
+            99,
+            26,
+            12
+          ],
           "character_id": "TFT7_Vladimir",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -4386,7 +4968,11 @@
           "tier": 3
         },
         {
-          "items": [9009, 16, 9004],
+          "items": [
+            9009,
+            16,
+            9004
+          ],
           "character_id": "TFT7_Nidalee",
           "itemNames": [
             "TFT4_Item_OrnnTheCollector",
@@ -4411,7 +4997,11 @@
           "tier": 2
         },
         {
-          "items": [23, 11, 16],
+          "items": [
+            23,
+            11,
+            16
+          ],
           "character_id": "TFT7_Varus",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -4422,7 +5012,11 @@
           "tier": 3
         },
         {
-          "items": [57, 88, 9008],
+          "items": [
+            57,
+            88,
+            9008
+          ],
           "character_id": "TFT7_Illaoi",
           "itemNames": [
             "TFT_Item_RedBuff",
@@ -4433,9 +5027,15 @@
           "tier": 3
         },
         {
-          "items": [19, 12],
+          "items": [
+            19,
+            12
+          ],
           "character_id": "TFT7_Xayah",
-          "itemNames": ["TFT_Item_InfinityEdge", "TFT_Item_MadredsBloodrazor"],
+          "itemNames": [
+            "TFT_Item_InfinityEdge",
+            "TFT_Item_MadredsBloodrazor"
+          ],
           "rarity": 3,
           "tier": 2
         },
@@ -4447,9 +5047,13 @@
           "tier": 2
         },
         {
-          "items": [17],
+          "items": [
+            17
+          ],
           "character_id": "TFT7_Bard",
-          "itemNames": ["TFT_Item_ZekesHerald"],
+          "itemNames": [
+            "TFT_Item_ZekesHerald"
+          ],
           "rarity": 5,
           "tier": 1
         },
@@ -4562,21 +5166,37 @@
           "tier": 2
         },
         {
-          "items": [17, 2315],
+          "items": [
+            17,
+            2315
+          ],
           "character_id": "TFT7_Twitch",
-          "itemNames": ["TFT_Item_ZekesHerald", "TFT7_Item_RagewingEmblemItem"],
+          "itemNames": [
+            "TFT_Item_ZekesHerald",
+            "TFT7_Item_RagewingEmblemItem"
+          ],
           "rarity": 1,
           "tier": 2
         },
         {
-          "items": [39, 39],
+          "items": [
+            39,
+            39
+          ],
           "character_id": "TFT7_Hecarim",
-          "itemNames": ["TFT_Item_JeweledGauntlet", "TFT_Item_JeweledGauntlet"],
+          "itemNames": [
+            "TFT_Item_JeweledGauntlet",
+            "TFT_Item_JeweledGauntlet"
+          ],
           "rarity": 3,
           "tier": 2
         },
         {
-          "items": [23, 49, 19],
+          "items": [
+            23,
+            49,
+            19
+          ],
           "character_id": "TFT7_Xayah",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -4587,9 +5207,15 @@
           "tier": 2
         },
         {
-          "items": [66, 57],
+          "items": [
+            66,
+            57
+          ],
           "character_id": "TFT7_Ornn",
-          "itemNames": ["TFT_Item_DragonsClaw", "TFT_Item_RedBuff"],
+          "itemNames": [
+            "TFT_Item_DragonsClaw",
+            "TFT_Item_RedBuff"
+          ],
           "rarity": 3,
           "tier": 2
         },
@@ -4601,7 +5227,11 @@
           "tier": 2
         },
         {
-          "items": [24, 34, 13],
+          "items": [
+            24,
+            34,
+            13
+          ],
           "character_id": "TFT7_AoShin",
           "itemNames": [
             "TFT_Item_StatikkShiv",
@@ -4743,7 +5373,11 @@
           "tier": 1
         },
         {
-          "items": [22, 2325, 45],
+          "items": [
+            22,
+            2325,
+            45
+          ],
           "character_id": "TFT7_Olaf",
           "itemNames": [
             "TFT_Item_RapidFireCannon",
@@ -4754,7 +5388,11 @@
           "tier": 2
         },
         {
-          "items": [57, 47, 55],
+          "items": [
+            57,
+            47,
+            55
+          ],
           "character_id": "TFT7_Sylas",
           "itemNames": [
             "TFT_Item_RedBuff",
@@ -4765,7 +5403,11 @@
           "tier": 3
         },
         {
-          "items": [23, 14, 24],
+          "items": [
+            23,
+            14,
+            24
+          ],
           "character_id": "TFT7_Varus",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -4783,7 +5425,11 @@
           "tier": 2
         },
         {
-          "items": [99, 79, 29],
+          "items": [
+            99,
+            79,
+            29
+          ],
           "character_id": "TFT7_Diana",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -4876,7 +5522,11 @@
       ],
       "unitDTO": [
         {
-          "items": [99, 36, 24],
+          "items": [
+            99,
+            36,
+            24
+          ],
           "character_id": "TFT7_Vladimir",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -4901,30 +5551,52 @@
           "tier": 3
         },
         {
-          "items": [39, 24],
+          "items": [
+            39,
+            24
+          ],
           "character_id": "TFT7_Nami",
-          "itemNames": ["TFT_Item_JeweledGauntlet", "TFT_Item_StatikkShiv"],
+          "itemNames": [
+            "TFT_Item_JeweledGauntlet",
+            "TFT_Item_StatikkShiv"
+          ],
           "rarity": 1,
           "tier": 3
         },
         {
-          "items": [67],
+          "items": [
+            67
+          ],
           "character_id": "TFT7_Sylas",
-          "itemNames": ["TFT_Item_Zephyr"],
+          "itemNames": [
+            "TFT_Item_Zephyr"
+          ],
           "rarity": 2,
           "tier": 1
         },
         {
-          "items": [16, 23],
+          "items": [
+            16,
+            23
+          ],
           "character_id": "TFT7_Varus",
-          "itemNames": ["TFT_Item_Bloodthirster", "TFT_Item_GuinsoosRageblade"],
+          "itemNames": [
+            "TFT_Item_Bloodthirster",
+            "TFT_Item_GuinsoosRageblade"
+          ],
           "rarity": 2,
           "tier": 3
         },
         {
-          "items": [35, 5],
+          "items": [
+            35,
+            5
+          ],
           "character_id": "TFT7_Illaoi",
-          "itemNames": ["TFT_Item_LocketOfTheIronSolari", "TFT_Item_ChainVest"],
+          "itemNames": [
+            "TFT_Item_LocketOfTheIronSolari",
+            "TFT_Item_ChainVest"
+          ],
           "rarity": 2,
           "tier": 3
         },
@@ -5049,16 +5721,24 @@
           "tier": 2
         },
         {
-          "items": [45],
+          "items": [
+            45
+          ],
           "character_id": "TFT7_Sylas",
-          "itemNames": ["TFT_Item_FrozenHeart"],
+          "itemNames": [
+            "TFT_Item_FrozenHeart"
+          ],
           "rarity": 2,
           "tier": 2
         },
         {
-          "items": [12],
+          "items": [
+            12
+          ],
           "character_id": "TFT7_Diana",
-          "itemNames": ["TFT_Item_MadredsBloodrazor"],
+          "itemNames": [
+            "TFT_Item_MadredsBloodrazor"
+          ],
           "rarity": 2,
           "tier": 2
         },
@@ -5070,7 +5750,11 @@
           "tier": 2
         },
         {
-          "items": [57, 77, 79],
+          "items": [
+            57,
+            77,
+            79
+          ],
           "character_id": "TFT7_Neeko",
           "itemNames": [
             "TFT_Item_RedBuff",
@@ -5088,7 +5772,11 @@
           "tier": 2
         },
         {
-          "items": [69, 16, 25],
+          "items": [
+            69,
+            16,
+            25
+          ],
           "character_id": "TFT7_DragonGreen",
           "itemNames": [
             "TFT_Item_Quicksilver",
@@ -5099,7 +5787,11 @@
           "tier": 2
         },
         {
-          "items": [94, 46, 26],
+          "items": [
+            94,
+            46,
+            26
+          ],
           "character_id": "TFT7_Pyke",
           "itemNames": [
             "TFT_Item_GuardianAngel",
@@ -5110,7 +5802,11 @@
           "tier": 2
         },
         {
-          "items": [25, 9, 2318],
+          "items": [
+            25,
+            9,
+            2318
+          ],
           "character_id": "TFT7_Soraka",
           "itemNames": [
             "TFT_Item_TitansResolve",
@@ -5216,7 +5912,11 @@
       ],
       "unitDTO": [
         {
-          "items": [2, 2323, 13],
+          "items": [
+            2,
+            2323,
+            13
+          ],
           "character_id": "TFT7_DragonPurple",
           "itemNames": [
             "TFT_Item_RecurveBow",
@@ -5227,14 +5927,22 @@
           "tier": 2
         },
         {
-          "items": [3003],
+          "items": [
+            3003
+          ],
           "character_id": "TFT7_Ornn",
-          "itemNames": ["TFT7_Item_ShimmerscaleGoldmancersStaff"],
+          "itemNames": [
+            "TFT7_Item_ShimmerscaleGoldmancersStaff"
+          ],
           "rarity": 3,
           "tier": 2
         },
         {
-          "items": [23, 39, 19],
+          "items": [
+            23,
+            39,
+            19
+          ],
           "character_id": "TFT7_DragonBlue",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -5245,16 +5953,26 @@
           "tier": 1
         },
         {
-          "items": [27],
+          "items": [
+            27
+          ],
           "character_id": "TFT7_DragonGold",
-          "itemNames": ["TFT_Item_TitanicHydra"],
+          "itemNames": [
+            "TFT_Item_TitanicHydra"
+          ],
           "rarity": 4,
           "tier": 1
         },
         {
-          "items": [14, 13],
+          "items": [
+            14,
+            13
+          ],
           "character_id": "TFT7_Bard",
-          "itemNames": ["TFT_Item_SpearOfShojin", "TFT_Item_HextechGunblade"],
+          "itemNames": [
+            "TFT_Item_SpearOfShojin",
+            "TFT_Item_HextechGunblade"
+          ],
           "rarity": 5,
           "tier": 1
         },
@@ -5372,7 +6090,11 @@
           "tier": 1
         },
         {
-          "items": [19, 47, 57],
+          "items": [
+            19,
+            47,
+            57
+          ],
           "character_id": "TFT7_DragonPurple",
           "itemNames": [
             "TFT_Item_InfinityEdge",
@@ -5383,7 +6105,11 @@
           "tier": 2
         },
         {
-          "items": [77, 9007, 27],
+          "items": [
+            77,
+            9007,
+            27
+          ],
           "character_id": "TFT7_DragonGreen",
           "itemNames": [
             "TFT_Item_WarmogsArmor",
@@ -5394,9 +6120,13 @@
           "tier": 2
         },
         {
-          "items": [16],
+          "items": [
+            16
+          ],
           "character_id": "TFT7_Yasuo",
-          "itemNames": ["TFT_Item_Bloodthirster"],
+          "itemNames": [
+            "TFT_Item_Bloodthirster"
+          ],
           "rarity": 5,
           "tier": 1
         },
@@ -5408,7 +6138,11 @@
           "tier": 1
         },
         {
-          "items": [14, 23, 19],
+          "items": [
+            14,
+            23,
+            19
+          ],
           "character_id": "TFT7_AoShin",
           "itemNames": [
             "TFT_Item_SpearOfShojin",
@@ -5517,14 +6251,22 @@
       ],
       "unitDTO": [
         {
-          "items": [88],
+          "items": [
+            88
+          ],
           "character_id": "TFT7_Ornn",
-          "itemNames": ["TFT_Item_ForceOfNature"],
+          "itemNames": [
+            "TFT_Item_ForceOfNature"
+          ],
           "rarity": 3,
           "tier": 1
         },
         {
-          "items": [25, 45, 79],
+          "items": [
+            25,
+            45,
+            79
+          ],
           "character_id": "TFT7_DragonGreen",
           "itemNames": [
             "TFT_Item_TitansResolve",
@@ -5535,7 +6277,11 @@
           "tier": 2
         },
         {
-          "items": [23, 3004, 23],
+          "items": [
+            23,
+            3004,
+            23
+          ],
           "character_id": "TFT7_DragonBlue",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -5546,9 +6292,15 @@
           "tier": 2
         },
         {
-          "items": [9003, 5],
+          "items": [
+            9003,
+            5
+          ],
           "character_id": "TFT7_DragonGold",
-          "itemNames": ["TFT4_Item_OrnnEternalWinter", "TFT_Item_ChainVest"],
+          "itemNames": [
+            "TFT4_Item_OrnnEternalWinter",
+            "TFT_Item_ChainVest"
+          ],
           "rarity": 4,
           "tier": 2
         },
@@ -5560,7 +6312,11 @@
           "tier": 2
         },
         {
-          "items": [23, 34, 49],
+          "items": [
+            23,
+            34,
+            49
+          ],
           "character_id": "TFT7_AoShin",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -5690,16 +6446,24 @@
           "tier": 2
         },
         {
-          "items": [29],
+          "items": [
+            29
+          ],
           "character_id": "TFT7_Tristana",
-          "itemNames": ["TFT_Item_LastWhisper"],
+          "itemNames": [
+            "TFT_Item_LastWhisper"
+          ],
           "rarity": 1,
           "tier": 2
         },
         {
-          "items": [55],
+          "items": [
+            55
+          ],
           "character_id": "TFT7_Lulu",
-          "itemNames": ["TFT_Item_BrambleVest"],
+          "itemNames": [
+            "TFT_Item_BrambleVest"
+          ],
           "rarity": 2,
           "tier": 3
         },
@@ -5711,7 +6475,11 @@
           "tier": 2
         },
         {
-          "items": [23, 19, 39],
+          "items": [
+            23,
+            19,
+            39
+          ],
           "character_id": "TFT7_Corki",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -5722,7 +6490,11 @@
           "tier": 2
         },
         {
-          "items": [45, 16, 25],
+          "items": [
+            45,
+            16,
+            25
+          ],
           "character_id": "TFT7_Ornn",
           "itemNames": [
             "TFT_Item_FrozenHeart",
@@ -5733,7 +6505,11 @@
           "tier": 2
         },
         {
-          "items": [57, 3002, 66],
+          "items": [
+            57,
+            3002,
+            66
+          ],
           "character_id": "TFT7_DragonGold",
           "itemNames": [
             "TFT_Item_RedBuff",
@@ -5744,9 +6520,13 @@
           "tier": 2
         },
         {
-          "items": [41105],
+          "items": [
+            41105
+          ],
           "character_id": "TFT7_TrainerDragon",
-          "itemNames": ["TFT7_Item_TrainerSnax"],
+          "itemNames": [
+            "TFT7_Item_TrainerSnax"
+          ],
           "rarity": 8,
           "tier": 4
         },
@@ -5861,14 +6641,24 @@
           "tier": 2
         },
         {
-          "items": [17, 17],
+          "items": [
+            17,
+            17
+          ],
           "character_id": "TFT7_Twitch",
-          "itemNames": ["TFT_Item_ZekesHerald", "TFT_Item_ZekesHerald"],
+          "itemNames": [
+            "TFT_Item_ZekesHerald",
+            "TFT_Item_ZekesHerald"
+          ],
           "rarity": 1,
           "tier": 2
         },
         {
-          "items": [99, 16, 13],
+          "items": [
+            99,
+            16,
+            13
+          ],
           "character_id": "TFT7_Hecarim",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -5879,7 +6669,11 @@
           "tier": 1
         },
         {
-          "items": [99, 1, 17],
+          "items": [
+            99,
+            1,
+            17
+          ],
           "character_id": "TFT7_Talon",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -5890,16 +6684,24 @@
           "tier": 2
         },
         {
-          "items": [23],
+          "items": [
+            23
+          ],
           "character_id": "TFT7_Xayah",
-          "itemNames": ["TFT_Item_GuinsoosRageblade"],
+          "itemNames": [
+            "TFT_Item_GuinsoosRageblade"
+          ],
           "rarity": 3,
           "tier": 2
         },
         {
-          "items": [57],
+          "items": [
+            57
+          ],
           "character_id": "TFT7_Ornn",
-          "itemNames": ["TFT_Item_RedBuff"],
+          "itemNames": [
+            "TFT_Item_RedBuff"
+          ],
           "rarity": 3,
           "tier": 1
         },
@@ -6014,7 +6816,11 @@
       ],
       "unitDTO": [
         {
-          "items": [99, 26, 12],
+          "items": [
+            99,
+            26,
+            12
+          ],
           "character_id": "TFT7_Vladimir",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -6032,7 +6838,11 @@
           "tier": 3
         },
         {
-          "items": [9009, 16, 9004],
+          "items": [
+            9009,
+            16,
+            9004
+          ],
           "character_id": "TFT7_Nidalee",
           "itemNames": [
             "TFT4_Item_OrnnTheCollector",
@@ -6057,7 +6867,11 @@
           "tier": 2
         },
         {
-          "items": [23, 11, 16],
+          "items": [
+            23,
+            11,
+            16
+          ],
           "character_id": "TFT7_Varus",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -6068,7 +6882,11 @@
           "tier": 3
         },
         {
-          "items": [57, 88, 9008],
+          "items": [
+            57,
+            88,
+            9008
+          ],
           "character_id": "TFT7_Illaoi",
           "itemNames": [
             "TFT_Item_RedBuff",
@@ -6079,9 +6897,15 @@
           "tier": 3
         },
         {
-          "items": [19, 12],
+          "items": [
+            19,
+            12
+          ],
           "character_id": "TFT7_Xayah",
-          "itemNames": ["TFT_Item_InfinityEdge", "TFT_Item_MadredsBloodrazor"],
+          "itemNames": [
+            "TFT_Item_InfinityEdge",
+            "TFT_Item_MadredsBloodrazor"
+          ],
           "rarity": 3,
           "tier": 2
         },
@@ -6093,9 +6917,13 @@
           "tier": 2
         },
         {
-          "items": [17],
+          "items": [
+            17
+          ],
           "character_id": "TFT7_Bard",
-          "itemNames": ["TFT_Item_ZekesHerald"],
+          "itemNames": [
+            "TFT_Item_ZekesHerald"
+          ],
           "rarity": 5,
           "tier": 1
         },
@@ -6208,21 +7036,37 @@
           "tier": 2
         },
         {
-          "items": [17, 2315],
+          "items": [
+            17,
+            2315
+          ],
           "character_id": "TFT7_Twitch",
-          "itemNames": ["TFT_Item_ZekesHerald", "TFT7_Item_RagewingEmblemItem"],
+          "itemNames": [
+            "TFT_Item_ZekesHerald",
+            "TFT7_Item_RagewingEmblemItem"
+          ],
           "rarity": 1,
           "tier": 2
         },
         {
-          "items": [39, 39],
+          "items": [
+            39,
+            39
+          ],
           "character_id": "TFT7_Hecarim",
-          "itemNames": ["TFT_Item_JeweledGauntlet", "TFT_Item_JeweledGauntlet"],
+          "itemNames": [
+            "TFT_Item_JeweledGauntlet",
+            "TFT_Item_JeweledGauntlet"
+          ],
           "rarity": 3,
           "tier": 2
         },
         {
-          "items": [23, 49, 19],
+          "items": [
+            23,
+            49,
+            19
+          ],
           "character_id": "TFT7_Xayah",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -6233,9 +7077,15 @@
           "tier": 2
         },
         {
-          "items": [66, 57],
+          "items": [
+            66,
+            57
+          ],
           "character_id": "TFT7_Ornn",
-          "itemNames": ["TFT_Item_DragonsClaw", "TFT_Item_RedBuff"],
+          "itemNames": [
+            "TFT_Item_DragonsClaw",
+            "TFT_Item_RedBuff"
+          ],
           "rarity": 3,
           "tier": 2
         },
@@ -6247,7 +7097,11 @@
           "tier": 2
         },
         {
-          "items": [24, 34, 13],
+          "items": [
+            24,
+            34,
+            13
+          ],
           "character_id": "TFT7_AoShin",
           "itemNames": [
             "TFT_Item_StatikkShiv",
@@ -6389,7 +7243,11 @@
           "tier": 1
         },
         {
-          "items": [22, 2325, 45],
+          "items": [
+            22,
+            2325,
+            45
+          ],
           "character_id": "TFT7_Olaf",
           "itemNames": [
             "TFT_Item_RapidFireCannon",
@@ -6400,7 +7258,11 @@
           "tier": 2
         },
         {
-          "items": [57, 47, 55],
+          "items": [
+            57,
+            47,
+            55
+          ],
           "character_id": "TFT7_Sylas",
           "itemNames": [
             "TFT_Item_RedBuff",
@@ -6411,7 +7273,11 @@
           "tier": 3
         },
         {
-          "items": [23, 14, 24],
+          "items": [
+            23,
+            14,
+            24
+          ],
           "character_id": "TFT7_Varus",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -6429,7 +7295,11 @@
           "tier": 2
         },
         {
-          "items": [99, 79, 29],
+          "items": [
+            99,
+            79,
+            29
+          ],
           "character_id": "TFT7_Diana",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -6522,7 +7392,11 @@
       ],
       "unitDTO": [
         {
-          "items": [99, 36, 24],
+          "items": [
+            99,
+            36,
+            24
+          ],
           "character_id": "TFT7_Vladimir",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -6547,30 +7421,52 @@
           "tier": 3
         },
         {
-          "items": [39, 24],
+          "items": [
+            39,
+            24
+          ],
           "character_id": "TFT7_Nami",
-          "itemNames": ["TFT_Item_JeweledGauntlet", "TFT_Item_StatikkShiv"],
+          "itemNames": [
+            "TFT_Item_JeweledGauntlet",
+            "TFT_Item_StatikkShiv"
+          ],
           "rarity": 1,
           "tier": 3
         },
         {
-          "items": [67],
+          "items": [
+            67
+          ],
           "character_id": "TFT7_Sylas",
-          "itemNames": ["TFT_Item_Zephyr"],
+          "itemNames": [
+            "TFT_Item_Zephyr"
+          ],
           "rarity": 2,
           "tier": 1
         },
         {
-          "items": [16, 23],
+          "items": [
+            16,
+            23
+          ],
           "character_id": "TFT7_Varus",
-          "itemNames": ["TFT_Item_Bloodthirster", "TFT_Item_GuinsoosRageblade"],
+          "itemNames": [
+            "TFT_Item_Bloodthirster",
+            "TFT_Item_GuinsoosRageblade"
+          ],
           "rarity": 2,
           "tier": 3
         },
         {
-          "items": [35, 5],
+          "items": [
+            35,
+            5
+          ],
           "character_id": "TFT7_Illaoi",
-          "itemNames": ["TFT_Item_LocketOfTheIronSolari", "TFT_Item_ChainVest"],
+          "itemNames": [
+            "TFT_Item_LocketOfTheIronSolari",
+            "TFT_Item_ChainVest"
+          ],
           "rarity": 2,
           "tier": 3
         },
@@ -6695,16 +7591,24 @@
           "tier": 2
         },
         {
-          "items": [45],
+          "items": [
+            45
+          ],
           "character_id": "TFT7_Sylas",
-          "itemNames": ["TFT_Item_FrozenHeart"],
+          "itemNames": [
+            "TFT_Item_FrozenHeart"
+          ],
           "rarity": 2,
           "tier": 2
         },
         {
-          "items": [12],
+          "items": [
+            12
+          ],
           "character_id": "TFT7_Diana",
-          "itemNames": ["TFT_Item_MadredsBloodrazor"],
+          "itemNames": [
+            "TFT_Item_MadredsBloodrazor"
+          ],
           "rarity": 2,
           "tier": 2
         },
@@ -6716,7 +7620,11 @@
           "tier": 2
         },
         {
-          "items": [57, 77, 79],
+          "items": [
+            57,
+            77,
+            79
+          ],
           "character_id": "TFT7_Neeko",
           "itemNames": [
             "TFT_Item_RedBuff",
@@ -6734,7 +7642,11 @@
           "tier": 2
         },
         {
-          "items": [69, 16, 25],
+          "items": [
+            69,
+            16,
+            25
+          ],
           "character_id": "TFT7_DragonGreen",
           "itemNames": [
             "TFT_Item_Quicksilver",
@@ -6745,7 +7657,11 @@
           "tier": 2
         },
         {
-          "items": [94, 46, 26],
+          "items": [
+            94,
+            46,
+            26
+          ],
           "character_id": "TFT7_Pyke",
           "itemNames": [
             "TFT_Item_GuardianAngel",
@@ -6756,7 +7672,11 @@
           "tier": 2
         },
         {
-          "items": [25, 9, 2318],
+          "items": [
+            25,
+            9,
+            2318
+          ],
           "character_id": "TFT7_Soraka",
           "itemNames": [
             "TFT_Item_TitansResolve",
@@ -6862,7 +7782,11 @@
       ],
       "unitDTO": [
         {
-          "items": [2, 2323, 13],
+          "items": [
+            2,
+            2323,
+            13
+          ],
           "character_id": "TFT7_DragonPurple",
           "itemNames": [
             "TFT_Item_RecurveBow",
@@ -6873,14 +7797,22 @@
           "tier": 2
         },
         {
-          "items": [3003],
+          "items": [
+            3003
+          ],
           "character_id": "TFT7_Ornn",
-          "itemNames": ["TFT7_Item_ShimmerscaleGoldmancersStaff"],
+          "itemNames": [
+            "TFT7_Item_ShimmerscaleGoldmancersStaff"
+          ],
           "rarity": 3,
           "tier": 2
         },
         {
-          "items": [23, 39, 19],
+          "items": [
+            23,
+            39,
+            19
+          ],
           "character_id": "TFT7_DragonBlue",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -6891,16 +7823,26 @@
           "tier": 1
         },
         {
-          "items": [27],
+          "items": [
+            27
+          ],
           "character_id": "TFT7_DragonGold",
-          "itemNames": ["TFT_Item_TitanicHydra"],
+          "itemNames": [
+            "TFT_Item_TitanicHydra"
+          ],
           "rarity": 4,
           "tier": 1
         },
         {
-          "items": [14, 13],
+          "items": [
+            14,
+            13
+          ],
           "character_id": "TFT7_Bard",
-          "itemNames": ["TFT_Item_SpearOfShojin", "TFT_Item_HextechGunblade"],
+          "itemNames": [
+            "TFT_Item_SpearOfShojin",
+            "TFT_Item_HextechGunblade"
+          ],
           "rarity": 5,
           "tier": 1
         },
@@ -7018,7 +7960,11 @@
           "tier": 1
         },
         {
-          "items": [19, 47, 57],
+          "items": [
+            19,
+            47,
+            57
+          ],
           "character_id": "TFT7_DragonPurple",
           "itemNames": [
             "TFT_Item_InfinityEdge",
@@ -7029,7 +7975,11 @@
           "tier": 2
         },
         {
-          "items": [77, 9007, 27],
+          "items": [
+            77,
+            9007,
+            27
+          ],
           "character_id": "TFT7_DragonGreen",
           "itemNames": [
             "TFT_Item_WarmogsArmor",
@@ -7040,9 +7990,13 @@
           "tier": 2
         },
         {
-          "items": [16],
+          "items": [
+            16
+          ],
           "character_id": "TFT7_Yasuo",
-          "itemNames": ["TFT_Item_Bloodthirster"],
+          "itemNames": [
+            "TFT_Item_Bloodthirster"
+          ],
           "rarity": 5,
           "tier": 1
         },
@@ -7054,7 +8008,11 @@
           "tier": 1
         },
         {
-          "items": [14, 23, 19],
+          "items": [
+            14,
+            23,
+            19
+          ],
           "character_id": "TFT7_AoShin",
           "itemNames": [
             "TFT_Item_SpearOfShojin",
@@ -7163,14 +8121,22 @@
       ],
       "unitDTO": [
         {
-          "items": [88],
+          "items": [
+            88
+          ],
           "character_id": "TFT7_Ornn",
-          "itemNames": ["TFT_Item_ForceOfNature"],
+          "itemNames": [
+            "TFT_Item_ForceOfNature"
+          ],
           "rarity": 3,
           "tier": 1
         },
         {
-          "items": [25, 45, 79],
+          "items": [
+            25,
+            45,
+            79
+          ],
           "character_id": "TFT7_DragonGreen",
           "itemNames": [
             "TFT_Item_TitansResolve",
@@ -7181,7 +8147,11 @@
           "tier": 2
         },
         {
-          "items": [23, 3004, 23],
+          "items": [
+            23,
+            3004,
+            23
+          ],
           "character_id": "TFT7_DragonBlue",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -7192,9 +8162,15 @@
           "tier": 2
         },
         {
-          "items": [9003, 5],
+          "items": [
+            9003,
+            5
+          ],
           "character_id": "TFT7_DragonGold",
-          "itemNames": ["TFT4_Item_OrnnEternalWinter", "TFT_Item_ChainVest"],
+          "itemNames": [
+            "TFT4_Item_OrnnEternalWinter",
+            "TFT_Item_ChainVest"
+          ],
           "rarity": 4,
           "tier": 2
         },
@@ -7206,7 +8182,11 @@
           "tier": 2
         },
         {
-          "items": [23, 34, 49],
+          "items": [
+            23,
+            34,
+            49
+          ],
           "character_id": "TFT7_AoShin",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -7336,16 +8316,24 @@
           "tier": 2
         },
         {
-          "items": [29],
+          "items": [
+            29
+          ],
           "character_id": "TFT7_Tristana",
-          "itemNames": ["TFT_Item_LastWhisper"],
+          "itemNames": [
+            "TFT_Item_LastWhisper"
+          ],
           "rarity": 1,
           "tier": 2
         },
         {
-          "items": [55],
+          "items": [
+            55
+          ],
           "character_id": "TFT7_Lulu",
-          "itemNames": ["TFT_Item_BrambleVest"],
+          "itemNames": [
+            "TFT_Item_BrambleVest"
+          ],
           "rarity": 2,
           "tier": 3
         },
@@ -7357,7 +8345,11 @@
           "tier": 2
         },
         {
-          "items": [23, 19, 39],
+          "items": [
+            23,
+            19,
+            39
+          ],
           "character_id": "TFT7_Corki",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -7368,7 +8360,11 @@
           "tier": 2
         },
         {
-          "items": [45, 16, 25],
+          "items": [
+            45,
+            16,
+            25
+          ],
           "character_id": "TFT7_Ornn",
           "itemNames": [
             "TFT_Item_FrozenHeart",
@@ -7379,7 +8375,11 @@
           "tier": 2
         },
         {
-          "items": [57, 3002, 66],
+          "items": [
+            57,
+            3002,
+            66
+          ],
           "character_id": "TFT7_DragonGold",
           "itemNames": [
             "TFT_Item_RedBuff",
@@ -7390,9 +8390,13 @@
           "tier": 2
         },
         {
-          "items": [41105],
+          "items": [
+            41105
+          ],
           "character_id": "TFT7_TrainerDragon",
-          "itemNames": ["TFT7_Item_TrainerSnax"],
+          "itemNames": [
+            "TFT7_Item_TrainerSnax"
+          ],
           "rarity": 8,
           "tier": 4
         },
@@ -7507,14 +8511,24 @@
           "tier": 2
         },
         {
-          "items": [17, 17],
+          "items": [
+            17,
+            17
+          ],
           "character_id": "TFT7_Twitch",
-          "itemNames": ["TFT_Item_ZekesHerald", "TFT_Item_ZekesHerald"],
+          "itemNames": [
+            "TFT_Item_ZekesHerald",
+            "TFT_Item_ZekesHerald"
+          ],
           "rarity": 1,
           "tier": 2
         },
         {
-          "items": [99, 16, 13],
+          "items": [
+            99,
+            16,
+            13
+          ],
           "character_id": "TFT7_Hecarim",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -7525,7 +8539,11 @@
           "tier": 1
         },
         {
-          "items": [99, 1, 17],
+          "items": [
+            99,
+            1,
+            17
+          ],
           "character_id": "TFT7_Talon",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -7536,16 +8554,24 @@
           "tier": 2
         },
         {
-          "items": [23],
+          "items": [
+            23
+          ],
           "character_id": "TFT7_Xayah",
-          "itemNames": ["TFT_Item_GuinsoosRageblade"],
+          "itemNames": [
+            "TFT_Item_GuinsoosRageblade"
+          ],
           "rarity": 3,
           "tier": 2
         },
         {
-          "items": [57],
+          "items": [
+            57
+          ],
           "character_id": "TFT7_Ornn",
-          "itemNames": ["TFT_Item_RedBuff"],
+          "itemNames": [
+            "TFT_Item_RedBuff"
+          ],
           "rarity": 3,
           "tier": 1
         },
@@ -7660,7 +8686,11 @@
       ],
       "unitDTO": [
         {
-          "items": [99, 26, 12],
+          "items": [
+            99,
+            26,
+            12
+          ],
           "character_id": "TFT7_Vladimir",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -7678,7 +8708,11 @@
           "tier": 3
         },
         {
-          "items": [9009, 16, 9004],
+          "items": [
+            9009,
+            16,
+            9004
+          ],
           "character_id": "TFT7_Nidalee",
           "itemNames": [
             "TFT4_Item_OrnnTheCollector",
@@ -7703,7 +8737,11 @@
           "tier": 2
         },
         {
-          "items": [23, 11, 16],
+          "items": [
+            23,
+            11,
+            16
+          ],
           "character_id": "TFT7_Varus",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -7714,7 +8752,11 @@
           "tier": 3
         },
         {
-          "items": [57, 88, 9008],
+          "items": [
+            57,
+            88,
+            9008
+          ],
           "character_id": "TFT7_Illaoi",
           "itemNames": [
             "TFT_Item_RedBuff",
@@ -7725,9 +8767,15 @@
           "tier": 3
         },
         {
-          "items": [19, 12],
+          "items": [
+            19,
+            12
+          ],
           "character_id": "TFT7_Xayah",
-          "itemNames": ["TFT_Item_InfinityEdge", "TFT_Item_MadredsBloodrazor"],
+          "itemNames": [
+            "TFT_Item_InfinityEdge",
+            "TFT_Item_MadredsBloodrazor"
+          ],
           "rarity": 3,
           "tier": 2
         },
@@ -7739,9 +8787,13 @@
           "tier": 2
         },
         {
-          "items": [17],
+          "items": [
+            17
+          ],
           "character_id": "TFT7_Bard",
-          "itemNames": ["TFT_Item_ZekesHerald"],
+          "itemNames": [
+            "TFT_Item_ZekesHerald"
+          ],
           "rarity": 5,
           "tier": 1
         },
@@ -7854,21 +8906,37 @@
           "tier": 2
         },
         {
-          "items": [17, 2315],
+          "items": [
+            17,
+            2315
+          ],
           "character_id": "TFT7_Twitch",
-          "itemNames": ["TFT_Item_ZekesHerald", "TFT7_Item_RagewingEmblemItem"],
+          "itemNames": [
+            "TFT_Item_ZekesHerald",
+            "TFT7_Item_RagewingEmblemItem"
+          ],
           "rarity": 1,
           "tier": 2
         },
         {
-          "items": [39, 39],
+          "items": [
+            39,
+            39
+          ],
           "character_id": "TFT7_Hecarim",
-          "itemNames": ["TFT_Item_JeweledGauntlet", "TFT_Item_JeweledGauntlet"],
+          "itemNames": [
+            "TFT_Item_JeweledGauntlet",
+            "TFT_Item_JeweledGauntlet"
+          ],
           "rarity": 3,
           "tier": 2
         },
         {
-          "items": [23, 49, 19],
+          "items": [
+            23,
+            49,
+            19
+          ],
           "character_id": "TFT7_Xayah",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -7879,9 +8947,15 @@
           "tier": 2
         },
         {
-          "items": [66, 57],
+          "items": [
+            66,
+            57
+          ],
           "character_id": "TFT7_Ornn",
-          "itemNames": ["TFT_Item_DragonsClaw", "TFT_Item_RedBuff"],
+          "itemNames": [
+            "TFT_Item_DragonsClaw",
+            "TFT_Item_RedBuff"
+          ],
           "rarity": 3,
           "tier": 2
         },
@@ -7893,7 +8967,11 @@
           "tier": 2
         },
         {
-          "items": [24, 34, 13],
+          "items": [
+            24,
+            34,
+            13
+          ],
           "character_id": "TFT7_AoShin",
           "itemNames": [
             "TFT_Item_StatikkShiv",
@@ -8035,7 +9113,11 @@
           "tier": 1
         },
         {
-          "items": [22, 2325, 45],
+          "items": [
+            22,
+            2325,
+            45
+          ],
           "character_id": "TFT7_Olaf",
           "itemNames": [
             "TFT_Item_RapidFireCannon",
@@ -8046,7 +9128,11 @@
           "tier": 2
         },
         {
-          "items": [57, 47, 55],
+          "items": [
+            57,
+            47,
+            55
+          ],
           "character_id": "TFT7_Sylas",
           "itemNames": [
             "TFT_Item_RedBuff",
@@ -8057,7 +9143,11 @@
           "tier": 3
         },
         {
-          "items": [23, 14, 24],
+          "items": [
+            23,
+            14,
+            24
+          ],
           "character_id": "TFT7_Varus",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -8075,7 +9165,11 @@
           "tier": 2
         },
         {
-          "items": [99, 79, 29],
+          "items": [
+            99,
+            79,
+            29
+          ],
           "character_id": "TFT7_Diana",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -8168,7 +9262,11 @@
       ],
       "unitDTO": [
         {
-          "items": [99, 36, 24],
+          "items": [
+            99,
+            36,
+            24
+          ],
           "character_id": "TFT7_Vladimir",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -8193,30 +9291,52 @@
           "tier": 3
         },
         {
-          "items": [39, 24],
+          "items": [
+            39,
+            24
+          ],
           "character_id": "TFT7_Nami",
-          "itemNames": ["TFT_Item_JeweledGauntlet", "TFT_Item_StatikkShiv"],
+          "itemNames": [
+            "TFT_Item_JeweledGauntlet",
+            "TFT_Item_StatikkShiv"
+          ],
           "rarity": 1,
           "tier": 3
         },
         {
-          "items": [67],
+          "items": [
+            67
+          ],
           "character_id": "TFT7_Sylas",
-          "itemNames": ["TFT_Item_Zephyr"],
+          "itemNames": [
+            "TFT_Item_Zephyr"
+          ],
           "rarity": 2,
           "tier": 1
         },
         {
-          "items": [16, 23],
+          "items": [
+            16,
+            23
+          ],
           "character_id": "TFT7_Varus",
-          "itemNames": ["TFT_Item_Bloodthirster", "TFT_Item_GuinsoosRageblade"],
+          "itemNames": [
+            "TFT_Item_Bloodthirster",
+            "TFT_Item_GuinsoosRageblade"
+          ],
           "rarity": 2,
           "tier": 3
         },
         {
-          "items": [35, 5],
+          "items": [
+            35,
+            5
+          ],
           "character_id": "TFT7_Illaoi",
-          "itemNames": ["TFT_Item_LocketOfTheIronSolari", "TFT_Item_ChainVest"],
+          "itemNames": [
+            "TFT_Item_LocketOfTheIronSolari",
+            "TFT_Item_ChainVest"
+          ],
           "rarity": 2,
           "tier": 3
         },
@@ -8341,16 +9461,24 @@
           "tier": 2
         },
         {
-          "items": [45],
+          "items": [
+            45
+          ],
           "character_id": "TFT7_Sylas",
-          "itemNames": ["TFT_Item_FrozenHeart"],
+          "itemNames": [
+            "TFT_Item_FrozenHeart"
+          ],
           "rarity": 2,
           "tier": 2
         },
         {
-          "items": [12],
+          "items": [
+            12
+          ],
           "character_id": "TFT7_Diana",
-          "itemNames": ["TFT_Item_MadredsBloodrazor"],
+          "itemNames": [
+            "TFT_Item_MadredsBloodrazor"
+          ],
           "rarity": 2,
           "tier": 2
         },
@@ -8362,7 +9490,11 @@
           "tier": 2
         },
         {
-          "items": [57, 77, 79],
+          "items": [
+            57,
+            77,
+            79
+          ],
           "character_id": "TFT7_Neeko",
           "itemNames": [
             "TFT_Item_RedBuff",
@@ -8380,7 +9512,11 @@
           "tier": 2
         },
         {
-          "items": [69, 16, 25],
+          "items": [
+            69,
+            16,
+            25
+          ],
           "character_id": "TFT7_DragonGreen",
           "itemNames": [
             "TFT_Item_Quicksilver",
@@ -8391,7 +9527,11 @@
           "tier": 2
         },
         {
-          "items": [94, 46, 26],
+          "items": [
+            94,
+            46,
+            26
+          ],
           "character_id": "TFT7_Pyke",
           "itemNames": [
             "TFT_Item_GuardianAngel",
@@ -8402,7 +9542,11 @@
           "tier": 2
         },
         {
-          "items": [25, 9, 2318],
+          "items": [
+            25,
+            9,
+            2318
+          ],
           "character_id": "TFT7_Soraka",
           "itemNames": [
             "TFT_Item_TitansResolve",
@@ -8508,7 +9652,11 @@
       ],
       "unitDTO": [
         {
-          "items": [2, 2323, 13],
+          "items": [
+            2,
+            2323,
+            13
+          ],
           "character_id": "TFT7_DragonPurple",
           "itemNames": [
             "TFT_Item_RecurveBow",
@@ -8519,14 +9667,22 @@
           "tier": 2
         },
         {
-          "items": [3003],
+          "items": [
+            3003
+          ],
           "character_id": "TFT7_Ornn",
-          "itemNames": ["TFT7_Item_ShimmerscaleGoldmancersStaff"],
+          "itemNames": [
+            "TFT7_Item_ShimmerscaleGoldmancersStaff"
+          ],
           "rarity": 3,
           "tier": 2
         },
         {
-          "items": [23, 39, 19],
+          "items": [
+            23,
+            39,
+            19
+          ],
           "character_id": "TFT7_DragonBlue",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -8537,16 +9693,26 @@
           "tier": 1
         },
         {
-          "items": [27],
+          "items": [
+            27
+          ],
           "character_id": "TFT7_DragonGold",
-          "itemNames": ["TFT_Item_TitanicHydra"],
+          "itemNames": [
+            "TFT_Item_TitanicHydra"
+          ],
           "rarity": 4,
           "tier": 1
         },
         {
-          "items": [14, 13],
+          "items": [
+            14,
+            13
+          ],
           "character_id": "TFT7_Bard",
-          "itemNames": ["TFT_Item_SpearOfShojin", "TFT_Item_HextechGunblade"],
+          "itemNames": [
+            "TFT_Item_SpearOfShojin",
+            "TFT_Item_HextechGunblade"
+          ],
           "rarity": 5,
           "tier": 1
         },
@@ -8664,7 +9830,11 @@
           "tier": 1
         },
         {
-          "items": [19, 47, 57],
+          "items": [
+            19,
+            47,
+            57
+          ],
           "character_id": "TFT7_DragonPurple",
           "itemNames": [
             "TFT_Item_InfinityEdge",
@@ -8675,7 +9845,11 @@
           "tier": 2
         },
         {
-          "items": [77, 9007, 27],
+          "items": [
+            77,
+            9007,
+            27
+          ],
           "character_id": "TFT7_DragonGreen",
           "itemNames": [
             "TFT_Item_WarmogsArmor",
@@ -8686,9 +9860,13 @@
           "tier": 2
         },
         {
-          "items": [16],
+          "items": [
+            16
+          ],
           "character_id": "TFT7_Yasuo",
-          "itemNames": ["TFT_Item_Bloodthirster"],
+          "itemNames": [
+            "TFT_Item_Bloodthirster"
+          ],
           "rarity": 5,
           "tier": 1
         },
@@ -8700,7 +9878,11 @@
           "tier": 1
         },
         {
-          "items": [14, 23, 19],
+          "items": [
+            14,
+            23,
+            19
+          ],
           "character_id": "TFT7_AoShin",
           "itemNames": [
             "TFT_Item_SpearOfShojin",
@@ -8809,14 +9991,22 @@
       ],
       "unitDTO": [
         {
-          "items": [88],
+          "items": [
+            88
+          ],
           "character_id": "TFT7_Ornn",
-          "itemNames": ["TFT_Item_ForceOfNature"],
+          "itemNames": [
+            "TFT_Item_ForceOfNature"
+          ],
           "rarity": 3,
           "tier": 1
         },
         {
-          "items": [25, 45, 79],
+          "items": [
+            25,
+            45,
+            79
+          ],
           "character_id": "TFT7_DragonGreen",
           "itemNames": [
             "TFT_Item_TitansResolve",
@@ -8827,7 +10017,11 @@
           "tier": 2
         },
         {
-          "items": [23, 3004, 23],
+          "items": [
+            23,
+            3004,
+            23
+          ],
           "character_id": "TFT7_DragonBlue",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -8838,9 +10032,15 @@
           "tier": 2
         },
         {
-          "items": [9003, 5],
+          "items": [
+            9003,
+            5
+          ],
           "character_id": "TFT7_DragonGold",
-          "itemNames": ["TFT4_Item_OrnnEternalWinter", "TFT_Item_ChainVest"],
+          "itemNames": [
+            "TFT4_Item_OrnnEternalWinter",
+            "TFT_Item_ChainVest"
+          ],
           "rarity": 4,
           "tier": 2
         },
@@ -8852,7 +10052,11 @@
           "tier": 2
         },
         {
-          "items": [23, 34, 49],
+          "items": [
+            23,
+            34,
+            49
+          ],
           "character_id": "TFT7_AoShin",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -8982,16 +10186,24 @@
           "tier": 2
         },
         {
-          "items": [29],
+          "items": [
+            29
+          ],
           "character_id": "TFT7_Tristana",
-          "itemNames": ["TFT_Item_LastWhisper"],
+          "itemNames": [
+            "TFT_Item_LastWhisper"
+          ],
           "rarity": 1,
           "tier": 2
         },
         {
-          "items": [55],
+          "items": [
+            55
+          ],
           "character_id": "TFT7_Lulu",
-          "itemNames": ["TFT_Item_BrambleVest"],
+          "itemNames": [
+            "TFT_Item_BrambleVest"
+          ],
           "rarity": 2,
           "tier": 3
         },
@@ -9003,7 +10215,11 @@
           "tier": 2
         },
         {
-          "items": [23, 19, 39],
+          "items": [
+            23,
+            19,
+            39
+          ],
           "character_id": "TFT7_Corki",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -9014,7 +10230,11 @@
           "tier": 2
         },
         {
-          "items": [45, 16, 25],
+          "items": [
+            45,
+            16,
+            25
+          ],
           "character_id": "TFT7_Ornn",
           "itemNames": [
             "TFT_Item_FrozenHeart",
@@ -9025,7 +10245,11 @@
           "tier": 2
         },
         {
-          "items": [57, 3002, 66],
+          "items": [
+            57,
+            3002,
+            66
+          ],
           "character_id": "TFT7_DragonGold",
           "itemNames": [
             "TFT_Item_RedBuff",
@@ -9036,9 +10260,13 @@
           "tier": 2
         },
         {
-          "items": [41105],
+          "items": [
+            41105
+          ],
           "character_id": "TFT7_TrainerDragon",
-          "itemNames": ["TFT7_Item_TrainerSnax"],
+          "itemNames": [
+            "TFT7_Item_TrainerSnax"
+          ],
           "rarity": 8,
           "tier": 4
         },
@@ -9153,14 +10381,24 @@
           "tier": 2
         },
         {
-          "items": [17, 17],
+          "items": [
+            17,
+            17
+          ],
           "character_id": "TFT7_Twitch",
-          "itemNames": ["TFT_Item_ZekesHerald", "TFT_Item_ZekesHerald"],
+          "itemNames": [
+            "TFT_Item_ZekesHerald",
+            "TFT_Item_ZekesHerald"
+          ],
           "rarity": 1,
           "tier": 2
         },
         {
-          "items": [99, 16, 13],
+          "items": [
+            99,
+            16,
+            13
+          ],
           "character_id": "TFT7_Hecarim",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -9171,7 +10409,11 @@
           "tier": 1
         },
         {
-          "items": [99, 1, 17],
+          "items": [
+            99,
+            1,
+            17
+          ],
           "character_id": "TFT7_Talon",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -9182,16 +10424,24 @@
           "tier": 2
         },
         {
-          "items": [23],
+          "items": [
+            23
+          ],
           "character_id": "TFT7_Xayah",
-          "itemNames": ["TFT_Item_GuinsoosRageblade"],
+          "itemNames": [
+            "TFT_Item_GuinsoosRageblade"
+          ],
           "rarity": 3,
           "tier": 2
         },
         {
-          "items": [57],
+          "items": [
+            57
+          ],
           "character_id": "TFT7_Ornn",
-          "itemNames": ["TFT_Item_RedBuff"],
+          "itemNames": [
+            "TFT_Item_RedBuff"
+          ],
           "rarity": 3,
           "tier": 1
         },
@@ -9306,7 +10556,11 @@
       ],
       "unitDTO": [
         {
-          "items": [99, 26, 12],
+          "items": [
+            99,
+            26,
+            12
+          ],
           "character_id": "TFT7_Vladimir",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -9324,7 +10578,11 @@
           "tier": 3
         },
         {
-          "items": [9009, 16, 9004],
+          "items": [
+            9009,
+            16,
+            9004
+          ],
           "character_id": "TFT7_Nidalee",
           "itemNames": [
             "TFT4_Item_OrnnTheCollector",
@@ -9349,7 +10607,11 @@
           "tier": 2
         },
         {
-          "items": [23, 11, 16],
+          "items": [
+            23,
+            11,
+            16
+          ],
           "character_id": "TFT7_Varus",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -9360,7 +10622,11 @@
           "tier": 3
         },
         {
-          "items": [57, 88, 9008],
+          "items": [
+            57,
+            88,
+            9008
+          ],
           "character_id": "TFT7_Illaoi",
           "itemNames": [
             "TFT_Item_RedBuff",
@@ -9371,9 +10637,15 @@
           "tier": 3
         },
         {
-          "items": [19, 12],
+          "items": [
+            19,
+            12
+          ],
           "character_id": "TFT7_Xayah",
-          "itemNames": ["TFT_Item_InfinityEdge", "TFT_Item_MadredsBloodrazor"],
+          "itemNames": [
+            "TFT_Item_InfinityEdge",
+            "TFT_Item_MadredsBloodrazor"
+          ],
           "rarity": 3,
           "tier": 2
         },
@@ -9385,9 +10657,13 @@
           "tier": 2
         },
         {
-          "items": [17],
+          "items": [
+            17
+          ],
           "character_id": "TFT7_Bard",
-          "itemNames": ["TFT_Item_ZekesHerald"],
+          "itemNames": [
+            "TFT_Item_ZekesHerald"
+          ],
           "rarity": 5,
           "tier": 1
         },
@@ -9500,21 +10776,37 @@
           "tier": 2
         },
         {
-          "items": [17, 2315],
+          "items": [
+            17,
+            2315
+          ],
           "character_id": "TFT7_Twitch",
-          "itemNames": ["TFT_Item_ZekesHerald", "TFT7_Item_RagewingEmblemItem"],
+          "itemNames": [
+            "TFT_Item_ZekesHerald",
+            "TFT7_Item_RagewingEmblemItem"
+          ],
           "rarity": 1,
           "tier": 2
         },
         {
-          "items": [39, 39],
+          "items": [
+            39,
+            39
+          ],
           "character_id": "TFT7_Hecarim",
-          "itemNames": ["TFT_Item_JeweledGauntlet", "TFT_Item_JeweledGauntlet"],
+          "itemNames": [
+            "TFT_Item_JeweledGauntlet",
+            "TFT_Item_JeweledGauntlet"
+          ],
           "rarity": 3,
           "tier": 2
         },
         {
-          "items": [23, 49, 19],
+          "items": [
+            23,
+            49,
+            19
+          ],
           "character_id": "TFT7_Xayah",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -9525,9 +10817,15 @@
           "tier": 2
         },
         {
-          "items": [66, 57],
+          "items": [
+            66,
+            57
+          ],
           "character_id": "TFT7_Ornn",
-          "itemNames": ["TFT_Item_DragonsClaw", "TFT_Item_RedBuff"],
+          "itemNames": [
+            "TFT_Item_DragonsClaw",
+            "TFT_Item_RedBuff"
+          ],
           "rarity": 3,
           "tier": 2
         },
@@ -9539,7 +10837,11 @@
           "tier": 2
         },
         {
-          "items": [24, 34, 13],
+          "items": [
+            24,
+            34,
+            13
+          ],
           "character_id": "TFT7_AoShin",
           "itemNames": [
             "TFT_Item_StatikkShiv",
@@ -9681,7 +10983,11 @@
           "tier": 1
         },
         {
-          "items": [22, 2325, 45],
+          "items": [
+            22,
+            2325,
+            45
+          ],
           "character_id": "TFT7_Olaf",
           "itemNames": [
             "TFT_Item_RapidFireCannon",
@@ -9692,7 +10998,11 @@
           "tier": 2
         },
         {
-          "items": [57, 47, 55],
+          "items": [
+            57,
+            47,
+            55
+          ],
           "character_id": "TFT7_Sylas",
           "itemNames": [
             "TFT_Item_RedBuff",
@@ -9703,7 +11013,11 @@
           "tier": 3
         },
         {
-          "items": [23, 14, 24],
+          "items": [
+            23,
+            14,
+            24
+          ],
           "character_id": "TFT7_Varus",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -9721,7 +11035,11 @@
           "tier": 2
         },
         {
-          "items": [99, 79, 29],
+          "items": [
+            99,
+            79,
+            29
+          ],
           "character_id": "TFT7_Diana",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -9814,7 +11132,11 @@
       ],
       "unitDTO": [
         {
-          "items": [99, 36, 24],
+          "items": [
+            99,
+            36,
+            24
+          ],
           "character_id": "TFT7_Vladimir",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -9839,30 +11161,52 @@
           "tier": 3
         },
         {
-          "items": [39, 24],
+          "items": [
+            39,
+            24
+          ],
           "character_id": "TFT7_Nami",
-          "itemNames": ["TFT_Item_JeweledGauntlet", "TFT_Item_StatikkShiv"],
+          "itemNames": [
+            "TFT_Item_JeweledGauntlet",
+            "TFT_Item_StatikkShiv"
+          ],
           "rarity": 1,
           "tier": 3
         },
         {
-          "items": [67],
+          "items": [
+            67
+          ],
           "character_id": "TFT7_Sylas",
-          "itemNames": ["TFT_Item_Zephyr"],
+          "itemNames": [
+            "TFT_Item_Zephyr"
+          ],
           "rarity": 2,
           "tier": 1
         },
         {
-          "items": [16, 23],
+          "items": [
+            16,
+            23
+          ],
           "character_id": "TFT7_Varus",
-          "itemNames": ["TFT_Item_Bloodthirster", "TFT_Item_GuinsoosRageblade"],
+          "itemNames": [
+            "TFT_Item_Bloodthirster",
+            "TFT_Item_GuinsoosRageblade"
+          ],
           "rarity": 2,
           "tier": 3
         },
         {
-          "items": [35, 5],
+          "items": [
+            35,
+            5
+          ],
           "character_id": "TFT7_Illaoi",
-          "itemNames": ["TFT_Item_LocketOfTheIronSolari", "TFT_Item_ChainVest"],
+          "itemNames": [
+            "TFT_Item_LocketOfTheIronSolari",
+            "TFT_Item_ChainVest"
+          ],
           "rarity": 2,
           "tier": 3
         },
@@ -9987,16 +11331,24 @@
           "tier": 2
         },
         {
-          "items": [45],
+          "items": [
+            45
+          ],
           "character_id": "TFT7_Sylas",
-          "itemNames": ["TFT_Item_FrozenHeart"],
+          "itemNames": [
+            "TFT_Item_FrozenHeart"
+          ],
           "rarity": 2,
           "tier": 2
         },
         {
-          "items": [12],
+          "items": [
+            12
+          ],
           "character_id": "TFT7_Diana",
-          "itemNames": ["TFT_Item_MadredsBloodrazor"],
+          "itemNames": [
+            "TFT_Item_MadredsBloodrazor"
+          ],
           "rarity": 2,
           "tier": 2
         },
@@ -10008,7 +11360,11 @@
           "tier": 2
         },
         {
-          "items": [57, 77, 79],
+          "items": [
+            57,
+            77,
+            79
+          ],
           "character_id": "TFT7_Neeko",
           "itemNames": [
             "TFT_Item_RedBuff",
@@ -10026,7 +11382,11 @@
           "tier": 2
         },
         {
-          "items": [69, 16, 25],
+          "items": [
+            69,
+            16,
+            25
+          ],
           "character_id": "TFT7_DragonGreen",
           "itemNames": [
             "TFT_Item_Quicksilver",
@@ -10037,7 +11397,11 @@
           "tier": 2
         },
         {
-          "items": [94, 46, 26],
+          "items": [
+            94,
+            46,
+            26
+          ],
           "character_id": "TFT7_Pyke",
           "itemNames": [
             "TFT_Item_GuardianAngel",
@@ -10048,7 +11412,11 @@
           "tier": 2
         },
         {
-          "items": [25, 9, 2318],
+          "items": [
+            25,
+            9,
+            2318
+          ],
           "character_id": "TFT7_Soraka",
           "itemNames": [
             "TFT_Item_TitansResolve",
@@ -10154,7 +11522,11 @@
       ],
       "unitDTO": [
         {
-          "items": [2, 2323, 13],
+          "items": [
+            2,
+            2323,
+            13
+          ],
           "character_id": "TFT7_DragonPurple",
           "itemNames": [
             "TFT_Item_RecurveBow",
@@ -10165,14 +11537,22 @@
           "tier": 2
         },
         {
-          "items": [3003],
+          "items": [
+            3003
+          ],
           "character_id": "TFT7_Ornn",
-          "itemNames": ["TFT7_Item_ShimmerscaleGoldmancersStaff"],
+          "itemNames": [
+            "TFT7_Item_ShimmerscaleGoldmancersStaff"
+          ],
           "rarity": 3,
           "tier": 2
         },
         {
-          "items": [23, 39, 19],
+          "items": [
+            23,
+            39,
+            19
+          ],
           "character_id": "TFT7_DragonBlue",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -10183,16 +11563,26 @@
           "tier": 1
         },
         {
-          "items": [27],
+          "items": [
+            27
+          ],
           "character_id": "TFT7_DragonGold",
-          "itemNames": ["TFT_Item_TitanicHydra"],
+          "itemNames": [
+            "TFT_Item_TitanicHydra"
+          ],
           "rarity": 4,
           "tier": 1
         },
         {
-          "items": [14, 13],
+          "items": [
+            14,
+            13
+          ],
           "character_id": "TFT7_Bard",
-          "itemNames": ["TFT_Item_SpearOfShojin", "TFT_Item_HextechGunblade"],
+          "itemNames": [
+            "TFT_Item_SpearOfShojin",
+            "TFT_Item_HextechGunblade"
+          ],
           "rarity": 5,
           "tier": 1
         },
@@ -10310,7 +11700,11 @@
           "tier": 1
         },
         {
-          "items": [19, 47, 57],
+          "items": [
+            19,
+            47,
+            57
+          ],
           "character_id": "TFT7_DragonPurple",
           "itemNames": [
             "TFT_Item_InfinityEdge",
@@ -10321,7 +11715,11 @@
           "tier": 2
         },
         {
-          "items": [77, 9007, 27],
+          "items": [
+            77,
+            9007,
+            27
+          ],
           "character_id": "TFT7_DragonGreen",
           "itemNames": [
             "TFT_Item_WarmogsArmor",
@@ -10332,9 +11730,13 @@
           "tier": 2
         },
         {
-          "items": [16],
+          "items": [
+            16
+          ],
           "character_id": "TFT7_Yasuo",
-          "itemNames": ["TFT_Item_Bloodthirster"],
+          "itemNames": [
+            "TFT_Item_Bloodthirster"
+          ],
           "rarity": 5,
           "tier": 1
         },
@@ -10346,7 +11748,11 @@
           "tier": 1
         },
         {
-          "items": [14, 23, 19],
+          "items": [
+            14,
+            23,
+            19
+          ],
           "character_id": "TFT7_AoShin",
           "itemNames": [
             "TFT_Item_SpearOfShojin",
@@ -10455,14 +11861,22 @@
       ],
       "unitDTO": [
         {
-          "items": [88],
+          "items": [
+            88
+          ],
           "character_id": "TFT7_Ornn",
-          "itemNames": ["TFT_Item_ForceOfNature"],
+          "itemNames": [
+            "TFT_Item_ForceOfNature"
+          ],
           "rarity": 3,
           "tier": 1
         },
         {
-          "items": [25, 45, 79],
+          "items": [
+            25,
+            45,
+            79
+          ],
           "character_id": "TFT7_DragonGreen",
           "itemNames": [
             "TFT_Item_TitansResolve",
@@ -10473,7 +11887,11 @@
           "tier": 2
         },
         {
-          "items": [23, 3004, 23],
+          "items": [
+            23,
+            3004,
+            23
+          ],
           "character_id": "TFT7_DragonBlue",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -10484,9 +11902,15 @@
           "tier": 2
         },
         {
-          "items": [9003, 5],
+          "items": [
+            9003,
+            5
+          ],
           "character_id": "TFT7_DragonGold",
-          "itemNames": ["TFT4_Item_OrnnEternalWinter", "TFT_Item_ChainVest"],
+          "itemNames": [
+            "TFT4_Item_OrnnEternalWinter",
+            "TFT_Item_ChainVest"
+          ],
           "rarity": 4,
           "tier": 2
         },
@@ -10498,7 +11922,11 @@
           "tier": 2
         },
         {
-          "items": [23, 34, 49],
+          "items": [
+            23,
+            34,
+            49
+          ],
           "character_id": "TFT7_AoShin",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -10628,16 +12056,24 @@
           "tier": 2
         },
         {
-          "items": [29],
+          "items": [
+            29
+          ],
           "character_id": "TFT7_Tristana",
-          "itemNames": ["TFT_Item_LastWhisper"],
+          "itemNames": [
+            "TFT_Item_LastWhisper"
+          ],
           "rarity": 1,
           "tier": 2
         },
         {
-          "items": [55],
+          "items": [
+            55
+          ],
           "character_id": "TFT7_Lulu",
-          "itemNames": ["TFT_Item_BrambleVest"],
+          "itemNames": [
+            "TFT_Item_BrambleVest"
+          ],
           "rarity": 2,
           "tier": 3
         },
@@ -10649,7 +12085,11 @@
           "tier": 2
         },
         {
-          "items": [23, 19, 39],
+          "items": [
+            23,
+            19,
+            39
+          ],
           "character_id": "TFT7_Corki",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -10660,7 +12100,11 @@
           "tier": 2
         },
         {
-          "items": [45, 16, 25],
+          "items": [
+            45,
+            16,
+            25
+          ],
           "character_id": "TFT7_Ornn",
           "itemNames": [
             "TFT_Item_FrozenHeart",
@@ -10671,7 +12115,11 @@
           "tier": 2
         },
         {
-          "items": [57, 3002, 66],
+          "items": [
+            57,
+            3002,
+            66
+          ],
           "character_id": "TFT7_DragonGold",
           "itemNames": [
             "TFT_Item_RedBuff",
@@ -10682,9 +12130,13 @@
           "tier": 2
         },
         {
-          "items": [41105],
+          "items": [
+            41105
+          ],
           "character_id": "TFT7_TrainerDragon",
-          "itemNames": ["TFT7_Item_TrainerSnax"],
+          "itemNames": [
+            "TFT7_Item_TrainerSnax"
+          ],
           "rarity": 8,
           "tier": 4
         },
@@ -10799,14 +12251,24 @@
           "tier": 2
         },
         {
-          "items": [17, 17],
+          "items": [
+            17,
+            17
+          ],
           "character_id": "TFT7_Twitch",
-          "itemNames": ["TFT_Item_ZekesHerald", "TFT_Item_ZekesHerald"],
+          "itemNames": [
+            "TFT_Item_ZekesHerald",
+            "TFT_Item_ZekesHerald"
+          ],
           "rarity": 1,
           "tier": 2
         },
         {
-          "items": [99, 16, 13],
+          "items": [
+            99,
+            16,
+            13
+          ],
           "character_id": "TFT7_Hecarim",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -10817,7 +12279,11 @@
           "tier": 1
         },
         {
-          "items": [99, 1, 17],
+          "items": [
+            99,
+            1,
+            17
+          ],
           "character_id": "TFT7_Talon",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -10828,16 +12294,24 @@
           "tier": 2
         },
         {
-          "items": [23],
+          "items": [
+            23
+          ],
           "character_id": "TFT7_Xayah",
-          "itemNames": ["TFT_Item_GuinsoosRageblade"],
+          "itemNames": [
+            "TFT_Item_GuinsoosRageblade"
+          ],
           "rarity": 3,
           "tier": 2
         },
         {
-          "items": [57],
+          "items": [
+            57
+          ],
           "character_id": "TFT7_Ornn",
-          "itemNames": ["TFT_Item_RedBuff"],
+          "itemNames": [
+            "TFT_Item_RedBuff"
+          ],
           "rarity": 3,
           "tier": 1
         },
@@ -10952,7 +12426,11 @@
       ],
       "unitDTO": [
         {
-          "items": [99, 26, 12],
+          "items": [
+            99,
+            26,
+            12
+          ],
           "character_id": "TFT7_Vladimir",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -10970,7 +12448,11 @@
           "tier": 3
         },
         {
-          "items": [9009, 16, 9004],
+          "items": [
+            9009,
+            16,
+            9004
+          ],
           "character_id": "TFT7_Nidalee",
           "itemNames": [
             "TFT4_Item_OrnnTheCollector",
@@ -10995,7 +12477,11 @@
           "tier": 2
         },
         {
-          "items": [23, 11, 16],
+          "items": [
+            23,
+            11,
+            16
+          ],
           "character_id": "TFT7_Varus",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -11006,7 +12492,11 @@
           "tier": 3
         },
         {
-          "items": [57, 88, 9008],
+          "items": [
+            57,
+            88,
+            9008
+          ],
           "character_id": "TFT7_Illaoi",
           "itemNames": [
             "TFT_Item_RedBuff",
@@ -11017,9 +12507,15 @@
           "tier": 3
         },
         {
-          "items": [19, 12],
+          "items": [
+            19,
+            12
+          ],
           "character_id": "TFT7_Xayah",
-          "itemNames": ["TFT_Item_InfinityEdge", "TFT_Item_MadredsBloodrazor"],
+          "itemNames": [
+            "TFT_Item_InfinityEdge",
+            "TFT_Item_MadredsBloodrazor"
+          ],
           "rarity": 3,
           "tier": 2
         },
@@ -11031,9 +12527,13 @@
           "tier": 2
         },
         {
-          "items": [17],
+          "items": [
+            17
+          ],
           "character_id": "TFT7_Bard",
-          "itemNames": ["TFT_Item_ZekesHerald"],
+          "itemNames": [
+            "TFT_Item_ZekesHerald"
+          ],
           "rarity": 5,
           "tier": 1
         },
@@ -11146,21 +12646,37 @@
           "tier": 2
         },
         {
-          "items": [17, 2315],
+          "items": [
+            17,
+            2315
+          ],
           "character_id": "TFT7_Twitch",
-          "itemNames": ["TFT_Item_ZekesHerald", "TFT7_Item_RagewingEmblemItem"],
+          "itemNames": [
+            "TFT_Item_ZekesHerald",
+            "TFT7_Item_RagewingEmblemItem"
+          ],
           "rarity": 1,
           "tier": 2
         },
         {
-          "items": [39, 39],
+          "items": [
+            39,
+            39
+          ],
           "character_id": "TFT7_Hecarim",
-          "itemNames": ["TFT_Item_JeweledGauntlet", "TFT_Item_JeweledGauntlet"],
+          "itemNames": [
+            "TFT_Item_JeweledGauntlet",
+            "TFT_Item_JeweledGauntlet"
+          ],
           "rarity": 3,
           "tier": 2
         },
         {
-          "items": [23, 49, 19],
+          "items": [
+            23,
+            49,
+            19
+          ],
           "character_id": "TFT7_Xayah",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -11171,9 +12687,15 @@
           "tier": 2
         },
         {
-          "items": [66, 57],
+          "items": [
+            66,
+            57
+          ],
           "character_id": "TFT7_Ornn",
-          "itemNames": ["TFT_Item_DragonsClaw", "TFT_Item_RedBuff"],
+          "itemNames": [
+            "TFT_Item_DragonsClaw",
+            "TFT_Item_RedBuff"
+          ],
           "rarity": 3,
           "tier": 2
         },
@@ -11185,7 +12707,11 @@
           "tier": 2
         },
         {
-          "items": [24, 34, 13],
+          "items": [
+            24,
+            34,
+            13
+          ],
           "character_id": "TFT7_AoShin",
           "itemNames": [
             "TFT_Item_StatikkShiv",
@@ -11327,7 +12853,11 @@
           "tier": 1
         },
         {
-          "items": [22, 2325, 45],
+          "items": [
+            22,
+            2325,
+            45
+          ],
           "character_id": "TFT7_Olaf",
           "itemNames": [
             "TFT_Item_RapidFireCannon",
@@ -11338,7 +12868,11 @@
           "tier": 2
         },
         {
-          "items": [57, 47, 55],
+          "items": [
+            57,
+            47,
+            55
+          ],
           "character_id": "TFT7_Sylas",
           "itemNames": [
             "TFT_Item_RedBuff",
@@ -11349,7 +12883,11 @@
           "tier": 3
         },
         {
-          "items": [23, 14, 24],
+          "items": [
+            23,
+            14,
+            24
+          ],
           "character_id": "TFT7_Varus",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -11367,7 +12905,11 @@
           "tier": 2
         },
         {
-          "items": [99, 79, 29],
+          "items": [
+            99,
+            79,
+            29
+          ],
           "character_id": "TFT7_Diana",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -11460,7 +13002,11 @@
       ],
       "unitDTO": [
         {
-          "items": [99, 36, 24],
+          "items": [
+            99,
+            36,
+            24
+          ],
           "character_id": "TFT7_Vladimir",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -11485,30 +13031,52 @@
           "tier": 3
         },
         {
-          "items": [39, 24],
+          "items": [
+            39,
+            24
+          ],
           "character_id": "TFT7_Nami",
-          "itemNames": ["TFT_Item_JeweledGauntlet", "TFT_Item_StatikkShiv"],
+          "itemNames": [
+            "TFT_Item_JeweledGauntlet",
+            "TFT_Item_StatikkShiv"
+          ],
           "rarity": 1,
           "tier": 3
         },
         {
-          "items": [67],
+          "items": [
+            67
+          ],
           "character_id": "TFT7_Sylas",
-          "itemNames": ["TFT_Item_Zephyr"],
+          "itemNames": [
+            "TFT_Item_Zephyr"
+          ],
           "rarity": 2,
           "tier": 1
         },
         {
-          "items": [16, 23],
+          "items": [
+            16,
+            23
+          ],
           "character_id": "TFT7_Varus",
-          "itemNames": ["TFT_Item_Bloodthirster", "TFT_Item_GuinsoosRageblade"],
+          "itemNames": [
+            "TFT_Item_Bloodthirster",
+            "TFT_Item_GuinsoosRageblade"
+          ],
           "rarity": 2,
           "tier": 3
         },
         {
-          "items": [35, 5],
+          "items": [
+            35,
+            5
+          ],
           "character_id": "TFT7_Illaoi",
-          "itemNames": ["TFT_Item_LocketOfTheIronSolari", "TFT_Item_ChainVest"],
+          "itemNames": [
+            "TFT_Item_LocketOfTheIronSolari",
+            "TFT_Item_ChainVest"
+          ],
           "rarity": 2,
           "tier": 3
         },
@@ -11633,16 +13201,24 @@
           "tier": 2
         },
         {
-          "items": [45],
+          "items": [
+            45
+          ],
           "character_id": "TFT7_Sylas",
-          "itemNames": ["TFT_Item_FrozenHeart"],
+          "itemNames": [
+            "TFT_Item_FrozenHeart"
+          ],
           "rarity": 2,
           "tier": 2
         },
         {
-          "items": [12],
+          "items": [
+            12
+          ],
           "character_id": "TFT7_Diana",
-          "itemNames": ["TFT_Item_MadredsBloodrazor"],
+          "itemNames": [
+            "TFT_Item_MadredsBloodrazor"
+          ],
           "rarity": 2,
           "tier": 2
         },
@@ -11654,7 +13230,11 @@
           "tier": 2
         },
         {
-          "items": [57, 77, 79],
+          "items": [
+            57,
+            77,
+            79
+          ],
           "character_id": "TFT7_Neeko",
           "itemNames": [
             "TFT_Item_RedBuff",
@@ -11672,7 +13252,11 @@
           "tier": 2
         },
         {
-          "items": [69, 16, 25],
+          "items": [
+            69,
+            16,
+            25
+          ],
           "character_id": "TFT7_DragonGreen",
           "itemNames": [
             "TFT_Item_Quicksilver",
@@ -11683,7 +13267,11 @@
           "tier": 2
         },
         {
-          "items": [94, 46, 26],
+          "items": [
+            94,
+            46,
+            26
+          ],
           "character_id": "TFT7_Pyke",
           "itemNames": [
             "TFT_Item_GuardianAngel",
@@ -11694,7 +13282,11 @@
           "tier": 2
         },
         {
-          "items": [25, 9, 2318],
+          "items": [
+            25,
+            9,
+            2318
+          ],
           "character_id": "TFT7_Soraka",
           "itemNames": [
             "TFT_Item_TitansResolve",
@@ -11800,7 +13392,11 @@
       ],
       "unitDTO": [
         {
-          "items": [2, 2323, 13],
+          "items": [
+            2,
+            2323,
+            13
+          ],
           "character_id": "TFT7_DragonPurple",
           "itemNames": [
             "TFT_Item_RecurveBow",
@@ -11811,14 +13407,22 @@
           "tier": 2
         },
         {
-          "items": [3003],
+          "items": [
+            3003
+          ],
           "character_id": "TFT7_Ornn",
-          "itemNames": ["TFT7_Item_ShimmerscaleGoldmancersStaff"],
+          "itemNames": [
+            "TFT7_Item_ShimmerscaleGoldmancersStaff"
+          ],
           "rarity": 3,
           "tier": 2
         },
         {
-          "items": [23, 39, 19],
+          "items": [
+            23,
+            39,
+            19
+          ],
           "character_id": "TFT7_DragonBlue",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -11829,16 +13433,26 @@
           "tier": 1
         },
         {
-          "items": [27],
+          "items": [
+            27
+          ],
           "character_id": "TFT7_DragonGold",
-          "itemNames": ["TFT_Item_TitanicHydra"],
+          "itemNames": [
+            "TFT_Item_TitanicHydra"
+          ],
           "rarity": 4,
           "tier": 1
         },
         {
-          "items": [14, 13],
+          "items": [
+            14,
+            13
+          ],
           "character_id": "TFT7_Bard",
-          "itemNames": ["TFT_Item_SpearOfShojin", "TFT_Item_HextechGunblade"],
+          "itemNames": [
+            "TFT_Item_SpearOfShojin",
+            "TFT_Item_HextechGunblade"
+          ],
           "rarity": 5,
           "tier": 1
         },
@@ -11956,7 +13570,11 @@
           "tier": 1
         },
         {
-          "items": [19, 47, 57],
+          "items": [
+            19,
+            47,
+            57
+          ],
           "character_id": "TFT7_DragonPurple",
           "itemNames": [
             "TFT_Item_InfinityEdge",
@@ -11967,7 +13585,11 @@
           "tier": 2
         },
         {
-          "items": [77, 9007, 27],
+          "items": [
+            77,
+            9007,
+            27
+          ],
           "character_id": "TFT7_DragonGreen",
           "itemNames": [
             "TFT_Item_WarmogsArmor",
@@ -11978,9 +13600,13 @@
           "tier": 2
         },
         {
-          "items": [16],
+          "items": [
+            16
+          ],
           "character_id": "TFT7_Yasuo",
-          "itemNames": ["TFT_Item_Bloodthirster"],
+          "itemNames": [
+            "TFT_Item_Bloodthirster"
+          ],
           "rarity": 5,
           "tier": 1
         },
@@ -11992,7 +13618,11 @@
           "tier": 1
         },
         {
-          "items": [14, 23, 19],
+          "items": [
+            14,
+            23,
+            19
+          ],
           "character_id": "TFT7_AoShin",
           "itemNames": [
             "TFT_Item_SpearOfShojin",
@@ -12101,14 +13731,22 @@
       ],
       "unitDTO": [
         {
-          "items": [88],
+          "items": [
+            88
+          ],
           "character_id": "TFT7_Ornn",
-          "itemNames": ["TFT_Item_ForceOfNature"],
+          "itemNames": [
+            "TFT_Item_ForceOfNature"
+          ],
           "rarity": 3,
           "tier": 1
         },
         {
-          "items": [25, 45, 79],
+          "items": [
+            25,
+            45,
+            79
+          ],
           "character_id": "TFT7_DragonGreen",
           "itemNames": [
             "TFT_Item_TitansResolve",
@@ -12119,7 +13757,11 @@
           "tier": 2
         },
         {
-          "items": [23, 3004, 23],
+          "items": [
+            23,
+            3004,
+            23
+          ],
           "character_id": "TFT7_DragonBlue",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -12130,9 +13772,15 @@
           "tier": 2
         },
         {
-          "items": [9003, 5],
+          "items": [
+            9003,
+            5
+          ],
           "character_id": "TFT7_DragonGold",
-          "itemNames": ["TFT4_Item_OrnnEternalWinter", "TFT_Item_ChainVest"],
+          "itemNames": [
+            "TFT4_Item_OrnnEternalWinter",
+            "TFT_Item_ChainVest"
+          ],
           "rarity": 4,
           "tier": 2
         },
@@ -12144,7 +13792,11 @@
           "tier": 2
         },
         {
-          "items": [23, 34, 49],
+          "items": [
+            23,
+            34,
+            49
+          ],
           "character_id": "TFT7_AoShin",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -12274,16 +13926,24 @@
           "tier": 2
         },
         {
-          "items": [29],
+          "items": [
+            29
+          ],
           "character_id": "TFT7_Tristana",
-          "itemNames": ["TFT_Item_LastWhisper"],
+          "itemNames": [
+            "TFT_Item_LastWhisper"
+          ],
           "rarity": 1,
           "tier": 2
         },
         {
-          "items": [55],
+          "items": [
+            55
+          ],
           "character_id": "TFT7_Lulu",
-          "itemNames": ["TFT_Item_BrambleVest"],
+          "itemNames": [
+            "TFT_Item_BrambleVest"
+          ],
           "rarity": 2,
           "tier": 3
         },
@@ -12295,7 +13955,11 @@
           "tier": 2
         },
         {
-          "items": [23, 19, 39],
+          "items": [
+            23,
+            19,
+            39
+          ],
           "character_id": "TFT7_Corki",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -12306,7 +13970,11 @@
           "tier": 2
         },
         {
-          "items": [45, 16, 25],
+          "items": [
+            45,
+            16,
+            25
+          ],
           "character_id": "TFT7_Ornn",
           "itemNames": [
             "TFT_Item_FrozenHeart",
@@ -12317,7 +13985,11 @@
           "tier": 2
         },
         {
-          "items": [57, 3002, 66],
+          "items": [
+            57,
+            3002,
+            66
+          ],
           "character_id": "TFT7_DragonGold",
           "itemNames": [
             "TFT_Item_RedBuff",
@@ -12328,9 +14000,13 @@
           "tier": 2
         },
         {
-          "items": [41105],
+          "items": [
+            41105
+          ],
           "character_id": "TFT7_TrainerDragon",
-          "itemNames": ["TFT7_Item_TrainerSnax"],
+          "itemNames": [
+            "TFT7_Item_TrainerSnax"
+          ],
           "rarity": 8,
           "tier": 4
         },
@@ -12445,14 +14121,24 @@
           "tier": 2
         },
         {
-          "items": [17, 17],
+          "items": [
+            17,
+            17
+          ],
           "character_id": "TFT7_Twitch",
-          "itemNames": ["TFT_Item_ZekesHerald", "TFT_Item_ZekesHerald"],
+          "itemNames": [
+            "TFT_Item_ZekesHerald",
+            "TFT_Item_ZekesHerald"
+          ],
           "rarity": 1,
           "tier": 2
         },
         {
-          "items": [99, 16, 13],
+          "items": [
+            99,
+            16,
+            13
+          ],
           "character_id": "TFT7_Hecarim",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -12463,7 +14149,11 @@
           "tier": 1
         },
         {
-          "items": [99, 1, 17],
+          "items": [
+            99,
+            1,
+            17
+          ],
           "character_id": "TFT7_Talon",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -12474,16 +14164,24 @@
           "tier": 2
         },
         {
-          "items": [23],
+          "items": [
+            23
+          ],
           "character_id": "TFT7_Xayah",
-          "itemNames": ["TFT_Item_GuinsoosRageblade"],
+          "itemNames": [
+            "TFT_Item_GuinsoosRageblade"
+          ],
           "rarity": 3,
           "tier": 2
         },
         {
-          "items": [57],
+          "items": [
+            57
+          ],
           "character_id": "TFT7_Ornn",
-          "itemNames": ["TFT_Item_RedBuff"],
+          "itemNames": [
+            "TFT_Item_RedBuff"
+          ],
           "rarity": 3,
           "tier": 1
         },
@@ -12598,7 +14296,11 @@
       ],
       "unitDTO": [
         {
-          "items": [99, 26, 12],
+          "items": [
+            99,
+            26,
+            12
+          ],
           "character_id": "TFT7_Vladimir",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -12616,7 +14318,11 @@
           "tier": 3
         },
         {
-          "items": [9009, 16, 9004],
+          "items": [
+            9009,
+            16,
+            9004
+          ],
           "character_id": "TFT7_Nidalee",
           "itemNames": [
             "TFT4_Item_OrnnTheCollector",
@@ -12641,7 +14347,11 @@
           "tier": 2
         },
         {
-          "items": [23, 11, 16],
+          "items": [
+            23,
+            11,
+            16
+          ],
           "character_id": "TFT7_Varus",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -12652,7 +14362,11 @@
           "tier": 3
         },
         {
-          "items": [57, 88, 9008],
+          "items": [
+            57,
+            88,
+            9008
+          ],
           "character_id": "TFT7_Illaoi",
           "itemNames": [
             "TFT_Item_RedBuff",
@@ -12663,9 +14377,15 @@
           "tier": 3
         },
         {
-          "items": [19, 12],
+          "items": [
+            19,
+            12
+          ],
           "character_id": "TFT7_Xayah",
-          "itemNames": ["TFT_Item_InfinityEdge", "TFT_Item_MadredsBloodrazor"],
+          "itemNames": [
+            "TFT_Item_InfinityEdge",
+            "TFT_Item_MadredsBloodrazor"
+          ],
           "rarity": 3,
           "tier": 2
         },
@@ -12677,9 +14397,13 @@
           "tier": 2
         },
         {
-          "items": [17],
+          "items": [
+            17
+          ],
           "character_id": "TFT7_Bard",
-          "itemNames": ["TFT_Item_ZekesHerald"],
+          "itemNames": [
+            "TFT_Item_ZekesHerald"
+          ],
           "rarity": 5,
           "tier": 1
         },
@@ -12792,21 +14516,37 @@
           "tier": 2
         },
         {
-          "items": [17, 2315],
+          "items": [
+            17,
+            2315
+          ],
           "character_id": "TFT7_Twitch",
-          "itemNames": ["TFT_Item_ZekesHerald", "TFT7_Item_RagewingEmblemItem"],
+          "itemNames": [
+            "TFT_Item_ZekesHerald",
+            "TFT7_Item_RagewingEmblemItem"
+          ],
           "rarity": 1,
           "tier": 2
         },
         {
-          "items": [39, 39],
+          "items": [
+            39,
+            39
+          ],
           "character_id": "TFT7_Hecarim",
-          "itemNames": ["TFT_Item_JeweledGauntlet", "TFT_Item_JeweledGauntlet"],
+          "itemNames": [
+            "TFT_Item_JeweledGauntlet",
+            "TFT_Item_JeweledGauntlet"
+          ],
           "rarity": 3,
           "tier": 2
         },
         {
-          "items": [23, 49, 19],
+          "items": [
+            23,
+            49,
+            19
+          ],
           "character_id": "TFT7_Xayah",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -12817,9 +14557,15 @@
           "tier": 2
         },
         {
-          "items": [66, 57],
+          "items": [
+            66,
+            57
+          ],
           "character_id": "TFT7_Ornn",
-          "itemNames": ["TFT_Item_DragonsClaw", "TFT_Item_RedBuff"],
+          "itemNames": [
+            "TFT_Item_DragonsClaw",
+            "TFT_Item_RedBuff"
+          ],
           "rarity": 3,
           "tier": 2
         },
@@ -12831,7 +14577,11 @@
           "tier": 2
         },
         {
-          "items": [24, 34, 13],
+          "items": [
+            24,
+            34,
+            13
+          ],
           "character_id": "TFT7_AoShin",
           "itemNames": [
             "TFT_Item_StatikkShiv",
@@ -12973,7 +14723,11 @@
           "tier": 1
         },
         {
-          "items": [22, 2325, 45],
+          "items": [
+            22,
+            2325,
+            45
+          ],
           "character_id": "TFT7_Olaf",
           "itemNames": [
             "TFT_Item_RapidFireCannon",
@@ -12984,7 +14738,11 @@
           "tier": 2
         },
         {
-          "items": [57, 47, 55],
+          "items": [
+            57,
+            47,
+            55
+          ],
           "character_id": "TFT7_Sylas",
           "itemNames": [
             "TFT_Item_RedBuff",
@@ -12995,7 +14753,11 @@
           "tier": 3
         },
         {
-          "items": [23, 14, 24],
+          "items": [
+            23,
+            14,
+            24
+          ],
           "character_id": "TFT7_Varus",
           "itemNames": [
             "TFT_Item_GuinsoosRageblade",
@@ -13013,7 +14775,11 @@
           "tier": 2
         },
         {
-          "items": [99, 79, 29],
+          "items": [
+            99,
+            79,
+            29
+          ],
           "character_id": "TFT7_Diana",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -13106,7 +14872,11 @@
       ],
       "unitDTO": [
         {
-          "items": [99, 36, 24],
+          "items": [
+            99,
+            36,
+            24
+          ],
           "character_id": "TFT7_Vladimir",
           "itemNames": [
             "TFT_Item_ThiefsGloves",
@@ -13131,30 +14901,52 @@
           "tier": 3
         },
         {
-          "items": [39, 24],
+          "items": [
+            39,
+            24
+          ],
           "character_id": "TFT7_Nami",
-          "itemNames": ["TFT_Item_JeweledGauntlet", "TFT_Item_StatikkShiv"],
+          "itemNames": [
+            "TFT_Item_JeweledGauntlet",
+            "TFT_Item_StatikkShiv"
+          ],
           "rarity": 1,
           "tier": 3
         },
         {
-          "items": [67],
+          "items": [
+            67
+          ],
           "character_id": "TFT7_Sylas",
-          "itemNames": ["TFT_Item_Zephyr"],
+          "itemNames": [
+            "TFT_Item_Zephyr"
+          ],
           "rarity": 2,
           "tier": 1
         },
         {
-          "items": [16, 23],
+          "items": [
+            16,
+            23
+          ],
           "character_id": "TFT7_Varus",
-          "itemNames": ["TFT_Item_Bloodthirster", "TFT_Item_GuinsoosRageblade"],
+          "itemNames": [
+            "TFT_Item_Bloodthirster",
+            "TFT_Item_GuinsoosRageblade"
+          ],
           "rarity": 2,
           "tier": 3
         },
         {
-          "items": [35, 5],
+          "items": [
+            35,
+            5
+          ],
           "character_id": "TFT7_Illaoi",
-          "itemNames": ["TFT_Item_LocketOfTheIronSolari", "TFT_Item_ChainVest"],
+          "itemNames": [
+            "TFT_Item_LocketOfTheIronSolari",
+            "TFT_Item_ChainVest"
+          ],
           "rarity": 2,
           "tier": 3
         },

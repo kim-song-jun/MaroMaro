@@ -10,34 +10,28 @@
 </template>
 
 <script>
-import { isFlowBaseAnnotation } from "@babel/types";
-import VueApexCharts from "vue3-apexcharts";
+import { isFlowBaseAnnotation } from '@babel/types';
+import VueApexCharts from 'vue3-apexcharts';
 export default {
-  name: "apex",
   components: {
     apexchart: VueApexCharts,
-  },
-  methods: {
-    foo(num) {
-      return `https://raw.communitydragon.org/latest/game/assets/ux/tft/championsplashes/tft6_amumu_mobile.tft_set${num}.png`;
-    },
   },
   data() {
     return {
       series: [
         {
-          name: "item1",
+          name: 'unit1',
           data: [[16.4, 3.2]],
         },
         {
-          name: "item2",
+          name: 'unit2',
           data: [[6.4, 5.4]],
         },
       ],
       chartOptions: {
         chart: {
           height: 350,
-          type: "scatter",
+          type: 'scatter',
           animations: {
             enabled: isFlowBaseAnnotation,
           },
@@ -48,7 +42,7 @@ export default {
             show: false,
           },
         },
-        colors: ["#056BF6", "#D2376A"],
+        colors: ['#056BF6', '#D2376A'],
         xaxis: {
           tickAmount: 10,
           min: 0,
@@ -61,12 +55,12 @@ export default {
           size: 15,
         },
         fill: {
-          type: "image",
+          type: 'image',
           opacity: 1,
           image: {
             src: [
-              this.foo(6),
-              "https://raw.communitydragon.org/latest/game/assets/characters/tft7_vladimir/hud/tft7_vladimir_square.tft_set7.png",
+              'https://raw.communitydragon.org/latest/game/assets/ux/tft/championsplashes/tft6_amumu_mobile.tft_set6.png',
+              'https://raw.communitydragon.org/latest/game/assets/ux/tft/championsplashes/tft6_amumu_mobile.tft_set6.png',
             ],
             width: 30,
             height: 30,
@@ -80,10 +74,10 @@ export default {
           markers: {
             customHTML: [
               function () {
-                return "";
+                return '';
               },
               function () {
-                return "";
+                return '';
               },
             ],
           },
