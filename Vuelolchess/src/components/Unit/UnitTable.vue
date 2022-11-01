@@ -34,16 +34,20 @@
                   </div>
                   <p class="tip-detail">
                     <br />
-                    특성: 블라블라
+                    특성:<img
+                      v-for="(trait, i) in GetChamp(name).traits"
+                      :key="i"
+                      class="tip-detail-image"
+                      :src="GetTraitUrl(trait)"
+                      alt="coin-img"
+                    />
                     <br />
-                    추천템:
-                    <img
+                    추천템:<img
                       v-for="(recommand, index) in recommands"
                       :key="index"
+                      class="tip-detail-image"
                       :src="this.GetItemUrl(recommand)"
                       alt="recommanditem1"
-                      width="15"
-                      height="15"
                     />
                   </p>
                 </div>
@@ -203,6 +207,35 @@ export default {
       }
       // console.log(this.costs);
     },
+    GetChamp(champName) {
+      var temp = {};
+      for (let i = 0; i < this.newdata.setData[0].champions.length; i++) {
+        let name = this.newdata.setData[0].champions[i].apiName.replace(
+          / /g,
+          ''
+        );
+        if (name === champName) temp = this.newdata.setData[0].champions[i];
+      }
+      // console.log(`getchamp:${this.champ}`);
+      // console.log(this.champ);
+      // console.log(`temp:${temp}`);
+      // console.log(temp);
+      return temp;
+    },
+    GetTraitUrl(traitName) {
+      for (let i in this.newdata.setData[0].traits) {
+        // console.log(i);
+        if (this.newdata.setData[0].traits[i].name == traitName) {
+          let temp = this.newdata.setData[0].traits[i].icon
+            .toLowerCase()
+            .split('.')
+            .slice(0, -1);
+          return `https://raw.communitydragon.org/latest/game/${temp.join(
+            '.'
+          )}.png`;
+        }
+      }
+    },
     GetChampBorderByCost(champCost) {
       //return border style each cost
       if (champCost === 1) {
@@ -344,11 +377,6 @@ td .table-item {
   display: flex;
   align-items: center;
 }
-td .table-item img {
-  margin: 0px 5px 0px 0px;
-  width: 32px;
-  height: 32px;
-}
 td .table-tier {
   background-color: #ff7e83;
   color: #111;
@@ -408,10 +436,12 @@ td .table-frequency {
   font-size: 13px;
   line-height: 1;
 }
-.tip-detail img {
-  margin-top: 0.5rem;
+.tip-detail-image {
+  margin-bottom: 0.2rem;
   margin-left: 0.2rem;
   border-radius: 50%;
+  width: 20px;
+  height: 20px;
 }
 .help-tip strong {
   color: rgb(31, 132, 144);
@@ -426,5 +456,8 @@ td .table-frequency {
 }
 .unit-img {
   border-radius: 5px;
+  margin: 0px 5px 0px 0px;
+  width: 32px;
+  height: 32px;
 }
 </style>
