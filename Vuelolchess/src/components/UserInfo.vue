@@ -7,7 +7,8 @@
       <div>
         <strong style="font-size: x-large">
           <!-- {{ this.userName }} -->
-          {{ $store.state.name }}
+          <!-- {{ $store.state.name }} -->
+          {{ $route.params.name }}
         </strong>
       </div>
 

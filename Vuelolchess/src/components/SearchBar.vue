@@ -48,7 +48,8 @@ export default {
         this.$store.dispatch("GetMatchHistory3", this.inputValue);
         this.$store.dispatch("GetMatchHistory4", this.inputValue);
         this.$store.dispatch("GetMatchHistory5", this.inputValue);
-        this.$store.commit("SetPage", 1);
+        // this.$store.commit("SetPage", 1);
+        this.$router.push(`/result/${this.inputValue}`);
       }
     },
   },

@@ -11,8 +11,8 @@
     :userName="this.userName"
     :matchData="this.More(this.userName)"
   ></ResultPage> -->
-  <!-- <SearchPage v-if="$store.state.page == 0"></SearchPage>
-  <ResultPage v-if="$store.state.page == 1"></ResultPage> -->
+  <SearchPage v-if="$store.state.page == 0"></SearchPage>
+  <ResultPage v-if="$store.state.page == 1"></ResultPage>
   <!-- {{ this.tempdata.stats.hp }} -->
   <!-- {{ console.log(lastest) }}
   {{ console.log(tierDeck) }}
@@ -40,8 +40,8 @@
 </template>
 
 <script>
-// import SearchPage from "./components/SearchPage.vue";
-// import ResultPage from "./components/ResultPage.vue";
+import SearchPage from "./components/SearchPage.vue";
+import ResultPage from "./components/ResultPage.vue";
 // import axios from "axios";
 // import tempdata from "./assets/tempdata.json";
 import lastest from "./assets/lastest.json";
@@ -62,7 +62,10 @@ export default {
     };
   },
   props: {},
-  components: {},
+  components: {
+    SearchPage,
+    ResultPage,
+  },
   methods: {
     temp() {
       console.log(lastest);

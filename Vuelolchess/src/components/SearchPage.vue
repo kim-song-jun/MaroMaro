@@ -41,7 +41,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .app_container {
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;

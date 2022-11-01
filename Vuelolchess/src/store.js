@@ -1,11 +1,11 @@
-import { createStore } from 'vuex';
-import axios from 'axios';
+import { createStore } from "vuex";
+import axios from "axios";
 
 const store = createStore({
   state() {
     return {
-      page: 2,
-      name: '',
+      page: 0,
+      name: "",
       matchData: [],
       matchData2: [],
       matchData3: [],
@@ -47,7 +47,7 @@ const store = createStore({
           {
             transformRequest: [
               (data, headers) => {
-                delete headers.common['X-Requested-With'];
+                delete headers.common["X-Requested-With"];
                 return data;
               },
             ],
@@ -58,10 +58,10 @@ const store = createStore({
           console.log(`GetMatchHistory8659: ${result.data}`);
           console.log(result.data);
           console.log(result);
-          context.commit('SetMatchData', result.data);
+          context.commit("SetMatchData", result.data);
         })
         .catch((e) => {
-          console.log('error-GetMatchhistory8659');
+          console.log("error-GetMatchhistory8659");
           console.log(e);
         });
     },
@@ -74,7 +74,7 @@ const store = createStore({
           {
             transformRequest: [
               (data, headers) => {
-                delete headers.common['X-Requested-With'];
+                delete headers.common["X-Requested-With"];
                 return data;
               },
             ],
@@ -85,10 +85,10 @@ const store = createStore({
           console.log(`GetMatchHistory8660: ${result.data}`);
           console.log(result.data);
           console.log(result);
-          context.commit('SetMatchData2', result.data);
+          context.commit("SetMatchData2", result.data);
         })
         .catch((e) => {
-          console.log('error-GetMatchhistory8660');
+          console.log("error-GetMatchhistory8660");
           console.log(e);
         });
     },
@@ -101,7 +101,7 @@ const store = createStore({
           {
             transformRequest: [
               (data, headers) => {
-                delete headers.common['X-Requested-With'];
+                delete headers.common["X-Requested-With"];
                 return data;
               },
             ],
@@ -112,10 +112,10 @@ const store = createStore({
           console.log(`GetMatchHistory8080: ${result.data}`);
           console.log(result.data);
           console.log(result);
-          context.commit('SetMatchData3', result.data);
+          context.commit("SetMatchData3", result.data);
         })
         .catch((e) => {
-          console.log('error-GetMatchhistory8080');
+          console.log("error-GetMatchhistory8080");
           console.log(e);
         });
     },
@@ -128,7 +128,7 @@ const store = createStore({
           {
             transformRequest: [
               (data, headers) => {
-                delete headers.common['X-Requested-With'];
+                delete headers.common["X-Requested-With"];
                 return data;
               },
             ],
@@ -139,10 +139,10 @@ const store = createStore({
           console.log(`GetMatchHistory: ${result.data}`);
           console.log(result.data);
           console.log(result);
-          context.commit('SetMatchData4', result.data);
+          context.commit("SetMatchData4", result.data);
         })
         .catch((e) => {
-          console.log('error-GetMatchhistory');
+          console.log("error-GetMatchhistory");
           console.log(e);
         });
     },
@@ -155,7 +155,7 @@ const store = createStore({
           {
             transformRequest: [
               (data, headers) => {
-                delete headers.common['X-Requested-With'];
+                delete headers.common["X-Requested-With"];
                 return data;
               },
             ],
@@ -166,10 +166,10 @@ const store = createStore({
           console.log(`GetMatchHistory: ${result.data}`);
           console.log(result.data);
           console.log(result);
-          context.commit('SetMatchData5', result.data);
+          context.commit("SetMatchData5", result.data);
         })
         .catch((e) => {
-          console.log('error-GetMatchhistory');
+          console.log("error-GetMatchhistory");
           console.log(e);
         });
     },

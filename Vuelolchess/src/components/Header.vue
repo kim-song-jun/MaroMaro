@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">MaroMaro</a>
+      <router-link class="navbar-brand" to="/">MaroMaro</router-link>
       <button
         class="navbar-toggler"
         type="button"
@@ -15,14 +15,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
+          <li class="nav-item"></li>
           <li class="nav-item">
-            <a href="/" class="nav-link active" aria-current="page">
-              <!-- @click="this.pageChange" -->
-              Home
-            </a>
-          </li>
-          <li class="nav-item">
-            <div class="nav-link">Comps</div>
+            <router-link class="nav-link active" to="/deck">Comps</router-link>
           </li>
           <li class="nav-item dropdown">
             <a
@@ -38,11 +33,17 @@
               class="dropdown-menu disabled"
               aria-labelledby="navbarDropdownMenuLink"
             >
-              <li><a class="dropdown-item">Items</a></li>
+              <li>
+                <router-link class="dropdown-item" to="/stats/items"
+                  >Items</router-link
+                >
+              </li>
               <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item">Units</a></li>
-              <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item">Traits</a></li>
+              <li>
+                <router-link class="dropdown-item" to="/stats/units"
+                  >Units</router-link
+                >
+              </li>
             </ul>
           </li>
         </ul>

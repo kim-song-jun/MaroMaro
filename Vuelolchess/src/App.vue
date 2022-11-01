@@ -11,29 +11,28 @@
     :userName="this.userName"
     :matchData="this.More(this.userName)"
   ></ResultPage> -->
-  <!-- <SearchPage v-if="$store.state.page == 0"></SearchPage> -->
-  <!-- <ResultPage v-if="$store.state.page == 1"></ResultPage> -->
-  <ItemPage v-if="$store.state.page == 0"></ItemPage>
-  <UnitPage v-if="$store.state.page == 1"></UnitPage>
-  <TierPage v-if="$store.state.page == 2"></TierPage>
+  <!-- <SearchPage v-if="$store.state.page == 0"></SearchPage>
+  <ResultPage v-if="$store.state.page == 1"></ResultPage>
+  <ItemPage v-if="$store.state.page == 2"></ItemPage>
+  <UnitPage v-if="$store.state.page == 3"></UnitPage>
+  <TierPage v-if="$store.state.page == 4"></TierPage> -->
+  <router-view></router-view>
 </template>
 
 <script>
-// import SearchPage from './components/SearchPage.vue';
-// import ResultPage from './components/ResultPage.vue';
-import ItemPage from './components/Item/ItemPage.vue';
-// import ItemPage from './components/Filter/ItemFilterContainer.vue';
-// import ItemPage from './components/Filter/UnitFilterContainer.vue';
-import UnitPage from './components/Unit/UnitPage.vue';
-import TierPage from './components/Deck/DeckPage.vue';
-import axios from 'axios';
+// import SearchPage from "./components/SearchPage.vue";
+// import ResultPage from "./components/ResultPage.vue";
+// import ItemPage from "./components/Item/ItemPage.vue";
+// import UnitPage from "./components/Unit/UnitPage.vue";
+// import TierPage from "./components/Deck/DeckPage.vue";
+import axios from "axios";
 
 export default {
-  name: 'App',
+  name: "App",
   data() {
     return {
       pageChange: 0,
-      userName: '',
+      userName: "",
       matchData: [],
     };
   },
@@ -41,16 +40,11 @@ export default {
   components: {
     // SearchPage,
     // ResultPage,
-    ItemPage,
-    UnitPage,
-    TierPage,
+    // ItemPage,
+    // UnitPage,
+    // TierPage,
   },
   methods: {
-    // GetMatchData(name) {
-    //   console.log("App-GetMatchData");
-    //   this.More(name);
-    //   return this.matchData;
-    // },
     RefreshMatchData(bool) {
       if (bool == true) {
         this.GetMatchData(this.userName);
@@ -75,11 +69,11 @@ export default {
     },
   },
   mounted() {
-    this.emitter.on('inputValue', (e) => {
+    this.emitter.on("inputValue", (e) => {
       this.userName = e;
       console.log(e);
     });
-    this.emitter.on('page', (e) => {
+    this.emitter.on("page", (e) => {
       this.pageChange = e;
       console.log(e);
     });

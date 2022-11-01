@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">MaroMaro</a>
+      <router-link class="navbar-brand" to="/">MaroMaro</router-link>
       <button
         class="navbar-toggler"
         type="button"
@@ -18,11 +18,8 @@
           class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
           style="--bs-scroll-height: 100px"
         >
-          <l i class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
-          </l>
           <li class="nav-item">
-            <a class="nav-link">Comps</a>
+            <router-link class="nav-link" to="/deck">Comps</router-link>
           </li>
           <li class="nav-item dropdown">
             <a
@@ -35,11 +32,17 @@
               Stats
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-              <li><a class="dropdown-item">Items</a></li>
+              <li>
+                <router-link class="dropdown-item" to="/stats/items"
+                  >Items</router-link
+                >
+              </li>
               <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item">Units</a></li>
-              <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item">Traits</a></li>
+              <li>
+                <router-link class="dropdown-item" to="/stats/units"
+                  >Units</router-link
+                >
+              </li>
             </ul>
           </li>
         </ul>
