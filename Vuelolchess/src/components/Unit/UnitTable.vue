@@ -41,6 +41,7 @@
                       :src="GetTraitUrl(trait)"
                       alt="coin-img"
                     />
+
                     <br />
                     추천템:<img
                       v-for="(recommand, index) in recommands"
@@ -69,10 +70,10 @@
 
 <script>
 // import alldata from '../../assets/data.json';
-import newdata from '../../assets/newdata.json';
+import newdata from "../../assets/newdata.json";
 
 export default {
-  props: ['cost', 'traits'],
+  props: ["cost", "traits"],
   data() {
     return {
       newdata,
@@ -80,11 +81,11 @@ export default {
       stage2: [],
       costs: [],
       championBorderStyle: [
-        'border:solid 2px gray;',
-        'border:solid 2px green;',
-        'border:solid 2px blue;',
-        'border:solid 2px purple;',
-        'border:solid 2px #ffd700;',
+        "border:solid 2px gray;",
+        "border:solid 2px green;",
+        "border:solid 2px blue;",
+        "border:solid 2px purple;",
+        "border:solid 2px #ffd700;",
       ],
       recommands: [1, 6, 3],
       costFilter: this.cost,
@@ -93,7 +94,7 @@ export default {
   methods: {
     showModal(name) {
       // console.log(`emit:${name}`);
-      this.$emit('open', 1, name);
+      this.$emit("open", 1, name);
     },
     filter() {
       return false;
@@ -113,23 +114,23 @@ export default {
         if (item == this.newdata.items[j].id) {
           let temp = this.newdata.items[j].icon
             .toLowerCase()
-            .split('.')
+            .split(".")
             .slice(0, -1);
           return `https://raw.communitydragon.org/latest/game/${temp.join(
-            '.'
+            "."
           )}.png`;
         }
       }
     },
     GetChampName() {
       for (let i = 0; i < newdata.setData[0].champions.length; i++) {
-        let name = newdata.setData[0].champions[i].apiName.replace(/ /g, '');
+        let name = newdata.setData[0].champions[i].apiName.replace(/ /g, "");
         const exception = [
-          'TFT6_TheGoldenEgg',
-          'TFT7_IvernMinion',
-          'TFT7_JadeStatue',
-          'TFT7_LagoonRelic',
-          'TFT7_Nomsy',
+          "TFT6_TheGoldenEgg",
+          "TFT7_IvernMinion",
+          "TFT7_JadeStatue",
+          "TFT7_LagoonRelic",
+          "TFT7_Nomsy",
         ];
         if (exception.includes(name)) continue;
         // else if (
@@ -156,11 +157,11 @@ export default {
     },
     GetChampNameStage2() {
       //store name that has different url
-      const exceptionStage2 = ['lagoon', 'monolith', 'darkflight', 'prodigy'];
+      const exceptionStage2 = ["lagoon", "monolith", "darkflight", "prodigy"];
       for (let i = 0; i < newdata.setData[0].champions.length; i++) {
         let name = newdata.setData[0].champions[i].apiName
           .toLowerCase()
-          .replace(/ /g, '');
+          .replace(/ /g, "");
         if (
           newdata.setData[0].champions[i].traits[0] === undefined ||
           newdata.setData[0].champions[i].traits[1] === undefined
@@ -179,18 +180,18 @@ export default {
       }
       // console.log(newdata.setData[0].champions[0].traits[0].toLowerCase());
       this.stage2.push(
-        'tft7b_heimerdinger',
-        'tft7b_lulu',
-        'tft7b_tristana',
-        'tft7_jayce',
-        'tft7_graves',
-        'tft7_pantheon',
-        'tft7_rakan',
-        'tft7_lux',
-        'tft7_zyra',
-        'tft7_jax',
-        'tft7_nasus',
-        'tft7_wukong'
+        "tft7b_heimerdinger",
+        "tft7b_lulu",
+        "tft7b_tristana",
+        "tft7_jayce",
+        "tft7_graves",
+        "tft7_pantheon",
+        "tft7_rakan",
+        "tft7_lux",
+        "tft7_zyra",
+        "tft7_jax",
+        "tft7_nasus",
+        "tft7_wukong"
       );
       // console.log(this.stage2);
     },
@@ -212,7 +213,7 @@ export default {
       for (let i = 0; i < this.newdata.setData[0].champions.length; i++) {
         let name = this.newdata.setData[0].champions[i].apiName.replace(
           / /g,
-          ''
+          ""
         );
         if (name === champName) temp = this.newdata.setData[0].champions[i];
       }
@@ -228,10 +229,10 @@ export default {
         if (this.newdata.setData[0].traits[i].name == traitName) {
           let temp = this.newdata.setData[0].traits[i].icon
             .toLowerCase()
-            .split('.')
+            .split(".")
             .slice(0, -1);
           return `https://raw.communitydragon.org/latest/game/${temp.join(
-            '.'
+            "."
           )}.png`;
         }
       }
@@ -258,21 +259,21 @@ export default {
           if (this.newdata.setData[i].champions[j].apiName == championID) {
             let temp = this.newdata.setData[i].champions[j].icon
               .toLowerCase()
-              .split('/');
+              .split("/");
             // console.log(temp);
             // let newUrl = temp.slice(0, -1);
-            let newUrl2 = temp.slice(-1)[0].split('.');
+            let newUrl2 = temp.slice(-1)[0].split(".");
             // console.log(newUrl);
             // console.log(newUrl2);
-            if (newUrl2[0] == 'tft7_volibear') {
+            if (newUrl2[0] == "tft7_volibear") {
               return `https://raw.communitydragon.org/latest/game/assets/characters/${championID.toLowerCase()}/hud/${
                 newUrl2[0]
               }_square.${newUrl2[1].slice(0, 8)}.png`;
-            } else if (newUrl2[0] == 'tft7_zippy') {
+            } else if (newUrl2[0] == "tft7_zippy") {
               return `https://raw.communitydragon.org/latest/game/assets/characters/${championID.toLowerCase()}/hud/icons2d/${
                 newUrl2[0]
               }_square.${newUrl2[1]}.png`;
-            } else if (newUrl2[0] == 'tft7_dragongreen') {
+            } else if (newUrl2[0] == "tft7_dragongreen") {
               return `https://raw.communitydragon.org/latest/game/assets/characters/${championID.toLowerCase()}/hud/tft7_jadedragon_square.${newUrl2[1].slice(
                 0,
                 8
@@ -288,30 +289,30 @@ export default {
     },
     GetChampionUrlByName(championName) {
       // console.log(championName);
-      let changeName = '';
+      let changeName = "";
       let temp = championName.toLowerCase();
 
-      if (temp == 'tft7_dragonblue') {
-        changeName = 'tft7_miragedragon';
-      } else if (temp == 'tft7_dragongold') {
-        changeName = 'tft7_shimmerscaledragon';
-      } else if (temp == 'tft7_dragongreen') {
-        changeName = 'tft7_jadedragon';
-      } else if (temp == 'tft7_dragonpurple') {
-        changeName = 'tft7_whispersdragon';
-      } else if (temp == 'tft7_aquaticdragon') {
-        changeName = 'tft7_sohm';
-      } else if (temp == 'tft7_nomsy') {
-        temp = 'tft7_nomsymage';
-        changeName = 'tft7_nomsy';
-      } else if (temp == 'tft7_heimerdinger') {
-        temp = 'tft7b_heimerdinger';
+      if (temp == "tft7_dragonblue") {
+        changeName = "tft7_miragedragon";
+      } else if (temp == "tft7_dragongold") {
+        changeName = "tft7_shimmerscaledragon";
+      } else if (temp == "tft7_dragongreen") {
+        changeName = "tft7_jadedragon";
+      } else if (temp == "tft7_dragonpurple") {
+        changeName = "tft7_whispersdragon";
+      } else if (temp == "tft7_aquaticdragon") {
+        changeName = "tft7_sohm";
+      } else if (temp == "tft7_nomsy") {
+        temp = "tft7_nomsymage";
+        changeName = "tft7_nomsy";
+      } else if (temp == "tft7_heimerdinger") {
+        temp = "tft7b_heimerdinger";
         changeName = temp;
-      } else if (temp == 'tft7_tristana') {
-        temp = 'tft7b_tristana';
+      } else if (temp == "tft7_tristana") {
+        temp = "tft7b_tristana";
         changeName = temp;
-      } else if (temp == 'tft7_lulu') {
-        temp = 'tft7b_lulu';
+      } else if (temp == "tft7_lulu") {
+        temp = "tft7b_lulu";
         changeName = temp;
       } else {
         changeName = temp;
@@ -320,8 +321,8 @@ export default {
       // console.log(changeName)
       if (this.stage2.includes(temp))
         return `https://raw.communitydragon.org/latest/game/assets/characters/${temp}/hud/${changeName}_square.tft_set7_stage2.png`;
-      else if (temp == 'tft7_dragonguild')
-        return 'https://raw.communitydragon.org/latest/game/assets/characters/tft7_dragonguild/hud/icons2d/tft7_zippy_square.tft_set7_stage2.png';
+      else if (temp == "tft7_dragonguild")
+        return "https://raw.communitydragon.org/latest/game/assets/characters/tft7_dragonguild/hud/icons2d/tft7_zippy_square.tft_set7_stage2.png";
       else
         return `https://raw.communitydragon.org/latest/game/assets/characters/${temp}/hud/${changeName}_square.tft_set7.png`;
     },

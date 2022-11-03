@@ -1,0 +1,99 @@
+[
+  {
+    "version": "12.19",
+    "mainDeckName": "4 Tempest, 3 Mage",
+    "subDeckName": "2 Trainer, 2 Mystic, 2 Bruiser, 1 Spell Thief",
+    "placementrate": 0.56,
+    "rank": "S",
+    "deckUnit": [
+      {
+        "items": [59],
+        "character_id": "TFT7_Vladimir",
+        "itemNames": ["TFT_Item_Shroud"],
+        "rarity": 0,
+        "tier": 3
+      },
+      {
+        "items": [],
+        "character_id": "TFT7_Skarner",
+        "itemNames": [],
+        "rarity": 0,
+        "tier": 3
+      },
+      {
+        "items": [24, 35, 34],
+        "character_id": "TFT7_Nami",
+        "itemNames": [
+          "TFT_Item_StatikkShiv",
+          "TFT_Item_LocketOfTheIronSolari",
+          "TFT_Item_ArchangelsStaff"
+        ],
+        "rarity": 1,
+        "tier": 3
+      },
+      {
+        "items": [2306, 14, 39],
+        "character_id": "TFT7_Ryze",
+        "itemNames": [
+          "TFT7_Item_AstralEmblemItem",
+          "TFT_Item_SpearOfShojin",
+          "TFT_Item_JeweledGauntlet"
+        ],
+        "rarity": 2,
+        "tier": 3
+      },
+      {
+        "items": [6],
+        "character_id": "TFT7_Varus",
+        "itemNames": ["TFT_Item_NegatronCloak"],
+        "rarity": 2,
+        "tier": 3
+      },
+      {
+        "items": [55],
+        "character_id": "TFT7_Illaoi",
+        "itemNames": ["TFT_Item_BrambleVest"],
+        "rarity": 2,
+        "tier": 3
+      },
+      {
+        "items": [3],
+        "character_id": "TFT7_Bard",
+        "itemNames": ["TFT_Item_NeedlesslyLargeRod"],
+        "rarity": 5,
+        "tier": 1
+      }
+    ],
+    "carryUnit": [
+      {
+        "items": [24, 35, 34],
+        "character_id": "TFT7_Nami",
+        "itemNames": [
+          "TFT_Item_StatikkShiv",
+          "TFT_Item_LocketOfTheIronSolari",
+          "TFT_Item_ArchangelsStaff"
+        ],
+        "rarity": 1,
+        "tier": 3
+      },
+      {
+        "items": [2306, 14, 39],
+        "character_id": "TFT7_Ryze",
+        "itemNames": [
+          "TFT7_Item_AstralEmblemItem",
+          "TFT_Item_SpearOfShojin",
+          "TFT_Item_JeweledGauntlet"
+        ],
+        "rarity": 2,
+        "tier": 3
+      },
+      {
+        "items": [6],
+        "character_id": "TFT7_Varus",
+        "itemNames": ["TFT_Item_NegatronCloak"],
+        "rarity": 2,
+        "tier": 3
+      }
+    ]
+  }
+]

@@ -16,6 +16,14 @@
   <ItemPage v-if="$store.state.page == 2"></ItemPage>
   <UnitPage v-if="$store.state.page == 3"></UnitPage>
   <TierPage v-if="$store.state.page == 4"></TierPage> -->
+  {{ this.tierUnit }}
+  {{ this.AddTraits() }}
+  <hr />
+  <br />
+  {{ this.tempUnit }}
+  <hr />
+  {{ this.ChampTraitFilter(null) }}
+  <!-- {{ this.ChampCostFilter(3) }} -->
   <router-view></router-view>
 </template>
 
@@ -26,6 +34,8 @@
 // import UnitPage from "./components/Unit/UnitPage.vue";
 // import TierPage from "./components/Deck/DeckPage.vue";
 import axios from "axios";
+import tierUnit from "./assets/tierUnit.json";
+import newdata from "./assets/newdata.json";
 
 export default {
   name: "App",
@@ -34,6 +44,9 @@ export default {
       pageChange: 0,
       userName: "",
       matchData: [],
+      tierUnit,
+      newdata,
+      tempUnit: tierUnit,
     };
   },
   props: {},
@@ -45,6 +58,51 @@ export default {
     // TierPage,
   },
   methods: {
+    GetChamp(champName) {
+      var temp = {};
+      for (let i = 0; i < this.newdata.setData[0].champions.length; i++) {
+        let name = this.newdata.setData[0].champions[i].apiName.replace(
+          / /g,
+          ""
+        );
+        if (name === champName) temp = this.newdata.setData[0].champions[i];
+      }
+      return temp;
+    },
+    AddTraits() {
+      for (let i = 0; i < this.tierUnit.units.length; i++) {
+        this.GetChamp(this.tierUnit.units[i].ID);
+        this.tierUnit.units[i].traits = this.GetChamp(
+          this.tierUnit.units[i].ID
+        ).traits;
+      }
+    },
+    ChampCostFilter(cost) {
+      this.tempUnit.units = this.tempUnit.units.filter(
+        (el) => el.rarity == cost
+      );
+    },
+    ChampTraitFilter(trait) {
+      this.tempUnit.units = this.tempUnit.units.filter((el) =>
+        el.traits.includes(trait)
+      );
+    },
+    ChampCostsFilter(costs) {
+      if (costs == null) {
+        return;
+      }
+      for (let i; i < costs.lengh; i++) {
+        this.ChampCostFilter(costs[i]);
+      }
+    },
+    ChampTraitsFilter(traits) {
+      if (traits == null) {
+        return;
+      }
+      for (let i; i < traits.lengh; i++) {
+        this.ChampTraitFilter(traits[i]);
+      }
+    },
     RefreshMatchData(bool) {
       if (bool == true) {
         this.GetMatchData(this.userName);

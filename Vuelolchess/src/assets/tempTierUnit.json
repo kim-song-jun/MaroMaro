@@ -1,0 +1,70 @@
+{
+  "version": "12.19",
+  "units": [
+    {
+      "name": "Vladimir",
+      "ID": "TFT7_Vladimir",
+      "items": [2316, 79, 2312],
+      "rank": "S",
+      "rarity": 3,
+      "stars": [
+        { "tier": 0, "Frequency": "2.15", "Placement": "1.52" },
+        { "tier": 1, "Frequency": "2.15", "Placement": "1.52" },
+        { "tier": 2, "Frequency": "2.15", "Placement": "1.52" }
+      ],
+      "traits": ["Astral", "Mage"]
+    },
+    {
+      "name": "Nidalee",
+      "ID": "TFT7_Nidalee",
+      "items": [2316, 79, 2312],
+      "rank": "A",
+      "rarity": 5,
+      "stars": [
+        { "tier": 0, "Frequency": "2.15", "Placement": "1.52" },
+        { "tier": 1, "Frequency": "2.15", "Placement": "1.52" },
+        { "tier": 2, "Frequency": "2.15", "Placement": "1.52" }
+      ],
+      "traits": ["Astral", "Shapeshifter"]
+    },
+    {
+      "name": "Senna",
+      "ID": "TFT7_Senna",
+      "items": [2316, 79, 2312],
+      "rank": "B",
+      "rarity": 4,
+      "stars": [
+        { "tier": 0, "Frequency": "2.15", "Placement": "1.52" },
+        { "tier": 1, "Frequency": "2.15", "Placement": "1.52" },
+        { "tier": 2, "Frequency": "2.15", "Placement": "1.52" }
+      ],
+      "traits": ["Ragewing", "Cannoneer"]
+    },
+    {
+      "name": "Senna",
+      "ID": "TFT7_Sylas",
+      "items": [2316, 79, 2312],
+      "rank": "B",
+      "rarity": 3,
+      "stars": [
+        { "tier": 0, "Frequency": "2.15", "Placement": "1.52" },
+        { "tier": 1, "Frequency": "2.15", "Placement": "1.52" },
+        { "tier": 2, "Frequency": "2.15", "Placement": "1.52" }
+      ],
+      "traits": ["Whispers", "Mage", "Bruiser"]
+    },
+    {
+      "name": "Senna",
+      "ID": "TFT7_Sett",
+      "items": [2316, 79, 2312],
+      "rank": "B",
+      "rarity": 1,
+      "stars": [
+        { "tier": 0, "Frequency": "2.15", "Placement": "1.52" },
+        { "tier": 1, "Frequency": "2.15", "Placement": "1.52" },
+        { "tier": 2, "Frequency": "2.15", "Placement": "1.52" }
+      ],
+      "traits": ["Ragewing", "Dragonmancer"]
+    }
+  ]
+}

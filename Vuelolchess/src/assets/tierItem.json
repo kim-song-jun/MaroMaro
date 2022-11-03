@@ -1,0 +1,26 @@
+{
+  "version": "12.19",
+  "items": [
+    {
+      "name": "Banshee's Claw",
+      "ID": 79,
+      "Frequency": "2.34",
+      "Placement": "2.23",
+      "rank": "S"
+    },
+    {
+      "name": "Mystic Emblem",
+      "ID": 2312,
+      "Frequency": "2.34",
+      "Placement": "2.23",
+      "rank": "A"
+    },
+    {
+      "name": "Assassin Emblem",
+      "ID": 2325,
+      "Frequency": "2.34",
+      "Placement": "2.23",
+      "rank": "B"
+    }
+  ]
+}
