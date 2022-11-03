@@ -21,7 +21,7 @@ export default {};
 
 <style>
 .footer {
-  padding: 1rem 1.5rem;
+  background-color: #b6a694;
 }
 footer p {
   margin: 0px;

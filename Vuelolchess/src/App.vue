@@ -16,13 +16,13 @@
   <ItemPage v-if="$store.state.page == 2"></ItemPage>
   <UnitPage v-if="$store.state.page == 3"></UnitPage>
   <TierPage v-if="$store.state.page == 4"></TierPage> -->
-  {{ this.tierUnit }}
+  <!-- {{ this.tierUnit }}
   {{ this.AddTraits() }}
   <hr />
   <br />
   {{ this.tempUnit }}
   <hr />
-  {{ this.ChampTraitFilter(null) }}
+  {{ this.ChampTraitsFilter(null) }} -->
   <!-- {{ this.ChampCostFilter(3) }} -->
   <router-view></router-view>
 </template>

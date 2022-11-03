@@ -34,7 +34,7 @@
                   </div>
                   <p class="tip-detail">
                     <br />
-                    특성:<img
+                    traits:<img
                       v-for="(trait, i) in GetChamp(name).traits"
                       :key="i"
                       class="tip-detail-image"
@@ -43,7 +43,7 @@
                     />
 
                     <br />
-                    추천템:<img
+                    items:<img
                       v-for="(recommand, index) in recommands"
                       :key="index"
                       class="tip-detail-image"
@@ -345,18 +345,50 @@ export default {
 table {
   border-spacing: 0;
   width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  padding: 10px;
+  /* border: none; */
 }
-th,
-td {
+th {
   padding: 0.4rem 0.6rem;
-  border-bottom: 1px solid #313236;
+  /* border-bottom: 2px solid #313236; */
   border-left: 0;
   border-right: 0;
   margin: 0;
+  background-color: #f4dfd0;
+}
+td {
+  padding: 0.4rem 0.6rem;
+  /* border-bottom: 2px solid #313236; */
+  border-left: 0;
+  border-right: 0;
+  margin: 0;
+  /* background-color: aliceblue; */
+}
+
+table tr:nth-child(odd) {
+  background-color: rgb(238, 238, 238);
+}
+table tr:nth-child(even) {
+  background-color: whitesmoke;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+
+td:first-child,
+th:first-child {
+  border-radius: 10px 0 0 10px;
+}
+td:last-child,
+th:last-child {
+  border-radius: 0 10px 10px 0;
 }
 .table-container {
-  overflow: auto;
-  height: 590px;
+  /* overflow: auto;
+  height: 590px; */
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
 }

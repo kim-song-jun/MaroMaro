@@ -1,13 +1,19 @@
 <template>
-  <UnitInfo
+  <!-- <UnitInfo
     v-if="modalOpen"
     @close="modalOpen = 0"
     :champName="this.champName"
-  ></UnitInfo>
+  ></UnitInfo> -->
   <div class="app_container">
     <div class="header-content">
       <Header></Header>
     </div>
+    <UnitInfo
+      class="modal-content"
+      v-if="modalOpen"
+      @close="modalOpen = 0"
+      :champName="this.champName"
+    ></UnitInfo>
     <div class="sidebar-a"></div>
     <div class="sidebar-b"></div>
     <div class="filter-content">
@@ -21,6 +27,7 @@
         @traits="changeTrait"
       ></Filter>
       <div class="unit-content">
+        <NewUnitTableVue></NewUnitTableVue>
         <UnitTable
           :cost="this.cost"
           :traits="this.traits"
@@ -100,11 +107,13 @@ export default {
 
 <style>
 .app_container {
+  background-color: #cdbba7;
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
   justify-items: stretch;
   grid-template-areas:
     "header header header"
+    "a modal b"
     "a filter b"
     "footer footer footer";
   height: 100vh;
@@ -117,18 +126,25 @@ export default {
   grid-area: footer;
 }
 .sidebar-a {
+  background-color: #cdbba7;
   grid-area: a;
+  border-right: 2px solid #dad0c2;
 }
 .sidebar-b {
+  background-color: #cdbba7;
   grid-area: b;
+  border-left: 2px solid #dad0c2;
+}
+.modal-content {
+  grid-area: modal;
 }
 .filter-content {
   grid-area: filter;
-  background-color: #faf8ec;
+  background-color: #cdbba7;
   height: 94%;
 }
 .unit-content {
-  background-color: rgb(172, 225, 227);
-  padding: 0px 0px 20px;
+  background-color: #cdbba7;
+  /* padding: 0px 0px 20px; */
 }
 </style>
