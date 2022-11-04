@@ -44,13 +44,13 @@
 </template>
 
 <script>
-import Header from "../Header.vue";
-import Filter from "../Filter/UnitFilterContainer.vue";
-import UnitTable from "./UnitTable.vue";
-import UnitApex from "./UnitApex.vue";
-import UnitInfo from "./UnitInfo.vue";
-import Footer from "../Footer.vue";
-import newdata from "../../assets/newdata.json";
+import Header from '../Header.vue';
+import Filter from '../Filter/UnitFilterContainer.vue';
+import UnitTable from './UnitTable.vue';
+import UnitApex from './UnitApex.vue';
+import UnitInfo from './UnitInfo.vue';
+import Footer from '../Footer.vue';
+import newdata from '../../assets/newdata.json';
 
 export default {
   components: {
@@ -66,7 +66,7 @@ export default {
       newdata,
       modalOpen: 0,
       container: 0,
-      champName: "",
+      champName: '',
       cost: [0, 0, 0, 0, 0],
       traits: [
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -81,7 +81,7 @@ export default {
       // console.log(`champName: ${this.champName}`);
     },
     reset() {
-      console.log("reset");
+      console.log('reset');
       this.container = 0;
       this.cost = [0, 0, 0, 0, 0];
       this.traits = [
@@ -112,10 +112,10 @@ export default {
   grid-template-columns: 1fr 5fr 1fr;
   justify-items: stretch;
   grid-template-areas:
-    "header header header"
-    "a modal b"
-    "a filter b"
-    "footer footer footer";
+    'header header header'
+    'a modal b'
+    'a filter b'
+    'footer footer footer';
   height: 100vh;
   align-items: stretch;
 }
@@ -128,15 +128,15 @@ export default {
 .sidebar-a {
   background-color: #cdbba7;
   grid-area: a;
-  border-right: 2px solid #dad0c2;
+  /* border-right: 2px solid #dad0c2; */
 }
 .sidebar-b {
   background-color: #cdbba7;
   grid-area: b;
-  border-left: 2px solid #dad0c2;
+  /* border-left: 2px solid #dad0c2; */
 }
 .modal-content {
-  grid-area: modal;
+  grid-area: modal, filter;
 }
 .filter-content {
   grid-area: filter;

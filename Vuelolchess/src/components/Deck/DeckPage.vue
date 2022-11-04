@@ -26,10 +26,10 @@
 </template>
 
 <script>
-import Header from "../Header.vue";
-import Filter from "../Filter/DeckFilterContainer.vue";
-import Deck from "./TierDeck.vue";
-import Footer from "../Footer.vue";
+import Header from '../Header.vue';
+import Filter from '../Filter/DeckFilterContainer.vue';
+import Deck from './TierDeck.vue';
+import Footer from '../Footer.vue';
 
 export default {
   components: {
@@ -51,7 +51,7 @@ export default {
   },
   methods: {
     reset() {
-      console.log("reset");
+      console.log('reset');
       this.container = 0;
       this.tier = [0, 0, 0, 0, 0];
       this.traits = [
@@ -82,9 +82,9 @@ export default {
   grid-template-columns: 1fr 5fr 1fr;
   justify-items: stretch;
   grid-template-areas:
-    "header header header"
-    "a filter b"
-    "footer footer footer";
+    'header header header'
+    'a filter b'
+    'footer footer footer';
   height: 100vh;
   align-items: stretch;
 }
@@ -102,12 +102,13 @@ export default {
   grid-area: b;
 }
 .filter-content {
+  padding-top: 20px;
   grid-area: filter;
-  background-color: #faf8ec;
-  height: 94%;
+  background-color: #cdbba7;
+  height: 100%;
 }
 .deck-content {
-  background-color: rgb(212, 212, 212);
-  padding: 10px 0px 20px;
+  background-color: #cdbba7;
+  /* padding: 10px 0px 20px; */
 }
 </style>
