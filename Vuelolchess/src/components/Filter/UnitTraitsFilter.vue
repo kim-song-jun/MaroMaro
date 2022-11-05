@@ -19,7 +19,6 @@
 </template>
 
 <script>
-import traitsdata from '../../assets/tfttraits.json';
 import newdata from '../../assets/newdata.json';
 import tierUnit from '../../assets/tierUnit.json';
 
@@ -64,12 +63,11 @@ export default {
       }
     },
     GetTraitName() {
-      for (let i = 0; i < traitsdata.length; i++) {
-        if (traitsdata[i].set === 'TFTSet7') {
-          this.traitNames.push(traitsdata[i].display_name);
-        }
+      for (let i in this.newdata.setData[0].traits) {
+        this.traitNames.push(this.newdata.setData[0].traits[i].name);
       }
-      // console.log(this.traitNames);
+      this.traitNames.sort();
+      // console.log(temp);
     },
     GetTraitImage(traitName) {
       // console.log(traitName.toLowerCase());
