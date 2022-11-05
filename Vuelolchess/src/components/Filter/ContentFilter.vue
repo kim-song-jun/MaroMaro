@@ -59,16 +59,15 @@ export default {
 .unclicked {
   color: black;
   border-radius: 10px;
-  background-color: #faf8ec;
+  background-color: #c3936f;
   border: 0.1px solid #c3936f;
-  box-shadow: 4px 4px 0px 0 #c3936f, -5px -7px 1px 0 rgba(255, 255, 255, 0.3);
 }
 .clicked {
-  color: black;
+  color: #c3936f;
   border-radius: 10px;
-  background-color: #faf8ec;
+  background-color: black;
   border: 0.1px solid #eec9ad;
-  box-shadow: inset 4px 4px 0px 0 #eec9ad,
+  box-shadow: inset 4px 4px 0px 0 black,
     inset -1px -1px 7px 0 rgba(255, 255, 255, 0.5);
 }
 </style>
