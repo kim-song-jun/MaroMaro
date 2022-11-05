@@ -1,24 +1,14 @@
 <template>
   <div class="filter1">
-    <button id="1cost" class="cost unclicked" @click="changeCost('1cost')">
+    <button
+      v-for="(cost, index) in costs"
+      :key="index"
+      :id="cost"
+      class="cost unclicked"
+      @click="changeCost(cost)"
+    >
       <img class="coin" src="../../assets/coin.png" alt="coin" />
-      <span class="coin">1</span>
-    </button>
-    <button id="2cost" class="cost unclicked" @click="changeCost('2cost')">
-      <img class="coin" src="../../assets/coin.png" alt="coin" />
-      <span class="coin">2</span>
-    </button>
-    <button id="3cost" class="cost unclicked" @click="changeCost('3cost')">
-      <img class="coin" src="../../assets/coin.png" alt="coin" />
-      <span class="coin">3</span>
-    </button>
-    <button id="4cost" class="cost unclicked" @click="changeCost('4cost')">
-      <img class="coin" src="../../assets/coin.png" alt="coin" />
-      <span class="coin">4</span>
-    </button>
-    <button id="5cost" class="cost unclicked" @click="changeCost('5cost')">
-      <img class="coin" src="../../assets/coin.png" alt="coin" />
-      <span class="coin">5</span>
+      <span class="coin">{{ index + 1 }} </span>
     </button>
   </div>
 </template>
@@ -28,6 +18,7 @@ export default {
   props: ['cost'],
   data() {
     return {
+      costs: ['1cost', '2cost', '3cost', '4cost', '5cost'],
       isClicked: [0, 0, 0, 0, 0],
     };
   },
