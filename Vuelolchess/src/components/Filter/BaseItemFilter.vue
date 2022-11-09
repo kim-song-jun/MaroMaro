@@ -6,7 +6,7 @@
       :id="item.name"
       class="filter-item-img unclicked-img"
       @click="changeBase(item)"
-      :src="this.GetItem(item.id)"
+      :src="this.GetItemUrl(item.id)"
       :alt="item.name"
     />
   </div>
@@ -28,6 +28,7 @@ export default {
         { name: 'cloakFilter', id: 6 },
         { name: 'beltFilter', id: 7 },
         { name: 'glovesFilter', id: 9 },
+        { name: 'spatula', id: 8 },
       ],
       baseItemID: 0,
     };
@@ -64,14 +65,16 @@ export default {
         }
       }
     },
-    GetItem(item) {
+    GetItemUrl(itemID) {
       for (let j in this.newdata.items) {
-        if (item == this.newdata.items[j].id) {
-          return `https://raw.communitydragon.org/latest/game/${this.newdata.items[
-            j
-          ].icon
+        if (itemID == this.newdata.items[j].id) {
+          let temp = this.newdata.items[j].icon
             .toLowerCase()
-            .slice(0, -4)}.png`;
+            .split('.')
+            .slice(0, -1);
+          return `https://raw.communitydragon.org/latest/game/${temp.join(
+            '.'
+          )}.png`;
         }
       }
     },

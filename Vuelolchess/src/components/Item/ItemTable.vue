@@ -77,7 +77,7 @@ import newdata from '../../assets/newdata.json';
 export default {
   data() {
     return {
-      items: [],
+      newdata,
     };
   },
   methods: {
@@ -85,9 +85,9 @@ export default {
       this.$emit('open', 1, id);
     },
     GetItemUrl(item) {
-      for (let j in newdata.items) {
-        if (item == newdata.items[j].id) {
-          let temp = newdata.items[j].icon
+      for (let j in this.newdata.items) {
+        if (item == this.newdata.items[j].id) {
+          let temp = this.newdata.items[j].icon
             .toLowerCase()
             .split('.')
             .slice(0, -1);
@@ -98,20 +98,18 @@ export default {
       }
     },
     GetItems() {
-      for (let i = 0; i < newdata.items.length; i++) {
-        this.items.push(newdata.items[i]);
+      const temp = [];
+      for (let i = 0; i < this.newdata.items.length; i++) {
+        temp.push(this.newdata.items[i]);
       }
+      return temp;
     },
     isEmptyArr(arr) {
-      if (Array.isArray(arr) && arr.length === 0) {
-        return true;
-      }
-
+      if (Array.isArray(arr) && arr.length === 0) return true;
       return false;
     },
   },
   created() {
-    this.GetItems();
   },
 };
 </script>

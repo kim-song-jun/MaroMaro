@@ -3,12 +3,9 @@
     <button
       v-for="(type, index) in types"
       :key="index"
-      :class="[
-        isClicked[index] === 1
-          ? 'filter-type clicked'
-          : 'filter-type unclicked',
-      ]"
-      @click="changeType(index)"
+      :id="type"
+      class="filter-type unclicked"
+      @click="changeType(type, index)"
     >
       {{ type }}
     </button>
@@ -31,13 +28,22 @@ export default {
   },
   methods: {
     reset() {
-      this.isClicked = this.type;
+      for (let i = 0; i < this.isClicked.length; i++) {
+        if (this.isClicked[i] === 1) {
+          const classList = document.getElementById(this.types[i]).classList;
+          classList.replace('clicked', 'unclicked');
+        }
+      }
+      // this.isClicked = this.middletype;
     },
-    changeType(i) {
-      if (this.isClicked[i] === 1) {
-        this.isClicked[i] = 0;
+    changeType(type, index) {
+      const classList = document.getElementById(type).classList;
+      if (classList.contains('clicked')) {
+        this.isClicked[index] = 0;
+        classList.replace('clicked', 'unclicked');
       } else {
-        this.isClicked[i] = 1;
+        this.isClicked[index] = 1;
+        classList.replace('unclicked', 'clicked');
       }
     },
   },
