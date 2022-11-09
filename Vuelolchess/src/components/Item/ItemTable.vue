@@ -1,16 +1,18 @@
 <template>
   <div class="table-container">
-    <table>
+    <table class="item-table">
       <thead>
-        <th><div class="table-item">Item</div></th>
-        <th><div class="table-tier">Tier</div></th>
-        <th><div class="table-avg">Avg Place</div></th>
-        <th><div class="table-winrate">Winrate</div></th>
-        <th><div class="table-frequency">Frequency</div></th>
+        <th class="item-table-th"><div class="table-item">Item</div></th>
+        <th class="item-table-th"><div class="table-tier">Tier</div></th>
+        <th class="item-table-th"><div class="table-avg">Avg Place</div></th>
+        <th class="item-table-th"><div class="table-winrate">Winrate</div></th>
+        <th class="item-table-th">
+          <div class="table-frequency">Frequency</div>
+        </th>
       </thead>
       <tbody>
         <tr v-for="item in items" :key="item">
-          <td>
+          <td class="item-table-td">
             <div class="table-item">
               <div class="help-tip">
                 <a>
@@ -57,10 +59,12 @@
               </div>
             </div>
           </td>
-          <td><div class="table-tier">S</div></td>
-          <td><div class="table-avg">3.53</div></td>
-          <td><div class="table-winrate">22.9%</div></td>
-          <td><div class="table-frequency">24,258 (2.5%)</div></td>
+          <td class="item-table-td"><div class="table-tier">S</div></td>
+          <td class="item-table-td"><div class="table-avg">3.53</div></td>
+          <td class="item-table-td"><div class="table-winrate">22.9%</div></td>
+          <td class="item-table-td">
+            <div class="table-frequency">24,258 (2.5%)</div>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -68,7 +72,6 @@
 </template>
 
 <script>
-// import alldata from '../../assets/data.json';
 import newdata from '../../assets/newdata.json';
 
 export default {
@@ -79,29 +82,11 @@ export default {
   },
   methods: {
     showModal(id) {
-      // console.log(`emit:${name}`);
       this.$emit('open', 1, id);
     },
     GetItemUrl(item) {
-      // console.log(item);
-      // for (let j in newdata.items) {
-      //   if (item == newdata.items[j].id) {
-      //     console.log(
-      //       `https://raw.communitydragon.org/latest/game/${newdata.items[j].icon
-      //         .toLowerCase()
-      //         .slice(0, -4)}.png`
-      //     );
-      //     return `https://raw.communitydragon.org/latest/game/${newdata.items[
-      //       j
-      //     ].icon
-      //       .toLowerCase()
-      //       .slice(0, -4)}.png`;
-      //   }
-      // }
-      // console.log(item)
       for (let j in newdata.items) {
         if (item == newdata.items[j].id) {
-          // console.log(newdata.items[j].icon.toLowerCase().split('.'));
           let temp = newdata.items[j].icon
             .toLowerCase()
             .split('.')
@@ -113,16 +98,7 @@ export default {
       }
     },
     GetItems() {
-      //tierItem is server data
-      // for (let i = 0; i < newdata.items.length; i++) {
-      //   let id = newdata.items[i].id;
-      //   const filter1 = 'tft7_item';
-      //   if (id == tierItem.items[i].id) this.items.push(newdata.items[i]);
-      // }
       for (let i = 0; i < newdata.items.length; i++) {
-        // let name = newdata.items[i].apiName.toLowerCase().replace(/ /g, '');
-        // const filter1 = 'tft7_item';
-        // if (name.includes(filter1)) this.items.push(newdata.items[i]);
         this.items.push(newdata.items[i]);
       }
     },
@@ -140,13 +116,13 @@ export default {
 };
 </script>
 
-<style scoped>
-table {
+<style>
+.item-table {
   border-spacing: 0;
   width: 100%;
 }
-th,
-td {
+.item-table-th,
+.item-table-td {
   padding: 0.4rem 0.6rem;
   border-bottom: 1px solid #313236;
   border-left: 0;
@@ -162,7 +138,7 @@ td {
 .table-container::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
 }
-th .table-item {
+.item-table-th .table-item {
   min-width: 170px;
   max-width: 170px;
   text-align: left;
@@ -173,16 +149,16 @@ th .table-item {
 .table-frequency {
   text-align: right;
 }
-td .table-item {
+.item-table-td .table-item {
   display: flex;
   align-items: center;
 }
-td .table-item img {
+.item-table-td .table-item img {
   margin: 0px 5px 0px 0px;
   width: 32px;
   height: 32px;
 }
-td .table-tier {
+.item-table-td .table-tier {
   background-color: #ff7e83;
   color: #111;
   font-weight: 600;
@@ -193,14 +169,14 @@ td .table-tier {
   align-items: center;
   justify-content: center;
 }
-td .table-avg {
+.item-table-td .table-avg {
   font-size: 16px;
   color: rgb(15, 67, 73);
 }
-td .table-winrate {
+.item-table-td .table-winrate {
   font-size: 14px;
 }
-td .table-frequency {
+.item-table-td .table-frequency {
   text-align: right;
   font-size: 14px;
 }

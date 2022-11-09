@@ -1,5 +1,5 @@
 <template>
-  <div class="filter1">
+  <div class="type-filter">
     <button
       v-for="(type, index) in types"
       :key="index"
@@ -17,7 +17,6 @@
 
 <script>
 export default {
-  props: ['type'],
   data() {
     return {
       types: [
@@ -39,18 +38,14 @@ export default {
         this.isClicked[i] = 0;
       } else {
         this.isClicked[i] = 1;
-        this.$emit('type', i + 1);
       }
     },
-  },
-  updated() {
-    this.reset();
   },
 };
 </script>
 
-<style scoped>
-.filter1 {
+<style>
+.type-filter {
   display: flex;
   padding: 0.5rem 0rem;
   margin: 0.5rem 0rem;

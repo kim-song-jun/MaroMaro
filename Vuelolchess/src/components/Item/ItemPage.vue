@@ -11,15 +11,7 @@
     <div class="sidebar-a"></div>
     <div class="sidebar-b"></div>
     <div class="filter-content">
-      <Filter
-        :content="this.container"
-        :type="this.type"
-        :base="this.base"
-        @reset="reset"
-        @content="changeContent"
-        @type="changeType"
-        @base="changeBase"
-      ></Filter>
+      <Filter @reset="reset" @content="changeContent"></Filter>
       <div class="item-content">
         <ItemTable v-if="container === 0" @open="showModal"></ItemTable>
         <ItemApex v-if="container === 1"></ItemApex>
@@ -53,33 +45,18 @@ export default {
       modalOpen: 0,
       itemID: 0,
       container: 0,
-      type: [0, 0, 0, 0, 0],
-      base: 0,
     };
   },
   methods: {
     showModal(modalOpen, id) {
       this.modalOpen = modalOpen;
       this.itemID = id;
-      // console.log(`champName: ${this.champName}`);
     },
     reset() {
       console.log('reset');
-      this.container = 0;
-      this.type = [0, 0, 0, 0, 0];
-      this.base = 0;
     },
     changeContent(content) {
-      console.log(`content${content}`);
       this.container = content;
-    },
-    changeType(type) {
-      console.log(`type${type}`);
-      this.type[type - 1] = 1;
-    },
-    changeBase(base) {
-      console.log(`base${base}`);
-      this.base = base;
     },
   },
 };

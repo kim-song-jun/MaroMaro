@@ -41,7 +41,6 @@
                 v-for="(baseID, i) in this.item.from"
                 :key="i"
               >
-                <!-- {{ this.GetEffectUrl(baseID, i) }} -->
                 <img
                   class="item-detail-effect-image"
                   :src="
@@ -103,27 +102,11 @@ export default {
           temp = this.newdata.items[i];
         }
       }
-      // console.log(`getchamp:${this.champ}`);
-      // console.log(this.champ);
-      // console.log(`temp:${temp}`);
-      // console.log(temp);
-      // this.item = temp;
       return temp;
     },
     GetItemUrl(item) {
-      // console.log(item);
-      // for (let j in alldata.items) {
-      //   if (item == alldata.items[j].id) {
-      //     return `https://raw.communitydragon.org/latest/game/${alldata.items[
-      //       j
-      //     ].icon
-      //       .toLowerCase()
-      //       .slice(0, -4)}.png`;
-      //   }
-      // }// console.log(item)
       for (let j in this.newdata.items) {
         if (item == this.newdata.items[j].id) {
-          // console.log(this.newdata.items[j].icon.toLowerCase().split('.'));
           let temp = this.newdata.items[j].icon
             .toLowerCase()
             .split('.')
@@ -135,23 +118,14 @@ export default {
       }
     },
     isEmptyArr(arr) {
-      if (Array.isArray(arr) && arr.length === 0) {
-        return true;
-      }
-
+      if (Array.isArray(arr) && arr.length === 0) return true;
       return false;
     },
     GetEffectUrl(baseID) {
-      // console.log(baseID);
       const baseItem = this.GetItem(baseID);
       let effect = Object.entries(baseItem.effects);
-      // console.log(Object.entries(baseItem.effects)[0]);
-      console.log(effect[0][0]);
       return effect[0][0];
     },
-  },
-  beforeCreate() {
-    console.log(this.itemID);
   },
   created() {
     this.item = this.GetItem(this.itemID);
