@@ -24,6 +24,7 @@ export default {
         'shimmerscale(빛비늘)',
       ],
       isClicked: [0, 0, 0, 0, 0],
+      filter: [],
     };
   },
   methods: {
@@ -38,13 +39,26 @@ export default {
     },
     changeType(type, index) {
       const classList = document.getElementById(type).classList;
+      const word = [
+        'Standard/',
+        'Emblem',
+        'Ornn_',
+        'Radiant/',
+        'Shimmerscale/',
+      ];
+      // filter off
       if (classList.contains('clicked')) {
         this.isClicked[index] = 0;
+        this.filter = this.filter.filter((type) => type != word[index]);
         classList.replace('clicked', 'unclicked');
       } else {
+        //filter on
         this.isClicked[index] = 1;
+        this.filter.push(word[index]);
         classList.replace('unclicked', 'clicked');
       }
+      this.$store.commit('SetItemFilterType', this.filter);
+      this.$store.dispatch('filterItems', this.$store.state.itemFilter);
     },
   },
 };

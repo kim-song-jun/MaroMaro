@@ -11,7 +11,7 @@
         </th>
       </thead>
       <tbody>
-        <tr v-for="item in items" :key="item">
+        <tr v-for="item in this.$store.state.filteredItems" :key="item">
           <td class="item-table-td">
             <div class="table-item">
               <div class="help-tip">
@@ -108,8 +108,16 @@ export default {
       if (Array.isArray(arr) && arr.length === 0) return true;
       return false;
     },
+    initItems() {
+      this.$store.commit('SetFilteredItems', this.GetItems());
+    },
+    excute() {
+      this.$store.commit('SetItems', this.GetItems());
+    },
   },
   created() {
+    this.initItems();
+    this.excute();
   },
 };
 </script>

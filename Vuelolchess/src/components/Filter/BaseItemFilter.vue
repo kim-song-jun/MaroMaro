@@ -64,6 +64,8 @@ export default {
           classList.replace('unclicked-img', 'clicked');
         }
       }
+      this.$store.commit('SetItemFilterBase', this.baseItemID);
+      this.$store.dispatch('filterItems', this.$store.state.itemFilter);
     },
     GetItemUrl(itemID) {
       for (let j in this.newdata.items) {
