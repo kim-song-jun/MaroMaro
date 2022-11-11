@@ -87,12 +87,10 @@ export default {
   grid-area: footer;
 }
 .sidebar-a {
-  background-color: #cdbba7;
   grid-area: a;
   /* border-right: 2px solid #dad0c2; */
 }
 .sidebar-b {
-  background-color: #cdbba7;
   grid-area: b;
   /* border-left: 2px solid #dad0c2; */
 }
@@ -101,10 +99,8 @@ export default {
 }
 .filter-content {
   grid-area: filter;
-  background-color: #cdbba7;
   height: 94%;
 }
 .unit-content {
-  background-color: #cdbba7;
 }
 </style>

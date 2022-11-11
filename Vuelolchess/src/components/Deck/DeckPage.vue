@@ -1,6 +1,6 @@
 <template>
   <!-- <ItemInfo v-if="modalOpen" @close="modalOpen = 0"></ItemInfo> -->
-  <div class="app_container">
+  <div class="deck_container">
     <div class="header-content">
       <Header></Header>
     </div>
@@ -77,7 +77,7 @@ export default {
 </script>
 
 <style>
-.app_container {
+.deck_container {
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
   justify-items: stretch;
@@ -85,8 +85,9 @@ export default {
     'header header header'
     'a filter b'
     'footer footer footer';
-  height: 100vh;
+  /* height: 100vh; */
   align-items: stretch;
+  background-color: #cdbba7;
 }
 .header-content {
   grid-area: header;
@@ -104,11 +105,9 @@ export default {
 .filter-content {
   padding-top: 20px;
   grid-area: filter;
-  background-color: #cdbba7;
   height: 100%;
 }
 .deck-content {
-  background-color: #cdbba7;
   /* padding: 10px 0px 20px; */
 }
 </style>

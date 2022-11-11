@@ -2,17 +2,17 @@
   <div class="table-container">
     <table class="item-table">
       <thead>
-        <th class="item-table-th"><div class="table-item">Item</div></th>
-        <th class="item-table-th"><div class="table-tier">Tier</div></th>
-        <th class="item-table-th"><div class="table-avg">Avg Place</div></th>
-        <th class="item-table-th"><div class="table-winrate">Winrate</div></th>
-        <th class="item-table-th">
+        <th class="table-th"><div class="table-item">Item</div></th>
+        <th class="table-th"><div class="table-tier">Tier</div></th>
+        <th class="table-th"><div class="table-avg">Avg Place</div></th>
+        <th class="table-th"><div class="table-winrate">Winrate</div></th>
+        <th class="table-th">
           <div class="table-frequency">Frequency</div>
         </th>
       </thead>
       <tbody>
         <tr v-for="item in this.$store.state.filteredItems" :key="item">
-          <td class="item-table-td">
+          <td class="table-td">
             <div class="table-item">
               <div class="help-tip">
                 <a>
@@ -59,10 +59,10 @@
               </div>
             </div>
           </td>
-          <td class="item-table-td"><div class="table-tier">S</div></td>
-          <td class="item-table-td"><div class="table-avg">3.53</div></td>
-          <td class="item-table-td"><div class="table-winrate">22.9%</div></td>
-          <td class="item-table-td">
+          <td class="table-td"><div class="table-tier">S</div></td>
+          <td class="table-td"><div class="table-avg">3.53</div></td>
+          <td class="table-td"><div class="table-winrate">22.9%</div></td>
+          <td class="table-td">
             <div class="table-frequency">24,258 (2.5%)</div>
           </td>
         </tr>
@@ -126,6 +126,9 @@ export default {
 .item-table {
   border-spacing: 0;
   width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  padding: 10px;
 }
 .item-table-th,
 .item-table-td {

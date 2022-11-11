@@ -227,14 +227,14 @@ export default {
   /* background-color: aliceblue; */
 }
 
-.unit-table tr:nth-child(odd) {
+table tr:nth-child(odd) {
   background-color: rgb(238, 238, 238);
 }
-.unit-table tr:nth-child(even) {
+table tr:nth-child(even) {
   background-color: whitesmoke;
 }
 
-.unit-table tr:hover {
+table tr:hover {
   background-color: #ddd;
 }
 
