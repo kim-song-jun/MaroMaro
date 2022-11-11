@@ -14,6 +14,9 @@ const store = createStore({
       matchData4: [],
       matchData5: [],
       tierUnit: {},
+      items: [],
+      filteredItems: [],
+      itemFilter: { base: 0, type: [] },
     };
   },
   mutations: {
@@ -40,6 +43,18 @@ const store = createStore({
     },
     SetTierUnit(state, inputValue) {
       state.tierUnit = inputValue;
+    },
+    SetItems(state, inputValue) {
+      state.items = inputValue;
+    },
+    SetFilteredItems(state, inputValue) {
+      state.filteredItems = inputValue;
+    },
+    SetItemFilterBase(state, inputValue) {
+      state.itemFilter.base = inputValue;
+    },
+    SetItemFilterType(state, inputValue) {
+      state.itemFilter.type = inputValue;
     },
   },
   // ajax 요청 받는거
@@ -178,6 +193,37 @@ const store = createStore({
           console.log('error-GetMatchhistory');
           console.log(e);
         });
+    },
+    initItems(context, origin) {
+      context.commit('SetFilteredItems', origin);
+    },
+    filterItems(context, filter) {
+      this.dispatch('initItems', this.state.items);
+      this.dispatch('typesFilter', filter.type);
+      this.dispatch('baseFilter', filter.base);
+    },
+    baseFilter(context, base) {
+      if (base == 0) {
+        return;
+      }
+      context.commit(
+        'SetFilteredItems',
+        this.state.filteredItems.filter(
+          (item) => item.from.includes(base) || item.id == base
+        )
+      );
+    },
+    typesFilter(context, types) {
+      if (types.length === 0) {
+        return;
+      }
+      let temp = [];
+      for (let i in types) {
+        temp = temp.concat(
+          this.state.items.filter((item) => item.icon.includes(types[i]))
+        );
+      }
+      this.commit('SetFilteredItems', temp);
     },
   },
 });

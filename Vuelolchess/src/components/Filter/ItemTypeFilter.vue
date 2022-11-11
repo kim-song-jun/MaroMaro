@@ -1,14 +1,11 @@
 <template>
-  <div class="filter1">
+  <div class="type-filter">
     <button
       v-for="(type, index) in types"
       :key="index"
-      :class="[
-        isClicked[index] === 1
-          ? 'filter-type clicked'
-          : 'filter-type unclicked',
-      ]"
-      @click="changeType(index)"
+      :id="type"
+      class="filter-type unclicked"
+      @click="changeType(type, index)"
     >
       {{ type }}
     </button>
@@ -17,7 +14,6 @@
 
 <script>
 export default {
-  props: ['type'],
   data() {
     return {
       types: [
@@ -28,29 +24,48 @@ export default {
         'shimmerscale(빛비늘)',
       ],
       isClicked: [0, 0, 0, 0, 0],
+      filter: [],
     };
   },
   methods: {
     reset() {
-      this.isClicked = this.type;
-    },
-    changeType(i) {
-      if (this.isClicked[i] === 1) {
-        this.isClicked[i] = 0;
-      } else {
-        this.isClicked[i] = 1;
-        this.$emit('type', i + 1);
+      for (let i = 0; i < this.isClicked.length; i++) {
+        if (this.isClicked[i] === 1) {
+          const classList = document.getElementById(this.types[i]).classList;
+          classList.replace('clicked', 'unclicked');
+        }
       }
+      // this.isClicked = this.middletype;
     },
-  },
-  updated() {
-    this.reset();
+    changeType(type, index) {
+      const classList = document.getElementById(type).classList;
+      const word = [
+        'Standard/',
+        'Emblem',
+        'Ornn_',
+        'Radiant/',
+        'Shimmerscale/',
+      ];
+      // filter off
+      if (classList.contains('clicked')) {
+        this.isClicked[index] = 0;
+        this.filter = this.filter.filter((type) => type != word[index]);
+        classList.replace('clicked', 'unclicked');
+      } else {
+        //filter on
+        this.isClicked[index] = 1;
+        this.filter.push(word[index]);
+        classList.replace('unclicked', 'clicked');
+      }
+      this.$store.commit('SetItemFilterType', this.filter);
+      this.$store.dispatch('filterItems', this.$store.state.itemFilter);
+    },
   },
 };
 </script>
 
-<style scoped>
-.filter1 {
+<style>
+.type-filter {
   display: flex;
   padding: 0.5rem 0rem;
   margin: 0.5rem 0rem;

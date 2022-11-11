@@ -1,24 +1,24 @@
 <template>
-  <div class="filter2">
+  <div class="base-filter">
     <img
       v-for="item in items"
       :key="item"
       :id="item.name"
-      class="filter-item-img unclicked"
+      class="filter-item-img unclicked-img"
       @click="changeBase(item)"
-      :src="this.GetItem(item.id)"
+      :src="this.GetItemUrl(item.id)"
       :alt="item.name"
     />
   </div>
 </template>
 
 <script>
-import alldata from '../../assets/data.json';
+import newdata from '../../assets/newdata.json';
 
 export default {
-  props: ['base'],
   data() {
     return {
+      newdata,
       items: [
         { name: 'swordFilter', id: 1 },
         { name: 'bowFilter', id: 2 },
@@ -28,23 +28,22 @@ export default {
         { name: 'cloakFilter', id: 6 },
         { name: 'beltFilter', id: 7 },
         { name: 'glovesFilter', id: 9 },
+        { name: 'spatula', id: 8 },
       ],
-      isClicked: 0,
+      baseItemID: 0,
     };
   },
   methods: {
     reset(base) {
       if (base == 0) {
-        // console.log('reset');
         for (let item of this.items) {
-          // console.log(item);
-          if (this.isClicked === item.id) {
+          if (this.baseItemID === item.id) {
             const classList = document.getElementById(item.name).classList;
-            classList.replace('clicked', 'unclicked');
+            classList.replace('clicked', 'unclicked-img');
           }
         }
       }
-      this.isClicked = base;
+      this.baseItemID = base;
     },
     changeBase(item) {
       const classList = document.getElementById(item.name).classList;
@@ -53,54 +52,45 @@ export default {
       );
 
       if (isExist.length === 0) {
-        //선택된 필터가 없는 경우
-        this.isClicked = item.id;
-        classList.replace('unclicked', 'clicked');
+        this.baseItemID = item.id;
+        classList.replace('unclicked-img', 'clicked');
       } else {
-        //선택된 필터가 이미 있는 경우
-
-        //이미 선택된 것을 끄고 싶을 경우
         if (classList.contains('clicked')) {
-          this.isClicked = 0;
-          classList.replace('clicked', 'unclicked');
+          this.baseItemID = 0;
+          classList.replace('clicked', 'unclicked-img');
         } else {
-          //다른 것을 선택한 경우
-          //선택된 필터를 끄기
-          isExist.item(0).classList.replace('clicked', 'unclicked');
-          //선택한 필터 켜기
-          this.isClicked = item.id;
-          classList.replace('unclicked', 'clicked');
+          isExist.item(0).classList.replace('clicked', 'unclicked-img');
+          this.baseItemID = item.id;
+          classList.replace('unclicked-img', 'clicked');
         }
       }
-      // console.log(this.isClicked);
-      this.$emit('base', this.isClicked);
+      this.$store.commit('SetItemFilterBase', this.baseItemID);
+      this.$store.dispatch('filterItems', this.$store.state.itemFilter);
     },
-    GetItem(item) {
-      // console.log(item);
-      for (let j in alldata.items) {
-        if (item == alldata.items[j].id) {
-          return `https://raw.communitydragon.org/latest/game/${alldata.items[
-            j
-          ].icon
+    GetItemUrl(itemID) {
+      for (let j in this.newdata.items) {
+        if (itemID == this.newdata.items[j].id) {
+          let temp = this.newdata.items[j].icon
             .toLowerCase()
-            .slice(0, -4)}.png`;
+            .split('.')
+            .slice(0, -1);
+          return `https://raw.communitydragon.org/latest/game/${temp.join(
+            '.'
+          )}.png`;
         }
       }
     },
-  },
-  updated() {
-    this.reset(this.base);
   },
 };
 </script>
 
-<style scoped>
-.filter2 {
+<style>
+.base-filter {
   padding: 0.5rem 0rem;
   margin: 0.5rem 0rem;
   display: flex;
 }
-.unclicked {
+.unclicked-img {
   color: black;
   border-radius: 10px;
   background-color: #c3936f;
