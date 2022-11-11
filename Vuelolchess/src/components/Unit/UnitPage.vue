@@ -1,10 +1,5 @@
 <template>
-  <!-- <UnitInfo
-    v-if="modalOpen"
-    @close="modalOpen = 0"
-    :champName="this.champName"
-  ></UnitInfo> -->
-  <div class="app_container">
+  <div class="unit_container">
     <div class="header-content">
       <Header></Header>
     </div>
@@ -17,23 +12,9 @@
     <div class="sidebar-a"></div>
     <div class="sidebar-b"></div>
     <div class="filter-content">
-      <Filter
-        :content="this.container"
-        :cost="this.cost"
-        :traits="this.traits"
-        @reset="reset"
-        @content="changeContent"
-        @cost="changeCost"
-        @traits="changeTrait"
-      ></Filter>
+      <Filter @reset="reset" @content="changeContent"></Filter>
       <div class="unit-content">
-        <NewUnitTableVue></NewUnitTableVue>
-        <UnitTable
-          :cost="this.cost"
-          :traits="this.traits"
-          v-if="container === 0"
-          @open="showModal"
-        ></UnitTable>
+        <UnitTable v-if="container === 0" @open="showModal"></UnitTable>
         <UnitApex v-if="container === 1"></UnitApex>
       </div>
     </div>
@@ -67,46 +48,26 @@ export default {
       modalOpen: 0,
       container: 0,
       champName: '',
-      cost: [0, 0, 0, 0, 0],
-      traits: [
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0,
-      ],
     };
   },
   methods: {
     showModal(modalOpen, name) {
       this.modalOpen = modalOpen;
       this.champName = name;
-      // console.log(`champName: ${this.champName}`);
     },
     reset() {
       console.log('reset');
       this.container = 0;
-      this.cost = [0, 0, 0, 0, 0];
-      this.traits = [
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0,
-      ];
     },
     changeContent(content) {
-      console.log(`content${content}`);
       this.container = content;
-    },
-    changeCost(cost) {
-      console.log(`cost${cost}`);
-      this.cost[cost - 1] = 1;
-    },
-    changeTrait(traits) {
-      console.log(`traits${traits}`);
-      this.traits = traits;
     },
   },
 };
 </script>
 
 <style>
-.app_container {
+.unit_container {
   background-color: #cdbba7;
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
@@ -145,6 +106,5 @@ export default {
 }
 .unit-content {
   background-color: #cdbba7;
-  /* padding: 0px 0px 20px; */
 }
 </style>

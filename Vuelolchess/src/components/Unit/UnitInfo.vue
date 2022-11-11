@@ -2,7 +2,6 @@
   <div class="blackBG">
     <div class="info-container">
       <div class="info-title">
-        <!-- {{ this.GetChampionUrl(this.champ.apiName) }} -->
         <h5>Unit Info</h5>
         <button class="btn-close" @click="this.$emit('close', 0)"></button>
       </div>
@@ -147,18 +146,6 @@
                 </td>
               </tr>
             </table>
-            <!-- <div class="champ-detail-stats-left">
-              <div class="champ-detail-stat">ad/ad/ad</div>
-              <div class="champ-detail-stat">armor</div>
-              <div class="champ-detail-stat">attackspeed</div>
-              <div class="champ-detail-stat">critchance</div>
-            </div>
-            <div class="champ-detail-stats-right">
-              <div class="champ-detail-stat">100%</div>
-              <div class="champ-detail-stat">magicResist</div>
-              <div class="champ-detail-stat">range</div>
-              <div class="champ-detail-stat">critMultiplier</div>
-            </div> -->
           </div>
         </div>
         <div class="recommand-item">
@@ -166,9 +153,9 @@
           <div class="recommand-item-container">
             <img
               class="recommand-item-image"
-              v-for="recommandItem in recommandItems"
-              :key="recommandItem"
-              :src="GetItemUrl(recommandItem)"
+              v-for="(item, i) in this.tierUnit.items"
+              :key="i"
+              :src="GetItemUrl(item)"
               alt="recommand-item"
               width="40"
               height="40"
@@ -182,6 +169,7 @@
 
 <script>
 import newdata from '../../assets/newdata.json';
+import tierUnits from '../../assets/tierUnit.json';
 
 export default {
   props: ['champName'],
@@ -189,7 +177,9 @@ export default {
   data() {
     return {
       newdata,
+      tierUnits,
       champ: {},
+      tierUnit: {},
       stage2: [],
       variables: [
         { name: 'variable', value: 'value' },
@@ -197,7 +187,6 @@ export default {
       ],
       champStars: [1, 0, 0],
       star: ['starbronze', 'star', 'star'],
-      recommandItems: [1, 2, 25],
     };
   },
   methods: {
@@ -225,35 +214,15 @@ export default {
         );
         if (name === champName) temp = this.newdata.setData[0].champions[i];
       }
-      // console.log(`getchamp:${this.champ}`);
-      // console.log(this.champ);
-      // console.log(`temp:${temp}`);
-      // console.log(temp);
       return temp;
     },
-    GetChampNameStage2() {
-      //store name that has different url
-      const exceptionStage2 = ['lagoon', 'monolith', 'darkflight', 'prodigy'];
-      for (let i = 0; i < this.newdata.setData[0].champions.length; i++) {
-        let name = this.newdata.setData[0].champions[i].apiName
-          .toLowerCase()
-          .replace(/ /g, '');
-        if (
-          this.newdata.setData[0].champions[i].traits[0] === undefined ||
-          this.newdata.setData[0].champions[i].traits[1] === undefined
-        )
-          continue;
-        else if (
-          exceptionStage2.includes(
-            this.newdata.setData[0].champions[i].traits[0].toLowerCase()
-          ) ||
-          exceptionStage2.includes(
-            this.newdata.setData[0].champions[i].traits[1].toLowerCase()
-          )
-        )
-          this.stage2.push(name);
-        // console.log(this.newdata.setData[0].champions[i].traits[0].toLowerCase());
+    GetTierUnit(champName) {
+      var temp = {};
+      for (let i = 0; i < this.tierUnits.units.length; i++) {
+        let name = this.tierUnits.units[i].ID.replace(/ /g, '');
+        if (name === champName) temp = this.tierUnits.units[i];
       }
+      return temp;
     },
     GetChampionUrl(championID) {
       // get url by champion ID
@@ -291,59 +260,9 @@ export default {
         }
       }
     },
-    GetChampionUrlByName(championName) {
-      // console.log(championName);
-      let changeName = '';
-      let temp = championName.toLowerCase();
-
-      if (temp == 'tft7_dragonblue') {
-        changeName = 'tft7_miragedragon';
-      } else if (temp == 'tft7_dragongold') {
-        changeName = 'tft7_shimmerscaledragon';
-      } else if (temp == 'tft7_dragongreen') {
-        changeName = 'tft7_jadedragon';
-      } else if (temp == 'tft7_dragonpurple') {
-        changeName = 'tft7_whispersdragon';
-      } else if (temp == 'tft7_aquaticdragon') {
-        changeName = 'tft7_sohm';
-      } else if (temp == 'tft7_nomsy') {
-        temp = 'tft7_nomsymage';
-        changeName = 'tft7_nomsy';
-      } else if (temp == 'tft7_heimerdinger') {
-        temp = 'tft7b_heimerdinger';
-        changeName = temp;
-      } else if (temp == 'tft7_tristana') {
-        temp = 'tft7b_tristana';
-        changeName = temp;
-      } else if (temp == 'tft7_lulu') {
-        temp = 'tft7b_lulu';
-        changeName = temp;
-      } else {
-        changeName = temp;
-      }
-      // console.log(temp)
-      // console.log(changeName)
-      if (this.stage2.includes(temp))
-        return `https://raw.communitydragon.org/latest/game/assets/characters/${temp}/hud/${changeName}_square.tft_set7_stage2.png`;
-      else if (temp == 'tft7_dragonguild')
-        return 'https://raw.communitydragon.org/latest/game/assets/characters/tft7_dragonguild/hud/icons2d/tft7_zippy_square.tft_set7_stage2.png';
-      else
-        return `https://raw.communitydragon.org/latest/game/assets/characters/${temp}/hud/${changeName}_square.tft_set7.png`;
-    },
     GetItemUrl(item) {
-      // console.log(item);
-      // for (let j in alldata.items) {
-      //   if (item == alldata.items[j].id) {
-      //     return `https://raw.communitydragon.org/latest/game/${alldata.items[
-      //       j
-      //     ].icon
-      //       .toLowerCase()
-      //       .slice(0, -4)}.png`;
-      //   }
-      // }// console.log(item)
       for (let j in this.newdata.items) {
         if (item == this.newdata.items[j].id) {
-          // console.log(this.newdata.items[j].icon.toLowerCase().split('.'));
           let temp = this.newdata.items[j].icon
             .toLowerCase()
             .split('.')
@@ -360,9 +279,7 @@ export default {
           let temp = this.newdata.setData[0].champions[i].ability.icon
             .toLowerCase()
             .split('/');
-          // console.log(temp);
           let newUrl2 = temp.slice(-1)[0].split('.');
-          // console.log(newUrl2);
           if (newUrl2[1] != 'dds') {
             return `https://raw.communitydragon.org/latest/game/assets/characters/${temp[2]}/hud/icons2d/${newUrl2[0]}.${newUrl2[1]}.png`;
           } else
@@ -372,7 +289,6 @@ export default {
     },
     GetTraitUrl(traitName) {
       for (let i in this.newdata.setData[0].traits) {
-        // console.log(i);
         if (this.newdata.setData[0].traits[i].name == traitName) {
           let temp = this.newdata.setData[0].traits[i].icon
             .toLowerCase()
@@ -384,40 +300,10 @@ export default {
         }
       }
     },
-    GetTraitImage(trait) {
-      // console.log(trait.toLowerCase());
-      const exceptionNone = ['assassin', 'shapeshifter'];
-      const exceptionStage2 = ['lagoon', 'monolith', 'darkflight', 'prodigy'];
-      const exception2 = ['mage', 'mystic'];
-      if (exceptionNone.includes(trait.toLowerCase())) {
-        return `https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_${trait.toLowerCase()}.png`;
-      } else if (exceptionStage2.includes(trait.toLowerCase())) {
-        return `https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_${trait.toLowerCase()}.tft_set7_stage2.png`;
-      } else if (trait.toLowerCase() === 'bruiser') {
-        return `https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_6_bruiser.png`;
-      } else if (exception2.includes(trait.toLowerCase())) {
-        return `https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_2_${trait.toLowerCase()}.png`;
-      } else if (trait.toLowerCase() === 'scalescorn') {
-        return `https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_7_dragonbane.png`;
-      } else if (trait.toLowerCase() === 'cavalier') {
-        return `https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_5_cavalry.png`;
-      } else if (trait.toLowerCase() === 'spelltheif') {
-        return `https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_7_spellthief.png`;
-      } else if (trait.toLowerCase() === 'cannoneer') {
-        return `https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_5_cannoneer.png`;
-      } else {
-        return `https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_7_${trait.toLowerCase()}.png`;
-      }
-    },
   },
   created() {
-    // console.log(this.champName);
     this.champ = this.GetChamp(this.champName);
-    console.log(`mounted:${this.champ}`);
-    console.log(this.champName);
-    console.log(this.champ);
-    console.log(this.champ.stats.hp);
-    this.GetChampNameStage2();
+    this.tierUnit = this.GetTierUnit(this.champName);
   },
 };
 </script>
@@ -437,7 +323,6 @@ export default {
 }
 .btn-close {
   display: flex;
-  /* justify-self: right; */
   margin-left: auto;
 }
 .info-container {
@@ -450,7 +335,6 @@ export default {
 }
 .info-title {
   display: flex;
-  /* margin-bottom: 10px; */
 }
 .champion-container {
   display: flex;
@@ -497,8 +381,6 @@ export default {
   margin-right: 10px;
 }
 .champ-detail-skill {
-  /* display: flex; */
-  /* flex-direction: column; */
   padding: 10px 20px 10px 70px;
   position: relative;
 }
@@ -550,10 +432,6 @@ export default {
   position: absolute;
   left: 0px;
   top: 10px;
-  /* display: flex;
-  flex-basis: 40px;
-  padding: 5px; */
-  /* margin: 10px; */
 }
 .champ-detail-skill-info,
 .champ-detail-stats-right,

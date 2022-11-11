@@ -16,10 +16,6 @@
   <ItemPage v-if="$store.state.page == 2"></ItemPage>
   <UnitPage v-if="$store.state.page == 3"></UnitPage>
   <TierPage v-if="$store.state.page == 4"></TierPage> -->
-  <hr />
-  {{ this.$store.state.tierUnit }}
-  <hr />
-
   <router-view></router-view>
 </template>
 

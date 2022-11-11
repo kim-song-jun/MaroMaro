@@ -1,5 +1,5 @@
 <template>
-  <div class="filter2">
+  <div class="trait-filter">
     <div class="filter-raw">
       <div
         v-for="(trait, index) in traitNames"
@@ -20,10 +20,8 @@
 
 <script>
 import newdata from '../../assets/newdata.json';
-import tierUnit from '../../assets/tierUnit.json';
 
 export default {
-  props: ['traits'],
   data() {
     return {
       newdata,
@@ -31,10 +29,8 @@ export default {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0,
       ],
-      tierUnit,
       traitNames: [],
       traitFilter: [],
-      filteredTierUnit: {},
     };
   },
   methods: {
@@ -50,7 +46,6 @@ export default {
     },
     GetTraitUrl(traitName) {
       for (let i in this.newdata.setData[0].traits) {
-        // console.log(i);
         if (this.newdata.setData[0].traits[i].name == traitName) {
           let temp = this.newdata.setData[0].traits[i].icon
             .toLowerCase()
@@ -67,32 +62,6 @@ export default {
         this.traitNames.push(this.newdata.setData[0].traits[i].name);
       }
       this.traitNames.sort();
-      // console.log(temp);
-    },
-    GetTraitImage(traitName) {
-      // console.log(traitName.toLowerCase());
-      const exceptionNone = ['assassin', 'shapeshifter'];
-      const exceptionStage2 = ['lagoon', 'monolith', 'darkflight', 'prodigy'];
-      const exception2 = ['mage', 'mystic'];
-      if (exceptionNone.includes(traitName.toLowerCase())) {
-        return `https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_${traitName.toLowerCase()}.png`;
-      } else if (exceptionStage2.includes(traitName.toLowerCase())) {
-        return `https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_${traitName.toLowerCase()}.tft_set7_stage2.png`;
-      } else if (traitName.toLowerCase() === 'bruiser') {
-        return `https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_6_bruiser.png`;
-      } else if (exception2.includes(traitName.toLowerCase())) {
-        return `https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_2_${traitName.toLowerCase()}.png`;
-      } else if (traitName.toLowerCase() === 'scalescorn') {
-        return `https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_7_dragonbane.png`;
-      } else if (traitName.toLowerCase() === 'cavalier') {
-        return `https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_5_cavalry.png`;
-      } else if (traitName.toLowerCase() === 'spelltheif') {
-        return `https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_7_spellthief.png`;
-      } else if (traitName.toLowerCase() === 'cannoneer') {
-        return `https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_5_cannoneer.png`;
-      } else {
-        return `https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_7_${traitName.toLowerCase()}.png`;
-      }
     },
     changeTrait(index) {
       if (this.isClicked[index] === 1) {
@@ -104,70 +73,22 @@ export default {
         this.traitFilter.push(this.traitNames[index]);
         this.isClicked[index] = 1;
       }
-      this.ChampTraitsFilter(this.traitFilter);
-      this.Excute();
       this.$store.commit('SetUnitFilterTrait', this.traitFilter);
       this.$store.dispatch('filterUnits', this.$store.state.unitFilter);
-      this.$emit('traits', this.isClicked);
-    },
-    initTierUnits() {
-      this.filteredTierUnit = { ...this.tierUnit };
-    },
-    Excute() {
-      this.$store.commit('SetTierUnit', this.filteredTierUnit);
-    },
-    GetChamp(champName) {
-      var temp = {};
-      for (let i = 0; i < this.newdata.setData[0].champions.length; i++) {
-        let name = this.newdata.setData[0].champions[i].apiName.replace(
-          / /g,
-          ''
-        );
-        if (name === champName) temp = this.newdata.setData[0].champions[i];
-      }
-      return temp;
-    },
-    AddTraits() {
-      for (let i = 0; i < this.tierUnit.units.length; i++) {
-        this.GetChamp(this.tierUnit.units[i].ID);
-        this.tierUnit.units[i].traits = this.GetChamp(
-          this.tierUnit.units[i].ID
-        ).traits;
-      }
-    },
-    ChampTraitFilter(trait) {
-      this.filteredTierUnit.units = this.filteredTierUnit.units.filter((el) =>
-        el.traits.includes(trait)
-      );
-    },
-    ChampTraitsFilter(trait) {
-      this.initTierUnits();
-      if (trait.length == 0) {
-        return;
-      }
-      for (let i = 0; i < trait.length; i++) {
-        this.ChampTraitFilter(trait[i]);
-      }
     },
   },
   created() {
     this.GetTraitName();
-    this.AddTraits();
-    this.initTierUnits();
-    this.Excute();
-  },
-  updated() {
-    this.reset();
   },
 };
 </script>
 
-<style scoped>
-.filter2 {
+<style>
+.trait-filter {
   padding: 0.5rem 0rem;
   margin: 0.5rem 0rem;
 }
-.filter2 .filter-trait-img {
+.trait-filter .filter-trait-img {
   display: flex;
   cursor: pointer;
   width: 30px;

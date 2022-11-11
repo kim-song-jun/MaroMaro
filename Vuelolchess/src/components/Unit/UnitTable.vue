@@ -1,24 +1,18 @@
 <template>
   <div class="table-container">
-    <table>
+    <table class="unit-table">
       <thead>
-        <th><div class="table-item">Unit</div></th>
-        <th><div class="table-tier">Tier</div></th>
-        <th><div class="table-avg">Avg Place</div></th>
-        <th><div class="table-winrate">Winrate</div></th>
-        <th><div class="table-frequency">Frequency</div></th>
+        <th class="table-th"><div class="table-item">Unit</div></th>
+        <th class="table-th"><div class="table-tier">Tier</div></th>
+        <th class="table-th"><div class="table-avg">Avg Place</div></th>
+        <th class="table-th"><div class="table-winrate">Winrate</div></th>
+        <th class="table-th">
+          <div class="table-frequency">Frequency</div>
+        </th>
       </thead>
       <tbody>
-        <tr
-          v-for="(unit, index) in $store.state.filteredUnits"
-          :key="index"
-          :v-show="filter"
-        >
-          <!-- <img :src="this.GetSkillUrl(name)" alt="dd" /> -->
-          <!-- {{
-            this.GetChampionUrl(name)
-          }} -->
-          <td>
+        <tr v-for="(unit, index) in $store.state.filteredUnits" :key="index">
+          <td class="table-td">
             <div class="table-item">
               <div class="help-tip">
                 <a>
@@ -62,10 +56,12 @@
               </div>
             </div>
           </td>
-          <td><div class="table-tier">S</div></td>
-          <td><div class="table-avg">3.53</div></td>
-          <td><div class="table-winrate">22.9%</div></td>
-          <td><div class="table-frequency">24,258 (2.5%)</div></td>
+          <td class="table-td"><div class="table-tier">S</div></td>
+          <td class="table-td"><div class="table-avg">3.53</div></td>
+          <td class="table-td"><div class="table-winrate">22.9%</div></td>
+          <td class="table-td">
+            <div class="table-frequency">24,258 (2.5%)</div>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -73,17 +69,15 @@
 </template>
 
 <script>
-// import alldata from '../../assets/data.json';
 import newdata from '../../assets/newdata.json';
+import tierUnit from '../../assets/tierUnit.json';
 
 export default {
   props: ['cost', 'traits'],
   data() {
     return {
+      tierUnit,
       newdata,
-      champs: [],
-      stage2: [],
-      costs: [],
       championBorderStyle: [
         'border:solid 2px gray;',
         'border:solid 2px green;',
@@ -91,17 +85,11 @@ export default {
         'border:solid 2px purple;',
         'border:solid 2px #ffd700;',
       ],
-      recommands: [1, 6, 3],
-      costFilter: this.cost,
     };
   },
   methods: {
     showModal(name) {
-      // console.log(`emit:${name}`);
       this.$emit('open', 1, name);
-    },
-    filter() {
-      return false;
     },
     GetItemUrl(item) {
       for (let j in this.newdata.items) {
@@ -116,73 +104,6 @@ export default {
         }
       }
     },
-    GetChampName() {
-      for (let i = 0; i < newdata.setData[0].champions.length; i++) {
-        let name = newdata.setData[0].champions[i].apiName.replace(/ /g, '');
-        const exception = [
-          'TFT6_TheGoldenEgg',
-          'TFT7_IvernMinion',
-          'TFT7_JadeStatue',
-          'TFT7_LagoonRelic',
-          'TFT7_Nomsy',
-        ];
-        if (exception.includes(name)) continue;
-        else this.champs.push(name);
-      }
-    },
-    GetChampNameStage2() {
-      //store name that has different url
-      const exceptionStage2 = ['lagoon', 'monolith', 'darkflight', 'prodigy'];
-      for (let i = 0; i < newdata.setData[0].champions.length; i++) {
-        let name = newdata.setData[0].champions[i].apiName
-          .toLowerCase()
-          .replace(/ /g, '');
-        if (
-          newdata.setData[0].champions[i].traits[0] === undefined ||
-          newdata.setData[0].champions[i].traits[1] === undefined
-        )
-          continue;
-        else if (
-          exceptionStage2.includes(
-            newdata.setData[0].champions[i].traits[0].toLowerCase()
-          ) ||
-          exceptionStage2.includes(
-            newdata.setData[0].champions[i].traits[1].toLowerCase()
-          )
-        )
-          this.stage2.push(name);
-        // console.log(newdata.setData[0].champions[i].traits[0].toLowerCase());
-      }
-      // console.log(newdata.setData[0].champions[0].traits[0].toLowerCase());
-      this.stage2.push(
-        'tft7b_heimerdinger',
-        'tft7b_lulu',
-        'tft7b_tristana',
-        'tft7_jayce',
-        'tft7_graves',
-        'tft7_pantheon',
-        'tft7_rakan',
-        'tft7_lux',
-        'tft7_zyra',
-        'tft7_jax',
-        'tft7_nasus',
-        'tft7_wukong'
-      );
-      // console.log(this.stage2);
-    },
-    GetChampCost() {
-      //store cost for champBorder
-      for (let i = 0; i < newdata.setData[0].champions.length; i++) {
-        let cost = newdata.setData[0].champions[i].cost;
-        if (cost === 11 || cost === 8) continue;
-        else {
-          this.costs.push(cost);
-          // console.log(`${this.champs[i]}:${this.costs[i]}`);
-        }
-        // console.log(`${this.champs[i]}:${this.costs[i]}`);
-      }
-      // console.log(this.costs);
-    },
     GetChamp(champName) {
       var temp = {};
       for (let i = 0; i < this.newdata.setData[0].champions.length; i++) {
@@ -192,10 +113,6 @@ export default {
         );
         if (name === champName) temp = this.newdata.setData[0].champions[i];
       }
-      // console.log(`getchamp:${this.champ}`);
-      // console.log(this.champ);
-      // console.log(`temp:${temp}`);
-      // console.log(temp);
       return temp;
     },
     AddTraits() {
@@ -208,7 +125,6 @@ export default {
     },
     GetTraitUrl(traitName) {
       for (let i in this.newdata.setData[0].traits) {
-        // console.log(i);
         if (this.newdata.setData[0].traits[i].name == traitName) {
           let temp = this.newdata.setData[0].traits[i].icon
             .toLowerCase()
@@ -270,44 +186,6 @@ export default {
         }
       }
     },
-    GetChampionUrlByName(championName) {
-      // console.log(championName);
-      let changeName = '';
-      let temp = championName.toLowerCase();
-
-      if (temp == 'tft7_dragonblue') {
-        changeName = 'tft7_miragedragon';
-      } else if (temp == 'tft7_dragongold') {
-        changeName = 'tft7_shimmerscaledragon';
-      } else if (temp == 'tft7_dragongreen') {
-        changeName = 'tft7_jadedragon';
-      } else if (temp == 'tft7_dragonpurple') {
-        changeName = 'tft7_whispersdragon';
-      } else if (temp == 'tft7_aquaticdragon') {
-        changeName = 'tft7_sohm';
-      } else if (temp == 'tft7_nomsy') {
-        temp = 'tft7_nomsymage';
-        changeName = 'tft7_nomsy';
-      } else if (temp == 'tft7_heimerdinger') {
-        temp = 'tft7b_heimerdinger';
-        changeName = temp;
-      } else if (temp == 'tft7_tristana') {
-        temp = 'tft7b_tristana';
-        changeName = temp;
-      } else if (temp == 'tft7_lulu') {
-        temp = 'tft7b_lulu';
-        changeName = temp;
-      } else {
-        changeName = temp;
-      }
-      // console.log(temp)
-      // console.log(changeName)
-      if (this.stage2.includes(temp))
-        return `https://raw.communitydragon.org/latest/game/assets/characters/${temp}/hud/${changeName}_square.tft_set7_stage2.png`;
-      else if (temp == 'tft7_dragonguild')
-        return 'https://raw.communitydragon.org/latest/game/assets/characters/tft7_dragonguild/hud/icons2d/tft7_zippy_square.tft_set7_stage2.png';
-      else
-        return `https://raw.communitydragon.org/latest/game/assets/characters/${temp}/hud/${changeName}_square.tft_set7.png`;
     initTierUnits() {
       this.$store.commit('SetFilteredUnits', { ...this.tierUnit.units });
     },
@@ -316,15 +194,6 @@ export default {
     },
   },
   created() {
-    this.GetChampName();
-    this.GetChampNameStage2();
-    this.GetChampCost();
-  },
-  updated() {
-    // console.log(this.cost);
-    if (this.cost.includes(1)) {
-      this.filter();
-    }
     this.AddTraits();
     this.initTierUnits();
     this.excute();
@@ -332,8 +201,8 @@ export default {
 };
 </script>
 
-<style scoped>
-table {
+<style>
+.unit-table {
   border-spacing: 0;
   width: 100%;
   border-collapse: separate;
@@ -341,7 +210,7 @@ table {
   padding: 10px;
   /* border: none; */
 }
-th {
+.table-th {
   padding: 0.4rem 0.6rem;
   /* border-bottom: 2px solid #313236; */
   border-left: 0;
@@ -349,7 +218,7 @@ th {
   margin: 0;
   background-color: #f4dfd0;
 }
-td {
+.table-td {
   padding: 0.4rem 0.6rem;
   /* border-bottom: 2px solid #313236; */
   border-left: 0;
@@ -358,23 +227,23 @@ td {
   /* background-color: aliceblue; */
 }
 
-table tr:nth-child(odd) {
+.unit-table tr:nth-child(odd) {
   background-color: rgb(238, 238, 238);
 }
-table tr:nth-child(even) {
+.unit-table tr:nth-child(even) {
   background-color: whitesmoke;
 }
 
-table tr:hover {
+.unit-table tr:hover {
   background-color: #ddd;
 }
 
-td:first-child,
-th:first-child {
+.table-td:first-child,
+.table-th:first-child {
   border-radius: 10px 0 0 10px;
 }
-td:last-child,
-th:last-child {
+.table-td:last-child,
+.table-th:last-child {
   border-radius: 0 10px 10px 0;
 }
 .table-container {
@@ -386,7 +255,7 @@ th:last-child {
 .table-container::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
 }
-th .table-item {
+.table-th .table-item {
   min-width: 170px;
   max-width: 170px;
   text-align: left;
@@ -397,11 +266,11 @@ th .table-item {
 .table-frequency {
   text-align: right;
 }
-td .table-item {
+.table-td .table-item {
   display: flex;
   align-items: center;
 }
-td .table-tier {
+.table-td .table-tier {
   background-color: #ff7e83;
   color: #111;
   font-weight: 600;
@@ -412,14 +281,14 @@ td .table-tier {
   align-items: center;
   justify-content: center;
 }
-td .table-avg {
+.table-td .table-avg {
   font-size: 16px;
   color: rgb(15, 67, 73);
 }
-td .table-winrate {
+.table-td .table-winrate {
   font-size: 14px;
 }
-td .table-frequency {
+.table-td .table-frequency {
   text-align: right;
   font-size: 14px;
 }
