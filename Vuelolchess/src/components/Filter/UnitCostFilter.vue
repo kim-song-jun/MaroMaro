@@ -43,12 +43,16 @@ export default {
       //filter off
       if (classList.contains('clicked')) {
         this.isClicked[index] = 0;
+        this.filter = this.filter.filter((cost) => cost != index + 1);
         classList.replace('clicked', 'unclicked');
       } else {
         //filter on
         this.isClicked[index] = 1;
+        this.filter.push(index + 1);
         classList.replace('unclicked', 'clicked');
       }
+      this.$store.commit('SetUnitFilterCost', this.filter);
+      this.$store.dispatch('filterUnits', this.$store.state.unitFilter);
       this.$emit('cost', this.isClicked);
     },
   },

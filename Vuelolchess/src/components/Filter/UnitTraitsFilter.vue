@@ -106,6 +106,8 @@ export default {
       }
       this.ChampTraitsFilter(this.traitFilter);
       this.Excute();
+      this.$store.commit('SetUnitFilterTrait', this.traitFilter);
+      this.$store.dispatch('filterUnits', this.$store.state.unitFilter);
       this.$emit('traits', this.isClicked);
     },
     initTierUnits() {

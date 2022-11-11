@@ -10,7 +10,7 @@
       </thead>
       <tbody>
         <tr
-          v-for="(unit, index) in $store.state.tierUnit.units"
+          v-for="(unit, index) in $store.state.filteredUnits"
           :key="index"
           :v-show="filter"
         >
@@ -198,6 +198,14 @@ export default {
       // console.log(temp);
       return temp;
     },
+    AddTraits() {
+      for (let i = 0; i < this.tierUnit.units.length; i++) {
+        this.GetChamp(this.tierUnit.units[i].ID);
+        this.tierUnit.units[i].traits = this.GetChamp(
+          this.tierUnit.units[i].ID
+        ).traits;
+      }
+    },
     GetTraitUrl(traitName) {
       for (let i in this.newdata.setData[0].traits) {
         // console.log(i);
@@ -300,6 +308,11 @@ export default {
         return 'https://raw.communitydragon.org/latest/game/assets/characters/tft7_dragonguild/hud/icons2d/tft7_zippy_square.tft_set7_stage2.png';
       else
         return `https://raw.communitydragon.org/latest/game/assets/characters/${temp}/hud/${changeName}_square.tft_set7.png`;
+    initTierUnits() {
+      this.$store.commit('SetFilteredUnits', { ...this.tierUnit.units });
+    },
+    excute() {
+      this.$store.commit('SetTierUnit', { ...this.tierUnit });
     },
   },
   created() {
@@ -312,6 +325,9 @@ export default {
     if (this.cost.includes(1)) {
       this.filter();
     }
+    this.AddTraits();
+    this.initTierUnits();
+    this.excute();
   },
 };
 </script>
