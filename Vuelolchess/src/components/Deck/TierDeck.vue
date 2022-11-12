@@ -9,8 +9,6 @@
     v-for="(tier, tIndex) in this.$store.state.filteredDecks"
     :key="tIndex"
   >
-    <!-- {{ tier }} -->
-    <!-- {{ tier.deckUnit }} -->
     <div class="my-tier">
       <div class="my-tier-main">
         <img
@@ -35,7 +33,6 @@
             v-for="(j, i) in tier.deckUnit"
             :key="i"
           >
-            <!-- {{ j.character_id }} -->
             <div class="my-tier-champion-stars">
               <img
                 :src="require(`../../assets/${GetStar(j.tier)}.png`)"
@@ -50,7 +47,6 @@
               width="44"
               height="44"
             />
-            <!-- {{ this.GetChampionUrlByName(j) }} -->
             <div class="my-tier-champion-name">
               {{ j.character_id.slice(5) }}
             </div>
@@ -73,11 +69,11 @@
           <div
             class="my-tier-champion"
             style="width: 14%"
-            v-for="(j, i) in this.tierdata[0].carryUnit"
+            v-for="(j, i) in tier.carryUnit"
             :key="i"
           >
             <img
-              :src="this.GetChampionUrlByName(j.character_id)"
+              :src="this.GetChampionUrl(j.character_id)"
               class="my-tier-champion-img"
               style="width: 100%; margin-bottom: 10%"
             />
@@ -166,50 +162,6 @@ export default {
           }
         }
       }
-    },
-    GetChampionUrlByName(championID) {
-      // get url by champion ID
-      // ex) TFT7_NomsyCannonee
-      for (let i in this.newdata.setData) {
-        for (let j in this.newdata.setData[i].champions) {
-          if (this.newdata.setData[i].champions[j].apiName == championID) {
-            let temp = this.newdata.setData[i].champions[j].icon
-              .toLowerCase()
-              .split('/');
-            // console.log(temp[-2]);
-            // let newUrl = temp.slice(0, -1);
-            let newUrl2 = temp.slice(-1)[0].split('.');
-            // console.log(newUrl);
-            // console.log(newUrl2);
-            return (
-              `https://raw.communitydragon.org/latest/game/assets/characters${
-                '/' + championID.toLowerCase()
-              }/hud/` +
-              newUrl2[0] +
-              `_square.` +
-              `${newUrl2[1]}` +
-              `.png`
-            );
-          }
-        }
-      }
-
-      // let changeName = '';
-      // let temp = championName.toLowerCase();
-      // if (temp == 'tft7_dragonblue') {
-      //   changeName = 'tft7_miragedragon';
-      // } else if (temp == 'tft7_dragongold') {
-      //   changeName = 'tft7_shimmerscaledragon';
-      // } else if (temp == 'tft7_dragongreen') {
-      //   changeName = 'tft7_jadedragon';
-      // } else if (temp == 'tft7_dragonpurple') {
-      //   changeName = 'tft7_whispersdragon';
-      // } else {
-      //   changeName = temp;
-      // }
-      // // console.log(temp)
-      // // console.log(changeName)
-      // return `https://raw.communitydragon.org/latest/game/assets/characters/${temp}/hud/${changeName}_square.tft_set7.png`;
     },
     GetStar(i) {
       if (i == 3) {
