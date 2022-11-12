@@ -6,7 +6,7 @@
       padding: 1%;
       margin: 1%;
     "
-    v-for="(tier, tIndex) in this.tierdata"
+    v-for="(tier, tIndex) in this.$store.state.filteredDecks"
     :key="tIndex"
   >
     <!-- {{ tier }} -->
@@ -117,14 +117,14 @@
 <script>
 import newdata from '../../assets/newdata.json';
 // import UserTabs from '../UserTabs.vue';
-import tierdata from '../../assets/TierData.json';
+import tierDeck from '../../assets/tierDeck.json';
 import axios from 'axios';
 
 export default {
   data() {
     return {
       tabs: false,
-      tierdata,
+      tierDeck,
       newdata,
       getData: [],
     };
@@ -264,9 +264,17 @@ export default {
           console.log('GetDeck Error');
         });
     },
+    initTierDecks() {
+      this.$store.commit('SetFilteredDecks', [...this.tierDeck]);
+    },
+    excute() {
+      this.$store.commit('SetTierDeck', [...this.tierDeck]);
+    },
   },
   created() {
     // this.GetDeck();
+    this.initTierDecks();
+    this.excute();
   },
 };
 </script>

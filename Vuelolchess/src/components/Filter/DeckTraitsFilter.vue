@@ -31,6 +31,7 @@ export default {
         0, 0, 0, 0,
       ],
       traitNames: [],
+      traitFilter: [],
     };
   },
   methods: {
@@ -91,11 +92,15 @@ export default {
     changeTrait(index) {
       if (this.isClicked[index] === 1) {
         this.isClicked[index] = 0;
+        this.traitFilter = this.traitFilter.filter(
+          (trait) => trait != this.traitNames[index]
+        );
       } else {
         this.isClicked[index] = 1;
+        this.traitFilter.push(this.traitNames[index]);
       }
-      // console.log(this.isClicked[i]);
-      this.$emit('traits', this.isClicked);
+      this.$store.commit('SetDeckFilterTrait', this.traitFilter);
+      this.$store.dispatch('filterDecks', this.$store.state.deckFilter);
     },
   },
   created() {
