@@ -14,6 +14,8 @@ const store = createStore({
       matchData4: [],
       matchData5: [],
       tierUnit: {},
+      filteredUnits: [],
+      unitFilter: { cost: [], trait: [] },
       items: [],
       filteredItems: [],
       itemFilter: { base: 0, type: [] },
@@ -43,6 +45,15 @@ const store = createStore({
     },
     SetTierUnit(state, inputValue) {
       state.tierUnit = inputValue;
+    },
+    SetFilteredUnits(state, inputValue) {
+      state.filteredUnits = inputValue;
+    },
+    SetUnitFilterCost(state, inputValue) {
+      state.unitFilter.cost = inputValue;
+    },
+    SetUnitFilterTrait(state, inputValue) {
+      state.unitFilter.trait = inputValue;
     },
     SetItems(state, inputValue) {
       state.items = inputValue;
@@ -224,6 +235,40 @@ const store = createStore({
         );
       }
       this.commit('SetFilteredItems', temp);
+    },
+    initUnits(context, origin) {
+      context.commit('SetFilteredUnits', origin);
+    },
+    filterUnits(context, filter) {
+      this.dispatch('initUnits', this.state.tierUnit.units);
+      this.dispatch('costsFilter', filter.cost);
+      this.dispatch('ChampTraitsFilter', filter.trait);
+    },
+    costsFilter(context, costs) {
+      if (costs.length == 0) {
+        return;
+      }
+      let temp = [];
+      for (let i = 0; i < costs.length; i++) {
+        temp = temp.concat(
+          this.state.tierUnit.units.filter((unit) => unit.rarity == costs[i])
+        );
+      }
+      this.commit('SetFilteredUnits', temp);
+    },
+    ChampTraitsFilter(context, traits) {
+      if (traits.length === 0) {
+        return;
+      }
+      for (let i = 0; i < traits.length; i++) {
+        this.dispatch('ChampTraitFilter', traits[i]);
+      }
+    },
+    ChampTraitFilter(context, trait) {
+      let temp = this.state.filteredUnits.filter((unit) =>
+        unit.traits.includes(trait)
+      );
+      context.commit('SetFilteredUnits', temp);
     },
   },
 });

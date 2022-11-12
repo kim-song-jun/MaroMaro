@@ -54,6 +54,7 @@ export default {
     "footer footer footer";
   height: 100vh;
   align-items: stretch;
+  background-color: #cdbba7;
 }
 .header-content {
   grid-area: header;

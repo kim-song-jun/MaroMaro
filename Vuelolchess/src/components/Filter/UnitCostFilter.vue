@@ -1,5 +1,5 @@
 <template>
-  <div class="filter1">
+  <div class="cost-filter">
     <button
       v-for="(cost, index) in costs"
       :key="index"
@@ -15,17 +15,16 @@
 
 <script>
 export default {
-  props: ['cost'],
   data() {
     return {
       costs: ['1cost', '2cost', '3cost', '4cost', '5cost'],
       isClicked: [0, 0, 0, 0, 0],
+      filter: [],
     };
   },
   methods: {
     reset() {
       for (let i = 0; i < this.isClicked.length; i++) {
-        // console.log(item);
         if (this.isClicked[i] === 1) {
           const classList = document.getElementById(`${i + 1}cost`).classList;
           classList.replace('clicked', 'unclicked');
@@ -43,23 +42,23 @@ export default {
       //filter off
       if (classList.contains('clicked')) {
         this.isClicked[index] = 0;
+        this.filter = this.filter.filter((cost) => cost != index + 1);
         classList.replace('clicked', 'unclicked');
       } else {
         //filter on
         this.isClicked[index] = 1;
+        this.filter.push(index + 1);
         classList.replace('unclicked', 'clicked');
       }
-      this.$emit('cost', this.isClicked);
+      this.$store.commit('SetUnitFilterCost', this.filter);
+      this.$store.dispatch('filterUnits', this.$store.state.unitFilter);
     },
-  },
-  updated() {
-    this.reset();
   },
 };
 </script>
 
-<style scoped>
-.filter1 {
+<style>
+.cost-filter {
   padding: 0.5rem 0rem;
   margin: 0.5rem 0rem;
   display: flex;
