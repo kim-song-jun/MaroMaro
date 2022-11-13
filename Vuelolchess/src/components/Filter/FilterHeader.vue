@@ -7,7 +7,7 @@
       alt="init"
       width="22"
       height="22"
-      @click="this.$emit('reset')"
+      @click="reset()"
     />
   </div>
 </template>
@@ -17,7 +17,13 @@ export default {
   data() {
     return {};
   },
-  methods: {},
+  methods: {
+    reset() {
+      this.emitter.emit('resetContent', 'tableBtn');
+      this.emitter.emit('resetButton');
+      this.$emit('reset');
+    },
+  },
 };
 </script>
 

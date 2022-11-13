@@ -48,7 +48,7 @@ export default {
       newdata,
       modalOpen: 0,
       container: 0,
-      champName: "",
+      champName: '',
     };
   },
   methods: {
@@ -57,8 +57,11 @@ export default {
       this.champName = name;
     },
     reset() {
-      console.log("reset");
+      console.log('reset');
       this.container = 0;
+      this.$store.commit('SetUnitFilterCost', []);
+      this.$store.commit('SetUnitFilterTrait', []);
+      this.$store.dispatch('filterUnits', this.$store.state.unitFilter);
     },
     changeContent(content) {
       this.container = content;
@@ -104,9 +107,9 @@ export default {
   grid-template-columns: 1fr 5fr 1fr;
   justify-items: stretch;
   grid-template-areas:
-    "header header header"
-    "a filter b"
-    "footer footer footer";
+    'header header header'
+    'a filter b'
+    'footer footer footer';
   height: 100vh;
   align-items: stretch;
 }

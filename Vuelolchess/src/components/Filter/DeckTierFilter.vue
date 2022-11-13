@@ -3,9 +3,8 @@
     <button
       v-for="(tier, index) in tiers"
       :key="index"
-      :id="tier[0]"
-      class="rank unclicked"
-      @click="changeTier(tier[0], index)"
+      :class="tierChange(index)"
+      @click="changeTier(index)"
     >
       {{ tier }}
     </button>
@@ -16,34 +15,38 @@
 export default {
   data() {
     return {
-      tiers: ["S rank", "A rank", "B rank", "C rank", "D rank"],
+      tiers: ['S rank', 'A rank', 'B rank', 'C rank', 'D rank'],
       isClicked: [0, 0, 0, 0, 0],
       filter: [],
     };
   },
   methods: {
     reset() {
-      this.isClicked = this.tier;
+      for (let i in this.isClicked) {
+        this.isClicked[i] = 0;
+      }
     },
-    changeTier(id, index) {
-      const classList = document.getElementById(id).classList;
-
+    tierChange(index) {
+      return this.isClicked[index] === 1 ? 'rank clicked' : 'rank unclicked';
+    },
+    changeTier(index) {
       //filter off
-      if (classList.contains("clicked")) {
+      if (this.isClicked[index] == 1) {
         this.isClicked[index] = 0;
         this.filter = this.filter.filter(
           (rank) => rank != this.tiers[index][0]
         );
-        classList.replace("clicked", "unclicked");
       } else {
         //filter on
         this.isClicked[index] = 1;
         this.filter.push(this.tiers[index][0]);
-        classList.replace("unclicked", "clicked");
       }
-      this.$store.commit("SetDeckFilterRank", this.filter);
-      this.$store.dispatch("filterDecks", this.$store.state.deckFilter);
+      this.$store.commit('SetDeckFilterRank', this.filter);
+      this.$store.dispatch('filterDecks', this.$store.state.deckFilter);
     },
+  },
+  mounted() {
+    this.emitter.on('resetButton', this.reset);
   },
 };
 </script>

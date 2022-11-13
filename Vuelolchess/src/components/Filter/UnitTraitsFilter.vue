@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import newdata from "../../assets/newdata.json";
+import newdata from '../../assets/newdata.json';
 
 export default {
   data() {
@@ -35,24 +35,24 @@ export default {
   },
   methods: {
     reset() {
-      this.isClicked = this.traits;
-      // this.initTierUnits();
-      // this.Excute();
+      for (let i in this.isClicked) {
+        this.isClicked[i] = 0;
+      }
     },
     traitChange(index) {
       return this.isClicked[index] === 1
-        ? "filter-trait-img clicked"
-        : "filter-trait-img unclicked";
+        ? 'filter-trait-img clicked'
+        : 'filter-trait-img unclicked';
     },
     GetTraitUrl(traitName) {
       for (let i in this.newdata.setData[0].traits) {
         if (this.newdata.setData[0].traits[i].name == traitName) {
           let temp = this.newdata.setData[0].traits[i].icon
             .toLowerCase()
-            .split(".")
+            .split('.')
             .slice(0, -1);
           return `https://raw.communitydragon.org/latest/game/${temp.join(
-            "."
+            '.'
           )}.png`;
         }
       }
@@ -73,12 +73,15 @@ export default {
         this.traitFilter.push(this.traitNames[index]);
         this.isClicked[index] = 1;
       }
-      this.$store.commit("SetUnitFilterTrait", this.traitFilter);
-      this.$store.dispatch("filterUnits", this.$store.state.unitFilter);
+      this.$store.commit('SetUnitFilterTrait', this.traitFilter);
+      this.$store.dispatch('filterUnits', this.$store.state.unitFilter);
     },
   },
   created() {
     this.GetTraitName();
+  },
+  mounted() {
+    this.emitter.on('resetButton', this.reset);
   },
 };
 </script>

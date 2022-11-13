@@ -3,9 +3,8 @@
     <button
       v-for="(cost, index) in costs"
       :key="index"
-      :id="cost"
-      class="cost unclicked"
-      @click="changeCost(cost)"
+      :class="costChange(index)"
+      @click="changeCost(index)"
     >
       <img class="coin" src="../../assets/coin.png" alt="coin" />
       <span class="coin">{{ index + 1 }} </span>
@@ -17,42 +16,36 @@
 export default {
   data() {
     return {
-      costs: ["1cost", "2cost", "3cost", "4cost", "5cost"],
+      costs: ['1cost', '2cost', '3cost', '4cost', '5cost'],
       isClicked: [0, 0, 0, 0, 0],
       filter: [],
     };
   },
   methods: {
     reset() {
-      for (let i = 0; i < this.isClicked.length; i++) {
-        if (this.isClicked[i] === 1) {
-          const classList = document.getElementById(`${i + 1}cost`).classList;
-          classList.replace("clicked", "unclicked");
-        }
+      for (let i in this.isClicked) {
+        this.isClicked[i] = 0;
       }
-      this.isClicked = this.cost;
     },
-    idToIndex(id) {
-      return Number(id[0]) - 1;
+    costChange(index) {
+      return this.isClicked[index] === 1 ? 'cost clicked' : 'cost unclicked';
     },
-    changeCost(id) {
-      const classList = document.getElementById(id).classList;
-      const index = this.idToIndex(id);
-
+    changeCost(index) {
       //filter off
-      if (classList.contains("clicked")) {
+      if (this.isClicked[index] === 1) {
         this.isClicked[index] = 0;
         this.filter = this.filter.filter((cost) => cost != index + 1);
-        classList.replace("clicked", "unclicked");
       } else {
         //filter on
         this.isClicked[index] = 1;
         this.filter.push(index + 1);
-        classList.replace("unclicked", "clicked");
       }
-      this.$store.commit("SetUnitFilterCost", this.filter);
-      this.$store.dispatch("filterUnits", this.$store.state.unitFilter);
+      this.$store.commit('SetUnitFilterCost', this.filter);
+      this.$store.dispatch('filterUnits', this.$store.state.unitFilter);
     },
+  },
+  mounted() {
+    this.emitter.on('resetButton', this.reset);
   },
 };
 </script>

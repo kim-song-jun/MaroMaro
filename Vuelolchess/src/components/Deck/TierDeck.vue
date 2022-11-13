@@ -115,16 +115,14 @@
 </template>
 
 <script>
-import newdata from "../../assets/newdata.json";
+import newdata from '../../assets/newdata.json';
 // import UserTabs from '../UserTabs.vue';
-import tierDeck from "../../assets/tierDeck.json";
-import axios from "axios";
+import axios from 'axios';
 
 export default {
   data() {
     return {
       tabs: false,
-      tierDeck,
       newdata,
       getData: [],
     };
@@ -139,21 +137,21 @@ export default {
           if (this.newdata.setData[i].champions[j].apiName == championID) {
             let temp = this.newdata.setData[i].champions[j].icon
               .toLowerCase()
-              .split("/");
+              .split('/');
             // console.log(temp);
             // let newUrl = temp.slice(0, -1);
-            let newUrl2 = temp.slice(-1)[0].split(".");
+            let newUrl2 = temp.slice(-1)[0].split('.');
             // console.log(newUrl);
             // console.log(newUrl2);
-            if (newUrl2[0] == "tft7_volibear") {
+            if (newUrl2[0] == 'tft7_volibear') {
               return `https://raw.communitydragon.org/latest/game/assets/characters/${championID.toLowerCase()}/hud/${
                 newUrl2[0]
               }_square.${newUrl2[1].slice(0, 8)}.png`;
-            } else if (newUrl2[0] == "tft7_zippy") {
+            } else if (newUrl2[0] == 'tft7_zippy') {
               return `https://raw.communitydragon.org/latest/game/assets/characters/${championID.toLowerCase()}/hud/icons2d/${
                 newUrl2[0]
               }_square.${newUrl2[1]}.png`;
-            } else if (newUrl2[0] == "tft7_dragongreen") {
+            } else if (newUrl2[0] == 'tft7_dragongreen') {
               return `https://raw.communitydragon.org/latest/game/assets/characters/${championID.toLowerCase()}/hud/tft7_jadedragon_square.${newUrl2[1].slice(
                 0,
                 8
@@ -170,12 +168,12 @@ export default {
     GetStar(i) {
       if (i == 3) {
         // return `https://raw.communitydragon.org/latest/game/assets/ux/tft/notificationicons/goldstar.png`;
-        return "stargold";
+        return 'stargold';
       } else if (i == 2) {
         // return ``;
-        return "starsilver";
+        return 'starsilver';
       } else {
-        return "starbronze";
+        return 'starbronze';
       }
     },
     GetItemUrl(item) {
@@ -200,37 +198,29 @@ export default {
           // console.log(newdata.items[j].icon.toLowerCase().split('.'));
           let temp = newdata.items[j].icon
             .toLowerCase()
-            .split(".")
+            .split('.')
             .slice(0, -1);
           return `https://raw.communitydragon.org/latest/game/${temp.join(
-            "."
+            '.'
           )}.png`;
         }
       }
     },
     GetDeck() {
       axios
-        .get("/test/mockdoridomabem")
+        .get('/test/mockdoridomabem')
         .then((result) => {
           console.log(`GetDeck: ${result.data}`);
           console.log(result.data);
           this.getData = result.data;
         })
         .catch(() => {
-          console.log("GetDeck Error");
+          console.log('GetDeck Error');
         });
-    },
-    initTierDecks() {
-      this.$store.commit("SetFilteredDecks", [...this.tierDeck]);
-    },
-    excute() {
-      this.$store.commit("SetTierDeck", [...this.tierDeck]);
     },
   },
   created() {
     // this.GetDeck();
-    this.initTierDecks();
-    this.excute();
   },
 };
 </script>
