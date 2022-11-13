@@ -81,4 +81,35 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.trait-filter {
+  padding: 0.5rem 0rem;
+  margin: 0.5rem 0rem;
+}
+.trait-filter .filter-trait-img {
+  display: flex;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  margin: 0.3rem;
+}
+.filter-raw {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.unclicked {
+  border-radius: 10px;
+  background-color: black;
+  border: 0.1px solid black;
+  color: #f8f7f6;
+}
+.clicked {
+  color: #f8f7f6;
+  border-radius: 10px;
+  background-color: rgb(158, 146, 146);
+  border: 0.1px solid rgb(158, 146, 146);
+  box-shadow: inset 0px 0px 0px rgb(131, 123, 123);
+  /* inset -1px -1px 7px 0 rgba(255, 255, 255, 0.5); */
+}
+</style>
