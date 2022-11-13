@@ -11,15 +11,36 @@
     {
       "name": "Mystic Emblem",
       "ID": 2312,
-      "Frequency": "2.34",
-      "Placement": "2.23",
+      "Frequency": "4.34",
+      "Placement": "4.23",
       "rank": "A"
     },
     {
       "name": "Assassin Emblem",
       "ID": 2325,
+      "Frequency": "6.34",
+      "Placement": "3.23",
+      "rank": "B"
+    },
+    {
+      "name": "Protector's Vow",
+      "ID": 45,
       "Frequency": "2.34",
-      "Placement": "2.23",
+      "Placement": "10.23",
+      "rank": "S"
+    },
+    {
+      "name": "Rabadon's Deathcap",
+      "ID": 33,
+      "Frequency": "10.34",
+      "Placement": "4.23",
+      "rank": "A"
+    },
+    {
+      "name": "Infinity Edge",
+      "ID": 19,
+      "Frequency": "6.34",
+      "Placement": "1.23",
       "rank": "B"
     }
   ]

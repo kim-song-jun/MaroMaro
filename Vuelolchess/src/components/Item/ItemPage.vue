@@ -30,6 +30,8 @@ import ItemTable from './ItemTable.vue';
 import ItemApex from './ItemApex.vue';
 import ItemInfo from './ItemInfo.vue';
 import Footer from '../Footer.vue';
+import newdata from '../../assets/newdata.json';
+import tierItem from '../../assets/tierItem.json';
 
 export default {
   components: {
@@ -45,6 +47,8 @@ export default {
       modalOpen: 0,
       itemID: 0,
       container: 0,
+      newdata,
+      tierItem,
     };
   },
   methods: {
@@ -58,6 +62,26 @@ export default {
     changeContent(content) {
       this.container = content;
     },
+    GetItems() {
+      const temp = [];
+      for (let j = 0; j < this.tierItem.items.length; j++) {
+        for (let i = 0; i < this.newdata.items.length; i++) {
+          if (this.tierItem.items[j].ID == this.newdata.items[i].id)
+            temp.push(this.newdata.items[i]);
+        }
+      }
+      return temp;
+    },
+    initItems() {
+      this.$store.commit('SetFilteredItems', this.GetItems());
+    },
+    excute() {
+      this.$store.commit('SetItems', this.GetItems());
+    },
+  },
+  created() {
+    this.initItems();
+    this.excute();
   },
 };
 </script>

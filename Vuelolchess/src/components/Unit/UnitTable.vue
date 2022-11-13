@@ -74,14 +74,12 @@
 </template>
 
 <script>
-import newdata from "../../assets/newdata.json";
-import tierUnit from "../../assets/tierUnit.json";
+import newdata from '../../assets/newdata.json';
 
 export default {
   props: ["cost", "traits"],
   data() {
     return {
-      tierUnit,
       newdata,
       championBorderStyle: [
         "border:solid 2px gray;",
@@ -119,14 +117,6 @@ export default {
         if (name === champName) temp = this.newdata.setData[0].champions[i];
       }
       return temp;
-    },
-    AddTraits() {
-      for (let i = 0; i < this.tierUnit.units.length; i++) {
-        this.GetChamp(this.tierUnit.units[i].ID);
-        this.tierUnit.units[i].traits = this.GetChamp(
-          this.tierUnit.units[i].ID
-        ).traits;
-      }
     },
     GetTraitUrl(traitName) {
       for (let i in this.newdata.setData[0].traits) {
@@ -191,30 +181,6 @@ export default {
         }
       }
     },
-    initTierUnits() {
-      this.$store.commit("SetFilteredUnits", { ...this.tierUnit.units });
-    },
-    excute() {
-      this.$store.commit("SetTierUnit", { ...this.tierUnit });
-    },
-    animate() {
-      let tr = document.querySelectorAll("tr");
-      for (let i; i < tr.length; i++) {
-        observer.observe(tr[i]);
-      }
-      let observer = new IntersectionObserver((e) => {
-        e.forEach((box) => {
-          if (box.isIntersecting) {
-            box.target.style.opacity = 1;
-          }
-        });
-      });
-    },
-  },
-  created() {
-    this.AddTraits();
-    this.initTierUnits();
-    this.excute();
   },
   mounted() {
     // this.animate();

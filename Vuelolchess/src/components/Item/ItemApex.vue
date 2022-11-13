@@ -3,8 +3,8 @@
     <apexchart
       type="scatter"
       height="350"
-      :options="chartOptions"
-      :series="series"
+      :options="this.getChartOptions()"
+      :series="this.getSeries()"
     ></apexchart>
   </div>
 </template>
@@ -12,22 +12,18 @@
 <script>
 import { isFlowBaseAnnotation } from '@babel/types';
 import VueApexCharts from 'vue3-apexcharts';
+import newdata from '../../assets/newdata.json';
+import tierItem from '../../assets/tierItem.json';
+
 export default {
   components: {
     apexchart: VueApexCharts,
   },
   data() {
     return {
-      series: [
-        {
-          name: 'item1',
-          data: [[16.4, 3.2]],
-        },
-        {
-          name: 'item2',
-          data: [[6.4, 5.4]],
-        },
-      ],
+      newdata,
+      tierItem,
+      series: [],
       chartOptions: {
         chart: {
           height: 350,
@@ -58,10 +54,7 @@ export default {
           type: 'image',
           opacity: 1,
           image: {
-            src: [
-              'https://raw.communitydragon.org/latest/game/assets/ux/tft/championsplashes/tft6_amumu_mobile.tft_set6.png',
-              'https://raw.communitydragon.org/latest/game/assets/ux/tft/championsplashes/tft6_amumu_mobile.tft_set6.png',
-            ],
+            src: [],
             width: 30,
             height: 30,
           },
@@ -84,6 +77,54 @@ export default {
         },
       },
     };
+  },
+  methods: {
+    GetItemUrl(item) {
+      for (let j in this.newdata.items) {
+        if (item == this.newdata.items[j].id) {
+          let temp = this.newdata.items[j].icon
+            .toLowerCase()
+            .split('.')
+            .slice(0, -1);
+          return `https://raw.communitydragon.org/latest/game/${temp.join(
+            '.'
+          )}.png`;
+        }
+      }
+    },
+    getSeries() {
+      let items = this.$store.state.filteredItems;
+      let temp = [];
+      for (let i in items) {
+        for (let j in this.tierItem.items) {
+          if (items[i].id == this.tierItem.items[j].ID) {
+            let item = { name: '', data: [] };
+            item.name = this.tierItem.items[j].name;
+            item.data.push([
+              this.tierItem.items[j].Frequency,
+              this.tierItem.items[j].Placement,
+            ]);
+            temp.push(item);
+          }
+        }
+      }
+      return temp;
+    },
+    getChartOptions() {
+      let items = this.$store.state.filteredItems;
+      let option = { ...this.chartOptions };
+      let temp = [];
+      for (let i in items) {
+        for (let j in this.tierItem.items) {
+          if (items[i].id == this.tierItem.items[j].ID) {
+            let url = this.GetItemUrl(this.tierItem.items[j].ID);
+            temp.push(url);
+          }
+        }
+      }
+      option.fill.image.src = temp;
+      return option;
+    },
   },
 };
 </script>
