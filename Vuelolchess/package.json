@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.5",
+    "aos": "^2.3.4",
     "axios": "^0.27.2",
     "bootstrap": "^5.2.0",
     "bootstrap-vue-3": "^0.1.14",
@@ -21,9 +22,9 @@
     "vuex": "^4.0.2"
   },
   "devDependencies": {
-    "@volar-plugins/vetur": "latest",
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
+    "@volar-plugins/vetur": "latest",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
