@@ -3,8 +3,8 @@
     <apexchart
       type="scatter"
       height="350"
-      :options="chartOptions"
-      :series="series"
+      :options="this.getChartOptions()"
+      :series="this.getSeries()"
     ></apexchart>
   </div>
 </template>
@@ -12,22 +12,18 @@
 <script>
 import { isFlowBaseAnnotation } from '@babel/types';
 import VueApexCharts from 'vue3-apexcharts';
+import newdata from '../../assets/newdata.json';
+import tierUnit from '../../assets/tierUnit.json';
+
 export default {
   components: {
     apexchart: VueApexCharts,
   },
   data() {
     return {
-      series: [
-        {
-          name: 'unit1',
-          data: [[16.4, 3.2]],
-        },
-        {
-          name: 'unit2',
-          data: [[6.4, 5.4]],
-        },
-      ],
+      newdata,
+      tierUnit,
+      series: [],
       chartOptions: {
         chart: {
           height: 350,
@@ -58,10 +54,7 @@ export default {
           type: 'image',
           opacity: 1,
           image: {
-            src: [
-              'https://raw.communitydragon.org/latest/game/assets/ux/tft/championsplashes/tft6_amumu_mobile.tft_set6.png',
-              'https://raw.communitydragon.org/latest/game/assets/ux/tft/championsplashes/tft6_amumu_mobile.tft_set6.png',
-            ],
+            src: [],
             width: 30,
             height: 30,
           },
@@ -84,6 +77,77 @@ export default {
         },
       },
     };
+  },
+  methods: {
+    GetChampionUrl(championID) {
+      // get url by champion ID
+      // ex) TFT7_NomsyCannonee
+      for (let i in this.newdata.setData) {
+        for (let j in this.newdata.setData[i].champions) {
+          if (this.newdata.setData[i].champions[j].apiName == championID) {
+            let temp = this.newdata.setData[i].champions[j].icon
+              .toLowerCase()
+              .split('/');
+            // console.log(temp);
+            // let newUrl = temp.slice(0, -1);
+            let newUrl2 = temp.slice(-1)[0].split('.');
+            // console.log(newUrl);
+            // console.log(newUrl2);
+            if (newUrl2[0] == 'tft7_volibear') {
+              return `https://raw.communitydragon.org/latest/game/assets/characters/${championID.toLowerCase()}/hud/${
+                newUrl2[0]
+              }_square.${newUrl2[1].slice(0, 8)}.png`;
+            } else if (newUrl2[0] == 'tft7_zippy') {
+              return `https://raw.communitydragon.org/latest/game/assets/characters/${championID.toLowerCase()}/hud/icons2d/${
+                newUrl2[0]
+              }_square.${newUrl2[1]}.png`;
+            } else if (newUrl2[0] == 'tft7_dragongreen') {
+              return `https://raw.communitydragon.org/latest/game/assets/characters/${championID.toLowerCase()}/hud/tft7_jadedragon_square.${newUrl2[1].slice(
+                0,
+                8
+              )}.png`;
+            } else {
+              return `https://raw.communitydragon.org/latest/game/assets/characters/${championID.toLowerCase()}/hud/${
+                newUrl2[0]
+              }_square.${newUrl2[1]}.png`;
+            }
+          }
+        }
+      }
+    },
+    getSeries() {
+      let units = this.$store.state.filteredUnits;
+      let temp = [];
+      for (let i in units) {
+        for (let j in this.tierUnit.units) {
+          if (units[i].ID == this.tierUnit.units[j].ID) {
+            let unit = { name: '', data: [] };
+            unit.name = this.tierUnit.units[j].name;
+            unit.data.push([
+              this.tierUnit.units[j].stars[0].Frequency,
+              this.tierUnit.units[j].stars[0].Placement,
+            ]);
+            temp.push(unit);
+          }
+        }
+      }
+      return temp;
+    },
+    getChartOptions() {
+      let units = this.$store.state.filteredUnits;
+      let option = { ...this.chartOptions };
+      let temp = [];
+      for (let i in units) {
+        for (let j in this.tierUnit.units) {
+          if (units[i].ID == this.tierUnit.units[j].ID) {
+            let url = this.GetChampionUrl(units[i].ID);
+            temp.push(url);
+          }
+        }
+      }
+      option.fill.image.src = temp;
+      return option;
+    },
   },
 };
 </script>

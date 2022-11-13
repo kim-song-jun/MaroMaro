@@ -32,6 +32,7 @@ import UnitApex from './UnitApex.vue';
 import UnitInfo from './UnitInfo.vue';
 import Footer from '../Footer.vue';
 import newdata from '../../assets/newdata.json';
+import tierUnit from '../../assets/tierUnit.json';
 
 export default {
   components: {
@@ -44,6 +45,7 @@ export default {
   },
   data() {
     return {
+      tierUnit,
       newdata,
       modalOpen: 0,
       container: 0,
@@ -62,6 +64,36 @@ export default {
     changeContent(content) {
       this.container = content;
     },
+    GetChamp(champName) {
+      var temp = {};
+      for (let i = 0; i < this.newdata.setData[0].champions.length; i++) {
+        let name = this.newdata.setData[0].champions[i].apiName.replace(
+          / /g,
+          ''
+        );
+        if (name === champName) temp = this.newdata.setData[0].champions[i];
+      }
+      return temp;
+    },
+    AddTraits() {
+      for (let i = 0; i < this.tierUnit.units.length; i++) {
+        this.GetChamp(this.tierUnit.units[i].ID);
+        this.tierUnit.units[i].traits = this.GetChamp(
+          this.tierUnit.units[i].ID
+        ).traits;
+      }
+    },
+    initTierUnits() {
+      this.$store.commit('SetFilteredUnits', { ...this.tierUnit.units });
+    },
+    excute() {
+      this.$store.commit('SetTierUnit', { ...this.tierUnit });
+    },
+  },
+  created() {
+    this.AddTraits();
+    this.initTierUnits();
+    this.excute();
   },
 };
 </script>

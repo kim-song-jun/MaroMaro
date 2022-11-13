@@ -70,13 +70,11 @@
 
 <script>
 import newdata from '../../assets/newdata.json';
-import tierUnit from '../../assets/tierUnit.json';
 
 export default {
   props: ['cost', 'traits'],
   data() {
     return {
-      tierUnit,
       newdata,
       championBorderStyle: [
         'border:solid 2px gray;',
@@ -114,14 +112,6 @@ export default {
         if (name === champName) temp = this.newdata.setData[0].champions[i];
       }
       return temp;
-    },
-    AddTraits() {
-      for (let i = 0; i < this.tierUnit.units.length; i++) {
-        this.GetChamp(this.tierUnit.units[i].ID);
-        this.tierUnit.units[i].traits = this.GetChamp(
-          this.tierUnit.units[i].ID
-        ).traits;
-      }
     },
     GetTraitUrl(traitName) {
       for (let i in this.newdata.setData[0].traits) {
@@ -186,17 +176,6 @@ export default {
         }
       }
     },
-    initTierUnits() {
-      this.$store.commit('SetFilteredUnits', { ...this.tierUnit.units });
-    },
-    excute() {
-      this.$store.commit('SetTierUnit', { ...this.tierUnit });
-    },
-  },
-  created() {
-    this.AddTraits();
-    this.initTierUnits();
-    this.excute();
   },
 };
 </script>
