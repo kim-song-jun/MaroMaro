@@ -1,14 +1,11 @@
 <template>
-  <div class="filter1">
+  <div class="rank-filter">
     <button
       v-for="(tier, index) in tiers"
       :key="index"
-      :class="[
-        isClicked[index] === 1
-          ? 'filter-type clicked'
-          : 'filter-type unclicked',
-      ]"
-      @click="changeTier(index)"
+      :id="tier[0]"
+      class="rank unclicked"
+      @click="changeTier(tier[0], index)"
     >
       {{ tier }}
     </button>
@@ -17,34 +14,42 @@
 
 <script>
 export default {
-  props: ['tier'],
   data() {
     return {
       tiers: ['S rank', 'A rank', 'B rank', 'C rank', 'D rank'],
       isClicked: [0, 0, 0, 0, 0],
+      filter: [],
     };
   },
   methods: {
     reset() {
       this.isClicked = this.tier;
     },
-    changeTier(i) {
-      if (this.isClicked[i] === 1) {
-        this.isClicked[i] = 0;
+    changeTier(id, index) {
+      const classList = document.getElementById(id).classList;
+
+      //filter off
+      if (classList.contains('clicked')) {
+        this.isClicked[index] = 0;
+        this.filter = this.filter.filter(
+          (rank) => rank != this.tiers[index][0]
+        );
+        classList.replace('clicked', 'unclicked');
       } else {
-        this.isClicked[i] = 1;
-        this.$emit('tier', i + 1);
+        //filter on
+        this.isClicked[index] = 1;
+        this.filter.push(this.tiers[index][0]);
+        classList.replace('unclicked', 'clicked');
       }
+      this.$store.commit('SetDeckFilterRank', this.filter);
+      this.$store.dispatch('filterDecks', this.$store.state.deckFilter);
     },
-  },
-  updated() {
-    this.reset();
   },
 };
 </script>
 
-<style scoped>
-.filter1 {
+<style>
+.rank-filter {
   display: flex;
   padding: 0.5rem 0rem;
   margin: 0.5rem 0rem;
@@ -63,7 +68,7 @@ export default {
   box-shadow: inset 4px 4px 0px 0 black,
     inset -1px -1px 7px 0 rgba(255, 255, 255, 0.5);
 }
-.filter-type {
+.rank {
   display: flex;
   margin-right: 10px;
 }
