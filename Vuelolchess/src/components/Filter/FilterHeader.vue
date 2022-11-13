@@ -26,6 +26,7 @@ export default {
   display: flex;
   font-size: 25px;
   font-weight: 500;
+  color: #f8f7f6;
 }
 .filter-header-reset {
   padding: 0.4rem 0rem;

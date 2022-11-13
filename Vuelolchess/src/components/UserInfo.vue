@@ -5,7 +5,7 @@
     <div class="user-content" style="text-align: center">
       <img class="userInfo-icon" src="../assets/gold_base2.webp" />
       <div>
-        <strong style="font-size: x-large">
+        <strong style="font-size: x-large; color: #f8f7f6">
           <!-- {{ this.userName }} -->
           <!-- {{ $store.state.name }} -->
           {{ $route.params.name }}
@@ -18,7 +18,7 @@
     <div class="matches-content">
       <div class="userInfo-recentMatches-container">
         <div class="recent-content">
-          <strong>Recent 20 Matches(Ranked)</strong>
+          <strong style="color: #f8f7f6">Recent 20 Matches(Ranked)</strong>
         </div>
         <div class="recentMatches-content">
           <div
@@ -217,8 +217,8 @@ export default {
 
 .matches-detail-item {
   text-align: center;
-  border: solid wheat 3px;
-  background-color: wheat;
+  border: solid rgb(11, 8, 68) 3px;
+  background-color: rgb(11, 8, 68);
   width: 23%;
   display: inline-block;
   height: 100%;
@@ -236,30 +236,34 @@ export default {
     "user matches"
     "user status";
   align-items: stretch;
+  background-color: rgb(10, 10, 26);
 }
 
 .user-content {
   grid-area: user;
   padding: 3%;
-  border: solid 10px white;
-  background-color: whitesmoke;
+  border: solid 10px rgb(10, 10, 26);
+  background-color: rgb(10, 10, 26);
   border-radius: 20% 20% 20% 20% / 15% 15% 15% 15%;
+  color: #f8f7f6;
 }
 
 .matches-content {
   grid-area: matches;
   padding: 3%;
-  border: solid 10px white;
-  background-color: whitesmoke;
+  border: solid 10px rgb(10, 10, 26);
+  background-color: rgb(10, 10, 26);
   border-radius: 5% 5% 5% 5% / 20% 20% 20% 20%;
+  color: #f8f7f6;
 }
 
 .status-content {
   grid-area: status;
   padding: 3%;
-  border: solid 10px white;
-  background-color: whitesmoke;
+  border: solid 10px rgb(10, 10, 26);
+  background-color: rgb(10, 10, 26);
   border-radius: 5% 5% 5% 5% / 20% 20% 20% 20%;
+  color: #f8f7f6;
 }
 
 .userInfo-icon {

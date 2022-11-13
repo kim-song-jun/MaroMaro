@@ -10,10 +10,10 @@
 </template>
 
 <script>
-import { isFlowBaseAnnotation } from '@babel/types';
-import VueApexCharts from 'vue3-apexcharts';
+import { isFlowBaseAnnotation } from "@babel/types";
+import VueApexCharts from "vue3-apexcharts";
 export default {
-  name: 'apex',
+  name: "apex",
   components: {
     apexchart: VueApexCharts,
   },
@@ -21,18 +21,18 @@ export default {
     return {
       series: [
         {
-          name: 'item1',
+          name: "item1",
           data: [[16.4, 3.2]],
         },
         {
-          name: 'item2',
+          name: "item2",
           data: [[6.4, 5.4]],
         },
       ],
       chartOptions: {
         chart: {
           height: 350,
-          type: 'scatter',
+          type: "scatter",
           animations: {
             enabled: isFlowBaseAnnotation,
           },
@@ -43,7 +43,7 @@ export default {
             show: false,
           },
         },
-        colors: ['#056BF6', '#D2376A'],
+        colors: ["#056BF6", "#D2376A"],
         xaxis: {
           tickAmount: 10,
           min: 0,
@@ -56,12 +56,12 @@ export default {
           size: 15,
         },
         fill: {
-          type: 'image',
+          type: "image",
           opacity: 1,
           image: {
             src: [
-              'https://raw.communitydragon.org/latest/game/assets/ux/tft/championsplashes/tft6_amumu_mobile.tft_set6.png',
-              'https://raw.communitydragon.org/latest/game/assets/ux/tft/championsplashes/tft6_amumu_mobile.tft_set6.png',
+              "https://raw.communitydragon.org/latest/game/assets/ux/tft/championsplashes/tft6_amumu_mobile.tft_set6.png",
+              "https://raw.communitydragon.org/latest/game/assets/ux/tft/championsplashes/tft6_amumu_mobile.tft_set6.png",
             ],
             width: 30,
             height: 30,
@@ -75,10 +75,10 @@ export default {
           markers: {
             customHTML: [
               function () {
-                return '';
+                return "";
               },
               function () {
-                return '';
+                return "";
               },
             ],
           },
@@ -89,4 +89,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+#chart {
+  background-color: rgb(10, 10, 26);
+}
+</style>

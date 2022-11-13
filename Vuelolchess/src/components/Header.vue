@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark my-nav">
     <div class="container-fluid">
       <router-link class="navbar-brand" to="/">MaroMaro</router-link>
       <button
@@ -65,4 +65,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.my-nav {
+  background-color: rgb(10, 10, 30);
+}
+</style>
