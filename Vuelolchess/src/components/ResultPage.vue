@@ -13,16 +13,36 @@
       <MatchHistory></MatchHistory>
     </div>
     <div class="footer-content">
-      <div style="padding-top: 3%; padding-bottom: 3%">
+      <div
+        style="
+          padding-top: 3%;
+          padding-bottom: 3%;
+          background-color: rgb(10, 10, 26);
+        "
+      >
         <nav
           class="pagination is-centered"
           role="navigation"
           aria-label="pagination"
         >
           <ul class="pagination-list">
-            <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
+            <li>
+              <a
+                class="pagination-link"
+                aria-label="Goto page 1"
+                style="color: white"
+                >1</a
+              >
+            </li>
             <li><span class="pagination-ellipsis">&hellip;</span></li>
-            <li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
+            <li>
+              <a
+                class="pagination-link"
+                aria-label="Goto page 45"
+                style="color: white"
+                >45</a
+              >
+            </li>
             <li>
               <a
                 class="pagination-link is-current"
@@ -31,9 +51,23 @@
                 >46</a
               >
             </li>
-            <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
+            <li>
+              <a
+                class="pagination-link"
+                aria-label="Goto page 47"
+                style="color: white"
+                >47</a
+              >
+            </li>
             <li><span class="pagination-ellipsis">&hellip;</span></li>
-            <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
+            <li>
+              <a
+                class="pagination-link"
+                aria-label="Goto page 86"
+                style="color: white"
+                >86</a
+              >
+            </li>
           </ul>
         </nav>
       </div>
@@ -66,7 +100,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .app_container_result {
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
@@ -79,5 +113,31 @@ export default {
     "footer footer footer";
   height: 100vh;
   align-items: stretch;
+  background-color: rgb(10, 10, 26);
+}
+
+.header-content {
+  grid-area: header;
+}
+.footer-content {
+  grid-area: footer;
+  background-color: rgb(10, 10, 26);
+}
+.sidebar-a {
+  grid-area: a;
+  background-color: rgb(10, 10, 26);
+}
+.sidebar-b {
+  grid-area: b;
+  background-color: rgb(10, 10, 26);
+}
+.search-content {
+  grid-area: search;
+}
+.card-content {
+  grid-area: card;
+}
+.tier-content {
+  grid-area: tier;
 }
 </style>

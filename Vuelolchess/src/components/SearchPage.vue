@@ -41,7 +41,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .app_container {
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
@@ -54,7 +54,7 @@ export default {
     "footer footer footer";
   height: 100vh;
   align-items: stretch;
-  background-color: #cdbba7;
+  background-color: rgb(10, 10, 26);
 }
 .header-content {
   grid-area: header;
@@ -65,9 +65,11 @@ export default {
 }
 .sidebar-a {
   grid-area: a;
+  background-color: rgb(10, 10, 26);
 }
 .sidebar-b {
   grid-area: b;
+  background-color: rgb(10, 10, 26);
 }
 .search-content {
   grid-area: search;

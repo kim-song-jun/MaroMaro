@@ -1,14 +1,13 @@
 <template>
+  <UnitInfo
+    v-if="modalOpen"
+    @close="modalOpen = 0"
+    :champName="this.champName"
+  ></UnitInfo>
   <div class="unit_container">
     <div class="header-content">
       <Header></Header>
     </div>
-    <UnitInfo
-      class="modal-content"
-      v-if="modalOpen"
-      @close="modalOpen = 0"
-      :champName="this.champName"
-    ></UnitInfo>
     <div class="sidebar-a"></div>
     <div class="sidebar-b"></div>
     <div class="filter-content">
@@ -49,7 +48,7 @@ export default {
       newdata,
       modalOpen: 0,
       container: 0,
-      champName: '',
+      champName: "",
     };
   },
   methods: {
@@ -58,7 +57,7 @@ export default {
       this.champName = name;
     },
     reset() {
-      console.log('reset');
+      console.log("reset");
       this.container = 0;
     },
     changeContent(content) {
@@ -100,15 +99,14 @@ export default {
 
 <style>
 .unit_container {
-  background-color: #cdbba7;
+  background-color: rgb(10, 10, 26);
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
   justify-items: stretch;
   grid-template-areas:
-    'header header header'
-    'a modal b'
-    'a filter b'
-    'footer footer footer';
+    "header header header"
+    "a filter b"
+    "footer footer footer";
   height: 100vh;
   align-items: stretch;
 }
@@ -127,7 +125,8 @@ export default {
   /* border-left: 2px solid #dad0c2; */
 }
 .modal-content {
-  grid-area: modal, filter;
+  grid-area: modal;
+  display: none;
 }
 .filter-content {
   grid-area: filter;

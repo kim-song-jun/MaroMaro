@@ -1,5 +1,4 @@
 <template>
-  <!-- <ItemInfo v-if="modalOpen" @close="modalOpen = 0"></ItemInfo> -->
   <div class="deck_container">
     <div class="header-content">
       <Header></Header>
@@ -7,14 +6,7 @@
     <div class="sidebar-a"></div>
     <div class="sidebar-b"></div>
     <div class="filter-content">
-      <Filter
-        :content="this.container"
-        :tier="this.tier"
-        :traits="this.traits"
-        @reset="reset"
-        @tier="changeTier"
-        @traits="changeTrait"
-      ></Filter>
+      <Filter @reset="reset"></Filter>
       <div class="deck-content">
         <Deck></Deck>
       </div>
@@ -26,10 +18,10 @@
 </template>
 
 <script>
-import Header from '../Header.vue';
-import Filter from '../Filter/DeckFilterContainer.vue';
-import Deck from './TierDeck.vue';
-import Footer from '../Footer.vue';
+import Header from "../Header.vue";
+import Filter from "../Filter/DeckFilterContainer.vue";
+import Deck from "./TierDeck.vue";
+import Footer from "../Footer.vue";
 
 export default {
   components: {
@@ -41,66 +33,45 @@ export default {
   data() {
     return {
       modalOpen: 0,
-      container: 0,
-      tier: [0, 0, 0, 0, 0],
-      traits: [
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0,
-      ],
     };
   },
   methods: {
     reset() {
-      console.log('reset');
+      console.log("reset");
       this.container = 0;
-      this.tier = [0, 0, 0, 0, 0];
-      this.traits = [
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0,
-      ];
-    },
-    changeContent(content) {
-      console.log(`content${content}`);
-      // console.log(`page: ${content}`);
-      this.container = content;
-    },
-    changeTier(tier) {
-      console.log(`tier${tier}`);
-      this.tier[tier - 1] = 1;
-    },
-    changeTrait(traits) {
-      console.log(`traits${traits}`);
-      this.traits = traits;
     },
   },
 };
 </script>
 
-<style>
+<style scoped>
 .deck_container {
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
   justify-items: stretch;
   grid-template-areas:
-    'header header header'
-    'a filter b'
-    'footer footer footer';
-  /* height: 100vh; */
+    "header header header"
+    "a filter b"
+    "footer footer footer";
+  height: 100vh;
   align-items: stretch;
-  background-color: #cdbba7;
+  background-color: rgb(10, 10, 26);
 }
 .header-content {
   grid-area: header;
 }
 .footer-content {
   grid-area: footer;
-  height: 30px;
+
+  /* height: 30px; */
 }
 .sidebar-a {
   grid-area: a;
+  background-color: rgb(10, 10, 26);
 }
 .sidebar-b {
   grid-area: b;
+  background-color: rgb(10, 10, 26);
 }
 .filter-content {
   padding-top: 20px;
@@ -109,5 +80,6 @@ export default {
 }
 .deck-content {
   /* padding: 10px 0px 20px; */
+  background-color: rgb(10, 10, 26);
 }
 </style>

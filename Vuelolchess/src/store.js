@@ -13,6 +13,9 @@ const store = createStore({
       matchData3: [],
       matchData4: [],
       matchData5: [],
+      tierDeck: [],
+      filteredDecks: [],
+      deckFilter: { rank: [], trait: [] },
       tierUnit: {},
       filteredUnits: [],
       unitFilter: { cost: [], trait: [] },
@@ -42,6 +45,18 @@ const store = createStore({
     },
     SetMatchData5(state, inputValue) {
       state.SetMatchData5 = inputValue;
+    },
+    SetTierDeck(state, inputValue) {
+      state.tierDeck = inputValue;
+    },
+    SetFilteredDecks(state, inputValue) {
+      state.filteredDecks = inputValue;
+    },
+    SetDeckFilterRank(state, inputValue) {
+      state.deckFilter.rank = inputValue;
+    },
+    SetDeckFilterTrait(state, inputValue) {
+      state.deckFilter.trait = inputValue;
     },
     SetTierUnit(state, inputValue) {
       state.tierUnit = inputValue;
@@ -205,36 +220,39 @@ const store = createStore({
           console.log(e);
         });
     },
-    initItems(context, origin) {
-      context.commit('SetFilteredItems', origin);
+    initDecks(context, origin) {
+      context.commit('SetFilteredDecks', origin);
     },
-    filterItems(context, filter) {
-      this.dispatch('initItems', this.state.items);
-      this.dispatch('typesFilter', filter.type);
-      this.dispatch('baseFilter', filter.base);
+    filterDecks(context, filter) {
+      this.dispatch('initDecks', this.state.tierDeck);
+      this.dispatch('rankFilter', filter.rank);
+      this.dispatch('DeckTraitsFilter', filter.trait);
     },
-    baseFilter(context, base) {
-      if (base == 0) {
-        return;
-      }
-      context.commit(
-        'SetFilteredItems',
-        this.state.filteredItems.filter(
-          (item) => item.from.includes(base) || item.id == base
-        )
-      );
-    },
-    typesFilter(context, types) {
-      if (types.length === 0) {
+    rankFilter(context, ranks) {
+      if (ranks.length == 0) {
         return;
       }
       let temp = [];
-      for (let i in types) {
+      for (let i = 0; i < ranks.length; i++) {
         temp = temp.concat(
-          this.state.items.filter((item) => item.icon.includes(types[i]))
+          this.state.tierDeck.filter((deck) => deck.rank == ranks[i])
         );
       }
-      this.commit('SetFilteredItems', temp);
+      this.commit('SetFilteredDecks', temp);
+    },
+    DeckTraitsFilter(context, traits) {
+      if (traits.length === 0) {
+        return;
+      }
+      for (let i = 0; i < traits.length; i++) {
+        this.dispatch('DeckTraitFilter', traits[i]);
+      }
+    },
+    DeckTraitFilter(context, trait) {
+      let temp = this.state.filteredDecks.filter((deck) =>
+        deck.mainDeckName.includes(trait)
+      );
+      context.commit('SetFilteredDecks', temp);
     },
     initUnits(context, origin) {
       context.commit('SetFilteredUnits', origin);
@@ -269,6 +287,37 @@ const store = createStore({
         unit.traits.includes(trait)
       );
       context.commit('SetFilteredUnits', temp);
+    },
+    initItems(context, origin) {
+      context.commit('SetFilteredItems', origin);
+    },
+    filterItems(context, filter) {
+      this.dispatch('initItems', this.state.items);
+      this.dispatch('typesFilter', filter.type);
+      this.dispatch('baseFilter', filter.base);
+    },
+    baseFilter(context, base) {
+      if (base == 0) {
+        return;
+      }
+      context.commit(
+        'SetFilteredItems',
+        this.state.filteredItems.filter(
+          (item) => item.from.includes(base) || item.id == base
+        )
+      );
+    },
+    typesFilter(context, types) {
+      if (types.length === 0) {
+        return;
+      }
+      let temp = [];
+      for (let i in types) {
+        temp = temp.concat(
+          this.state.items.filter((item) => item.icon.includes(types[i]))
+        );
+      }
+      this.commit('SetFilteredItems', temp);
     },
   },
 });

@@ -97,7 +97,7 @@ export default {
     'footer footer footer';
   height: 100vh;
   align-items: stretch;
-  background-color: #cdbba7;
+  background-color: rgb(10, 10, 26);
 }
 .header-content {
   grid-area: header;
@@ -117,6 +117,7 @@ export default {
   height: 94%;
 }
 .item-content {
+  background-color: rgb(10, 10, 26);
   padding: 0px 0px 20px;
 }
 </style>

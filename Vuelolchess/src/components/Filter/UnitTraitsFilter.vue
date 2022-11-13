@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import newdata from '../../assets/newdata.json';
+import newdata from "../../assets/newdata.json";
 
 export default {
   data() {
@@ -41,18 +41,18 @@ export default {
     },
     traitChange(index) {
       return this.isClicked[index] === 1
-        ? 'filter-trait-img clicked'
-        : 'filter-trait-img unclicked';
+        ? "filter-trait-img clicked"
+        : "filter-trait-img unclicked";
     },
     GetTraitUrl(traitName) {
       for (let i in this.newdata.setData[0].traits) {
         if (this.newdata.setData[0].traits[i].name == traitName) {
           let temp = this.newdata.setData[0].traits[i].icon
             .toLowerCase()
-            .split('.')
+            .split(".")
             .slice(0, -1);
           return `https://raw.communitydragon.org/latest/game/${temp.join(
-            '.'
+            "."
           )}.png`;
         }
       }
@@ -73,8 +73,8 @@ export default {
         this.traitFilter.push(this.traitNames[index]);
         this.isClicked[index] = 1;
       }
-      this.$store.commit('SetUnitFilterTrait', this.traitFilter);
-      this.$store.dispatch('filterUnits', this.$store.state.unitFilter);
+      this.$store.commit("SetUnitFilterTrait", this.traitFilter);
+      this.$store.dispatch("filterUnits", this.$store.state.unitFilter);
     },
   },
   created() {
@@ -83,7 +83,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .trait-filter {
   padding: 0.5rem 0rem;
   margin: 0.5rem 0rem;
@@ -101,17 +101,17 @@ export default {
   justify-content: flex-start;
 }
 .unclicked {
-  color: black;
-  border-radius: 10px;
-  background-color: #c3936f;
-  border: 0.1px solid #c3936f;
-}
-.clicked {
-  color: #c3936f;
   border-radius: 10px;
   background-color: black;
-  border: 0.1px solid #eec9ad;
-  box-shadow: inset 4px 4px 0px 0 black,
-    inset -1px -1px 7px 0 rgba(255, 255, 255, 0.5);
+  border: 0.1px solid black;
+  color: #f8f7f6;
+}
+.clicked {
+  color: #f8f7f6;
+  border-radius: 10px;
+  background-color: rgb(158, 146, 146);
+  border: 0.1px solid rgb(158, 146, 146);
+  box-shadow: inset 0px 0px 0px rgb(131, 123, 123);
+  /* inset -1px -1px 7px 0 rgba(255, 255, 255, 0.5); */
 }
 </style>

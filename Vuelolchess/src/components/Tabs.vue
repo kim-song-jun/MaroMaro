@@ -23,7 +23,7 @@
         aria-controls="nav-profile"
         aria-selected="false"
       >
-        Profile
+        Comps
       </button>
       <button
         class="nav-link"
@@ -34,9 +34,7 @@
         role="tab"
         aria-controls="nav-contact"
         aria-selected="false"
-      >
-        Contact
-      </button>
+      ></button>
     </div>
   </nav>
   <div class="tab-content" id="nav-tabContent">
@@ -45,32 +43,30 @@
       id="nav-home"
       role="tabpanel"
       aria-labelledby="nav-home-tab"
+      style="background-color: rgb(10, 10, 26)"
     >
-      ...
+      <TierDeck></TierDeck>
     </div>
     <div
       class="tab-pane fade"
       id="nav-profile"
       role="tabpanel"
       aria-labelledby="nav-profile-tab"
+      style="background-color: rgb(10, 10, 26)"
     >
-      <TierDeck></TierDeck>
-    </div>
-    <div
-      class="tab-pane fade"
-      id="nav-contact"
-      role="tabpanel"
-      aria-labelledby="nav-contact-tab"
-    >
-      <Apex></Apex>
+      ...
     </div>
   </div>
 </template>
 
 <script>
-import TierDeck from './Deck/TierDeck.vue';
-import Apex from './Apex.vue';
-export default { components: { TierDeck, Apex } };
+import TierDeck from "./Deck/TierDeck.vue";
+// import Apex from "./Apex.vue";
+export default { components: { TierDeck } };
 </script>
 
-<style></style>
+<style scoped>
+.nav-link {
+  color: #f8f7f6;
+}
+</style>

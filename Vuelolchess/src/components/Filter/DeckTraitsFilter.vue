@@ -1,5 +1,5 @@
 <template>
-  <div class="filter2">
+  <div class="trait-filter">
     <div class="filter-raw">
       <div
         v-for="(trait, index) in traitNames"
@@ -22,7 +22,6 @@
 import newdata from '../../assets/newdata.json';
 
 export default {
-  props: ['traits'],
   data() {
     return {
       newdata,
@@ -31,11 +30,12 @@ export default {
         0, 0, 0, 0,
       ],
       traitNames: [],
+      traitFilter: [],
     };
   },
   methods: {
     reset() {
-      this.isClicked = this.traits;
+      // this.isClicked = this.traits;
     },
     traitChange(index) {
       return this.isClicked[index] === 1
@@ -47,11 +47,9 @@ export default {
         this.traitNames.push(this.newdata.setData[0].traits[i].name);
       }
       this.traitNames.sort();
-      // console.log(temp);
     },
     GetTraitUrl(traitName) {
       for (let i in this.newdata.setData[0].traits) {
-        // console.log(i);
         if (this.newdata.setData[0].traits[i].name == traitName) {
           let temp = this.newdata.setData[0].traits[i].icon
             .toLowerCase()
@@ -63,56 +61,32 @@ export default {
         }
       }
     },
-    GetTraitImage(traitName) {
-      // console.log(traitName.toLowerCase());
-      const exceptionNone = ['assassin', 'shapeshifter'];
-      const exceptionStage2 = ['lagoon', 'monolith', 'darkflight', 'prodigy'];
-      const exception2 = ['mage', 'mystic'];
-      if (exceptionNone.includes(traitName.toLowerCase())) {
-        return `https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_${traitName.toLowerCase()}.png`;
-      } else if (exceptionStage2.includes(traitName.toLowerCase())) {
-        return `https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_${traitName.toLowerCase()}.tft_set7_stage2.png`;
-      } else if (traitName.toLowerCase() === 'bruiser') {
-        return `https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_6_bruiser.png`;
-      } else if (exception2.includes(traitName.toLowerCase())) {
-        return `https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_2_${traitName.toLowerCase()}.png`;
-      } else if (traitName.toLowerCase() === 'scalescorn') {
-        return `https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_7_dragonbane.png`;
-      } else if (traitName.toLowerCase() === 'cavalier') {
-        return `https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_5_cavalry.png`;
-      } else if (traitName.toLowerCase() === 'spelltheif') {
-        return `https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_7_spellthief.png`;
-      } else if (traitName.toLowerCase() === 'cannoneer') {
-        return `https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_5_cannoneer.png`;
-      } else {
-        return `https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_7_${traitName.toLowerCase()}.png`;
-      }
-    },
     changeTrait(index) {
       if (this.isClicked[index] === 1) {
         this.isClicked[index] = 0;
+        this.traitFilter = this.traitFilter.filter(
+          (trait) => trait != this.traitNames[index]
+        );
       } else {
         this.isClicked[index] = 1;
+        this.traitFilter.push(this.traitNames[index]);
       }
-      // console.log(this.isClicked[i]);
-      this.$emit('traits', this.isClicked);
+      this.$store.commit('SetDeckFilterTrait', this.traitFilter);
+      this.$store.dispatch('filterDecks', this.$store.state.deckFilter);
     },
   },
   created() {
     this.GetTraitName();
   },
-  updated() {
-    this.reset();
-  },
 };
 </script>
 
 <style scoped>
-.filter2 {
+.trait-filter {
   padding: 0.5rem 0rem;
   margin: 0.5rem 0rem;
 }
-.filter2 .filter-trait-img {
+.trait-filter .filter-trait-img {
   display: flex;
   cursor: pointer;
   width: 30px;
@@ -125,22 +99,17 @@ export default {
   justify-content: flex-start;
 }
 .unclicked {
-  color: black;
   border-radius: 10px;
-  /* background-color: #faf8ec; */
-  background-color: #c3936f;
-  border: 0.1px solid #c3936f;
-  /* box-shadow: 4px 4px 0px 0 #c3936f, -5px -7px 1px 0 rgba(255, 255, 255, 0.3); */
+  background-color: black;
+  border: 0.1px solid black;
+  color: #f8f7f6;
 }
 .clicked {
-  color: black;
+  color: #f8f7f6;
   border-radius: 10px;
-  /* background-color: #faf8ec; */
-  background-color: black;
-  border: 0.1px solid #eec9ad;
-  /* box-shadow: inset 4px 4px 0px 0 #eec9ad,
-    inset -1px -1px 7px 0 rgba(255, 255, 255, 0.5); */
-  box-shadow: inset 4px 4px 0px 0 black,
-    inset -1px -1px 7px 0 rgba(255, 255, 255, 0.5);
+  background-color: rgb(158, 146, 146);
+  border: 0.1px solid rgb(158, 146, 146);
+  box-shadow: inset 0px 0px 0px rgb(131, 123, 123);
+  /* inset -1px -1px 7px 0 rgba(255, 255, 255, 0.5); */
 }
 </style>

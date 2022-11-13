@@ -1,16 +1,12 @@
 <template>
   <div
-    style="
-      background-color: whitesmoke;
-      border-radius: 2% / 15%;
-      padding: 1%;
-      margin: 1%;
-    "
-    v-for="(tier, tIndex) in this.tierdata"
+    class="tierDeckMainContainer"
+    style="color: white; border-radius: 3% / 15%; padding: 2%"
+    v-for="(tier, tIndex) in this.$store.state.filteredDecks"
     :key="tIndex"
+    data-aos="fade-up"
+    data-aos-anchor-placement="top-bottom"
   >
-    <!-- {{ tier }} -->
-    <!-- {{ tier.deckUnit }} -->
     <div class="my-tier">
       <div class="my-tier-main">
         <img
@@ -19,12 +15,14 @@
           class="row-item my-tier-img"
         />
         <div class="row-item my-tier-deck-name">
-          <strong class="my-tier-deck-main">{{ tier.mainDeckName }}</strong>
+          <strong class="my-tier-deck-main" style="color: white">{{
+            tier.mainDeckName
+          }}</strong>
           <br />
           <p class="my-tier-deck-sub">{{ tier.subDeckName }}</p>
         </div>
         <div class="row-item" style="width: 30%; margin-left: auto">
-          <strong>carries</strong>
+          <strong style="color: white">carries</strong>
         </div>
       </div>
       <div class="my-tier-main-info">
@@ -35,7 +33,6 @@
             v-for="(j, i) in tier.deckUnit"
             :key="i"
           >
-            <!-- {{ j.character_id }} -->
             <div class="my-tier-champion-stars">
               <img
                 :src="require(`../../assets/${GetStar(j.tier)}.png`)"
@@ -50,7 +47,6 @@
               width="44"
               height="44"
             />
-            <!-- {{ this.GetChampionUrlByName(j) }} -->
             <div class="my-tier-champion-name">
               {{ j.character_id.slice(5) }}
             </div>
@@ -59,11 +55,15 @@
         <div class="col-container my-tier-APtext" style="text-align: center">
           <div class="col-item" style="text-align: center; width: 100%">
             Avg Place:
-            <strong class="my-tier-Avg">{{ tier.placementRate }}</strong>
+            <strong class="my-tier-Avg" style="color: white">{{
+              tier.placementRate
+            }}</strong>
           </div>
           <div class="col-item" style="width: 100%; text-align: center">
             Pick Rate:
-            <strong class="my-tier-Pick">{{ tier.placementrate }}</strong>
+            <strong class="my-tier-Pick" style="color: white">{{
+              tier.placementrate
+            }}</strong>
           </div>
         </div>
         <div
@@ -73,11 +73,11 @@
           <div
             class="my-tier-champion"
             style="width: 14%"
-            v-for="(j, i) in this.tierdata[0].carryUnit"
+            v-for="(j, i) in tier.carryUnit"
             :key="i"
           >
             <img
-              :src="this.GetChampionUrlByName(j.character_id)"
+              :src="this.GetChampionUrl(j.character_id)"
               class="my-tier-champion-img"
               style="width: 100%; margin-bottom: 10%"
             />
@@ -115,16 +115,16 @@
 </template>
 
 <script>
-import newdata from '../../assets/newdata.json';
+import newdata from "../../assets/newdata.json";
 // import UserTabs from '../UserTabs.vue';
-import tierdata from '../../assets/TierData.json';
-import axios from 'axios';
+import tierDeck from "../../assets/tierDeck.json";
+import axios from "axios";
 
 export default {
   data() {
     return {
       tabs: false,
-      tierdata,
+      tierDeck,
       newdata,
       getData: [],
     };
@@ -139,21 +139,21 @@ export default {
           if (this.newdata.setData[i].champions[j].apiName == championID) {
             let temp = this.newdata.setData[i].champions[j].icon
               .toLowerCase()
-              .split('/');
+              .split("/");
             // console.log(temp);
             // let newUrl = temp.slice(0, -1);
-            let newUrl2 = temp.slice(-1)[0].split('.');
+            let newUrl2 = temp.slice(-1)[0].split(".");
             // console.log(newUrl);
             // console.log(newUrl2);
-            if (newUrl2[0] == 'tft7_volibear') {
+            if (newUrl2[0] == "tft7_volibear") {
               return `https://raw.communitydragon.org/latest/game/assets/characters/${championID.toLowerCase()}/hud/${
                 newUrl2[0]
               }_square.${newUrl2[1].slice(0, 8)}.png`;
-            } else if (newUrl2[0] == 'tft7_zippy') {
+            } else if (newUrl2[0] == "tft7_zippy") {
               return `https://raw.communitydragon.org/latest/game/assets/characters/${championID.toLowerCase()}/hud/icons2d/${
                 newUrl2[0]
               }_square.${newUrl2[1]}.png`;
-            } else if (newUrl2[0] == 'tft7_dragongreen') {
+            } else if (newUrl2[0] == "tft7_dragongreen") {
               return `https://raw.communitydragon.org/latest/game/assets/characters/${championID.toLowerCase()}/hud/tft7_jadedragon_square.${newUrl2[1].slice(
                 0,
                 8
@@ -167,59 +167,15 @@ export default {
         }
       }
     },
-    GetChampionUrlByName(championID) {
-      // get url by champion ID
-      // ex) TFT7_NomsyCannonee
-      for (let i in this.newdata.setData) {
-        for (let j in this.newdata.setData[i].champions) {
-          if (this.newdata.setData[i].champions[j].apiName == championID) {
-            let temp = this.newdata.setData[i].champions[j].icon
-              .toLowerCase()
-              .split('/');
-            // console.log(temp[-2]);
-            // let newUrl = temp.slice(0, -1);
-            let newUrl2 = temp.slice(-1)[0].split('.');
-            // console.log(newUrl);
-            // console.log(newUrl2);
-            return (
-              `https://raw.communitydragon.org/latest/game/assets/characters${
-                '/' + championID.toLowerCase()
-              }/hud/` +
-              newUrl2[0] +
-              `_square.` +
-              `${newUrl2[1]}` +
-              `.png`
-            );
-          }
-        }
-      }
-
-      // let changeName = '';
-      // let temp = championName.toLowerCase();
-      // if (temp == 'tft7_dragonblue') {
-      //   changeName = 'tft7_miragedragon';
-      // } else if (temp == 'tft7_dragongold') {
-      //   changeName = 'tft7_shimmerscaledragon';
-      // } else if (temp == 'tft7_dragongreen') {
-      //   changeName = 'tft7_jadedragon';
-      // } else if (temp == 'tft7_dragonpurple') {
-      //   changeName = 'tft7_whispersdragon';
-      // } else {
-      //   changeName = temp;
-      // }
-      // // console.log(temp)
-      // // console.log(changeName)
-      // return `https://raw.communitydragon.org/latest/game/assets/characters/${temp}/hud/${changeName}_square.tft_set7.png`;
-    },
     GetStar(i) {
       if (i == 3) {
         // return `https://raw.communitydragon.org/latest/game/assets/ux/tft/notificationicons/goldstar.png`;
-        return 'stargold';
+        return "stargold";
       } else if (i == 2) {
         // return ``;
-        return 'starsilver';
+        return "starsilver";
       } else {
-        return 'starbronze';
+        return "starbronze";
       }
     },
     GetItemUrl(item) {
@@ -244,34 +200,60 @@ export default {
           // console.log(newdata.items[j].icon.toLowerCase().split('.'));
           let temp = newdata.items[j].icon
             .toLowerCase()
-            .split('.')
+            .split(".")
             .slice(0, -1);
           return `https://raw.communitydragon.org/latest/game/${temp.join(
-            '.'
+            "."
           )}.png`;
         }
       }
     },
     GetDeck() {
       axios
-        .get('/test/mockdoridomabem')
+        .get("/test/mockdoridomabem")
         .then((result) => {
           console.log(`GetDeck: ${result.data}`);
           console.log(result.data);
           this.getData = result.data;
         })
         .catch(() => {
-          console.log('GetDeck Error');
+          console.log("GetDeck Error");
         });
+    },
+    initTierDecks() {
+      this.$store.commit("SetFilteredDecks", [...this.tierDeck]);
+    },
+    excute() {
+      this.$store.commit("SetTierDeck", [...this.tierDeck]);
     },
   },
   created() {
     // this.GetDeck();
+    this.initTierDecks();
+    this.excute();
   },
 };
 </script>
 
 <style>
+.tierDeckMainContainer {
+  background: linear-gradient(
+    to right,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 0, 0, 1) 60%,
+    rgba(2, 0, 36, 1) 80%
+  );
+  color: white;
+  border: solid 10px rgb(10, 10, 26);
+}
+.tierDeckMainContainer:hover {
+  background: linear-gradient(
+    to right,
+    rgb(11, 8, 68) 0%,
+    rgb(43, 43, 43) 60%,
+    rgb(11, 8, 68) 80%
+  );
+}
 .my-tier {
   display: flex;
   /* display: inline-flex; */

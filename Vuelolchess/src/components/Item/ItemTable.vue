@@ -12,8 +12,10 @@
       </thead>
       <tbody>
         <tr
+
           v-for="(item, index) in this.$store.state.filteredItems"
           :key="index"
+
         >
           <td class="table-td">
             <div class="table-item">
@@ -89,17 +91,17 @@ export default {
   },
   methods: {
     showModal(id) {
-      this.$emit('open', 1, id);
+      this.$emit("open", 1, id);
     },
     GetItemUrl(item) {
       for (let j in this.newdata.items) {
         if (item == this.newdata.items[j].id) {
           let temp = this.newdata.items[j].icon
             .toLowerCase()
-            .split('.')
+            .split(".")
             .slice(0, -1);
           return `https://raw.communitydragon.org/latest/game/${temp.join(
-            '.'
+            "."
           )}.png`;
         }
       }
@@ -119,6 +121,7 @@ export default {
   border-collapse: separate;
   border-spacing: 0 10px;
   padding: 10px;
+  background-color: rgb(10, 10, 26);
 }
 .item-table-th,
 .item-table-td {
@@ -129,8 +132,8 @@ export default {
   margin: 0;
 }
 .table-container {
-  overflow: auto;
-  height: 590px;
+  /* overflow: auto; */
+  /* height: 590px; */
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
 }
