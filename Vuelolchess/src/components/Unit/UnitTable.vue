@@ -11,7 +11,12 @@
         </th>
       </thead>
       <tbody>
-        <tr v-for="(unit, index) in $store.state.filteredUnits" :key="index">
+        <tr
+          v-for="(unit, index) in $store.state.filteredUnits"
+          :key="index"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+        >
           <td class="table-td">
             <div class="table-item">
               <div class="help-tip">
@@ -69,37 +74,37 @@
 </template>
 
 <script>
-import newdata from '../../assets/newdata.json';
-import tierUnit from '../../assets/tierUnit.json';
+import newdata from "../../assets/newdata.json";
+import tierUnit from "../../assets/tierUnit.json";
 
 export default {
-  props: ['cost', 'traits'],
+  props: ["cost", "traits"],
   data() {
     return {
       tierUnit,
       newdata,
       championBorderStyle: [
-        'border:solid 2px gray;',
-        'border:solid 2px green;',
-        'border:solid 2px blue;',
-        'border:solid 2px purple;',
-        'border:solid 2px #ffd700;',
+        "border:solid 2px gray;",
+        "border:solid 2px green;",
+        "border:solid 2px blue;",
+        "border:solid 2px purple;",
+        "border:solid 2px #ffd700;",
       ],
     };
   },
   methods: {
     showModal(name) {
-      this.$emit('open', 1, name);
+      this.$emit("open", 1, name);
     },
     GetItemUrl(item) {
       for (let j in this.newdata.items) {
         if (item == this.newdata.items[j].id) {
           let temp = this.newdata.items[j].icon
             .toLowerCase()
-            .split('.')
+            .split(".")
             .slice(0, -1);
           return `https://raw.communitydragon.org/latest/game/${temp.join(
-            '.'
+            "."
           )}.png`;
         }
       }
@@ -109,7 +114,7 @@ export default {
       for (let i = 0; i < this.newdata.setData[0].champions.length; i++) {
         let name = this.newdata.setData[0].champions[i].apiName.replace(
           / /g,
-          ''
+          ""
         );
         if (name === champName) temp = this.newdata.setData[0].champions[i];
       }
@@ -128,10 +133,10 @@ export default {
         if (this.newdata.setData[0].traits[i].name == traitName) {
           let temp = this.newdata.setData[0].traits[i].icon
             .toLowerCase()
-            .split('.')
+            .split(".")
             .slice(0, -1);
           return `https://raw.communitydragon.org/latest/game/${temp.join(
-            '.'
+            "."
           )}.png`;
         }
       }
@@ -158,21 +163,21 @@ export default {
           if (this.newdata.setData[i].champions[j].apiName == championID) {
             let temp = this.newdata.setData[i].champions[j].icon
               .toLowerCase()
-              .split('/');
+              .split("/");
             // console.log(temp);
             // let newUrl = temp.slice(0, -1);
-            let newUrl2 = temp.slice(-1)[0].split('.');
+            let newUrl2 = temp.slice(-1)[0].split(".");
             // console.log(newUrl);
             // console.log(newUrl2);
-            if (newUrl2[0] == 'tft7_volibear') {
+            if (newUrl2[0] == "tft7_volibear") {
               return `https://raw.communitydragon.org/latest/game/assets/characters/${championID.toLowerCase()}/hud/${
                 newUrl2[0]
               }_square.${newUrl2[1].slice(0, 8)}.png`;
-            } else if (newUrl2[0] == 'tft7_zippy') {
+            } else if (newUrl2[0] == "tft7_zippy") {
               return `https://raw.communitydragon.org/latest/game/assets/characters/${championID.toLowerCase()}/hud/icons2d/${
                 newUrl2[0]
               }_square.${newUrl2[1]}.png`;
-            } else if (newUrl2[0] == 'tft7_dragongreen') {
+            } else if (newUrl2[0] == "tft7_dragongreen") {
               return `https://raw.communitydragon.org/latest/game/assets/characters/${championID.toLowerCase()}/hud/tft7_jadedragon_square.${newUrl2[1].slice(
                 0,
                 8
@@ -187,16 +192,32 @@ export default {
       }
     },
     initTierUnits() {
-      this.$store.commit('SetFilteredUnits', { ...this.tierUnit.units });
+      this.$store.commit("SetFilteredUnits", { ...this.tierUnit.units });
     },
     excute() {
-      this.$store.commit('SetTierUnit', { ...this.tierUnit });
+      this.$store.commit("SetTierUnit", { ...this.tierUnit });
+    },
+    animate() {
+      let tr = document.querySelectorAll("tr");
+      for (let i; i < tr.length; i++) {
+        observer.observe(tr[i]);
+      }
+      let observer = new IntersectionObserver((e) => {
+        e.forEach((box) => {
+          if (box.isIntersecting) {
+            box.target.style.opacity = 1;
+          }
+        });
+      });
     },
   },
   created() {
     this.AddTraits();
     this.initTierUnits();
     this.excute();
+  },
+  mounted() {
+    // this.animate();
   },
 };
 </script>
@@ -216,7 +237,8 @@ export default {
   border-left: 0;
   border-right: 0;
   margin: 0;
-  background-color: #f4dfd0;
+  background-color: black;
+  color: #f8f7f6;
 }
 .table-td {
   padding: 0.4rem 0.6rem;
@@ -228,14 +250,31 @@ export default {
 }
 
 table tr:nth-child(odd) {
-  background-color: rgb(238, 238, 238);
+  background: linear-gradient(
+    to right,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 0, 0, 1) 60%,
+    rgba(2, 0, 36, 1) 80%
+  );
+  color: white;
 }
 table tr:nth-child(even) {
-  background-color: whitesmoke;
+  background: linear-gradient(
+    to right,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 0, 0, 1) 60%,
+    rgba(2, 0, 36, 1) 80%
+  );
+  color: white;
 }
 
 table tr:hover {
-  background-color: #ddd;
+  background: linear-gradient(
+    to right,
+    rgb(11, 8, 68) 0%,
+    rgb(43, 43, 43) 60%,
+    rgb(11, 8, 68) 80%
+  );
 }
 
 .table-td:first-child,

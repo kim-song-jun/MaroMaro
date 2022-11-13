@@ -168,11 +168,11 @@
 </template>
 
 <script>
-import newdata from '../../assets/newdata.json';
-import tierUnits from '../../assets/tierUnit.json';
+import newdata from "../../assets/newdata.json";
+import tierUnits from "../../assets/tierUnit.json";
 
 export default {
-  props: ['champName'],
+  props: ["champName"],
   components: {},
   data() {
     return {
@@ -182,21 +182,21 @@ export default {
       tierUnit: {},
       stage2: [],
       variables: [
-        { name: 'variable', value: 'value' },
-        { name: 'variable', value: 'value' },
+        { name: "variable", value: "value" },
+        { name: "variable", value: "value" },
       ],
       champStars: [1, 0, 0],
-      star: ['starbronze', 'star', 'star'],
+      star: ["starbronze", "star", "star"],
     };
   },
   methods: {
     checkStar(index) {
       for (let i = 0; i < this.star.length; i++) {
         if (this.champStars[i] === 1) {
-          if (index === 0) this.star[0] = 'starbronze';
-          else if (index === 1) this.star[i] = 'starsilver';
-          else this.star[i] = 'stargold';
-        } else this.star[i] = 'star';
+          if (index === 0) this.star[0] = "starbronze";
+          else if (index === 1) this.star[i] = "starsilver";
+          else this.star[i] = "stargold";
+        } else this.star[i] = "star";
       }
     },
     fillStar(index) {
@@ -210,7 +210,7 @@ export default {
       for (let i = 0; i < this.newdata.setData[0].champions.length; i++) {
         let name = this.newdata.setData[0].champions[i].apiName.replace(
           / /g,
-          ''
+          ""
         );
         if (name === champName) temp = this.newdata.setData[0].champions[i];
       }
@@ -219,7 +219,7 @@ export default {
     GetTierUnit(champName) {
       var temp = {};
       for (let i = 0; i < this.tierUnits.units.length; i++) {
-        let name = this.tierUnits.units[i].ID.replace(/ /g, '');
+        let name = this.tierUnits.units[i].ID.replace(/ /g, "");
         if (name === champName) temp = this.tierUnits.units[i];
       }
       return temp;
@@ -232,21 +232,21 @@ export default {
           if (this.newdata.setData[i].champions[j].apiName == championID) {
             let temp = this.newdata.setData[i].champions[j].icon
               .toLowerCase()
-              .split('/');
+              .split("/");
             // console.log(temp);
             // let newUrl = temp.slice(0, -1);
-            let newUrl2 = temp.slice(-1)[0].split('.');
+            let newUrl2 = temp.slice(-1)[0].split(".");
             // console.log(newUrl);
             // console.log(newUrl2);
-            if (newUrl2[0] == 'tft7_volibear') {
+            if (newUrl2[0] == "tft7_volibear") {
               return `https://raw.communitydragon.org/latest/game/assets/characters/${championID.toLowerCase()}/hud/${
                 newUrl2[0]
               }_square.${newUrl2[1].slice(0, 8)}.png`;
-            } else if (newUrl2[0] == 'tft7_zippy') {
+            } else if (newUrl2[0] == "tft7_zippy") {
               return `https://raw.communitydragon.org/latest/game/assets/characters/${championID.toLowerCase()}/hud/icons2d/${
                 newUrl2[0]
               }_square.${newUrl2[1]}.png`;
-            } else if (newUrl2[0] == 'tft7_dragongreen') {
+            } else if (newUrl2[0] == "tft7_dragongreen") {
               return `https://raw.communitydragon.org/latest/game/assets/characters/${championID.toLowerCase()}/hud/tft7_jadedragon_square.${newUrl2[1].slice(
                 0,
                 8
@@ -265,10 +265,10 @@ export default {
         if (item == this.newdata.items[j].id) {
           let temp = this.newdata.items[j].icon
             .toLowerCase()
-            .split('.')
+            .split(".")
             .slice(0, -1);
           return `https://raw.communitydragon.org/latest/game/${temp.join(
-            '.'
+            "."
           )}.png`;
         }
       }
@@ -278,9 +278,9 @@ export default {
         if (this.newdata.setData[0].champions[i].apiName == championID) {
           let temp = this.newdata.setData[0].champions[i].ability.icon
             .toLowerCase()
-            .split('/');
-          let newUrl2 = temp.slice(-1)[0].split('.');
-          if (newUrl2[1] != 'dds') {
+            .split("/");
+          let newUrl2 = temp.slice(-1)[0].split(".");
+          if (newUrl2[1] != "dds") {
             return `https://raw.communitydragon.org/latest/game/assets/characters/${temp[2]}/hud/icons2d/${newUrl2[0]}.${newUrl2[1]}.png`;
           } else
             return `https://raw.communitydragon.org/latest/game/assets/characters/${temp[2]}/hud/icons2d/${newUrl2[0]}.png`;
@@ -292,10 +292,10 @@ export default {
         if (this.newdata.setData[0].traits[i].name == traitName) {
           let temp = this.newdata.setData[0].traits[i].icon
             .toLowerCase()
-            .split('.')
+            .split(".")
             .slice(0, -1);
           return `https://raw.communitydragon.org/latest/game/${temp.join(
-            '.'
+            "."
           )}.png`;
         }
       }

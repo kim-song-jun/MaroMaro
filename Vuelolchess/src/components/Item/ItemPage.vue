@@ -24,12 +24,12 @@
 </template>
 
 <script>
-import Header from '../Header.vue';
-import Filter from '../Filter/ItemFilterContainer.vue';
-import ItemTable from './ItemTable.vue';
-import ItemApex from './ItemApex.vue';
-import ItemInfo from './ItemInfo.vue';
-import Footer from '../Footer.vue';
+import Header from "../Header.vue";
+import Filter from "../Filter/ItemFilterContainer.vue";
+import ItemTable from "./ItemTable.vue";
+import ItemApex from "./ItemApex.vue";
+import ItemInfo from "./ItemInfo.vue";
+import Footer from "../Footer.vue";
 
 export default {
   components: {
@@ -53,7 +53,7 @@ export default {
       this.itemID = id;
     },
     reset() {
-      console.log('reset');
+      console.log("reset");
     },
     changeContent(content) {
       this.container = content;
@@ -68,12 +68,12 @@ export default {
   grid-template-columns: 1fr 5fr 1fr;
   justify-items: stretch;
   grid-template-areas:
-    'header header header'
-    'a filter b'
-    'footer footer footer';
+    "header header header"
+    "a filter b"
+    "footer footer footer";
   height: 100vh;
   align-items: stretch;
-  background-color: #cdbba7;
+  background-color: rgb(10, 10, 26);
 }
 .header-content {
   grid-area: header;

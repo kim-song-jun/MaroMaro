@@ -18,10 +18,10 @@
 </template>
 
 <script>
-import Header from '../Header.vue';
-import Filter from '../Filter/DeckFilterContainer.vue';
-import Deck from './TierDeck.vue';
-import Footer from '../Footer.vue';
+import Header from "../Header.vue";
+import Filter from "../Filter/DeckFilterContainer.vue";
+import Deck from "./TierDeck.vue";
+import Footer from "../Footer.vue";
 
 export default {
   components: {
@@ -37,38 +37,41 @@ export default {
   },
   methods: {
     reset() {
-      console.log('reset');
+      console.log("reset");
       this.container = 0;
     },
   },
 };
 </script>
 
-<style>
+<style scoped>
 .deck_container {
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
   justify-items: stretch;
   grid-template-areas:
-    'header header header'
-    'a filter b'
-    'footer footer footer';
+    "header header header"
+    "a filter b"
+    "footer footer footer";
   height: 100vh;
   align-items: stretch;
-  background-color: #cdbba7;
+  background-color: rgb(10, 10, 26);
 }
 .header-content {
   grid-area: header;
 }
 .footer-content {
   grid-area: footer;
-  height: 30px;
+
+  /* height: 30px; */
 }
 .sidebar-a {
   grid-area: a;
+  background-color: rgb(10, 10, 26);
 }
 .sidebar-b {
   grid-area: b;
+  background-color: rgb(10, 10, 26);
 }
 .filter-content {
   padding-top: 20px;
@@ -77,5 +80,6 @@ export default {
 }
 .deck-content {
   /* padding: 10px 0px 20px; */
+  background-color: rgb(10, 10, 26);
 }
 </style>
