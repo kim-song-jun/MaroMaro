@@ -11,7 +11,10 @@
         </th>
       </thead>
       <tbody>
-        <tr v-for="item in this.$store.state.filteredItems" :key="item">
+        <tr
+          v-for="(item, index) in this.$store.state.filteredItems"
+          :key="index"
+        >
           <td class="table-td">
             <div class="table-item">
               <div class="help-tip">
@@ -59,7 +62,9 @@
               </div>
             </div>
           </td>
-          <td class="table-td"><div class="table-tier">S</div></td>
+          <td class="table-td">
+            <div class="table-tier">{{ this.tierItem.items[index].rank }}</div>
+          </td>
           <td class="table-td"><div class="table-avg">3.53</div></td>
           <td class="table-td"><div class="table-winrate">22.9%</div></td>
           <td class="table-td">
@@ -73,11 +78,13 @@
 
 <script>
 import newdata from '../../assets/newdata.json';
+import tierItem from '../../assets/tierItem.json';
 
 export default {
   data() {
     return {
       newdata,
+      tierItem,
     };
   },
   methods: {
@@ -97,27 +104,10 @@ export default {
         }
       }
     },
-    GetItems() {
-      const temp = [];
-      for (let i = 0; i < this.newdata.items.length; i++) {
-        temp.push(this.newdata.items[i]);
-      }
-      return temp;
-    },
     isEmptyArr(arr) {
       if (Array.isArray(arr) && arr.length === 0) return true;
       return false;
     },
-    initItems() {
-      this.$store.commit('SetFilteredItems', this.GetItems());
-    },
-    excute() {
-      this.$store.commit('SetItems', this.GetItems());
-    },
-  },
-  created() {
-    this.initItems();
-    this.excute();
   },
 };
 </script>
