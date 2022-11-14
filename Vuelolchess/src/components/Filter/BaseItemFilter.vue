@@ -1,11 +1,10 @@
 <template>
   <div class="base-filter">
     <img
-      v-for="item in items"
-      :key="item"
-      :id="item.name"
-      class="filter-item-img unclicked-img"
-      @click="changeBase(item)"
+      v-for="(item, index) in items"
+      :key="index"
+      :class="baseChange(item.id)"
+      @click="changeBase(item.id)"
       :src="this.GetItemUrl(item.id)"
       :alt="item.name"
     />
@@ -34,35 +33,19 @@ export default {
     };
   },
   methods: {
-    reset(base) {
-      if (base == 0) {
-        for (let item of this.items) {
-          if (this.baseItemID === item.id) {
-            const classList = document.getElementById(item.name).classList;
-            classList.replace('clicked', 'unclicked-img');
-          }
-        }
-      }
-      this.baseItemID = base;
+    reset() {
+      this.baseItemID = 0;
     },
-    changeBase(item) {
-      const classList = document.getElementById(item.name).classList;
-      const isExist = document.getElementsByClassName(
-        'filter-item-img clicked'
-      );
-
-      if (isExist.length === 0) {
-        this.baseItemID = item.id;
-        classList.replace('unclicked-img', 'clicked');
+    baseChange(id) {
+      return this.baseItemID === id
+        ? 'filter-item-img clicked'
+        : 'filter-item-img unclicked-img';
+    },
+    changeBase(id) {
+      if (id == this.baseItemID) {
+        this.baseItemID = 0;
       } else {
-        if (classList.contains('clicked')) {
-          this.baseItemID = 0;
-          classList.replace('clicked', 'unclicked-img');
-        } else {
-          isExist.item(0).classList.replace('clicked', 'unclicked-img');
-          this.baseItemID = item.id;
-          classList.replace('unclicked-img', 'clicked');
-        }
+        this.baseItemID = id;
       }
       this.$store.commit('SetItemFilterBase', this.baseItemID);
       this.$store.dispatch('filterItems', this.$store.state.itemFilter);
@@ -80,6 +63,9 @@ export default {
         }
       }
     },
+  },
+  mounted() {
+    this.emitter.on('resetButton', this.reset);
   },
 };
 </script>

@@ -3,9 +3,8 @@
     <button
       v-for="(type, index) in types"
       :key="index"
-      :id="type"
-      class="filter-type unclicked"
-      @click="changeType(type, index)"
+      :class="this.typeChange(index)"
+      @click="changeType(index)"
     >
       {{ type }}
     </button>
@@ -17,11 +16,11 @@ export default {
   data() {
     return {
       types: [
-        "normal(일반)",
-        "emblem(상징)",
-        "ornn(오른)",
-        "radiant(찬란한)",
-        "shimmerscale(빛비늘)",
+        'normal(일반)',
+        'emblem(상징)',
+        'ornn(오른)',
+        'radiant(찬란한)',
+        'shimmerscale(빛비늘)',
       ],
       isClicked: [0, 0, 0, 0, 0],
       filter: [],
@@ -29,37 +28,38 @@ export default {
   },
   methods: {
     reset() {
-      for (let i = 0; i < this.isClicked.length; i++) {
-        if (this.isClicked[i] === 1) {
-          const classList = document.getElementById(this.types[i]).classList;
-          classList.replace("clicked", "unclicked");
-        }
+      for (let i in this.isClicked) {
+        this.isClicked[i] = 0;
       }
-      // this.isClicked = this.middletype;
     },
-    changeType(type, index) {
-      const classList = document.getElementById(type).classList;
+    typeChange(index) {
+      return this.isClicked[index] === 1
+        ? 'filter-type clicked'
+        : 'filter-type unclicked';
+    },
+    changeType(index) {
       const word = [
-        "Standard/",
-        "Emblem",
-        "Ornn_",
-        "Radiant/",
-        "Shimmerscale/",
+        'Standard/',
+        'Emblem',
+        'Ornn_',
+        'Radiant/',
+        'Shimmerscale/',
       ];
       // filter off
-      if (classList.contains("clicked")) {
+      if (this.isClicked[index] === 1) {
         this.isClicked[index] = 0;
         this.filter = this.filter.filter((type) => type != word[index]);
-        classList.replace("clicked", "unclicked");
       } else {
         //filter on
         this.isClicked[index] = 1;
         this.filter.push(word[index]);
-        classList.replace("unclicked", "clicked");
       }
-      this.$store.commit("SetItemFilterType", this.filter);
-      this.$store.dispatch("filterItems", this.$store.state.itemFilter);
+      this.$store.commit('SetItemFilterType', this.filter);
+      this.$store.dispatch('filterItems', this.$store.state.itemFilter);
     },
+  },
+  mounted() {
+    this.emitter.on('resetButton', this.reset);
   },
 };
 </script>

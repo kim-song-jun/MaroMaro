@@ -35,7 +35,9 @@ export default {
   },
   methods: {
     reset() {
-      // this.isClicked = this.traits;
+      for (let i in this.isClicked) {
+        this.isClicked[i] = 0;
+      }
     },
     traitChange(index) {
       return this.isClicked[index] === 1
@@ -77,6 +79,9 @@ export default {
   },
   created() {
     this.GetTraitName();
+  },
+  mounted() {
+    this.emitter.on('resetButton', this.reset);
   },
 };
 </script>

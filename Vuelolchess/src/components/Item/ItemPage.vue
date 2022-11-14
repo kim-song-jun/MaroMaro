@@ -58,6 +58,10 @@ export default {
     },
     reset() {
       console.log('reset');
+      this.container = 0;
+      this.$store.commit('SetItemFilterType', []);
+      this.$store.commit('SetItemFilterBase', []);
+      this.$store.dispatch('filterItems', this.$store.state.itemFilter);
     },
     changeContent(content) {
       this.container = content;

@@ -19,7 +19,6 @@
 
 <script>
 export default {
-  props: ["content"],
   data() {
     return {};
   },
@@ -27,23 +26,24 @@ export default {
     reset(id) {
       const classList = document.getElementById(id).classList;
       const isExist = document.getElementsByClassName(
-        "filter-change-button clicked"
+        'filter-change-button clicked'
       );
       //checked filter off
-      isExist.item(0).classList.replace("clicked", "unclicked");
+      isExist.item(0).classList.replace('clicked', 'unclicked');
       //checked filter on
-      classList.replace("unclicked", "clicked");
+      classList.replace('unclicked', 'clicked');
     },
     changeContent(id) {
       this.reset(id);
-      if (id === "tableBtn") this.$emit("content", 0);
-      else this.$emit("content", 1);
+      if (id === 'tableBtn') this.$emit('content', 0);
+      else this.$emit('content', 1);
+    },
+    receive(value) {
+      console.log(value);
     },
   },
-  updated() {
-    if (this.content == 0) {
-      this.reset("tableBtn");
-    }
+  mounted() {
+    this.emitter.on('resetContent', this.reset);
   },
 };
 </script>
