@@ -38,14 +38,32 @@ export default {
             show: false,
           },
         },
-        colors: ['#056BF6', '#D2376A'],
+        colors: ['#ffffff', '#ffffff'],
         xaxis: {
           tickAmount: 10,
-          min: 0,
-          max: 40,
+          min: -5,
+          max: 10,
+          labels: {
+            style: {
+              colors: '#ffffff',
+              fontSize: '12px',
+              fontFamily: 'Helvetica, Arial, sans-serif',
+              fontWeight: 400,
+              cssClass: 'apexcharts-xaxis-label',
+            },
+          },
         },
         yaxis: {
           tickAmount: 10,
+          labels: {
+            style: {
+              colors: '#ffffff',
+              fontSize: '12px',
+              fontFamily: 'Helvetica, Arial, sans-serif',
+              fontWeight: 400,
+              cssClass: 'apexcharts-xaxis-label',
+            },
+          },
         },
         markers: {
           size: 15,
