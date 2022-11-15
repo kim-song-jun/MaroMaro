@@ -49,16 +49,31 @@ npm run serve
 <img src="images/Items.png">
 
 1. 필터기능
+
+
   <img src="images/Items_Filter.png">
+
+
    - Item 종류, 조합 아이템으로 검색 가능
    - 초기화 가능
+
+
 2. Apex Chart 
+
+
   <img src="images/itemsApex_hover.png">
+
    - 각 item 정보들로 그래프를 그려줌
+
 3. Item Hover/Click
    - Hover 시
+
    <img src="images/items_hover.png">
+
+
    - Click 시
+
+
    <img src="images/items_click.png">
 
 ## Units Page
@@ -66,16 +81,28 @@ npm run serve
 <img src="images/Units.png">
 
 1. 필터기능
+
+
   <img src="images/Items_Filter.png">
+
+
   - Unit Tratis, Cost로 필터기능
   - Cost는 or 필터, Traits는 And 필터
   - 초기화 가능
 2. Apex Chart
+
+
    <img src="images/UnitsApex.png">
+
    - hover시 이벤트
+
    <img src="images/UnitApex_hover.png">
+
 3. Unit Hover/Click
    - Unit Hover
+  
    <img src="images/Unit_hover.png">
+
    - Unit Click
+  
    <img src="images/Unit_Click.png">
