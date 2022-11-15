@@ -15,6 +15,15 @@ npm install
 npm run serve
 ```
 
+# 사용 기술(Front)
+
+1. Vue.js(Vue Cli)
+2. Vue Router
+3. Vuex
+4. VueApexChart
+5. Bootstrap 5.0
+6. Vue AOS
+
 # Page Review
 
 - Main Page
