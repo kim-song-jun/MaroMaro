@@ -33,7 +33,7 @@ npm run serve
 
 ## Main Page
 
-<img src="images/MainPage.png">
+<img src="images/NewMainPage.png">
 
 1. 검색기능
    - 유저 닉네임으로 전적을 검색함
@@ -44,7 +44,7 @@ npm run serve
 
 ## Comps Page
 
-<img src="images/Comps.png">
+<img src="images/NewComps.png">
 
 1. 필터기능
    - Traits, Rank로 필터 가능
