@@ -1,37 +1,19 @@
 <template>
-  <!-- <SearchPage
-    v-if="pageChange == 0"
-    @inputValue="this.userName = $event"
-    @page="this.pageChange = $event"
-  ></SearchPage>
-  <ResultPage
-    v-if="pageChange == 1"
-    @inputValue="this.userName = $event"
-    @page="this.pageChange = $event"
-    :userName="this.userName"
-    :matchData="this.More(this.userName)"
-  ></ResultPage> -->
-  <!-- <SearchPage v-if="$store.state.page == 0"></SearchPage>
-  <ResultPage v-if="$store.state.page == 1"></ResultPage>
-  <ItemPage v-if="$store.state.page == 2"></ItemPage>
-  <UnitPage v-if="$store.state.page == 3"></UnitPage>
-  <TierPage v-if="$store.state.page == 4"></TierPage> -->
-  {{ this.$store.dispatch('StatUnit') }}
-  {{ this.$stroe.state.units }}
+  {{ this.$store.state.units }}
   <router-view></router-view>
 </template>
 
 <script>
-import axios from 'axios';
-import tierUnit from './assets/tierUnit.json';
-import newdata from './assets/newdata.json';
+import axios from "axios";
+import tierUnit from "./assets/tierUnit.json";
+import newdata from "./assets/newdata.json";
 
 export default {
-  name: 'App',
+  name: "App",
   data() {
     return {
       pageChange: 0,
-      userName: '',
+      userName: "",
       matchData: [],
       tierUnit,
       newdata,
@@ -115,11 +97,11 @@ export default {
     },
   },
   mounted() {
-    this.emitter.on('inputValue', (e) => {
+    this.emitter.on("inputValue", (e) => {
       this.userName = e;
       console.log(e);
     });
-    this.emitter.on('page', (e) => {
+    this.emitter.on("page", (e) => {
       this.pageChange = e;
       console.log(e);
     });
