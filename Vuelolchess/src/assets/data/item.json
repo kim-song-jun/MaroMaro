@@ -1,0 +1,68 @@
+{
+  "version": "12",
+  "items": [
+    {
+      "itemName": "TFT_Item_IonicSpark",
+      "itemId": 36,
+      "frequency": 15.24,
+      "averagePlacement": 3.98,
+      "tier": "널"
+    },
+    {
+      "itemName": "TFT_Item_FrozenHeart",
+      "itemId": 45,
+      "frequency": 5.34,
+      "averagePlacement": 4.88,
+      "tier": "널"
+    },
+    {
+      "itemName": "TFT_Item_HextechGunblade",
+      "itemId": 13,
+      "frequency": 11.24,
+      "averagePlacement": 3.98,
+      "tier": "널"
+    },
+    {
+      "itemName": "TFT_Item_WarmogsArmor",
+      "itemId": 77,
+      "frequency": 12.24,
+      "averagePlacement": 3.78,
+      "tier": "널"
+    },
+    {
+      "itemName": "TFT_Item_GuardianAngel",
+      "itemId": 94,
+      "frequency": 13.34,
+      "averagePlacement": 3.92,
+      "tier": "널"
+    },
+    {
+      "itemName": "TFT_Item_GargoyleStoneplate",
+      "itemId": 56,
+      "frequency": 14.54,
+      "averagePlacement": 4.12,
+      "tier": "널"
+    },
+    {
+      "itemName": "TFT_Item_Deathblade",
+      "itemId": 11,
+      "frequency": 11.34,
+      "averagePlacement": 4.29,
+      "tier": "널"
+    },
+    {
+      "itemName": "TFT_Item_UnstableConcoction",
+      "itemId": 49,
+      "frequency": 8.99,
+      "averagePlacement": 4.77,
+      "tier": "널"
+    },
+    {
+      "itemName": "TFT_Item_BrambleVest",
+      "itemId": 55,
+      "frequency": 7.54,
+      "averagePlacement": 3.24,
+      "tier": "널"
+    }
+  ]
+}

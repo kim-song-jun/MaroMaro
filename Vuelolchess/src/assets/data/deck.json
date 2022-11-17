@@ -1,0 +1,524 @@
+[
+  {
+    "version": "12",
+    "deckName": "4용(더미)",
+    "averagePlacement": 3.86,
+    "frequency": 8.81,
+    "tier": "널",
+    "unit": [
+      {
+        "items": null,
+        "character_id": "TFT7_Bard",
+        "itemNames": null,
+        "rarity": 6,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_DragonGold",
+        "itemNames": null,
+        "rarity": 5,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_DragonGreen",
+        "itemNames": null,
+        "rarity": 5,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Shyvana",
+        "itemNames": null,
+        "rarity": 7,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_AoShin",
+        "itemNames": null,
+        "rarity": 6,
+        "tier": 0
+      }
+    ]
+  },
+  {
+    "version": "12",
+    "deckName": "민첩사수(더미)",
+    "averagePlacement": 4.16,
+    "frequency": 2.13,
+    "tier": "널",
+    "unit": [
+      {
+        "items": null,
+        "character_id": "TFT7_Twitch",
+        "itemNames": null,
+        "rarity": 1,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Varus",
+        "itemNames": null,
+        "rarity": 2,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Rakan",
+        "itemNames": null,
+        "rarity": 2,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Seraphine",
+        "itemNames": null,
+        "rarity": 2,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_DragonGold",
+        "itemNames": null,
+        "rarity": 5,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Xayah",
+        "itemNames": null,
+        "rarity": 4,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Bard",
+        "itemNames": null,
+        "rarity": 6,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Soraka",
+        "itemNames": null,
+        "rarity": 6,
+        "tier": 0
+      }
+    ]
+  },
+  {
+    "version": "12",
+    "deckName": "세라핀 그브(더미)",
+    "averagePlacement": 3.96,
+    "frequency": 6.83,
+    "tier": "널",
+    "unit": [
+      {
+        "items": null,
+        "character_id": "TFT7_Zyra",
+        "itemNames": null,
+        "rarity": 1,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Zac",
+        "itemNames": null,
+        "rarity": 1,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Zeri",
+        "itemNames": null,
+        "rarity": 2,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Rakan",
+        "itemNames": null,
+        "rarity": 2,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Seraphine",
+        "itemNames": null,
+        "rarity": 2,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Graves",
+        "itemNames": null,
+        "rarity": 4,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Pantheon",
+        "itemNames": null,
+        "rarity": 4,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Bard",
+        "itemNames": null,
+        "rarity": 6,
+        "tier": 0
+      }
+    ]
+  },
+  {
+    "version": "12",
+    "deckName": "4용(더미)",
+    "averagePlacement": 3.86,
+    "frequency": 8.81,
+    "tier": "널",
+    "unit": [
+      {
+        "items": null,
+        "character_id": "TFT7_Bard",
+        "itemNames": null,
+        "rarity": 6,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_DragonGold",
+        "itemNames": null,
+        "rarity": 5,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_DragonGreen",
+        "itemNames": null,
+        "rarity": 5,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Shyvana",
+        "itemNames": null,
+        "rarity": 7,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_AoShin",
+        "itemNames": null,
+        "rarity": 6,
+        "tier": 0
+      }
+    ]
+  },
+  {
+    "version": "12",
+    "deckName": "민첩사수(더미)",
+    "averagePlacement": 4.16,
+    "frequency": 2.13,
+    "tier": "널",
+    "unit": [
+      {
+        "items": null,
+        "character_id": "TFT7_Twitch",
+        "itemNames": null,
+        "rarity": 1,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Varus",
+        "itemNames": null,
+        "rarity": 2,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Rakan",
+        "itemNames": null,
+        "rarity": 2,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Seraphine",
+        "itemNames": null,
+        "rarity": 2,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_DragonGold",
+        "itemNames": null,
+        "rarity": 5,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Xayah",
+        "itemNames": null,
+        "rarity": 4,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Bard",
+        "itemNames": null,
+        "rarity": 6,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Soraka",
+        "itemNames": null,
+        "rarity": 6,
+        "tier": 0
+      }
+    ]
+  },
+  {
+    "version": "12",
+    "deckName": "세라핀 그브(더미)",
+    "averagePlacement": 3.96,
+    "frequency": 6.83,
+    "tier": "널",
+    "unit": [
+      {
+        "items": null,
+        "character_id": "TFT7_Zyra",
+        "itemNames": null,
+        "rarity": 1,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Zac",
+        "itemNames": null,
+        "rarity": 1,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Zeri",
+        "itemNames": null,
+        "rarity": 2,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Rakan",
+        "itemNames": null,
+        "rarity": 2,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Seraphine",
+        "itemNames": null,
+        "rarity": 2,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Graves",
+        "itemNames": null,
+        "rarity": 4,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Pantheon",
+        "itemNames": null,
+        "rarity": 4,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Bard",
+        "itemNames": null,
+        "rarity": 6,
+        "tier": 0
+      }
+    ]
+  },
+  {
+    "version": "12",
+    "deckName": "4용(더미)",
+    "averagePlacement": 3.86,
+    "frequency": 8.81,
+    "tier": "널",
+    "unit": [
+      {
+        "items": null,
+        "character_id": "TFT7_Bard",
+        "itemNames": null,
+        "rarity": 6,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_DragonGold",
+        "itemNames": null,
+        "rarity": 5,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_DragonGreen",
+        "itemNames": null,
+        "rarity": 5,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Shyvana",
+        "itemNames": null,
+        "rarity": 7,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_AoShin",
+        "itemNames": null,
+        "rarity": 6,
+        "tier": 0
+      }
+    ]
+  },
+  {
+    "version": "12",
+    "deckName": "민첩사수(더미)",
+    "averagePlacement": 4.16,
+    "frequency": 2.13,
+    "tier": "널",
+    "unit": [
+      {
+        "items": null,
+        "character_id": "TFT7_Twitch",
+        "itemNames": null,
+        "rarity": 1,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Varus",
+        "itemNames": null,
+        "rarity": 2,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Rakan",
+        "itemNames": null,
+        "rarity": 2,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Seraphine",
+        "itemNames": null,
+        "rarity": 2,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_DragonGold",
+        "itemNames": null,
+        "rarity": 5,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Xayah",
+        "itemNames": null,
+        "rarity": 4,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Bard",
+        "itemNames": null,
+        "rarity": 6,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Soraka",
+        "itemNames": null,
+        "rarity": 6,
+        "tier": 0
+      }
+    ]
+  },
+  {
+    "version": "12",
+    "deckName": "세라핀 그브(더미)",
+    "averagePlacement": 3.96,
+    "frequency": 6.83,
+    "tier": "널",
+    "unit": [
+      {
+        "items": null,
+        "character_id": "TFT7_Zyra",
+        "itemNames": null,
+        "rarity": 1,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Zac",
+        "itemNames": null,
+        "rarity": 1,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Zeri",
+        "itemNames": null,
+        "rarity": 2,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Rakan",
+        "itemNames": null,
+        "rarity": 2,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Seraphine",
+        "itemNames": null,
+        "rarity": 2,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Graves",
+        "itemNames": null,
+        "rarity": 4,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Pantheon",
+        "itemNames": null,
+        "rarity": 4,
+        "tier": 0
+      },
+      {
+        "items": null,
+        "character_id": "TFT7_Bard",
+        "itemNames": null,
+        "rarity": 6,
+        "tier": 0
+      }
+    ]
+  }
+]

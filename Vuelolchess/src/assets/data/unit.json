@@ -1,0 +1,551 @@
+[
+  {
+    "id": 205,
+    "championId": "TFT7_Malphite",
+    "versionId": 35,
+    "frequency": 0.113,
+    "averagePlacement": 3.889,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 206,
+    "championId": "TFT7_Taliyah",
+    "versionId": 35,
+    "frequency": 0.113,
+    "averagePlacement": 4.889,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 207,
+    "championId": "TFT7_Zyra",
+    "versionId": 35,
+    "frequency": 0.113,
+    "averagePlacement": 3.667,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 208,
+    "championId": "TFT7_Sylas",
+    "versionId": 35,
+    "frequency": 0.15,
+    "averagePlacement": 4.833,
+    "threeStarFrequency": 0.15,
+    "threeStarAveragePlacement": 4.833
+  },
+  {
+    "id": 209,
+    "championId": "TFT7_Rakan",
+    "versionId": 35,
+    "frequency": 0.388,
+    "averagePlacement": 4.387,
+    "threeStarFrequency": 0.388,
+    "threeStarAveragePlacement": 4.387
+  },
+  {
+    "id": 210,
+    "championId": "TFT7_Seraphine",
+    "versionId": 35,
+    "frequency": 0.225,
+    "averagePlacement": 4.056,
+    "threeStarFrequency": 0.225,
+    "threeStarAveragePlacement": 4.056
+  },
+  {
+    "id": 211,
+    "championId": "TFT7_Nilah",
+    "versionId": 35,
+    "frequency": 0.1,
+    "averagePlacement": 4.375,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 212,
+    "championId": "TFT7_AquaticDragon",
+    "versionId": 35,
+    "frequency": 0.088,
+    "averagePlacement": 4.286,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 213,
+    "championId": "TFT7_Zoe",
+    "versionId": 35,
+    "frequency": 0.1,
+    "averagePlacement": 4.25,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 214,
+    "championId": "TFT7_Bard",
+    "versionId": 35,
+    "frequency": 0.35,
+    "averagePlacement": 3.464,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 215,
+    "championId": "TFT7_DragonGold",
+    "versionId": 35,
+    "frequency": 0.213,
+    "averagePlacement": 4.647,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 216,
+    "championId": "TFT7_Yasuo",
+    "versionId": 35,
+    "frequency": 0.175,
+    "averagePlacement": 4.714,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 217,
+    "championId": "TFT7_DragonEarth",
+    "versionId": 35,
+    "frequency": 0.2,
+    "averagePlacement": 3.75,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 218,
+    "championId": "TFT7_AoShin",
+    "versionId": 35,
+    "frequency": 0.138,
+    "averagePlacement": 3.636,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 219,
+    "championId": "TFT7_Shyvana",
+    "versionId": 35,
+    "frequency": 0.225,
+    "averagePlacement": 4.278,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 220,
+    "championId": "TFT7_Soraka",
+    "versionId": 35,
+    "frequency": 0.238,
+    "averagePlacement": 3.947,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 221,
+    "championId": "TFT7_Twitch",
+    "versionId": 35,
+    "frequency": 0.2,
+    "averagePlacement": 5.5,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 222,
+    "championId": "TFT7_DragonGuild",
+    "versionId": 35,
+    "frequency": 0.075,
+    "averagePlacement": 5.167,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 223,
+    "championId": "TFT7_Xayah",
+    "versionId": 35,
+    "frequency": 0.138,
+    "averagePlacement": 5.727,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 224,
+    "championId": "TFT7_Jayce",
+    "versionId": 35,
+    "frequency": 0.175,
+    "averagePlacement": 5.5,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 225,
+    "championId": "TFT7_Zac",
+    "versionId": 35,
+    "frequency": 0.163,
+    "averagePlacement": 4.0,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 226,
+    "championId": "TFT7_Zeri",
+    "versionId": 35,
+    "frequency": 0.138,
+    "averagePlacement": 3.364,
+    "threeStarFrequency": 0.138,
+    "threeStarAveragePlacement": 3.364
+  },
+  {
+    "id": 227,
+    "championId": "TFT7_Graves",
+    "versionId": 35,
+    "frequency": 0.263,
+    "averagePlacement": 3.81,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 228,
+    "championId": "TFT7_Pantheon",
+    "versionId": 35,
+    "frequency": 0.15,
+    "averagePlacement": 3.917,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 229,
+    "championId": "TFT7_AurelionSol",
+    "versionId": 35,
+    "frequency": 0.1,
+    "averagePlacement": 3.375,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 230,
+    "championId": "TFT7_Qiyana",
+    "versionId": 35,
+    "frequency": 0.063,
+    "averagePlacement": 2.8,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 231,
+    "championId": "TFT7_Aphelios",
+    "versionId": 35,
+    "frequency": 0.2,
+    "averagePlacement": 3.75,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 232,
+    "championId": "TFT7_Rell",
+    "versionId": 35,
+    "frequency": 0.2,
+    "averagePlacement": 3.938,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 233,
+    "championId": "TFT7_Rengar",
+    "versionId": 35,
+    "frequency": 0.2,
+    "averagePlacement": 3.5,
+    "threeStarFrequency": 0.2,
+    "threeStarAveragePlacement": 3.5
+  },
+  {
+    "id": 234,
+    "championId": "TFT7_Hecarim",
+    "versionId": 35,
+    "frequency": 0.15,
+    "averagePlacement": 5.25,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 235,
+    "championId": "TFT7_Senna",
+    "versionId": 35,
+    "frequency": 0.063,
+    "averagePlacement": 4.6,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 236,
+    "championId": "TFT7_NomsyCannoneer",
+    "versionId": 35,
+    "frequency": 0.038,
+    "averagePlacement": 5.333,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 237,
+    "championId": "TFT7b_Tristana",
+    "versionId": 35,
+    "frequency": 0.038,
+    "averagePlacement": 5.333,
+    "threeStarFrequency": 0.038,
+    "threeStarAveragePlacement": 5.333
+  },
+  {
+    "id": 238,
+    "championId": "TFT7_Sejuani",
+    "versionId": 35,
+    "frequency": 0.125,
+    "averagePlacement": 4.2,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 239,
+    "championId": "TFT7_DragonSwain",
+    "versionId": 35,
+    "frequency": 0.063,
+    "averagePlacement": 2.8,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 240,
+    "championId": "TFT7_Lillia",
+    "versionId": 35,
+    "frequency": 0.038,
+    "averagePlacement": 4.333,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 241,
+    "championId": "TFT7_Braum",
+    "versionId": 35,
+    "frequency": 0.113,
+    "averagePlacement": 5.222,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 242,
+    "championId": "TFT7_Diana",
+    "versionId": 35,
+    "frequency": 0.05,
+    "averagePlacement": 5.75,
+    "threeStarFrequency": 0.05,
+    "threeStarAveragePlacement": 5.75
+  },
+  {
+    "id": 243,
+    "championId": "TFT7_Olaf",
+    "versionId": 35,
+    "frequency": 0.075,
+    "averagePlacement": 5.167,
+    "threeStarFrequency": 0.075,
+    "threeStarAveragePlacement": 5.167
+  },
+  {
+    "id": 244,
+    "championId": "TFT7_Gnar",
+    "versionId": 35,
+    "frequency": 0.063,
+    "averagePlacement": 5.2,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 245,
+    "championId": "TFT7_DragonGreen",
+    "versionId": 35,
+    "frequency": 0.163,
+    "averagePlacement": 4.231,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 246,
+    "championId": "TFT7_Jax",
+    "versionId": 35,
+    "frequency": 0.1,
+    "averagePlacement": 4.25,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 247,
+    "championId": "TFT7_DragonPurple",
+    "versionId": 35,
+    "frequency": 0.05,
+    "averagePlacement": 4.25,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 248,
+    "championId": "TFT7_Leona",
+    "versionId": 35,
+    "frequency": 0.088,
+    "averagePlacement": 5.143,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 249,
+    "championId": "TFT7_Ezreal",
+    "versionId": 35,
+    "frequency": 0.05,
+    "averagePlacement": 5.25,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 250,
+    "championId": "TFT7_Nasus",
+    "versionId": 35,
+    "frequency": 0.088,
+    "averagePlacement": 4.429,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 251,
+    "championId": "TFT7_Varus",
+    "versionId": 35,
+    "frequency": 0.125,
+    "averagePlacement": 5.3,
+    "threeStarFrequency": 0.125,
+    "threeStarAveragePlacement": 5.3
+  },
+  {
+    "id": 252,
+    "championId": "TFT7_Lux",
+    "versionId": 35,
+    "frequency": 0.088,
+    "averagePlacement": 6.286,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 253,
+    "championId": "TFT7_Vladimir",
+    "versionId": 35,
+    "frequency": 0.075,
+    "averagePlacement": 6.5,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 254,
+    "championId": "TFT7_Skarner",
+    "versionId": 35,
+    "frequency": 0.063,
+    "averagePlacement": 6.2,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 255,
+    "championId": "TFT7_Nidalee",
+    "versionId": 35,
+    "frequency": 0.063,
+    "averagePlacement": 6.2,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 256,
+    "championId": "TFT7_Wukong",
+    "versionId": 35,
+    "frequency": 0.025,
+    "averagePlacement": 4.0,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 257,
+    "championId": "TFT7_Yone",
+    "versionId": 35,
+    "frequency": 0.063,
+    "averagePlacement": 4.4,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 258,
+    "championId": "TFT7_DragonBlue",
+    "versionId": 35,
+    "frequency": 0.063,
+    "averagePlacement": 5.4,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 259,
+    "championId": "TFT7_NomsyEvoker",
+    "versionId": 35,
+    "frequency": 0.025,
+    "averagePlacement": 3.0,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 260,
+    "championId": "TFT7b_Lulu",
+    "versionId": 35,
+    "frequency": 0.025,
+    "averagePlacement": 3.0,
+    "threeStarFrequency": 0.025,
+    "threeStarAveragePlacement": 3.0
+  },
+  {
+    "id": 261,
+    "championId": "TFT7_Sett",
+    "versionId": 35,
+    "frequency": 0.025,
+    "averagePlacement": 5.0,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 262,
+    "championId": "TFT7_Karma",
+    "versionId": 35,
+    "frequency": 0.038,
+    "averagePlacement": 4.667,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 263,
+    "championId": "TFT7_Kaisa",
+    "versionId": 35,
+    "frequency": 0.063,
+    "averagePlacement": 3.2,
+    "threeStarFrequency": 0.0,
+    "threeStarAveragePlacement": 0.0
+  },
+  {
+    "id": 264,
+    "championId": "TFT7_LeeSin",
+    "versionId": 35,
+    "frequency": 0.075,
+    "averagePlacement": 3.833,
+    "threeStarFrequency": 0.075,
+    "threeStarAveragePlacement": 3.833
+  },
+  {
+    "id": 265,
+    "championId": "TFT7b_Volibear",
+    "versionId": 35,
+    "frequency": 0.063,
+    "averagePlacement": 4.4,
+    "threeStarFrequency": 0.063,
+    "threeStarAveragePlacement": 4.4
+  }
+]
