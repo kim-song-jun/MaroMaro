@@ -22,7 +22,8 @@ import Header from '../Header.vue';
 import Filter from '../Filter/DeckFilterContainer.vue';
 import Deck from './TierDeck.vue';
 import Footer from '../Footer.vue';
-import tierDeck from '../../assets/tierDeck.json';
+// import tierDeck from '../../assets/tierDeck.json';
+import realDeck from '../../assets/data/deck.json';
 
 export default {
   components: {
@@ -34,7 +35,8 @@ export default {
   data() {
     return {
       modalOpen: 0,
-      tierDeck,
+      // tierDeck,
+      realDeck,
     };
   },
   methods: {
@@ -45,10 +47,10 @@ export default {
       this.$store.dispatch('filterDecks', this.$store.state.deckFilter);
     },
     initTierDecks() {
-      this.$store.commit('SetFilteredDecks', [...this.tierDeck]);
+      this.$store.commit('SetFilteredDecks', [...this.realDeck]);
     },
     excute() {
-      this.$store.commit('SetTierDeck', [...this.tierDeck]);
+      this.$store.commit('SetTierDeck', [...this.realDeck]);
     },
   },
   created() {

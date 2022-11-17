@@ -268,14 +268,14 @@ const store = createStore({
       this.dispatch("rankFilter", filter.rank);
       this.dispatch("DeckTraitsFilter", filter.trait);
     },
-    rankFilter(context, ranks) {
-      if (ranks.length == 0) {
+    rankFilter(context, tiers) {
+      if (tiers.length == 0) {
         return;
       }
       let temp = [];
-      for (let i = 0; i < ranks.length; i++) {
+      for (let i = 0; i < tiers.length; i++) {
         temp = temp.concat(
-          this.state.tierDeck.filter((deck) => deck.rank == ranks[i])
+          this.state.tierDeck.filter((deck) => deck.tier == tiers[i])
         );
       }
       this.commit("SetFilteredDecks", temp);
