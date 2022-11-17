@@ -1,24 +1,26 @@
 <template>
-  <UnitInfo
-    v-if="modalOpen"
-    @close="modalOpen = 0"
-    :champName="this.champName"
-  ></UnitInfo>
-  <div class="unit_container">
-    <div class="header-content">
-      <Header></Header>
-    </div>
-    <div class="sidebar-a"></div>
-    <div class="sidebar-b"></div>
-    <div class="filter-content">
-      <Filter @reset="reset" @content="changeContent"></Filter>
-      <div class="unit-content">
-        <UnitTable v-if="container === 0" @open="showModal"></UnitTable>
-        <UnitApex v-if="container === 1"></UnitApex>
+  <div>
+    <UnitInfo
+      v-if="modalOpen"
+      @close="modalOpen = 0"
+      :champName="this.champName"
+    ></UnitInfo>
+    <div class="unit_container">
+      <div class="header-content">
+        <Header></Header>
       </div>
-    </div>
-    <div class="footer-content">
-      <Footer></Footer>
+      <div class="sidebar-a"></div>
+      <div class="sidebar-b"></div>
+      <div class="filter-content">
+        <Filter @reset="reset" @content="changeContent"></Filter>
+        <div class="unit-content">
+          <UnitTable v-if="container === 0" @open="showModal"></UnitTable>
+          <UnitApex v-if="container === 1"></UnitApex>
+        </div>
+      </div>
+      <div class="footer-content">
+        <Footer></Footer>
+      </div>
     </div>
   </div>
 </template>
@@ -32,6 +34,7 @@ import UnitInfo from './UnitInfo.vue';
 import Footer from '../Footer.vue';
 import newdata from '../../assets/newdata.json';
 import tierUnit from '../../assets/tierUnit.json';
+import realUnit from '../../assets/data/unit.json';
 
 export default {
   components: {
@@ -46,6 +49,7 @@ export default {
     return {
       tierUnit,
       newdata,
+      realUnit,
       modalOpen: 0,
       container: 0,
       champName: '',
@@ -66,34 +70,28 @@ export default {
     changeContent(content) {
       this.container = content;
     },
-    GetChamp(champName) {
-      var temp = {};
-      for (let i = 0; i < this.newdata.setData[0].champions.length; i++) {
-        let name = this.newdata.setData[0].champions[i].apiName.replace(
-          / /g,
-          ''
-        );
-        if (name === champName) temp = this.newdata.setData[0].champions[i];
+    GetUnits() {
+      console.log('getUnits()');
+      const temp = [];
+      for (let j = 0; j < this.realUnit.length; j++) {
+        for (let i = 0; i < this.newdata.setData[0].champions.length; i++) {
+          if (
+            this.realUnit[j].championId ==
+            this.newdata.setData[0].champions[i].apiName
+          )
+            temp.push(this.newdata.setData[0].champions[i]);
+        }
       }
       return temp;
     },
-    AddTraits() {
-      for (let i = 0; i < this.tierUnit.units.length; i++) {
-        this.GetChamp(this.tierUnit.units[i].ID);
-        this.tierUnit.units[i].traits = this.GetChamp(
-          this.tierUnit.units[i].ID
-        ).traits;
-      }
-    },
     initTierUnits() {
-      this.$store.commit('SetFilteredUnits', { ...this.tierUnit.units });
+      this.$store.commit('SetFilteredUnits', this.GetUnits());
     },
     excute() {
-      this.$store.commit('SetTierUnit', { ...this.tierUnit });
+      this.$store.commit('SetTierUnit', this.GetUnits());
     },
   },
   created() {
-    this.AddTraits();
     this.initTierUnits();
     this.excute();
   },
@@ -136,5 +134,6 @@ export default {
   height: 94%;
 }
 .unit-content {
+  background-color: rgb(10, 10, 26);
 }
 </style>
