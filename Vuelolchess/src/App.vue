@@ -16,6 +16,8 @@
   <ItemPage v-if="$store.state.page == 2"></ItemPage>
   <UnitPage v-if="$store.state.page == 3"></UnitPage>
   <TierPage v-if="$store.state.page == 4"></TierPage> -->
+  {{ this.$store.dispatch('StatUnit') }}
+  {{ this.$stroe.state.units }}
   <router-view></router-view>
 </template>
 

@@ -22,9 +22,13 @@ const store = createStore({
       items: [],
       filteredItems: [],
       itemFilter: { base: 0, type: [] },
+      units: [],
     };
   },
   mutations: {
+    SetUnits(state, inputValue) {
+      state.page = inputValue;
+    },
     SetPage(state, inputValue) {
       state.page = inputValue;
     },
@@ -214,6 +218,64 @@ const store = createStore({
           console.log(result.data);
           console.log(result);
           context.commit('SetMatchData5', result.data);
+        })
+        .catch((e) => {
+          console.log('error-GetMatchhistory');
+          console.log(e);
+        });
+    },
+    StatUnit(context) {
+      console.log(`/stat/unit`);
+      axios
+        .get(`/stat/unit`, {
+          transformRequest: [
+            (data, headers) => {
+              delete headers.common['X-Requested-With'];
+              return data;
+            },
+          ],
+        })
+        .then((result) => {
+          //요청 성공시 가져오는 코드
+          console.log(
+            `/stat/unit : ${result.data.sort(function (a, b) {
+              // averagePlacement 별로 내림차순 정렬
+              if (a.averagePlacement > b.averagePlacement) return -1;
+              if (a.averagePlacement < b.averagePlacement) return 1;
+
+              // averagePlacement 내림차순 정렬된 상태에서 frequency별로 내림차순 정렬
+              if (a.frequency > b.frequency) return -1;
+              if (a.frequency < b.frequency) return 1;
+            })}`
+          );
+          let dataLength = result.data.length;
+          let S = dataLength * 0.11; // 11%
+          let A = dataLength * 0.23; // 23%
+          let B = dataLength * 0.4; // 40%
+          let C = dataLength * 0.6; // 60%
+          let D = dataLength * 0.77; // 77%
+          // let F = dataLength; // 100%
+
+          for (let i = 1; i <= dataLength; i++) {
+            // S
+            if (i < S) {
+              result.data[i].rank = 'S';
+            } else if (i < A) {
+              result.data[i].rank = 'A';
+            } else if (i < B) {
+              result.data[i].rank = 'B';
+            } else if (i < C) {
+              result.data[i].rank = 'C';
+            } else if (i < D) {
+              result.data[i].rank = 'D';
+            } else {
+              result.data[i].rank = 'F';
+            }
+          }
+
+          console.log(result.data);
+          console.log(result);
+          context.commit('SetUnits', result.data);
         })
         .catch((e) => {
           console.log('error-GetMatchhistory');
