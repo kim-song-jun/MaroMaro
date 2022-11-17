@@ -31,7 +31,8 @@ import ItemApex from './ItemApex.vue';
 import ItemInfo from './ItemInfo.vue';
 import Footer from '../Footer.vue';
 import newdata from '../../assets/newdata.json';
-import tierItem from '../../assets/tierItem.json';
+// import tierItem from '../../assets/tierItem.json';
+import realItem from '../../assets/data/item.json';
 
 export default {
   components: {
@@ -48,7 +49,8 @@ export default {
       itemID: 0,
       container: 0,
       newdata,
-      tierItem,
+      // tierItem,
+      realItem,
     };
   },
   methods: {
@@ -68,9 +70,9 @@ export default {
     },
     GetItems() {
       const temp = [];
-      for (let j = 0; j < this.tierItem.items.length; j++) {
+      for (let j = 0; j < this.realItem.items.length; j++) {
         for (let i = 0; i < this.newdata.items.length; i++) {
-          if (this.tierItem.items[j].ID == this.newdata.items[i].id)
+          if (this.realItem.items[j].itemId == this.newdata.items[i].id)
             temp.push(this.newdata.items[i]);
         }
       }

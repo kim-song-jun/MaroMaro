@@ -13,7 +13,8 @@
 import { isFlowBaseAnnotation } from '@babel/types';
 import VueApexCharts from 'vue3-apexcharts';
 import newdata from '../../assets/newdata.json';
-import tierItem from '../../assets/tierItem.json';
+// import tierItem from '../../assets/tierItem.json';
+import realItem from '../../assets/data/item.json';
 
 export default {
   components: {
@@ -22,7 +23,8 @@ export default {
   data() {
     return {
       newdata,
-      tierItem,
+      // tierItem,
+      realItem,
       series: [],
       chartOptions: {
         chart: {
@@ -96,13 +98,13 @@ export default {
       let items = this.$store.state.filteredItems;
       let temp = [];
       for (let i in items) {
-        for (let j in this.tierItem.items) {
-          if (items[i].id == this.tierItem.items[j].ID) {
+        for (let j in this.realItem.items) {
+          if (items[i].id == this.realItem.items[j].itemId) {
             let item = { name: '', data: [] };
-            item.name = this.tierItem.items[j].name;
+            item.name = this.realItem.items[j].name;
             item.data.push([
-              this.tierItem.items[j].Frequency,
-              this.tierItem.items[j].Placement,
+              this.realItem.items[j].frequency,
+              this.realItem.items[j].averagePlacement,
             ]);
             temp.push(item);
           }
@@ -115,9 +117,9 @@ export default {
       let option = { ...this.chartOptions };
       let temp = [];
       for (let i in items) {
-        for (let j in this.tierItem.items) {
-          if (items[i].id == this.tierItem.items[j].ID) {
-            let url = this.GetItemUrl(this.tierItem.items[j].ID);
+        for (let j in this.realItem.items) {
+          if (items[i].id == this.realItem.items[j].itemId) {
+            let url = this.GetItemUrl(this.realItem.items[j].itemId);
             temp.push(url);
           }
         }

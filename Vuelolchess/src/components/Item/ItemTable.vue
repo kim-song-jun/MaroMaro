@@ -5,17 +5,15 @@
         <th class="table-th"><div class="table-item">Item</div></th>
         <th class="table-th"><div class="table-tier">Tier</div></th>
         <th class="table-th"><div class="table-avg">Avg Place</div></th>
-        <th class="table-th"><div class="table-winrate">Winrate</div></th>
+        <!-- <th class="table-th"><div class="table-winrate">Winrate</div></th> -->
         <th class="table-th">
           <div class="table-frequency">Frequency</div>
         </th>
       </thead>
       <tbody>
         <tr
-
           v-for="(item, index) in this.$store.state.filteredItems"
           :key="index"
-
         >
           <td class="table-td">
             <div class="table-item">
@@ -65,12 +63,18 @@
             </div>
           </td>
           <td class="table-td">
-            <div class="table-tier">{{ this.tierItem.items[index].rank }}</div>
+            <div class="table-tier">{{ this.realItem.items[index].tier }}</div>
           </td>
-          <td class="table-td"><div class="table-avg">3.53</div></td>
-          <td class="table-td"><div class="table-winrate">22.9%</div></td>
           <td class="table-td">
-            <div class="table-frequency">24,258 (2.5%)</div>
+            <div class="table-avg">
+              {{ this.realItem.items[index].averagePlacement }}
+            </div>
+          </td>
+          <!-- <td class="table-td"><div class="table-winrate">22.9%</div></td> -->
+          <td class="table-td">
+            <div class="table-frequency">
+              {{ this.realItem.items[index].frequency }}
+            </div>
           </td>
         </tr>
       </tbody>
@@ -80,28 +84,30 @@
 
 <script>
 import newdata from '../../assets/newdata.json';
-import tierItem from '../../assets/tierItem.json';
+// import tierItem from '../../assets/tierItem.json';
+import realItem from '../../assets/data/item.json';
 
 export default {
   data() {
     return {
       newdata,
-      tierItem,
+      // tierItem,
+      realItem,
     };
   },
   methods: {
     showModal(id) {
-      this.$emit("open", 1, id);
+      this.$emit('open', 1, id);
     },
     GetItemUrl(item) {
       for (let j in this.newdata.items) {
         if (item == this.newdata.items[j].id) {
           let temp = this.newdata.items[j].icon
             .toLowerCase()
-            .split(".")
+            .split('.')
             .slice(0, -1);
           return `https://raw.communitydragon.org/latest/game/${temp.join(
-            "."
+            '.'
           )}.png`;
         }
       }
