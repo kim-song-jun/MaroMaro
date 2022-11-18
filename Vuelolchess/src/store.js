@@ -16,7 +16,7 @@ const store = createStore({
       tierDeck: [],
       filteredDecks: [],
       deckFilter: { rank: [], trait: [] },
-      tierUnit: {},
+      tierUnit: [],
       filteredUnits: [],
       unitFilter: { cost: [], trait: [] },
       items: [],
@@ -268,14 +268,14 @@ const store = createStore({
       this.dispatch("rankFilter", filter.rank);
       this.dispatch("DeckTraitsFilter", filter.trait);
     },
-    rankFilter(context, ranks) {
-      if (ranks.length == 0) {
+    rankFilter(context, tiers) {
+      if (tiers.length == 0) {
         return;
       }
       let temp = [];
-      for (let i = 0; i < ranks.length; i++) {
+      for (let i = 0; i < tiers.length; i++) {
         temp = temp.concat(
-          this.state.tierDeck.filter((deck) => deck.rank == ranks[i])
+          this.state.tierDeck.filter((deck) => deck.tier == tiers[i])
         );
       }
       this.commit("SetFilteredDecks", temp);
@@ -298,7 +298,7 @@ const store = createStore({
       context.commit("SetFilteredUnits", origin);
     },
     filterUnits(context, filter) {
-      this.dispatch("initUnits", this.state.tierUnit.units);
+      this.dispatch("initUnits", this.state.tierUnit);
       this.dispatch("costsFilter", filter.cost);
       this.dispatch("ChampTraitsFilter", filter.trait);
     },
@@ -309,7 +309,7 @@ const store = createStore({
       let temp = [];
       for (let i = 0; i < costs.length; i++) {
         temp = temp.concat(
-          this.state.tierUnit.units.filter((unit) => unit.rarity == costs[i])
+          this.state.tierUnit.filter((unit) => unit.cost == costs[i])
         );
       }
       this.commit("SetFilteredUnits", temp);

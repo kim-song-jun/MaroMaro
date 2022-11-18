@@ -4,42 +4,42 @@
     "deckName": "4용(더미)",
     "averagePlacement": 3.86,
     "frequency": 8.81,
-    "tier": "널",
+    "tier": "S",
     "unit": [
       {
         "items": null,
         "character_id": "TFT7_Bard",
         "itemNames": null,
         "rarity": 6,
-        "tier": 0
+        "tier": 3
       },
       {
         "items": null,
         "character_id": "TFT7_DragonGold",
         "itemNames": null,
         "rarity": 5,
-        "tier": 0
+        "tier": 3
       },
       {
         "items": null,
         "character_id": "TFT7_DragonGreen",
         "itemNames": null,
         "rarity": 5,
-        "tier": 0
+        "tier": 3
       },
       {
         "items": null,
         "character_id": "TFT7_Shyvana",
         "itemNames": null,
         "rarity": 7,
-        "tier": 0
+        "tier": 3
       },
       {
         "items": null,
         "character_id": "TFT7_AoShin",
         "itemNames": null,
         "rarity": 6,
-        "tier": 0
+        "tier": 3
       }
     ]
   },
@@ -48,7 +48,7 @@
     "deckName": "민첩사수(더미)",
     "averagePlacement": 4.16,
     "frequency": 2.13,
-    "tier": "널",
+    "tier": "S",
     "unit": [
       {
         "items": null,
@@ -113,7 +113,7 @@
     "deckName": "세라핀 그브(더미)",
     "averagePlacement": 3.96,
     "frequency": 6.83,
-    "tier": "널",
+    "tier": "S",
     "unit": [
       {
         "items": null,
@@ -178,7 +178,7 @@
     "deckName": "4용(더미)",
     "averagePlacement": 3.86,
     "frequency": 8.81,
-    "tier": "널",
+    "tier": "S",
     "unit": [
       {
         "items": null,
@@ -222,7 +222,7 @@
     "deckName": "민첩사수(더미)",
     "averagePlacement": 4.16,
     "frequency": 2.13,
-    "tier": "널",
+    "tier": "S",
     "unit": [
       {
         "items": null,
@@ -287,7 +287,7 @@
     "deckName": "세라핀 그브(더미)",
     "averagePlacement": 3.96,
     "frequency": 6.83,
-    "tier": "널",
+    "tier": "S",
     "unit": [
       {
         "items": null,
@@ -352,7 +352,7 @@
     "deckName": "4용(더미)",
     "averagePlacement": 3.86,
     "frequency": 8.81,
-    "tier": "널",
+    "tier": "S",
     "unit": [
       {
         "items": null,
@@ -396,7 +396,7 @@
     "deckName": "민첩사수(더미)",
     "averagePlacement": 4.16,
     "frequency": 2.13,
-    "tier": "널",
+    "tier": "S",
     "unit": [
       {
         "items": null,
@@ -461,7 +461,7 @@
     "deckName": "세라핀 그브(더미)",
     "averagePlacement": 3.96,
     "frequency": 6.83,
-    "tier": "널",
+    "tier": "S",
     "unit": [
       {
         "items": null,

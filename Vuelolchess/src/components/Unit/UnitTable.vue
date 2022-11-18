@@ -5,7 +5,7 @@
         <th class="table-th"><div class="table-item">Unit</div></th>
         <th class="table-th"><div class="table-tier">Tier</div></th>
         <th class="table-th"><div class="table-avg">Avg Place</div></th>
-        <th class="table-th"><div class="table-winrate">Winrate</div></th>
+        <!-- <th class="table-th"><div class="table-winrate">Winrate</div></th> -->
         <th class="table-th">
           <div class="table-frequency">Frequency</div>
         </th>
@@ -23,10 +23,10 @@
                 <a>
                   <img
                     class="unit-img"
-                    :src="GetChampionUrl(unit.ID)"
-                    :style="GetChampBorderByCost(unit.rarity)"
+                    :src="GetChampionUrl(unit.apiName)"
+                    :style="GetChampBorderByCost(unit.cost)"
                     alt="itemImg"
-                    @click="showModal(unit.ID)"
+                    @click="showModal(unit.apiName)"
                   />
                 </a>
                 <div class="tip-container">
@@ -38,7 +38,7 @@
                   <p class="tip-detail">
                     <br />
                     traits:<img
-                      v-for="(trait, i) in GetChamp(unit.ID).traits"
+                      v-for="(trait, i) in unit.traits"
                       :key="i"
                       class="tip-detail-image"
                       :src="GetTraitUrl(trait)"
@@ -62,10 +62,16 @@
             </div>
           </td>
           <td class="table-td"><div class="table-tier">S</div></td>
-          <td class="table-td"><div class="table-avg">3.53</div></td>
-          <td class="table-td"><div class="table-winrate">22.9%</div></td>
           <td class="table-td">
-            <div class="table-frequency">24,258 (2.5%)</div>
+            <div class="table-avg">
+              {{ this.realUnit[index].averagePlacement }}
+            </div>
+          </td>
+          <!-- <td class="table-td"><div class="table-winrate">22.9%</div></td> -->
+          <td class="table-td">
+            <div class="table-frequency">
+              {{ this.realUnit[index].frequency }}
+            </div>
           </td>
         </tr>
       </tbody>
@@ -75,34 +81,36 @@
 
 <script>
 import newdata from '../../assets/newdata.json';
+import realUnit from '../../assets/data/unit.json';
 
 export default {
-  props: ["cost", "traits"],
+  props: ['cost', 'traits'],
   data() {
     return {
       newdata,
+      realUnit,
       championBorderStyle: [
-        "border:solid 2px gray;",
-        "border:solid 2px green;",
-        "border:solid 2px blue;",
-        "border:solid 2px purple;",
-        "border:solid 2px #ffd700;",
+        'border:solid 2px gray;',
+        'border:solid 2px green;',
+        'border:solid 2px blue;',
+        'border:solid 2px purple;',
+        'border:solid 2px #ffd700;',
       ],
     };
   },
   methods: {
     showModal(name) {
-      this.$emit("open", 1, name);
+      this.$emit('open', 1, name);
     },
     GetItemUrl(item) {
       for (let j in this.newdata.items) {
         if (item == this.newdata.items[j].id) {
           let temp = this.newdata.items[j].icon
             .toLowerCase()
-            .split(".")
+            .split('.')
             .slice(0, -1);
           return `https://raw.communitydragon.org/latest/game/${temp.join(
-            "."
+            '.'
           )}.png`;
         }
       }
@@ -112,7 +120,7 @@ export default {
       for (let i = 0; i < this.newdata.setData[0].champions.length; i++) {
         let name = this.newdata.setData[0].champions[i].apiName.replace(
           / /g,
-          ""
+          ''
         );
         if (name === champName) temp = this.newdata.setData[0].champions[i];
       }
@@ -123,10 +131,10 @@ export default {
         if (this.newdata.setData[0].traits[i].name == traitName) {
           let temp = this.newdata.setData[0].traits[i].icon
             .toLowerCase()
-            .split(".")
+            .split('.')
             .slice(0, -1);
           return `https://raw.communitydragon.org/latest/game/${temp.join(
-            "."
+            '.'
           )}.png`;
         }
       }
@@ -153,21 +161,21 @@ export default {
           if (this.newdata.setData[i].champions[j].apiName == championID) {
             let temp = this.newdata.setData[i].champions[j].icon
               .toLowerCase()
-              .split("/");
+              .split('/');
             // console.log(temp);
             // let newUrl = temp.slice(0, -1);
-            let newUrl2 = temp.slice(-1)[0].split(".");
+            let newUrl2 = temp.slice(-1)[0].split('.');
             // console.log(newUrl);
             // console.log(newUrl2);
-            if (newUrl2[0] == "tft7_volibear") {
+            if (newUrl2[0] == 'tft7_volibear') {
               return `https://raw.communitydragon.org/latest/game/assets/characters/${championID.toLowerCase()}/hud/${
                 newUrl2[0]
               }_square.${newUrl2[1].slice(0, 8)}.png`;
-            } else if (newUrl2[0] == "tft7_zippy") {
+            } else if (newUrl2[0] == 'tft7_zippy') {
               return `https://raw.communitydragon.org/latest/game/assets/characters/${championID.toLowerCase()}/hud/icons2d/${
                 newUrl2[0]
               }_square.${newUrl2[1]}.png`;
-            } else if (newUrl2[0] == "tft7_dragongreen") {
+            } else if (newUrl2[0] == 'tft7_dragongreen') {
               return `https://raw.communitydragon.org/latest/game/assets/characters/${championID.toLowerCase()}/hud/tft7_jadedragon_square.${newUrl2[1].slice(
                 0,
                 8
@@ -288,7 +296,7 @@ table tr:hover {
 }
 .table-td .table-avg {
   font-size: 16px;
-  color: rgb(15, 67, 73);
+  color: whitesmoke;
 }
 .table-td .table-winrate {
   font-size: 14px;

@@ -14,6 +14,7 @@ import { isFlowBaseAnnotation } from '@babel/types';
 import VueApexCharts from 'vue3-apexcharts';
 import newdata from '../../assets/newdata.json';
 import tierUnit from '../../assets/tierUnit.json';
+import realUnit from '../../assets/data/unit.json';
 
 export default {
   components: {
@@ -23,6 +24,7 @@ export default {
     return {
       newdata,
       tierUnit,
+      realUnit,
       series: [],
       chartOptions: {
         chart: {
@@ -41,9 +43,11 @@ export default {
         colors: ['#ffffff', '#ffffff'],
         xaxis: {
           tickAmount: 10,
-          min: -5,
-          max: 10,
+          min: 0,
           labels: {
+            formatter: function (val) {
+              return val.toFixed(2);
+            },
             style: {
               colors: '#ffffff',
               fontSize: '12px',
@@ -137,13 +141,13 @@ export default {
       let units = this.$store.state.filteredUnits;
       let temp = [];
       for (let i in units) {
-        for (let j in this.tierUnit.units) {
-          if (units[i].ID == this.tierUnit.units[j].ID) {
+        for (let j in this.realUnit) {
+          if (units[i].apiName == this.realUnit[j].championId) {
             let unit = { name: '', data: [] };
-            unit.name = this.tierUnit.units[j].name;
+            unit.name = units[i].name;
             unit.data.push([
-              this.tierUnit.units[j].stars[0].Frequency,
-              this.tierUnit.units[j].stars[0].Placement,
+              this.realUnit[j].frequency,
+              this.realUnit[j].averagePlacement,
             ]);
             temp.push(unit);
           }
@@ -156,9 +160,9 @@ export default {
       let option = { ...this.chartOptions };
       let temp = [];
       for (let i in units) {
-        for (let j in this.tierUnit.units) {
-          if (units[i].ID == this.tierUnit.units[j].ID) {
-            let url = this.GetChampionUrl(units[i].ID);
+        for (let j in this.realUnit) {
+          if (units[i].apiName == this.realUnit[j].championId) {
+            let url = this.GetChampionUrl(units[i].apiName);
             temp.push(url);
           }
         }

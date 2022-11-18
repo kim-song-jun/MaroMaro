@@ -11,12 +11,12 @@
       <div class="my-tier-main">
         <img
           style="margin-right: 1%"
-          :src="require(`../../assets/tier${tier.rank}.png`)"
+          :src="require(`../../assets/tier${tier.tier}.png`)"
           class="row-item my-tier-img"
         />
         <div class="row-item my-tier-deck-name">
           <strong class="my-tier-deck-main" style="color: white">{{
-            tier.mainDeckName
+            tier.deckName
           }}</strong>
           <br />
           <p class="my-tier-deck-sub">{{ tier.subDeckName }}</p>
@@ -30,7 +30,7 @@
           <div
             style="align-self: baseline"
             class="my-tier-champion"
-            v-for="(j, i) in tier.deckUnit"
+            v-for="(j, i) in tier.unit"
             :key="i"
           >
             <div class="my-tier-champion-stars">
@@ -48,7 +48,7 @@
               height="44"
             />
             <div class="my-tier-champion-name">
-              {{ j.character_id.slice(5) }}
+              {{ this.getChampName(j.character_id) }}
             </div>
           </div>
         </div>
@@ -56,13 +56,13 @@
           <div class="col-item" style="text-align: center; width: 100%">
             Avg Place:
             <strong class="my-tier-Avg" style="color: white">{{
-              tier.placementRate
+              tier.averagePlacement
             }}</strong>
           </div>
           <div class="col-item" style="width: 100%; text-align: center">
-            Pick Rate:
+            Frequency:
             <strong class="my-tier-Pick" style="color: white">{{
-              tier.placementrate
+              tier.frequency
             }}</strong>
           </div>
         </div>
@@ -73,7 +73,7 @@
           <div
             class="my-tier-champion"
             style="width: 14%"
-            v-for="(j, i) in tier.carryUnit"
+            v-for="(j, i) in tier.unit"
             :key="i"
           >
             <img
@@ -129,6 +129,13 @@ export default {
   },
   // components: { UserTabs },
   methods: {
+    getChampName(championID) {
+      for (let j in this.newdata.setData[0].champions) {
+        if (this.newdata.setData[0].champions[j].apiName == championID) {
+          return this.newdata.setData[0].champions[j].name.replace(/ /g, '');
+        }
+      }
+    },
     GetChampionUrl(championID) {
       // get url by champion ID
       // ex) TFT7_NomsyCannonee
@@ -177,25 +184,8 @@ export default {
       }
     },
     GetItemUrl(item) {
-      // console.log(item);
-      // for (let j in newdata.items) {
-      //   if (item == newdata.items[j].id) {
-      //     console.log(
-      //       `https://raw.communitydragon.org/latest/game/${newdata.items[j].icon
-      //         .toLowerCase()
-      //         .slice(0, -4)}.png`
-      //     );
-      //     return `https://raw.communitydragon.org/latest/game/${newdata.items[
-      //       j
-      //     ].icon
-      //       .toLowerCase()
-      //       .slice(0, -4)}.png`;
-      //   }
-      // }
-      // console.log(item)
       for (let j in newdata.items) {
         if (item == newdata.items[j].id) {
-          // console.log(newdata.items[j].icon.toLowerCase().split('.'));
           let temp = newdata.items[j].icon
             .toLowerCase()
             .split('.')
@@ -321,7 +311,7 @@ img {
 .my-tier-champion-name {
   text-align: center;
   width: 100%;
-  font-size: small;
+  font-size: x-small;
 }
 .my-tier-APtext {
   width: 25%;
