@@ -1,5 +1,5 @@
-import { createStore } from "vuex";
-import axios from "axios";
+import { createStore } from 'vuex';
+import axios from 'axios';
 // import TierUnit from './assets/tierUnit.json';
 // import Newdata from './assets/newdata.json';
 
@@ -7,12 +7,7 @@ const store = createStore({
   state() {
     return {
       page: 0,
-      name: "",
-      matchData: [],
-      matchData2: [],
-      matchData3: [],
-      matchData4: [],
-      matchData5: [],
+      name: '',
       tierDeck: [],
       filteredDecks: [],
       deckFilter: { rank: [], trait: [] },
@@ -37,18 +32,6 @@ const store = createStore({
     },
     SetMatchData(state, inputValue) {
       state.matchData = inputValue;
-    },
-    SetMatchData2(state, inputValue) {
-      state.matchData2 = inputValue;
-    },
-    SetMatchData3(state, inputValue) {
-      state.SetMatchData3 = inputValue;
-    },
-    SetMatchData4(state, inputValue) {
-      state.SetMatchData4 = inputValue;
-    },
-    SetMatchData5(state, inputValue) {
-      state.SetMatchData5 = inputValue;
     },
     SetTierDeck(state, inputValue) {
       state.tierDeck = inputValue;
@@ -89,16 +72,16 @@ const store = createStore({
   },
   // ajax 요청 받는거
   actions: {
-    GetMatchHistory(context, name) {
+    GetMatchHistoryDev(context, name) {
       console.log(`/GetMatchHistory/${name}`);
       axios
         .get(
           // name: 병그니, 액정깨기장인, ..
-          `/GetMatchHistory/${name}`,
+          `http://yukmaro.cafe24.com/his/GetMatchHistory/${name}`,
           {
             transformRequest: [
               (data, headers) => {
-                delete headers.common["X-Requested-With"];
+                delete headers.common['X-Requested-With'];
                 return data;
               },
             ],
@@ -109,24 +92,24 @@ const store = createStore({
           console.log(`GetMatchHistory: ${result.data}`);
           console.log(result.data);
           console.log(result);
-          context.commit("SetMatchData5", result.data);
+          context.commit('SetMatchData', result.data);
         })
         .catch((e) => {
-          console.log("error-GetMatchhistory");
+          console.log('error-GetMatchhistory');
           console.log(e);
         });
     },
-    // cafe24에서 데이터 가져오기
-    GetMatchHistoryDev(context, name) {
-      console.log(`https://yukmaro.cafe24.com/his/GetMatchHistory/${name}`);
+    // his/GetRecord/{MatchID}
+    GetRecordDev(context, matchID) {
+      console.log(`/his/GetRecord/${matchID}`);
       axios
         .get(
-          // name: 병그니, 액정깨기장인, ..
-          `/GetMatchHistory/${name}`,
+          // KR_11232322
+          `http://yukmaro.cafe24.com/his/GetRecord/${matchID}`,
           {
             transformRequest: [
               (data, headers) => {
-                delete headers.common["X-Requested-With"];
+                delete headers.common['X-Requested-With'];
                 return data;
               },
             ],
@@ -134,13 +117,13 @@ const store = createStore({
         )
         .then((result) => {
           //요청 성공시 가져오는 코드
-          console.log(`GetMatchHistory: ${result.data}`);
+          console.log(`GetRecord: ${result.data}`);
           console.log(result.data);
           console.log(result);
-          context.commit("SetMatchData5", result.data);
+          context.commit('SetMatchData5', result.data);
         })
         .catch((e) => {
-          console.log("error-GetMatchhistory");
+          console.log('error-GetRecord');
           console.log(e);
         });
     },
@@ -151,7 +134,7 @@ const store = createStore({
         .get(`http://yukmaro.cafe24.com/stat/unit`, {
           transformRequest: [
             (data, headers) => {
-              delete headers.common["X-Requested-With"];
+              delete headers.common['X-Requested-With'];
               return data;
             },
           ],
@@ -176,10 +159,10 @@ const store = createStore({
           // let D = dataLength * 0.77; // 77%
           // let F = dataLength; // 100%
 
-          context.commit("SetUnits", result.data);
+          context.commit('SetUnits', result.data);
         })
         .catch((e) => {
-          console.log("error-SetUnits");
+          console.log('error-SetUnits');
           console.log(e);
         });
     },
@@ -190,7 +173,7 @@ const store = createStore({
         .get(`http://yukmaro.cafe24.com/stat/item`, {
           transformRequest: [
             (data, headers) => {
-              delete headers.common["X-Requested-With"];
+              delete headers.common['X-Requested-With'];
               return data;
             },
           ],
@@ -215,10 +198,10 @@ const store = createStore({
           // let D = dataLength * 0.77; // 77%
           // let F = dataLength; // 100%
 
-          context.commit("SetItems", result.data);
+          context.commit('SetItems', result.data);
         })
         .catch((e) => {
-          console.log("error-SetItems");
+          console.log('error-SetItems');
           console.log(e);
         });
     },
@@ -228,7 +211,7 @@ const store = createStore({
         .get(`http://yukmaro.cafe24.com/stat/deck`, {
           transformRequest: [
             (data, headers) => {
-              delete headers.common["X-Requested-With"];
+              delete headers.common['X-Requested-With'];
               return data;
             },
           ],
@@ -253,20 +236,20 @@ const store = createStore({
           // let D = dataLength * 0.77; // 77%
           // let F = dataLength; // 100%
 
-          context.commit("SetTierDeck", result.data);
+          context.commit('SetTierDeck', result.data);
         })
         .catch((e) => {
-          console.log("error-SetTierDeck");
+          console.log('error-SetTierDeck');
           console.log(e);
         });
     },
     initDecks(context, origin) {
-      context.commit("SetFilteredDecks", origin);
+      context.commit('SetFilteredDecks', origin);
     },
     filterDecks(context, filter) {
-      this.dispatch("initDecks", this.state.tierDeck);
-      this.dispatch("rankFilter", filter.rank);
-      this.dispatch("DeckTraitsFilter", filter.trait);
+      this.dispatch('initDecks', this.state.tierDeck);
+      this.dispatch('rankFilter', filter.rank);
+      this.dispatch('DeckTraitsFilter', filter.trait);
     },
     rankFilter(context, tiers) {
       if (tiers.length == 0) {
@@ -278,29 +261,29 @@ const store = createStore({
           this.state.tierDeck.filter((deck) => deck.tier == tiers[i])
         );
       }
-      this.commit("SetFilteredDecks", temp);
+      this.commit('SetFilteredDecks', temp);
     },
     DeckTraitsFilter(context, traits) {
       if (traits.length === 0) {
         return;
       }
       for (let i = 0; i < traits.length; i++) {
-        this.dispatch("DeckTraitFilter", traits[i]);
+        this.dispatch('DeckTraitFilter', traits[i]);
       }
     },
     DeckTraitFilter(context, trait) {
       let temp = this.state.filteredDecks.filter((deck) =>
         deck.mainDeckName.includes(trait)
       );
-      context.commit("SetFilteredDecks", temp);
+      context.commit('SetFilteredDecks', temp);
     },
     initUnits(context, origin) {
-      context.commit("SetFilteredUnits", origin);
+      context.commit('SetFilteredUnits', origin);
     },
     filterUnits(context, filter) {
-      this.dispatch("initUnits", this.state.tierUnit);
-      this.dispatch("costsFilter", filter.cost);
-      this.dispatch("ChampTraitsFilter", filter.trait);
+      this.dispatch('initUnits', this.state.tierUnit);
+      this.dispatch('costsFilter', filter.cost);
+      this.dispatch('ChampTraitsFilter', filter.trait);
     },
     costsFilter(context, costs) {
       if (costs.length == 0) {
@@ -312,36 +295,36 @@ const store = createStore({
           this.state.tierUnit.filter((unit) => unit.cost == costs[i])
         );
       }
-      this.commit("SetFilteredUnits", temp);
+      this.commit('SetFilteredUnits', temp);
     },
     ChampTraitsFilter(context, traits) {
       if (traits.length === 0) {
         return;
       }
       for (let i = 0; i < traits.length; i++) {
-        this.dispatch("ChampTraitFilter", traits[i]);
+        this.dispatch('ChampTraitFilter', traits[i]);
       }
     },
     ChampTraitFilter(context, trait) {
       let temp = this.state.filteredUnits.filter((unit) =>
         unit.traits.includes(trait)
       );
-      context.commit("SetFilteredUnits", temp);
+      context.commit('SetFilteredUnits', temp);
     },
     initItems(context, origin) {
-      context.commit("SetFilteredItems", origin);
+      context.commit('SetFilteredItems', origin);
     },
     filterItems(context, filter) {
-      this.dispatch("initItems", this.state.items);
-      this.dispatch("typesFilter", filter.type);
-      this.dispatch("baseFilter", filter.base);
+      this.dispatch('initItems', this.state.items);
+      this.dispatch('typesFilter', filter.type);
+      this.dispatch('baseFilter', filter.base);
     },
     baseFilter(context, base) {
       if (base == 0) {
         return;
       }
       context.commit(
-        "SetFilteredItems",
+        'SetFilteredItems',
         this.state.filteredItems.filter(
           (item) => item.from.includes(base) || item.id == base
         )
@@ -357,7 +340,7 @@ const store = createStore({
           this.state.items.filter((item) => item.icon.includes(types[i]))
         );
       }
-      this.commit("SetFilteredItems", temp);
+      this.commit('SetFilteredItems', temp);
     },
   },
 });
