@@ -26,15 +26,14 @@
 </template>
 
 <script>
-import Header from '../Header.vue';
-import Filter from '../Filter/UnitFilterContainer.vue';
-import UnitTable from './UnitTable.vue';
-import UnitApex from './UnitApex.vue';
-import UnitInfo from './UnitInfo.vue';
-import Footer from '../Footer.vue';
-import newdata from '../../assets/newdata.json';
-import tierUnit from '../../assets/tierUnit.json';
-import realUnit from '../../assets/data/unit.json';
+import Header from "../Header.vue";
+import Filter from "../Filter/UnitFilterContainer.vue";
+import UnitTable from "./UnitTable.vue";
+import UnitApex from "./UnitApex.vue";
+import UnitInfo from "./UnitInfo.vue";
+import Footer from "../Footer.vue";
+import newdata from "../../assets/newdata.json";
+import realUnit from "../../assets/data/unit.json";
 
 export default {
   components: {
@@ -47,12 +46,11 @@ export default {
   },
   data() {
     return {
-      tierUnit,
       newdata,
       realUnit,
       modalOpen: 0,
       container: 0,
-      champName: '',
+      champName: "",
     };
   },
   methods: {
@@ -61,38 +59,20 @@ export default {
       this.champName = name;
     },
     reset() {
-      console.log('reset');
+      console.log("reset");
       this.container = 0;
-      this.$store.commit('SetUnitFilterCost', []);
-      this.$store.commit('SetUnitFilterTrait', []);
-      this.$store.dispatch('filterUnits', this.$store.state.unitFilter);
+      this.$store.commit("SetUnitFilterCost", []);
+      this.$store.commit("SetUnitFilterTrait", []);
+      this.$store.dispatch("filterUnits", this.$store.state.unitFilter);
     },
     changeContent(content) {
       this.container = content;
     },
-    GetUnits() {
-      console.log('getUnits()');
-      const temp = [];
-      for (let j = 0; j < this.realUnit.length; j++) {
-        for (let i = 0; i < this.newdata.setData[0].champions.length; i++) {
-          if (
-            this.realUnit[j].championId ==
-            this.newdata.setData[0].champions[i].apiName
-          )
-            temp.push(this.newdata.setData[0].champions[i]);
-        }
-      }
-      return temp;
-    },
-    initTierUnits() {
-      this.$store.commit('SetFilteredUnits', this.GetUnits());
-    },
     excute() {
-      this.$store.commit('SetTierUnit', this.GetUnits());
+      this.$store.dispatch("StatUnit");
     },
   },
   created() {
-    this.initTierUnits();
     this.excute();
   },
 };
@@ -105,9 +85,9 @@ export default {
   grid-template-columns: 1fr 5fr 1fr;
   justify-items: stretch;
   grid-template-areas:
-    'header header header'
-    'a filter b'
-    'footer footer footer';
+    "header header header"
+    "a filter b"
+    "footer footer footer";
   height: 100vh;
   align-items: stretch;
 }

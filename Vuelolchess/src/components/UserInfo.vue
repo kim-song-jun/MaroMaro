@@ -6,13 +6,14 @@
       <img class="userInfo-icon" src="../assets/gold_base2.webp" />
       <div>
         <strong style="font-size: x-large; color: #f8f7f6">
-          <!-- {{ this.userName }} -->
-          <!-- {{ $store.state.name }} -->
           {{ $route.params.name }}
         </strong>
       </div>
 
-      <div>Gold III 30 LP</div>
+      <div>
+        {{ this.userInfo.tier }} {{ this.userInfo.tierDetail }}
+        {{ this.userInfo.leaguePoint }}
+      </div>
       <div>Top 20.4% KR</div>
     </div>
     <div class="matches-content">
@@ -61,43 +62,35 @@
 <script>
 import axios from "axios";
 import Tabs from "./Tabs.vue";
-import userMatchData from "../assets/UserMatchData.json";
 
 export default {
   data() {
     return {
       nextPage: 1,
-      userMatchData,
       result: {
         top4: 0,
         won: 0,
         steak: 1,
         LP: 0,
       },
+      userInfo: {},
     };
   },
   props: {
     userName: String,
   },
   methods: {
-    onSearch() {
-      this.$emit("userName", true);
-    },
     setRecentPlacement(data) {
       let placement = [];
       for (let i in data) {
         placement.push(data[i].placement);
-        // console.log(i);
       }
-      // console.log(placement.length);
       if (placement.length < 20) {
         let temp = 20 - placement.length;
-        // console.log(temp);
         var i = 0;
         for (;;) {
           if (i >= temp) break;
           placement.push("-");
-          // console.log(i);
           i++;
         }
       }
@@ -136,7 +129,6 @@ export default {
       };
       let check = true;
       for (let i in this.$store.state.matchData) {
-        // console.log(i)/
         if (this.$store.state.matchData[i].placement < 5) {
           result.top4++;
         }
@@ -160,23 +152,34 @@ export default {
       }
       this.result = result;
     },
-    More(name) {
+    GetUserInfo() {
       axios
         .get(
-          // KR_11232322
-          `/GetMatchHistroy/${name}`
+          // cafe24에서 데이터 가져오기
+          `/${this.$route.params.name}`,
+          {
+            transformRequest: [
+              (data, headers) => {
+                delete headers.common["X-Requested-With"];
+                return data;
+              },
+            ],
+          }
         )
         .then((result) => {
           //요청 성공시 가져오는 코드
-          console.log(result);
-          return result.data;
+          console.log(result.data);
+          this.userInfo = result.data;
         })
         .catch(() => {
-          console.log("error");
+          console.log("error-GetUserInfo");
         });
     },
   },
   components: { Tabs },
+  created() {
+    this.GetUserInfo();
+  },
 };
 </script>
 

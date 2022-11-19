@@ -305,8 +305,8 @@ export default {
     GetRecord(name) {
       axios
         .get(
-          // KR_11232322
-          `/GetRecord/${name}`,
+          // cafe24에서 데이터 가져오기
+          `/his/GetRecord/${name}`,
           {
             transformRequest: [
               (data, headers) => {
@@ -322,7 +322,7 @@ export default {
           this.resultData = result.data;
         })
         .catch(() => {
-          console.log("error");
+          console.log("error-GetRecord");
         });
     },
   },

@@ -24,15 +24,12 @@
 </template>
 
 <script>
-import Header from '../Header.vue';
-import Filter from '../Filter/ItemFilterContainer.vue';
-import ItemTable from './ItemTable.vue';
-import ItemApex from './ItemApex.vue';
-import ItemInfo from './ItemInfo.vue';
-import Footer from '../Footer.vue';
-import newdata from '../../assets/newdata.json';
-// import tierItem from '../../assets/tierItem.json';
-import realItem from '../../assets/data/item.json';
+import Header from "../Header.vue";
+import Filter from "../Filter/ItemFilterContainer.vue";
+import ItemTable from "./ItemTable.vue";
+import ItemApex from "./ItemApex.vue";
+import ItemInfo from "./ItemInfo.vue";
+import Footer from "../Footer.vue";
 
 export default {
   components: {
@@ -48,9 +45,6 @@ export default {
       modalOpen: 0,
       itemID: 0,
       container: 0,
-      newdata,
-      // tierItem,
-      realItem,
     };
   },
   methods: {
@@ -59,34 +53,20 @@ export default {
       this.itemID = id;
     },
     reset() {
-      console.log('reset');
+      console.log("reset");
       this.container = 0;
-      this.$store.commit('SetItemFilterType', []);
-      this.$store.commit('SetItemFilterBase', []);
-      this.$store.dispatch('filterItems', this.$store.state.itemFilter);
+      this.$store.commit("SetItemFilterType", []);
+      this.$store.commit("SetItemFilterBase", []);
+      this.$store.dispatch("filterItems", this.$store.state.itemFilter);
     },
     changeContent(content) {
       this.container = content;
     },
-    GetItems() {
-      const temp = [];
-      for (let j = 0; j < this.realItem.items.length; j++) {
-        for (let i = 0; i < this.newdata.items.length; i++) {
-          if (this.realItem.items[j].itemId == this.newdata.items[i].id)
-            temp.push(this.newdata.items[i]);
-        }
-      }
-      return temp;
-    },
-    initItems() {
-      this.$store.commit('SetFilteredItems', this.GetItems());
-    },
     excute() {
-      this.$store.commit('SetItems', this.GetItems());
+      this.$store.dispatch("StatItem");
     },
   },
   created() {
-    this.initItems();
     this.excute();
   },
 };
@@ -98,9 +78,9 @@ export default {
   grid-template-columns: 1fr 5fr 1fr;
   justify-items: stretch;
   grid-template-areas:
-    'header header header'
-    'a filter b'
-    'footer footer footer';
+    "header header header"
+    "a filter b"
+    "footer footer footer";
   height: 100vh;
   align-items: stretch;
   background-color: rgb(10, 10, 26);
