@@ -192,6 +192,16 @@ export default {
     };
   },
   methods: {
+    Setdesc(ability) {
+      let names = [];
+      for (let i = 0; i < ability.variables.length; i++) {
+        names.push(ability.variables[i].name);
+        ability.desc.replace(
+          `@${names[i]}@`,
+          `${ability.variables[i].value[0]},${ability.variables[i].value[1]},${ability.variables[i].value[2]}`
+        );
+      }
+    },
     checkStar(index) {
       for (let i = 0; i < this.star.length; i++) {
         if (this.champStars[i] === 1) {
