@@ -61,7 +61,9 @@
               </div>
             </div>
           </td>
-          <td class="table-td"><div class="table-tier">S</div></td>
+          <td class="table-td">
+            <div class="table-tier">{{ unit.tier }}</div>
+          </td>
           <td class="table-td">
             <div class="table-avg">
               {{ this.realUnit[index].averagePlacement }}
@@ -99,6 +101,24 @@ export default {
     };
   },
   methods: {
+    SetRank(list, index) {
+      let len = list.length;
+
+      for (let i; i < len; i++) {
+        if (len * 0.11 > index) {
+          return 'S';
+        } else if (len * 0.23 > index) {
+          return 'A';
+        } else if (len * 0.4 > index) {
+          return 'B';
+        } else if (len * 0.6 > index) {
+          return 'C';
+        } else if (len * 0.77 > index) {
+          return 'D';
+        }
+      }
+      return 'F';
+    },
     showModal(name) {
       this.$emit('open', 1, name);
     },

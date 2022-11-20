@@ -13,6 +13,7 @@
           style="margin-right: 1%"
           :src="require(`../../assets/tier${tier.tier}.png`)"
           class="row-item my-tier-img"
+          :alt="tier.tier"
         />
         <div class="row-item my-tier-deck-name">
           <strong class="my-tier-deck-main" style="color: white">{{
@@ -91,33 +92,14 @@
             </div>
           </div>
         </div>
-        <!-- <div class="row-container my-tier-expands">
-          <div class="row-item">
-            <img
-              v-if="!this.tabs"
-              src="../../assets/chevron-down-solid.png"
-              style="justify-self: flex-end"
-              @click="this.tabs = !this.tabs"
-            />
-            <img
-              v-if="this.tabs"
-              src="../../assets/chevron-down-solid.png"
-              style="justify-self: flex-end; transform: scaleY(-1)"
-              @click="this.tabs = !this.tabs"
-            />
-          </div>
-        </div> -->
       </div>
-      <!-- <hr /> -->
     </div>
-    <!-- <UserTabs v-if="this.tabs"></UserTabs> -->
   </div>
 </template>
 
 <script>
-import newdata from "../../assets/newdata.json";
-// import UserTabs from '../UserTabs.vue';
-import axios from "axios";
+import newdata from '../../assets/newdata.json';
+import axios from 'axios';
 
 export default {
   data() {
@@ -127,12 +109,11 @@ export default {
       getData: [],
     };
   },
-  // components: { UserTabs },
   methods: {
     getChampName(championID) {
       for (let j in this.newdata.setData[0].champions) {
         if (this.newdata.setData[0].champions[j].apiName == championID) {
-          return this.newdata.setData[0].champions[j].name.replace(/ /g, "");
+          return this.newdata.setData[0].champions[j].name.replace(/ /g, '');
         }
       }
     },
@@ -144,21 +125,21 @@ export default {
           if (this.newdata.setData[i].champions[j].apiName == championID) {
             let temp = this.newdata.setData[i].champions[j].icon
               .toLowerCase()
-              .split("/");
+              .split('/');
             // console.log(temp);
             // let newUrl = temp.slice(0, -1);
-            let newUrl2 = temp.slice(-1)[0].split(".");
+            let newUrl2 = temp.slice(-1)[0].split('.');
             // console.log(newUrl);
             // console.log(newUrl2);
-            if (newUrl2[0] == "tft7_volibear") {
+            if (newUrl2[0] == 'tft7_volibear') {
               return `https://raw.communitydragon.org/latest/game/assets/characters/${championID.toLowerCase()}/hud/${
                 newUrl2[0]
               }_square.${newUrl2[1].slice(0, 8)}.png`;
-            } else if (newUrl2[0] == "tft7_zippy") {
+            } else if (newUrl2[0] == 'tft7_zippy') {
               return `https://raw.communitydragon.org/latest/game/assets/characters/${championID.toLowerCase()}/hud/icons2d/${
                 newUrl2[0]
               }_square.${newUrl2[1]}.png`;
-            } else if (newUrl2[0] == "tft7_dragongreen") {
+            } else if (newUrl2[0] == 'tft7_dragongreen') {
               return `https://raw.communitydragon.org/latest/game/assets/characters/${championID.toLowerCase()}/hud/tft7_jadedragon_square.${newUrl2[1].slice(
                 0,
                 8
@@ -175,12 +156,12 @@ export default {
     GetStar(i) {
       if (i == 3) {
         // return `https://raw.communitydragon.org/latest/game/assets/ux/tft/notificationicons/goldstar.png`;
-        return "stargold";
+        return 'stargold';
       } else if (i == 2) {
         // return ``;
-        return "starsilver";
+        return 'starsilver';
       } else {
-        return "starbronze";
+        return 'starbronze';
       }
     },
     GetItemUrl(item) {
@@ -188,28 +169,29 @@ export default {
         if (item == newdata.items[j].id) {
           let temp = newdata.items[j].icon
             .toLowerCase()
-            .split(".")
+            .split('.')
             .slice(0, -1);
           return `https://raw.communitydragon.org/latest/game/${temp.join(
-            "."
+            '.'
           )}.png`;
         }
       }
     },
     GetDeck() {
       axios
-        .get("/test/mockdoridomabem")
+        .get('/test/mockdoridomabem')
         .then((result) => {
           console.log(`GetDeck: ${result.data}`);
           console.log(result.data);
           this.getData = result.data;
         })
         .catch(() => {
-          console.log("GetDeck Error");
+          console.log('GetDeck Error');
         });
     },
   },
   created() {
+    this.$store.dispatch('SetTierDeck');
     // this.GetDeck();
   },
 };

@@ -63,17 +63,17 @@
             </div>
           </td>
           <td class="table-td">
-            <div class="table-tier">{{ this.realItem.items[index].tier }}</div>
+            <div class="table-tier">{{ item.tier }}</div>
           </td>
           <td class="table-td">
             <div class="table-avg">
-              {{ this.realItem.items[index].averagePlacement }}
+              {{ item.averagePlacement }}
             </div>
           </td>
           <!-- <td class="table-td"><div class="table-winrate">22.9%</div></td> -->
           <td class="table-td">
             <div class="table-frequency">
-              {{ this.realItem.items[index].frequency }}
+              {{ item.frequency }}
             </div>
           </td>
         </tr>

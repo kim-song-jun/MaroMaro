@@ -18,12 +18,10 @@
 </template>
 
 <script>
-import Header from "../Header.vue";
-import Filter from "../Filter/DeckFilterContainer.vue";
-import Deck from "./TierDeck.vue";
-import Footer from "../Footer.vue";
-// import tierDeck from '../../assets/tierDeck.json';
-import realDeck from "../../assets/data/deck.json";
+import Header from '../Header.vue';
+import Filter from '../Filter/DeckFilterContainer.vue';
+import Deck from './TierDeck.vue';
+import Footer from '../Footer.vue';
 
 export default {
   components: {
@@ -35,26 +33,20 @@ export default {
   data() {
     return {
       modalOpen: 0,
-      // tierDeck,
-      realDeck,
     };
   },
   methods: {
     reset() {
-      console.log("reset");
-      this.$store.commit("SetDeckFilterRank", []);
-      this.$store.commit("SetDeckFilterTrait", []);
-      this.$store.dispatch("filterDecks", this.$store.state.deckFilter);
-    },
-    initTierDecks() {
-      this.$store.commit("SetFilteredDecks", [...this.realDeck]);
+      console.log('reset');
+      this.$store.commit('SetDeckFilterRank', []);
+      this.$store.commit('SetDeckFilterTrait', []);
+      this.$store.dispatch('filterDecks', this.$store.state.deckFilter);
     },
     excute() {
-      this.$store.commit("SetTierDeck", [...this.realDeck]);
+      this.$store.dispatch('SetTierDeck');
     },
   },
   created() {
-    this.initTierDecks();
     this.excute();
   },
 };
@@ -66,9 +58,9 @@ export default {
   grid-template-columns: 1fr 5fr 1fr;
   justify-items: stretch;
   grid-template-areas:
-    "header header header"
-    "a filter b"
-    "footer footer footer";
+    'header header header'
+    'a filter b'
+    'footer footer footer';
   height: 100vh;
   align-items: stretch;
   background-color: rgb(10, 10, 26);
