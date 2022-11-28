@@ -1,5 +1,5 @@
-import { createStore } from 'vuex';
-import axios from 'axios';
+import { createStore } from "vuex";
+import axios from "axios";
 // import TierUnit from './assets/tierUnit.json';
 // import Newdata from './assets/newdata.json';
 
@@ -7,7 +7,7 @@ const store = createStore({
   state() {
     return {
       page: 0,
-      name: '',
+      name: "",
       matchData: [],
       tierDeck: [],
       filteredDecks: [],
@@ -82,7 +82,7 @@ const store = createStore({
           {
             transformRequest: [
               (data, headers) => {
-                delete headers.common['X-Requested-With'];
+                delete headers.common["X-Requested-With"];
                 return data;
               },
             ],
@@ -93,10 +93,10 @@ const store = createStore({
           console.log(`GetMatchHistory: ${result.data}`);
           console.log(result.data);
           console.log(result);
-          context.commit('SetMatchData', result.data);
+          context.commit("SetMatchData", result.data);
         })
         .catch((e) => {
-          console.log('error-GetMatchhistory');
+          console.log("error-GetMatchhistory");
           console.log(e);
         });
     },
@@ -107,7 +107,7 @@ const store = createStore({
         .get(`/stat/unit`, {
           transformRequest: [
             (data, headers) => {
-              delete headers.common['X-Requested-With'];
+              delete headers.common["X-Requested-With"];
               return data;
             },
           ],
@@ -126,39 +126,39 @@ const store = createStore({
             })}`
           );
 
-          temp = [];
-          let S = dataLength * 0.11; // 11%
-          let A = dataLength * 0.23; // 23%
-          let B = dataLength * 0.4; // 40%
-          let C = dataLength * 0.6; // 60%
-          let D = dataLength * 0.77; // 77%
+          let temp = [];
+          let S = temp.length * 0.11; // 11%
+          let A = temp.length * 0.23; // 23%
+          let B = temp.length * 0.4; // 40%
+          let C = temp.length * 0.6; // 60%
+          let D = temp.length * 0.77; // 77%
           // let F = dataLength; // 100%
 
           temp = [...result.data];
           for (let i = 0; i < temp.length; i++) {
             if (S > i) {
-              temp[i].tier = 'S';
+              temp[i].tier = "S";
             } else if (A > i) {
-              temp[i].tier = 'A';
+              temp[i].tier = "A";
             } else if (B > i) {
-              temp[i].tier = 'B';
+              temp[i].tier = "B";
             } else if (C > i) {
-              temp[i].tier = 'C';
+              temp[i].tier = "C";
             } else if (D > i) {
-              temp[i].tier = 'D';
+              temp[i].tier = "D";
             } else {
-              temp[i].tier = 'F';
+              temp[i].tier = "F";
             }
           }
 
           // 데이터를 2개로 복사하여 저장
           // 1. 원본 데이터 보존
           // 2. 필터 데이터 (아무것도 안눌렀을때, init용)
-          context.commit('SetTierUnit', temp);
-          context.commit('SetFilteredUnits', temp);
+          context.commit("SetTierUnit", temp);
+          context.commit("SetFilteredUnits", temp);
         })
         .catch((e) => {
-          console.log('error-SetUnits');
+          console.log("error-SetUnits");
           console.log(e);
         });
     },
@@ -169,7 +169,7 @@ const store = createStore({
         .get(`/stat/item`, {
           transformRequest: [
             (data, headers) => {
-              delete headers.common['X-Requested-With'];
+              delete headers.common["X-Requested-With"];
               return data;
             },
           ],
@@ -188,36 +188,36 @@ const store = createStore({
             })}`
           );
 
-          temp = [];
-          let S = dataLength * 0.11; // 11%
-          let A = dataLength * 0.23; // 23%
-          let B = dataLength * 0.4; // 40%
-          let C = dataLength * 0.6; // 60%
-          let D = dataLength * 0.77; // 77%
+          let temp = [];
+          let S = temp.length * 0.11; // 11%
+          let A = temp.length * 0.23; // 23%
+          let B = temp.length * 0.4; // 40%
+          let C = temp.length * 0.6; // 60%
+          let D = temp.length * 0.77; // 77%
           // let F = dataLength; // 100%
 
           temp = [...result.data];
           for (let i = 0; i < temp.length; i++) {
             if (S > i) {
-              temp[i].tier = 'S';
+              temp[i].tier = "S";
             } else if (A > i) {
-              temp[i].tier = 'A';
+              temp[i].tier = "A";
             } else if (B > i) {
-              temp[i].tier = 'B';
+              temp[i].tier = "B";
             } else if (C > i) {
-              temp[i].tier = 'C';
+              temp[i].tier = "C";
             } else if (D > i) {
-              temp[i].tier = 'D';
+              temp[i].tier = "D";
             } else {
-              temp[i].tier = 'F';
+              temp[i].tier = "F";
             }
           }
 
-          context.commit('SetItems', temp);
-          context.commit('SetFilteredItems', temp);
+          context.commit("SetItems", temp);
+          context.commit("SetFilteredItems", temp);
         })
         .catch((e) => {
-          console.log('error-SetItems');
+          console.log("error-SetItems");
           console.log(e);
         });
     },
@@ -227,7 +227,7 @@ const store = createStore({
         .get(`/stat/deck`, {
           transformRequest: [
             (data, headers) => {
-              delete headers.common['X-Requested-With'];
+              delete headers.common["X-Requested-With"];
               return data;
             },
           ],
@@ -246,45 +246,45 @@ const store = createStore({
             })}`
           );
 
-          temp = [];
-          let S = dataLength * 0.11; // 11%
-          let A = dataLength * 0.23; // 23%
-          let B = dataLength * 0.4; // 40%
-          let C = dataLength * 0.6; // 60%
-          let D = dataLength * 0.77; // 77%
+          let temp = [];
+          let S = temp.length * 0.11; // 11%
+          let A = temp.length * 0.23; // 23%
+          let B = temp.length * 0.4; // 40%
+          let C = temp.length * 0.6; // 60%
+          let D = temp.length * 0.77; // 77%
           // let F = dataLength; // 100%
 
           temp = [...result.data];
           for (let i = 0; i < temp.length; i++) {
             if (S > i) {
-              temp[i].tier = 'S';
+              temp[i].tier = "S";
             } else if (A > i) {
-              temp[i].tier = 'A';
+              temp[i].tier = "A";
             } else if (B > i) {
-              temp[i].tier = 'B';
+              temp[i].tier = "B";
             } else if (C > i) {
-              temp[i].tier = 'C';
+              temp[i].tier = "C";
             } else if (D > i) {
-              temp[i].tier = 'D';
+              temp[i].tier = "D";
             } else {
-              temp[i].tier = 'F';
+              temp[i].tier = "F";
             }
           }
-          context.commit('SetTierDeck', temp);
-          context.commit('SetFilteredDecks', temp);
+          context.commit("SetTierDeck", temp);
+          context.commit("SetFilteredDecks", temp);
         })
         .catch((e) => {
-          console.log('error-SetTierDeck');
+          console.log("error-SetTierDeck");
           console.log(e);
         });
     },
     initDecks(context, origin) {
-      context.commit('SetFilteredDecks', origin);
+      context.commit("SetFilteredDecks", origin);
     },
     filterDecks(context, filter) {
-      this.dispatch('initDecks', this.state.tierDeck);
-      this.dispatch('rankFilter', filter.rank);
-      this.dispatch('DeckTraitsFilter', filter.trait);
+      this.dispatch("initDecks", this.state.tierDeck);
+      this.dispatch("rankFilter", filter.rank);
+      this.dispatch("DeckTraitsFilter", filter.trait);
     },
     rankFilter(context, tiers) {
       if (tiers.length == 0) {
@@ -296,29 +296,29 @@ const store = createStore({
           this.state.tierDeck.filter((deck) => deck.tier == tiers[i])
         );
       }
-      this.commit('SetFilteredDecks', temp);
+      this.commit("SetFilteredDecks", temp);
     },
     DeckTraitsFilter(context, traits) {
       if (traits.length === 0) {
         return;
       }
       for (let i = 0; i < traits.length; i++) {
-        this.dispatch('DeckTraitFilter', traits[i]);
+        this.dispatch("DeckTraitFilter", traits[i]);
       }
     },
     DeckTraitFilter(context, trait) {
       let temp = this.state.filteredDecks.filter((deck) =>
         deck.mainDeckName.includes(trait)
       );
-      context.commit('SetFilteredDecks', temp);
+      context.commit("SetFilteredDecks", temp);
     },
     initUnits(context, origin) {
-      context.commit('SetFilteredUnits', origin);
+      context.commit("SetFilteredUnits", origin);
     },
     filterUnits(context, filter) {
-      this.dispatch('initUnits', this.state.tierUnit);
-      this.dispatch('costsFilter', filter.cost);
-      this.dispatch('ChampTraitsFilter', filter.trait);
+      this.dispatch("initUnits", this.state.tierUnit);
+      this.dispatch("costsFilter", filter.cost);
+      this.dispatch("ChampTraitsFilter", filter.trait);
     },
     costsFilter(context, costs) {
       if (costs.length == 0) {
@@ -330,36 +330,36 @@ const store = createStore({
           this.state.tierUnit.filter((unit) => unit.cost == costs[i])
         );
       }
-      this.commit('SetFilteredUnits', temp);
+      this.commit("SetFilteredUnits", temp);
     },
     ChampTraitsFilter(context, traits) {
       if (traits.length === 0) {
         return;
       }
       for (let i = 0; i < traits.length; i++) {
-        this.dispatch('ChampTraitFilter', traits[i]);
+        this.dispatch("ChampTraitFilter", traits[i]);
       }
     },
     ChampTraitFilter(context, trait) {
       let temp = this.state.filteredUnits.filter((unit) =>
         unit.traits.includes(trait)
       );
-      context.commit('SetFilteredUnits', temp);
+      context.commit("SetFilteredUnits", temp);
     },
     initItems(context, origin) {
-      context.commit('SetFilteredItems', origin);
+      context.commit("SetFilteredItems", origin);
     },
     filterItems(context, filter) {
-      this.dispatch('initItems', this.state.items);
-      this.dispatch('typesFilter', filter.type);
-      this.dispatch('baseFilter', filter.base);
+      this.dispatch("initItems", this.state.items);
+      this.dispatch("typesFilter", filter.type);
+      this.dispatch("baseFilter", filter.base);
     },
     baseFilter(context, base) {
       if (base == 0) {
         return;
       }
       context.commit(
-        'SetFilteredItems',
+        "SetFilteredItems",
         this.state.filteredItems.filter(
           (item) => item.from.includes(base) || item.id == base
         )
@@ -375,7 +375,7 @@ const store = createStore({
           this.state.items.filter((item) => item.icon.includes(types[i]))
         );
       }
-      this.commit('SetFilteredItems', temp);
+      this.commit("SetFilteredItems", temp);
     },
   },
 });

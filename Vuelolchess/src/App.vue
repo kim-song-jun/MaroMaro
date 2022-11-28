@@ -1,11 +1,10 @@
 <template>
-  <!-- {{ this.$store.state.filteredUnits }} -->
   <router-view></router-view>
 </template>
 
 <script>
 export default {
-  name: 'App',
+  name: "App",
   data() {
     return {};
   },
